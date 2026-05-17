@@ -18,7 +18,10 @@ export const Route = createFileRoute("/offerings")({
   component: Offerings,
 });
 
-const items = [
+type Tier = { label: string; duration?: string; price: string; note?: string };
+const items: Array<{
+  icon: typeof Heart; title: string; img: string; slug: string; desc: string; tiers: Tier[];
+}> = [
   {
     icon: Heart, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
     desc: "A deep energy healing session weaving Reiki with crystal singing bowls — to clear stagnation, restore flow, and welcome your nervous system home.",
