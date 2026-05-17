@@ -19,16 +19,21 @@ function Contact() {
       <p className="mt-4 text-muted-foreground text-pretty">
         Questions, custom sessions, or private group ceremonies — I'd love to hear what brought you here.
       </p>
-      <div className="mt-10 grid sm:grid-cols-3 gap-4">
-        <a href="mailto:hello@iridescencehealing.com" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
+      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a href="mailto:met@iridescencehealing.com" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Mail className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Email</div>
-          <div className="mt-1 text-xs text-muted-foreground break-all">hello@iridescencehealing.com</div>
+          <div className="mt-1 text-xs text-muted-foreground break-all">met@iridescencehealing.com</div>
         </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
+        <a href="https://instagram.com/iridescence_healing" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Instagram className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Instagram</div>
-          <div className="mt-1 text-xs text-muted-foreground">@iridescencehealing</div>
+          <div className="mt-1 text-xs text-muted-foreground">@iridescence_healing</div>
+        </a>
+        <a href="https://instagram.com/jetsetmet" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
+          <Instagram className="h-5 w-5 mx-auto text-primary" />
+          <div className="mt-3 font-medium text-sm">Instagram</div>
+          <div className="mt-1 text-xs text-muted-foreground">@jetsetmet</div>
         </a>
         <div className="rounded-3xl border border-border bg-card p-6 shadow-card">
           <MapPin className="h-5 w-5 mx-auto text-primary" />
