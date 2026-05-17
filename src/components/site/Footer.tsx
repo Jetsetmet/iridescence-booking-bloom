@@ -22,11 +22,14 @@ export function Footer() {
         </div>
         <div className="text-sm space-y-2 text-muted-foreground">
           <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Uptown New Orleans, LA</div>
-          <a href="mailto:hello@iridescencehealing.com" className="flex items-center gap-2 hover:text-foreground">
-            <Mail className="h-4 w-4" /> hello@iridescencehealing.com
+          <a href="mailto:met@iridescencehealing.com" className="flex items-center gap-2 hover:text-foreground">
+            <Mail className="h-4 w-4" /> met@iridescencehealing.com
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
-            <Instagram className="h-4 w-4" /> @iridescencehealing
+          <a href="https://instagram.com/iridescence_healing" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
+            <Instagram className="h-4 w-4" /> @iridescence_healing
+          </a>
+          <a href="https://instagram.com/jetsetmet" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
+            <Instagram className="h-4 w-4" /> @jetsetmet
           </a>
         </div>
       </div>
