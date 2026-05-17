@@ -62,7 +62,13 @@ const items: Array<{
     desc: "A devotional mentorship for those called to reclaim their wholeness, intuition and inner power — offered in person and virtually.",
     tiers: [
       { label: "6 Week Cosmic Mentoring", price: "$720" },
-      { label: "Four 60-min Sessions", price: "$468", note: "In person & virtual packages — 10% discount" },
+    ],
+  },
+  {
+    icon: Sparkles, title: "In Person & Virtual Packages", img: heroImg, slug: "Mentoring",
+    desc: "Bundled session packages with a 10% discount — held in person in uptown New Orleans or virtually from anywhere.",
+    tiers: [
+      { label: "Four 60-min Sessions", duration: "10% discount", price: "$468" },
     ],
   },
 ];
