@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpg";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -18,9 +19,13 @@ export function Header() {
     <header className="sticky top-0 z-40 glass border-b border-border/60">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="grid h-9 w-9 place-items-center rounded-full bg-iridescent shadow-glow group-hover:scale-105 transition-transform">
-            <Sparkles className="h-4 w-4 text-foreground" strokeWidth={1.5} />
-          </div>
+          <img
+            src={logo}
+            alt="Iridescence Healing"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-full object-cover shadow-glow group-hover:scale-105 transition-transform mix-blend-multiply"
+          />
           <span className="font-display text-lg tracking-wide">Iridescence Healing</span>
         </Link>
 
