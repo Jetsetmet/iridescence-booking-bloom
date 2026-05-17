@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import soundImg from "@/assets/sound-bowls.jpg";
+import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/events")({
 });
 
 const events = [
-  { date: "Friday, May 30", time: "7:00 PM", title: "Full Moon Sound Bath", loc: "Uptown Studio, New Orleans", img: soundImg, slug: "Sound Bath" },
+  { date: "Friday, May 30", time: "7:00 PM", title: "Full Moon Sound Bath", loc: "Uptown Studio, New Orleans", img: moonImg, slug: "Sound Bath" },
   { date: "Sunday, June 9",  time: "5:30 PM", title: "Cacao + Heart Circle", loc: "Private Garden, Uptown", img: cacaoImg, slug: "Cacao Ceremony" },
   { date: "Saturday, June 22", time: "9:00 AM", title: "Sunrise Breathwork Journey", loc: "Audubon Park", img: heroImg, slug: "Breathwork" },
 ];
