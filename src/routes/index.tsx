@@ -35,7 +35,6 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-aura pointer-events-none" />
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1 text-xs text-muted-foreground">
@@ -69,13 +68,12 @@ function Home() {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute -inset-4 bg-iridescent rounded-[2rem] opacity-40 blur-2xl" />
             <img
               src={heroImg}
               alt="Met in meditation at golden hour in a tropical garden"
               width={1080}
               height={1920}
-              className="relative rounded-[2rem] shadow-glow object-cover w-full h-[520px] lg:h-[640px]"
+              className="relative rounded-[2rem] shadow-card object-cover w-full h-[520px] lg:h-[640px]"
             />
           </div>
         </div>
@@ -118,19 +116,19 @@ function Home() {
 
       {/* QUIZ CTA */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-10">
-        <div className="relative overflow-hidden rounded-[2rem] bg-iridescent p-10 sm:p-16 shadow-soft">
+        <div className="relative overflow-hidden rounded-[2rem] bg-card border border-border p-10 sm:p-16 shadow-card">
           <div className="relative max-w-2xl">
-            <p className="text-xs uppercase tracking-[0.2em] text-foreground/70">Not sure where to begin?</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Not sure where to begin?</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl text-balance">
               Take the 60-second journey quiz.
             </h2>
-            <p className="mt-4 text-foreground/80 text-pretty">
+            <p className="mt-4 text-muted-foreground text-pretty">
               Five gentle questions to help you discover the healing practice
               that's calling you right now — Reiki, sound, cacao, breath or mentoring.
             </p>
             <Link
               to="/quiz"
-              className="mt-7 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3.5 text-sm font-medium text-background hover:opacity-90 transition-opacity"
+              className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
             >
               Begin the journey <Sparkles className="h-4 w-4" />
             </Link>
