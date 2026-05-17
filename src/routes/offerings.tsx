@@ -3,6 +3,7 @@ import soundImg from "@/assets/sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
+import selfLoveImg from "@/assets/self-love.jpg";
 import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
@@ -26,7 +27,7 @@ const items = [
     desc: "Heart-opening ceremonial cacao circle with breath, intention, and gentle sharing. Group format, uptown New Orleans." },
   { icon: Wind, title: "Breathwork Guidance", duration: "60 min", price: "$111", img: heroImg, slug: "Breathwork",
     desc: "Guided pranayama and somatic breath journeys to release stored emotion and meet yourself in stillness." },
-  { icon: Sparkles, title: "Self-Love Mentoring", duration: "4 sessions", price: "$444", img: heroImg, slug: "Mentoring",
+  { icon: Sparkles, title: "Self-Love Mentoring", duration: "4 sessions", price: "$444", img: selfLoveImg, slug: "Mentoring",
     desc: "A 4-session mentorship for women called to reclaim their wholeness, intuition, and feminine power." },
 ];
 
