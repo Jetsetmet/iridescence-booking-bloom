@@ -1,0 +1,78 @@
+import { createServerFn } from "@tanstack/react-start";
+import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { z } from "zod";
+
+const emailSchema = z.string().trim().email().max(255).toLowerCase();
+
+const leadInput = z.object({
+  email: emailSchema,
+  name: z.string().trim().max(120).optional(),
+  source: z.string().trim().max(60).default("lead_magnet"),
+});
+
+export const submitLead = createServerFn({ method: "POST" })
+  .inputValidator((d: unknown) => leadInput.parse(d))
+  .handler(async ({ data }) => {
+    const { error } = await supabaseAdmin
+      .from("leads")
+      .insert({ email: data.email, name: data.name ?? null, source: data.source });
+    if (error && !error.message.includes("duplicate")) throw new Error(error.message);
+    return { ok: true };
+  });
+
+const bookingInput = z.object({
+  name: z.string().trim().min(1).max(120),
+  email: emailSchema,
+  phone: z.string().trim().max(40).optional().or(z.literal("")),
+  offering: z.string().trim().min(1).max(80),
+  preferred_date: z.string().trim().max(120).optional().or(z.literal("")),
+  notes: z.string().trim().max(2000).optional().or(z.literal("")),
+});
+
+export const submitBooking = createServerFn({ method: "POST" })
+  .inputValidator((d: unknown) => bookingInput.parse(d))
+  .handler(async ({ data }) => {
+    const { error } = await supabaseAdmin.from("bookings").insert({
+      name: data.name,
+      email: data.email,
+      phone: data.phone || null,
+      offering: data.offering,
+      preferred_date: data.preferred_date || null,
+      notes: data.notes || null,
+    });
+    if (error) throw new Error(error.message);
+    // Also capture as a lead for the nurture list
+    await supabaseAdmin.from("leads").insert({
+      email: data.email,
+      name: data.name,
+      source: "booking",
+    });
+    return { ok: true };
+  });
+
+const quizInput = z.object({
+  email: emailSchema.optional().or(z.literal("")),
+  name: z.string().trim().max(120).optional().or(z.literal("")),
+  answers: z.record(z.string(), z.string()),
+  recommended_offering: z.string().trim().min(1).max(80),
+});
+
+export const submitQuiz = createServerFn({ method: "POST" })
+  .inputValidator((d: unknown) => quizInput.parse(d))
+  .handler(async ({ data }) => {
+    const { error } = await supabaseAdmin.from("quiz_results").insert({
+      email: data.email || null,
+      name: data.name || null,
+      answers: data.answers,
+      recommended_offering: data.recommended_offering,
+    });
+    if (error) throw new Error(error.message);
+    if (data.email) {
+      await supabaseAdmin.from("leads").insert({
+        email: data.email,
+        name: data.name || null,
+        source: "quiz",
+      });
+    }
+    return { ok: true };
+  });
