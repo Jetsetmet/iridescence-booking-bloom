@@ -69,6 +69,7 @@ const items: Array<{
     desc: "Bundled session packages with a 10% discount — held in person in uptown New Orleans or virtually from anywhere.",
     tiers: [
       { label: "Four 60-min Sessions", duration: "10% discount", price: "$468" },
+      { label: "Four 90-min Sessions", duration: "10% discount", price: "$612" },
     ],
   },
 ];
