@@ -9,6 +9,10 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { LeadMagnetPopup } from "@/components/site/LeadMagnetPopup";
+import { Toaster } from "sonner";
 
 function NotFoundComponent() {
   return (
@@ -115,7 +119,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <div className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+        <LeadMagnetPopup />
+        <Toaster position="top-center" richColors />
+      </div>
     </QueryClientProvider>
   );
 }
