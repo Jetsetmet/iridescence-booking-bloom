@@ -18,17 +18,53 @@ export const Route = createFileRoute("/offerings")({
   component: Offerings,
 });
 
-const items = [
-  { icon: Heart, title: "1-on-1 Reiki", duration: "75 min", price: "$133", img: reikiImg, slug: "Reiki",
-    desc: "A deep energy healing session to clear stagnation, restore flow, and welcome your nervous system home. Includes intuitive crystal and oracle support." },
-  { icon: Music2, title: "Private Sound Bath", duration: "60 min", price: "$155", img: soundImg, slug: "Sound Bath",
-    desc: "A personal sonic journey with crystal singing bowls, gongs and chimes. Held one-on-one or for a small intimate group." },
-  { icon: Flame, title: "Cacao Ceremony", duration: "2 hr", price: "$77", img: cacaoImg, slug: "Cacao Ceremony",
-    desc: "Heart-opening ceremonial cacao circle with breath, intention, and gentle sharing. Group format, uptown New Orleans." },
-  { icon: Wind, title: "Breathwork Guidance", duration: "60 min", price: "$111", img: heroImg, slug: "Breathwork",
-    desc: "Guided pranayama and somatic breath journeys to release stored emotion and meet yourself in stillness." },
-  { icon: Sparkles, title: "Self-Love Mentoring", duration: "4 sessions", price: "$444", img: selfLoveImg, slug: "Mentoring",
-    desc: "A 4-session mentorship for women called to reclaim their wholeness, intuition, and feminine power." },
+type Tier = { label: string; duration?: string; price: string; note?: string };
+const items: Array<{
+  icon: typeof Heart; title: string; img: string; slug: string; desc: string; tiers: Tier[];
+}> = [
+  {
+    icon: Heart, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
+    desc: "A deep energy healing session weaving Reiki with crystal singing bowls — to clear stagnation, restore flow, and welcome your nervous system home.",
+    tiers: [
+      { label: "Crystal Reiki & Sound", duration: "60 min", price: "$130" },
+      { label: "Student Reiki & Sound", duration: "60 min", price: "$110" },
+      { label: "Crystal Reiki & Sound", duration: "90 min", price: "$170" },
+      { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
+    ],
+  },
+  {
+    icon: Music2, title: "Sound Bath Journey", img: soundImg, slug: "Sound Bath",
+    desc: "A sonic journey with crystal singing bowls, gongs and chimes — held for couples, intimate groups, and retreats.",
+    tiers: [
+      { label: "Retreat Sound Bath Journey", price: "Please email" },
+      { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 4, more on request" },
+    ],
+  },
+  {
+    icon: Flame, title: "Cacao Ceremonies", img: cacaoImg, slug: "Cacao Ceremony",
+    desc: "Heart-opening ceremonial cacao with breath, intention and gentle sharing — for couples and retreat groups.",
+    tiers: [
+      { label: "Couples Cacao", duration: "110 min", price: "$390" },
+      { label: "Retreat Cacao", price: "Please email" },
+    ],
+  },
+  {
+    icon: Wind, title: "Meditation • Breathwork • Yoga", img: heroImg, slug: "Breathwork",
+    desc: "Guided pranayama, somatic breath journeys and gentle yoga to release stored emotion and meet yourself in stillness.",
+    tiers: [
+      { label: "Meditation • Breathwork", duration: "60 min", price: "$130" },
+      { label: "Meditation • Breath • Yoga", duration: "90 min", price: "$170" },
+      { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
+    ],
+  },
+  {
+    icon: Sparkles, title: "Self-Love Mentoring", img: selfLoveImg, slug: "Mentoring",
+    desc: "A devotional mentorship for those called to reclaim their wholeness, intuition and inner power — offered in person and virtually.",
+    tiers: [
+      { label: "6 Week Cosmic Mentoring", price: "$720" },
+      { label: "Four 60-min Sessions", price: "$468", note: "In person & virtual packages — 10% discount" },
+    ],
+  },
 ];
 
 function Offerings() {
@@ -54,14 +90,29 @@ function Offerings() {
             <div>
               <div className="flex items-center gap-2 text-primary">
                 <o.icon className="h-4 w-4" />
-                <span className="text-xs uppercase tracking-wider">{o.duration} · {o.price}</span>
+                <span className="text-xs uppercase tracking-wider">Sacred practice</span>
               </div>
               <h2 className="mt-2 font-display text-3xl sm:text-4xl">{o.title}</h2>
               <p className="mt-3 text-muted-foreground text-pretty">{o.desc}</p>
+              <ul className="mt-5 divide-y divide-border rounded-2xl border border-border bg-card/50">
+                {o.tiers.map((t, ti) => (
+                  <li key={ti} className="flex items-baseline justify-between gap-4 px-4 py-3">
+                    <div className="min-w-0">
+                      <div className="text-sm font-medium">{t.label}</div>
+                      {(t.duration || t.note) && (
+                        <div className="text-xs text-muted-foreground mt-0.5">
+                          {t.duration}{t.duration && t.note ? " · " : ""}{t.note}
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-sm font-display whitespace-nowrap text-primary">{t.price}</div>
+                  </li>
+                ))}
+              </ul>
               <Link
                 to="/book"
                 search={{ offering: o.slug }}
-                className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
               >
                 Book {o.title} <ArrowRight className="h-4 w-4" />
               </Link>
