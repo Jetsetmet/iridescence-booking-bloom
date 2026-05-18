@@ -9,10 +9,10 @@ import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles } from "lucide-react";
 export const Route = createFileRoute("/offerings")({
   head: () => ({
     meta: [
-      { title: "Offerings — Iridescence Healing" },
-      { name: "description", content: "Reiki, sound healing, cacao ceremony, breathwork, and self-love mentoring with Met in New Orleans." },
-      { property: "og:title", content: "Offerings — Iridescence Healing" },
-      { property: "og:description", content: "Reiki, sound healing, cacao ceremony, breathwork and mentoring." },
+      { title: "Reiki, Sound Healing, Cacao & Breathwork Sessions in New Orleans" },
+      { name: "description", content: "Book Crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring with Met in uptown New Orleans. Private, couple, group and virtual sessions." },
+      { property: "og:title", content: "Healing Sessions in New Orleans — Iridescence Healing" },
+      { property: "og:description", content: "Reiki, sound healing, cacao ceremonies, breathwork and intuitive mentoring in New Orleans." },
     ],
   }),
   component: Offerings,
