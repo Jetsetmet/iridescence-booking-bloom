@@ -45,8 +45,7 @@ function About() {
             than your remembering.
           </p>
           <p>
-            Whether you're navigating a transition, releasing what no longer serves,
-            or simply longing for stillness — you are welcome in this space, exactly as you are.
+            I'm Mehtap - most people call me Met. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
           </p>
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
