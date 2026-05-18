@@ -4,6 +4,7 @@ import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
+import packagesImg from "@/assets/packages-sound-bowls.jpg";
 import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
@@ -65,7 +66,7 @@ const items: Array<{
     ],
   },
   {
-    icon: Sparkles, title: "In Person & Virtual Packages", img: heroImg, slug: "Mentoring",
+    icon: Sparkles, title: "In Person & Virtual Packages", img: packagesImg, slug: "Mentoring",
     desc: "Bundled session packages with a 10% discount — held in person in uptown New Orleans or virtually from anywhere.",
     tiers: [
       { label: "Four 60-min Sessions", duration: "10% discount", price: "$468" },
