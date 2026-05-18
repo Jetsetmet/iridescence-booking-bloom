@@ -49,7 +49,7 @@ const items: Array<{
     ],
   },
   {
-    icon: Wind, title: "Bundled session packages with a 10% discount - held in person in uptown New Orleans or virtually from anywhere.", img: heroImg, slug: "Breathwork",
+    icon: Wind, title: "Meditation • Breath • Yoga", img: heroImg, slug: "Breathwork",
     desc: "Guided pranayama, somatic breath journeys and gentle yoga to release stored emotion and meet yourself in stillness.",
     tiers: [
       { label: "Meditation • Breathwork", duration: "60 min", price: "$130" },
