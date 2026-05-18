@@ -27,8 +27,8 @@ const items: Array<{
     icon: Heart, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
     desc: "Reiki sound healings that weave hands-on energy work with crystal and Tibetan singing bowls - to clear stagnation, restore flow and welcome your nervous system home. Met specializes in couples, one-on-one and group sessions.",
     tiers: [
+      { label: "Student", duration: "60 min", price: "$110" },
       { label: "\n", duration: "60 min", price: "$130" },
-       { label: "Student ", duration: "60 min", price: "$110" },
       { label: "\n", duration: "90 min", price: "$170" },
       { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
     ],
