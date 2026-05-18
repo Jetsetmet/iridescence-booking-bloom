@@ -3,7 +3,7 @@ import heroImg from "@/assets/hero-meditation.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
-import { Sparkles, Heart, Wind, Music2, Flame, ArrowRight, Quote, Triangle } from "lucide-react";
+import { ArrowRight, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/")({
 });
 
 const offerings = [
-  { icon: Heart, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore, and reconnect.", img: reikiImg },
-  { icon: Music2, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg },
-  { icon: Flame, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg },
+  { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore, and reconnect.", img: reikiImg },
+  { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg },
+  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg },
 ];
 
 const testimonials = [
@@ -54,7 +54,7 @@ function Home() {
                 to="/offerings"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent transition-colors"
               >
-                View Offerings <Sparkles className="h-4 w-4" />
+                View Offerings <Triangle className="h-4 w-4" />
               </Link>
             </div>
           </div>
@@ -133,7 +133,7 @@ function Home() {
               to="/quiz"
               className="mt-7 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground hover:opacity-90 transition-opacity"
             >
-              Begin the journey <Sparkles className="h-4 w-4" />
+              Begin the journey <Triangle className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -150,7 +150,7 @@ function Home() {
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
             <figure key={t.name} className="rounded-3xl bg-card border border-border p-7 shadow-card">
-              <Quote className="h-5 w-5 text-primary/60" />
+              <Triangle className="h-5 w-5 text-primary/60" />
               <blockquote className="mt-4 font-display text-xl leading-snug text-pretty">
                 "{t.quote}"
               </blockquote>
@@ -162,7 +162,7 @@ function Home() {
 
       {/* FINAL CTA */}
       <section className="mx-auto max-w-5xl px-5 sm:px-8 py-20 text-center">
-        <Wind className="mx-auto h-6 w-6 text-primary animate-shimmer" />
+        <Triangle className="mx-auto h-6 w-6 text-primary animate-shimmer" />
         <h2 className="mt-4 font-display text-4xl sm:text-5xl text-balance">
           Your journey to wholeness begins here.
         </h2>
