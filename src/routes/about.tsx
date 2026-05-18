@@ -50,7 +50,7 @@ function About() {
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
           <div className="rounded-2xl border border-border bg-card p-4">
-            <div className="text-2xl font-display">100+</div>
+            <div className="text-2xl font-display">1000+</div>
             <div className="text-muted-foreground mt-1">Sessions held</div>
           </div>
           <div className="rounded-2xl border border-border bg-card p-4">
@@ -58,7 +58,7 @@ function About() {
             <div className="text-muted-foreground mt-1">Average review</div>
           </div>
           <div className="rounded-2xl border border-border bg-card p-4">
-            <div className="text-2xl font-display">6+</div>
+            <div className="text-2xl font-display">17+</div>
             <div className="text-muted-foreground mt-1">Years practicing</div>
           </div>
         </div>
