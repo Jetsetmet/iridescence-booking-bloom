@@ -27,7 +27,7 @@ const items: Array<{
     desc: "One-on-one Reiki sound healings that weave hands-on energy work with crystal singing bowls — to clear stagnation, restore flow, and welcome your nervous system home. Met specializes in couples, one-on-one and group sessions.",
     tiers: [
       { label: "Crystal Reiki & Sound", duration: "60 min", price: "$130" },
-      { label: "Student Reiki & Sound", duration: "60 min", price: "$110" },
+      { label: "Student Crystal Reiki & Sound", duration: "60 min", price: "$110" },
       { label: "Crystal Reiki & Sound", duration: "90 min", price: "$170" },
       { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
     ],

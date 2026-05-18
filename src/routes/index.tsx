@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 });
 
 const offerings = [
-  { icon: Heart, title: "Reiki Healing", desc: "One-on-one energy healing to clear, restore, and reconnect.", img: reikiImg },
+  { icon: Heart, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore, and reconnect.", img: reikiImg },
   { icon: Music2, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg },
   { icon: Flame, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg },
 ];
