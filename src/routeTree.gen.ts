@@ -15,6 +15,7 @@ import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as OfferingsRouteImport } from './routes/offerings'
+import { Route as MeditationRouteImport } from './routes/meditation'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookRouteImport } from './routes/book'
@@ -51,6 +52,11 @@ const OfferingsRoute = OfferingsRouteImport.update({
   path: '/offerings',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MeditationRoute = MeditationRouteImport.update({
+  id: '/meditation',
+  path: '/meditation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EventsRoute = EventsRouteImport.update({
   id: '/events',
   path: '/events',
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
+  '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
+  '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
+  '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/events'
+    | '/meditation'
     | '/offerings'
     | '/quiz'
     | '/retreats'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/events'
+    | '/meditation'
     | '/offerings'
     | '/quiz'
     | '/retreats'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/events'
+    | '/meditation'
     | '/offerings'
     | '/quiz'
     | '/retreats'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   BookRoute: typeof BookRoute
   ContactRoute: typeof ContactRoute
   EventsRoute: typeof EventsRoute
+  MeditationRoute: typeof MeditationRoute
   OfferingsRoute: typeof OfferingsRoute
   QuizRoute: typeof QuizRoute
   RetreatsRoute: typeof RetreatsRoute
@@ -217,6 +230,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof OfferingsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/meditation': {
+      id: '/meditation'
+      path: '/meditation'
+      fullPath: '/meditation'
+      preLoaderRoute: typeof MeditationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/events': {
       id: '/events'
       path: '/events'
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   BookRoute: BookRoute,
   ContactRoute: ContactRoute,
   EventsRoute: EventsRoute,
+  MeditationRoute: MeditationRoute,
   OfferingsRoute: OfferingsRoute,
   QuizRoute: QuizRoute,
   RetreatsRoute: RetreatsRoute,
