@@ -4,7 +4,7 @@ import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
-import packagesImg from "@/assets/met-yoga-beach.jpg";
+import packagesImg from "@/assets/moon.jpg";
 import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
