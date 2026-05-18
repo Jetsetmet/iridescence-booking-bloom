@@ -129,6 +129,27 @@ function Offerings() {
           </article>
         ))}
       </section>
+
+      <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-20">
+        <div className="rounded-3xl border border-border bg-card/50 p-8 sm:p-10">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">More ways to journey</p>
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl">Continue exploring.</h2>
+          <div className="mt-6 grid sm:grid-cols-3 gap-4">
+            <Link to="/meditation" className="rounded-2xl border border-border bg-background/60 p-5 hover:bg-accent transition-colors">
+              <div className="font-display text-xl">Meditation & Yoga</div>
+              <p className="mt-1 text-sm text-muted-foreground">Weekly breathwork and Kundalini classes.</p>
+            </Link>
+            <Link to="/retreats" className="rounded-2xl border border-border bg-background/60 p-5 hover:bg-accent transition-colors">
+              <div className="font-display text-xl">Retreats</div>
+              <p className="mt-1 text-sm text-muted-foreground">Costa Rica & seasonal immersions.</p>
+            </Link>
+            <Link to="/quiz" className="rounded-2xl border border-border bg-background/60 p-5 hover:bg-accent transition-colors">
+              <div className="font-display text-xl">Find Your Path</div>
+              <p className="mt-1 text-sm text-muted-foreground">A 60-second quiz to guide you.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
