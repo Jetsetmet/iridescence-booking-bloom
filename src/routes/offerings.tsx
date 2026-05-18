@@ -4,7 +4,7 @@ import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
-import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles } from "lucide-react";
+import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
   head: () => ({
@@ -97,7 +97,7 @@ function Offerings() {
             </div>
             <div>
               <div className="flex items-center gap-2 text-primary">
-                <o.icon className="h-4 w-4" />
+                <Triangle className="h-4 w-4" />
                 <span className="text-xs uppercase tracking-wider">Sacred practice</span>
               </div>
               <h2 className="mt-2 font-display text-3xl sm:text-4xl">{o.title}</h2>
