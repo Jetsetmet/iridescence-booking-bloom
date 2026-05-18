@@ -5,10 +5,10 @@ import { Sparkles, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Met — Iridescence Healing" },
-      { name: "description", content: "Meet Mehtap (Met), Reiki Master, sound healer and ceremony holder in uptown New Orleans." },
-      { property: "og:title", content: "About Met — Iridescence Healing" },
-      { property: "og:description", content: "Meet Mehtap (Met), Reiki Master and sound healer in New Orleans." },
+      { title: "About Met — New Orleans Reiki Master, Sound Healer & Intuitive Guide" },
+      { name: "description", content: "Meet Mehtap (Met) — certified Reiki Master, sound healer, breathwork guide, yoga teacher and intuitive energy practitioner in uptown New Orleans. 17+ years, 1000+ sessions." },
+      { property: "og:title", content: "About Met — Reiki Master & Intuitive Healer in New Orleans" },
+      { property: "og:description", content: "Certified Reiki Master, sound healer and intuitive guide in uptown New Orleans." },
       { property: "og:image", content: heroImg },
     ],
   }),
