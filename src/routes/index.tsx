@@ -37,15 +37,11 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="relative mx-auto max-w-7xl px-5 sm:px-8 pt-16 pb-24 grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-up">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/60 px-3 py-1 text-xs text-muted-foreground">
-              <Sparkles className="h-3.5 w-3.5" /> Uptown New Orleans · In-person & remote
-            </div>
-            <h1 className="mt-5 font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance">
-              A gentle return to your <span className="italic bg-iridescent bg-clip-text text-transparent">inner light</span>.
+            <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance">
+              A gentle return to your <span className="italic">inner light</span>.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl text-pretty">
-              I'm Met. Through Reiki, sound, breath and ceremony I hold a soft space
-              for you to slow down, reconnect, and remember the wisdom within you.
+              I'm Met — Reiki, sound and ceremony in uptown New Orleans.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -55,16 +51,11 @@ function Home() {
                 Book a Session <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                to="/quiz"
+                to="/offerings"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent transition-colors"
               >
-                Find Your Path <Sparkles className="h-4 w-4" />
+                View Offerings <Sparkles className="h-4 w-4" />
               </Link>
-            </div>
-            <div className="mt-10 flex items-center gap-6 text-xs text-muted-foreground">
-              <div>★★★★★ <span className="ml-1">100+ guided journeys</span></div>
-              <div className="h-4 w-px bg-border" />
-              <div>Certified Reiki Master</div>
             </div>
           </div>
           <div className="relative">
