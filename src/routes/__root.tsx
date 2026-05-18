@@ -76,13 +76,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Iridescence Healing — Reiki & Sound Healing in New Orleans" },
-      { name: "description", content: "Met (Mehtap) offers Reiki, sound baths, cacao ceremonies, breathwork and mentoring in uptown New Orleans. A gentle return to your inner light." },
+      { title: "Iridescence Healing — Reiki, Sound Healing & Energy Work in New Orleans" },
+      { name: "description", content: "Reiki, sound healing, cacao ceremonies, breathwork, yoga, self-love mentoring and intuitive energy guidance with Met in uptown New Orleans. Book in-person or virtual sessions." },
+      { name: "keywords", content: "New Orleans Reiki, sound healing New Orleans, sound bath, breathwork, cacao ceremony, energy healing, intuitive guide, self love mentoring, yoga, meditation, crystal healing, Reiki Master, uptown New Orleans" },
       { name: "author", content: "Iridescence Healing" },
-      { property: "og:title", content: "Iridescence Healing — New Orleans" },
-      { property: "og:description", content: "Reiki, sound baths, cacao ceremonies and breathwork in uptown New Orleans." },
+      { property: "og:title", content: "Iridescence Healing — Reiki & Sound Healing in New Orleans" },
+      { property: "og:description", content: "Reiki, sound healing, cacao, breathwork, yoga and intuitive energy guidance in uptown New Orleans." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { property: "og:site_name", content: "Iridescence Healing" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
@@ -92,6 +94,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HealthAndBeautyBusiness",
+          name: "Iridescence Healing",
+          description: "Reiki Master, sound healer, breathwork guide and intuitive energy practitioner offering ceremonies and mentoring in uptown New Orleans.",
+          founder: { "@type": "Person", name: "Mehtap (Met)" },
+          areaServed: { "@type": "City", name: "New Orleans" },
+          address: { "@type": "PostalAddress", addressLocality: "New Orleans", addressRegion: "LA", addressCountry: "US" },
+          knowsAbout: [
+            "Reiki", "Crystal Reiki", "Sound Healing", "Sound Bath", "Cacao Ceremony",
+            "Breathwork", "Meditation", "Yoga", "Self Love Mentoring", "Energy Healing",
+            "Intuitive Guidance", "Chakra Balancing",
+          ],
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
