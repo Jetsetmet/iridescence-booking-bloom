@@ -54,7 +54,7 @@ const items: Array<{
      desc: "Guided pranayama, somatic breath journeys and gentle yoga to release stored emotion and meet yourself in stillness.",
      tiers: [
        { label: "\n", duration: "60 min", price: "$130" },
-       { label: "Breath • Yoga", duration: "90 min", price: "$170" },
+       { label: "\n", duration: "90 min", price: "$170" },
        { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
      ],
    },
