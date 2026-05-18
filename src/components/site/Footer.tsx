@@ -23,7 +23,8 @@ export function Footer() {
         <div className="text-sm space-y-2 text-muted-foreground">
           <div className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Uptown New Orleans, LA</div>
           <a href="mailto:met@iridescencehealing.com" className="flex items-center gap-2 hover:text-foreground">
-            <Mail className="h-4 w-4" /> met@iridescencehealing.com
+            <Mail className="h-4 w-4" />
+            <span>met@iridescencehealing.com</span>
           </a>
           <a href="https://instagram.com/iridescence_healing" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
             <Instagram className="h-4 w-4" /> @iridescence_healing
@@ -34,7 +35,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-border/60 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Iridescence Healing · With love, Mehtap
+        © 2026 Iridescence Healing · With love, Mehtap
       </div>
     </footer>
   );
