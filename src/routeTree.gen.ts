@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThanksRouteImport } from './routes/thanks'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as EventsRouteImport } from './routes/events'
@@ -33,6 +34,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ReviewsRoute = ReviewsRouteImport.update({
   id: '/reviews',
   path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetreatsRoute = RetreatsRouteImport.update({
+  id: '/retreats',
+  path: '/retreats',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuizRoute = QuizRouteImport.update({
@@ -79,6 +85,7 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
+  '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
@@ -91,6 +98,7 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
+  '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
@@ -104,6 +112,7 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
+  '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
@@ -118,6 +127,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/offerings'
     | '/quiz'
+    | '/retreats'
     | '/reviews'
     | '/sitemap.xml'
     | '/thanks'
@@ -130,6 +140,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/offerings'
     | '/quiz'
+    | '/retreats'
     | '/reviews'
     | '/sitemap.xml'
     | '/thanks'
@@ -142,6 +153,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/offerings'
     | '/quiz'
+    | '/retreats'
     | '/reviews'
     | '/sitemap.xml'
     | '/thanks'
@@ -155,6 +167,7 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   OfferingsRoute: typeof OfferingsRoute
   QuizRoute: typeof QuizRoute
+  RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ThanksRoute: typeof ThanksRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/reviews'
       fullPath: '/reviews'
       preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retreats': {
+      id: '/retreats'
+      path: '/retreats'
+      fullPath: '/retreats'
+      preLoaderRoute: typeof RetreatsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quiz': {
@@ -243,6 +263,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   OfferingsRoute: OfferingsRoute,
   QuizRoute: QuizRoute,
+  RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ThanksRoute: ThanksRoute,
@@ -250,3 +271,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
