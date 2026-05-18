@@ -3,7 +3,7 @@ import heroImg from "@/assets/hero-meditation.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
-import { Sparkles, Heart, Wind, Music2, Flame, ArrowRight, Quote } from "lucide-react";
+import { Sparkles, Heart, Wind, Music2, Flame, ArrowRight, Quote, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -100,7 +100,7 @@ function Home() {
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 text-primary">
-                  <o.icon className="h-4 w-4" />
+                  <Triangle className="h-4 w-4" />
                   <span className="text-xs uppercase tracking-wider">Sacred practice</span>
                 </div>
                 <h3 className="mt-2 font-display text-2xl">{o.title}</h3>
