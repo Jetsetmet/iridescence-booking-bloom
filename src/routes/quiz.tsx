@@ -81,8 +81,8 @@ function tally(answers: Record<string, number>) {
 }
 
 const blurbs: Record<string, string> = {
-  Reiki: "A one-on-one Reiki session — gentle, deep, and clearing. This is where you let go.",
-  "Sound Bath": "A sound bath — bowls, gongs, and a soft place to land. Quiet the mind, drop in.",
+  Reiki: "A one-on-one Reiki session — gentle, deep  and clearing. This is where you let go.",
+  "Sound Bath": "A sound bath — bowls, gongs  and a soft place to land. Quiet the mind, drop in.",
   "Cacao Ceremony": "A cacao ceremony — heart-opening medicine held in sacred circle.",
   Breathwork: "Guided breathwork — to move what's been stored and meet yourself underneath.",
   Mentoring: "Self-love mentoring — a four-session journey to come home to your wholeness.",

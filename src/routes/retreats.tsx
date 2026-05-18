@@ -9,7 +9,7 @@ export const Route = createFileRoute("/retreats")({
       { title: "Transformative Retreats — Costa Rica with Iridescence Healing" },
       { name: "description", content: "Immersive Costa Rica retreats blending Reiki, sound healing, cacao, yoga, breathwork and nature immersion. December 2025 & January 2026." },
       { property: "og:title", content: "Transformative Retreats — Costa Rica" },
-      { property: "og:description", content: "Deeply nourishing, spacious retreats in Puntarenas, Costa Rica — reconnect, release, and step into clarity." },
+      { property: "og:description", content: "Deeply nourishing, spacious retreats in Puntarenas, Costa Rica — reconnect, release  and step into clarity." },
       { property: "og:image", content: heroImg },
     ],
   }),
@@ -51,7 +51,7 @@ function Retreats() {
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Why Costa Rica</p>
             <h2 className="mt-2 font-display text-4xl">The land remembers you.</h2>
             <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-              Lush jungles, warm ocean, and a rhythm that invites you to slow down and listen. Costa Rica holds a nurturing, healing presence — many feel an unexplainable shift here, as if the land helps them remember themselves.
+              Lush jungles, warm ocean  and a rhythm that invites you to slow down and listen. Costa Rica holds a nurturing, healing presence — many feel an unexplainable shift here, as if the land helps them remember themselves.
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ function Retreats() {
           <h2 className="mt-3 font-display text-4xl">4-Day Oneness Spiritual Emergence Retreat</h2>
           <p className="mt-2 text-sm text-muted-foreground">Costa Rica · Teens, Young Adults & Adults · From $4,422 pp</p>
           <p className="mt-4 text-foreground/80 leading-relaxed text-pretty max-w-3xl">
-            A one-on-one sanctuary in Costa Rica's wilderness — a gentle yet profound reset to shed old patterns, soothe the nervous system, and awaken the joy that lives within. Designed with your heart's vision in mind.
+            A one-on-one sanctuary in Costa Rica's wilderness — a gentle yet profound reset to shed old patterns, soothe the nervous system  and awaken the joy that lives within. Designed with your heart's vision in mind.
           </p>
 
           <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-foreground/80 list-disc pl-5">
