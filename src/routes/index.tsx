@@ -78,7 +78,7 @@ function Home() {
             An honour your path led you here.
           </p>
           <p className="mt-5 text-muted-foreground text-pretty">
-            A nurturing space uptown in New Orleans where ancient energy and heart medicine meet —
+            A nurturing space uptown in New Orleans where ancient energy and heart medicine meet -
             sound baths, Reiki, cacao, breathwork, meditation and mentoring to help you slow down,
             reconnect, and remember the wisdom within you.
           </p>
