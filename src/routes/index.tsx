@@ -8,10 +8,10 @@ import { Sparkles, Heart, Wind, Music2, Flame, ArrowRight, Quote } from "lucide-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Iridescence Healing — Reiki, Sound Baths & Cacao in New Orleans" },
-      { name: "description", content: "A gentle return to your inner light. Reiki, sound healing, cacao ceremonies, breathwork and mentoring with Met in uptown New Orleans." },
-      { property: "og:title", content: "Iridescence Healing — New Orleans" },
-      { property: "og:description", content: "Reiki, sound healing, cacao ceremonies and breathwork in uptown New Orleans." },
+      { title: "Reiki, Sound Healing & Energy Work in New Orleans | Iridescence Healing" },
+      { name: "description", content: "New Orleans Reiki Master Met offers crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring. 17+ years of intuitive energy healing in uptown New Orleans." },
+      { property: "og:title", content: "Reiki & Sound Healing in New Orleans — Iridescence Healing" },
+      { property: "og:description", content: "Crystal Reiki, sound baths, cacao ceremonies, breathwork and intuitive energy guidance with Met in uptown New Orleans." },
       { property: "og:image", content: heroImg },
     ],
   }),
@@ -70,7 +70,7 @@ function Home() {
           <div className="relative">
             <img
               src={heroImg}
-              alt="Met in meditation at golden hour in a tropical garden"
+              alt="Met leading meditation and energy healing at golden hour — Reiki and sound healing in New Orleans"
               width={1080}
               height={1920}
               className="relative rounded-[2rem] shadow-card object-cover w-full h-[520px] lg:h-[640px]"
@@ -95,7 +95,7 @@ function Home() {
               className="group rounded-3xl overflow-hidden bg-card shadow-card border border-border hover:shadow-glow transition-all"
             >
               <div className="aspect-[5/4] overflow-hidden">
-                <img src={o.img} alt={o.title} loading="lazy" width={1280} height={960}
+                <img src={o.img} alt={`${o.title} in New Orleans with Met — Iridescence Healing`} loading="lazy" width={1280} height={960}
                   className="h-full w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
               </div>
               <div className="p-6">

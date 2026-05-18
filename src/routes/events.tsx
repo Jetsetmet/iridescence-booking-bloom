@@ -7,10 +7,10 @@ import { Calendar, MapPin, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Upcoming Events — Iridescence Healing" },
-      { name: "description", content: "Group sound baths, cacao ceremonies and breathwork circles in New Orleans." },
-      { property: "og:title", content: "Upcoming Events — Iridescence Healing" },
-      { property: "og:description", content: "Group sound baths, cacao ceremonies and breathwork circles." },
+      { title: "Sound Baths, Cacao & Breathwork Events in New Orleans — Iridescence Healing" },
+      { name: "description", content: "Upcoming full moon sound baths, cacao ceremonies, breathwork circles and yoga gatherings in uptown New Orleans with Met. Small intimate groups." },
+      { property: "og:title", content: "Healing Events in New Orleans — Iridescence Healing" },
+      { property: "og:description", content: "Full moon sound baths, cacao ceremonies and sunrise breathwork in New Orleans." },
     ],
   }),
   component: Events,
@@ -36,7 +36,8 @@ function Events() {
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {events.map((e) => (
           <article key={e.title} className="rounded-3xl overflow-hidden bg-card border border-border shadow-card flex flex-col">
-            <img src={e.img} alt={e.title} loading="lazy" width={1280} height={960}
+            <img src={e.img} alt={`${e.title} — ${e.loc}, healing ceremony in New Orleans`}
+              loading="lazy" width={1280} height={960}
               className="h-52 w-full object-cover" />
             <div className="p-6 flex-1 flex flex-col">
               <div className="text-xs text-primary uppercase tracking-wider flex items-center gap-1.5">
