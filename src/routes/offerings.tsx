@@ -11,8 +11,8 @@ export const Route = createFileRoute("/offerings")({
   head: () => ({
     meta: [
       { title: "Reiki, Sound Healing, Cacao & Breathwork Sessions in New Orleans" },
-      { name: "description", content: "Book Crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring with Met in uptown New Orleans. Private, couple, group and virtual sessions." },
-      { property: "og:title", content: "Healing Sessions in New Orleans — Iridescence Healing" },
+       { name: "description", content: "Book Crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring with Mehtap in uptown New Orleans. Private, couple, group and virtual sessions." },
+       { property: "og:title", content: "Healing Sessions in New Orleans - Iridescence Healing" },
       { property: "og:description", content: "Reiki, sound healing, cacao ceremonies, breathwork and intuitive mentoring in New Orleans." },
     ],
   }),
@@ -25,7 +25,7 @@ const items: Array<{
 }> = [
   {
     icon: Heart, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
-    desc: "Reiki sound healings that weave hands-on energy work with crystal and Tibetan singing bowls - to clear stagnation, restore flow and welcome your nervous system home. Met specializes in couples, one-on-one and group sessions.",
+     desc: "Reiki sound healings that weave hands-on energy work with crystal and Tibetan singing bowls - to clear stagnation, restore flow and welcome your nervous system home. Mehtap specializes in couples, one-on-one and group sessions.",
     tiers: [
       { label: "Student", duration: "60 min", price: "$110" },
       { label: "\n", duration: "60 min", price: "$130" },
@@ -92,7 +92,7 @@ function Offerings() {
         {items.map((o, i) => (
           <article key={o.title} className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 ? "md:[&>div:first-child]:order-2" : ""}`}>
             <div className="rounded-3xl overflow-hidden shadow-card">
-              <img src={o.img} alt={`${o.title} session with Met at Iridescence Healing in New Orleans`}
+               <img src={o.img} alt={`${o.title} session with Mehtap at Iridescence Healing in New Orleans`}
                 loading="lazy" width={1280} height={960}
                 className="w-full h-[360px] object-cover" />
             </div>
