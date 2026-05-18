@@ -61,9 +61,9 @@ const items: Array<{
   {
     icon: Sparkles, title: "Self-Love Mentoring", img: selfLoveImg, slug: "Mentoring",
     desc: "A devotional mentorship for those called to reclaim their wholeness, intuition and inner power — offered in person and virtually.",
-    tiers: [
-      { label: "Each offering is held with intention, presence and a safe container - so you can soften the rest.", price: "$720" },
-    ],
+     tiers: [
+       { label: "6 Week Mentoring Programme", price: "$720" },
+     ],
   },
   {
     icon: Sparkles, title: "In Person & Virtual Packages", img: packagesImg, slug: "Mentoring",
