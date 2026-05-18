@@ -4,8 +4,8 @@ import { Mail, MapPin, Instagram } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Iridescence Healing" },
-      { name: "description", content: "Reach Met for questions, custom sessions, or private group ceremonies in New Orleans." },
+      { title: "Contact Met — Reiki & Sound Healing in New Orleans" },
+      { name: "description", content: "Contact Met for Reiki, sound healing, cacao ceremonies, breathwork, yoga and private group sessions in uptown New Orleans." },
     ],
   }),
   component: Contact,
