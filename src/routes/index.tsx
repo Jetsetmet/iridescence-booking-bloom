@@ -9,9 +9,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Reiki, Sound Healing & Energy Work in New Orleans | Iridescence Healing" },
-      { name: "description", content: "New Orleans Reiki Master Met offers crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring. 17+ years of intuitive energy healing in uptown New Orleans." },
-      { property: "og:title", content: "Reiki & Sound Healing in New Orleans — Iridescence Healing" },
-      { property: "og:description", content: "Crystal Reiki, sound baths, cacao ceremonies, breathwork and intuitive energy guidance with Met in uptown New Orleans." },
+       { name: "description", content: "New Orleans Reiki Master Mehtap offers crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring. 17+ years of intuitive energy healing in uptown New Orleans." },
+       { property: "og:title", content: "Reiki & Sound Healing in New Orleans - Iridescence Healing" },
+       { property: "og:description", content: "Crystal Reiki, sound baths, cacao ceremonies, breathwork and intuitive energy guidance with Mehtap in uptown New Orleans." },
       { property: "og:image", content: heroImg },
     ],
   }),
@@ -40,9 +40,9 @@ function Home() {
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl leading-[1.05] text-balance">
               A gentle return to your <span className="italic">inner light</span>.
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl text-pretty">
-              I'm Met — Reiki, sound and ceremony in uptown New Orleans.
-            </p>
+             <p className="mt-6 text-lg text-muted-foreground max-w-xl text-pretty">
+               I'm Mehtap - offering heart led healing through Reiki, Sound and Ceremony in uptown New Orleans.
+             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/book"
