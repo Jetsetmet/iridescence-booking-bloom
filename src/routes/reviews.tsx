@@ -5,9 +5,9 @@ export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
       { title: "Client Reviews — Iridescence Healing, New Orleans Reiki & Sound Healing" },
-      { name: "description", content: "Read client reviews for Met at Iridescence Healing — Reiki, sound healing, breathwork and intuitive energy sessions in uptown New Orleans." },
+      { name: "description", content: "Read client reviews for Mehtap at Iridescence Healing - Reiki, sound healing, breathwork and intuitive energy sessions in uptown New Orleans." },
       { property: "og:title", content: "Client Reviews — Iridescence Healing" },
-      { property: "og:description", content: "Stories from clients who have experienced Reiki, sound healing and intuitive guidance with Met in New Orleans." },
+      { property: "og:description", content: "Stories from clients who have experienced Reiki, sound healing and intuitive guidance with Mehtap in New Orleans." },
     ],
   }),
   component: Reviews,
