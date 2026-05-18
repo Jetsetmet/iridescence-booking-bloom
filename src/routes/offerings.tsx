@@ -83,8 +83,8 @@ function Offerings() {
         <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance max-w-3xl">
           Sacred practices for your remembering.
         </h1>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          Each offering is held with intention, presence, and a soft container — so you can soften the rest.
+        <p className="mt-4 max-w-2xl text-muted-foreground whitespace-pre-line">
+          Each offering is held with intention, presence and a safe container -{"\n"} so you can soften the rest.
         </p>
       </section>
 
