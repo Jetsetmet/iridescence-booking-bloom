@@ -30,6 +30,9 @@ function About() {
         </h1>
         <div className="mt-6 space-y-5 text-foreground/80 leading-relaxed text-pretty">
           <p>
+            I'm Mehtap - most people call me Met. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
+          </p>
+          <p>
             My path to this work began as so many do — through my own quiet unraveling.
             Years of seeking led me to the ancient practices that gently put me back together,
             and I now offer them as a soft return for anyone called to slow down.
@@ -38,9 +41,6 @@ function About() {
             My approach is rooted in heart medicine, ancestral wisdom and a deep
             trust in the body's innate intelligence. There is no agenda here other
             than your remembering.
-          </p>
-          <p>
-            I'm Mehtap - most people call me Met. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
           </p>
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
