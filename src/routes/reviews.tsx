@@ -16,12 +16,12 @@ export const Route = createFileRoute("/reviews")({
 const reviews: { quote: string; author: string }[] = [
   {
     quote:
-      "Every time I leave a session I feel completely and utterly rejuvenated. Anytime I feel I need healing in my life, I call Met. And anytime things are going really great, I call Met to assist me with clearing even more, feeling even better than I thought I could  and taking that time to connect more deeply with myself. She is so personable and easy to talk to, but also respectful of your personal boundaries. I have been having sessions done with her for almost a year now and my experiences have all been outstanding. I would suggest Iridescence Healing to anyone interested in trying reiki for the first time. I would also suggest Iridescence Healing to anyone who regularly practices reiki, so you can experience Met's beautiful way of treating people. Met is truly a shining star and I am so glad to have her help me in my journey.",
+      "Every time I leave a session I feel completely and utterly rejuvenated. Anytime I feel I need healing in my life, I call Met. And anytime things are going really great, I call Met to assist me with clearing even more, feeling even better than I thought I could and taking that time to connect more deeply with myself. She is so personable and easy to talk to, but also respectful of your personal boundaries. I have been having sessions done with her for almost a year now and my experiences have all been outstanding. I would suggest Iridescence Healing to anyone interested in trying reiki for the first time. I would also suggest Iridescence Healing to anyone who regularly practices reiki, so you can experience Met's beautiful way of treating people. Met is truly a shining star and I am so glad to have her help me in my journey.",
     author: "Brittany V.",
   },
   {
     quote:
-      "I went for a session with Met on my last visit to New Orleans based mainly on Yelp recommendations (thank you all!). I wanted to start my short vacation well-balanced  and scheduled with her for my first day in town. The studio is incredibly inviting and cozy. As soon as Met greeted me, her energy was warm and uplifting. I have been to a number of Reiki sessions in the past  and this was one of my best experiences. The techniques Met incorporates are holistic and fit directly for the individual. Her intuition is definitely In Tune  and she provided insights that I was able to focus on for the next few weeks. Also, my overall physical body felt absolutely electrified and elevated afterward. I highly recommend Met whether this is your first time experiencing Reiki, or, like myself, are familiar with the practice and need a recharge. Thank you thank you thank you, Met.",
+      "I went for a session with Met on my last visit to New Orleans based mainly on Yelp recommendations (thank you all!). I wanted to start my short vacation well-balanced and scheduled with her for my first day in town. The studio is incredibly inviting and cozy. As soon as Met greeted me, her energy was warm and uplifting. I have been to a number of Reiki sessions in the past and this was one of my best experiences. The techniques Met incorporates are holistic and fit directly for the individual. Her intuition is definitely In Tune and she provided insights that I was able to focus on for the next few weeks. Also, my overall physical body felt absolutely electrified and elevated afterward. I highly recommend Met whether this is your first time experiencing Reiki, or, like myself, are familiar with the practice and need a recharge. Thank you thank you thank you, Met.",
     author: "Mau R.",
   },
   {
@@ -31,7 +31,7 @@ const reviews: { quote: string; author: string }[] = [
   },
   {
     quote:
-      "Met is amazing. Every time she works on me, I feel like a new person. She's very intuitive and caring. The combo of oils, crystals  and healing touch is like nothing I've ever experienced. The ambiance and music choice is always soothing — in fact, I feel instantly better just walking into her space. Plus her prices are reasonable and worth it. I highly recommend her again and again!",
+      "Met is amazing. Every time she works on me, I feel like a new person. She's very intuitive and caring. The combo of oils, crystals and healing touch is like nothing I've ever experienced. The ambiance and music choice is always soothing — in fact, I feel instantly better just walking into her space. Plus her prices are reasonable and worth it. I highly recommend her again and again!",
     author: "Tara L.",
   },
   {

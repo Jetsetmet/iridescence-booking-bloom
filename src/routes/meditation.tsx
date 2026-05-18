@@ -26,10 +26,10 @@ function Meditation() {
             Awaken the energy <span className="italic bg-iridescent bg-clip-text text-transparent">within</span>.
           </h1>
           <p className="mt-6 text-foreground/80 leading-relaxed text-pretty">
-            Meditation and breathwork are gentle yet powerful practices that calm the mind, nurture the heart  and restore balance. Meditation creates space to reconnect with your true self, while breathwork helps release tension, soothe the nervous system  and bring clarity.
+            Meditation and breathwork are gentle yet powerful practices that calm the mind, nurture the heart and restore balance. Meditation creates space to reconnect with your true self, while breathwork helps release tension, soothe the nervous system and bring clarity.
           </p>
           <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-            Kundalini yoga weaves meditation, breathwork  and mindful movement together to clear blockages in the energy system — restoring harmony, supporting emotional healing  and deepening spiritual awareness.
+            Kundalini yoga weaves meditation, breathwork and mindful movement together to clear blockages in the energy system — restoring harmony, supporting emotional healing and deepening spiritual awareness.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
@@ -53,10 +53,10 @@ function Meditation() {
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Yoga</p>
           <h2 className="mt-2 font-display text-4xl">Kundalini — heart-centered & transformative.</h2>
           <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-            Kundalini yoga blends dynamic movement, breathwork  and mantra to awaken the dormant energy within the body. Rooted in ancient yogic tradition, it is challenging and deeply transformative. Met has practiced yoga for over 20 years and teaches from her own lived journey.
+            Kundalini yoga blends dynamic movement, breathwork and mantra to awaken the dormant energy within the body. Rooted in ancient yogic tradition, it is challenging and deeply transformative. Met has practiced yoga for over 20 years and teaches from her own lived journey.
           </p>
           <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-            She completed her Hatha Yoga teacher training at Wild Lotus Yoga in 2014, with additional training in restorative and children's yoga. In 2024 she deepened her path in India through intensive Kundalini training with Gurmukh and Guru Shabd of Golden Bridge Yoga — a profoundly challenging and life-changing experience. Her daily Kundalini practice continues to bring her peace, clarity  and balance.
+            She completed her Hatha Yoga teacher training at Wild Lotus Yoga in 2014, with additional training in restorative and children's yoga. In 2024 she deepened her path in India through intensive Kundalini training with Gurmukh and Guru Shabd of Golden Bridge Yoga — a profoundly challenging and life-changing experience. Her daily Kundalini practice continues to bring her peace, clarity and balance.
           </p>
         </div>
       </section>

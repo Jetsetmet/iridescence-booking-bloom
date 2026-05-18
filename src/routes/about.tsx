@@ -35,7 +35,7 @@ function About() {
           <p>
             My path to this work began as so many do — through my own quiet unraveling.
             Years of seeking led me to the ancient practices that gently put me back together,
-            and I now offer them as a soft return for anyone called to slow down.
+           and I now offer them as a soft return for anyone called to slow down.
           </p>
           <p>
             My approach is rooted in heart medicine, ancestral wisdom and a deep
