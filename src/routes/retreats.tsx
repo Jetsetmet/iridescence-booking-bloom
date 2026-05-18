@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Leaf, Sun, Heart, Sparkles } from "lucide-react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
-import natureImg from "@/assets/sound-bowls.jpg";
+import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
@@ -44,7 +44,7 @@ function Retreats() {
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <img src={natureImg} alt="Costa Rica jungle, beach and waterfall retreat setting"
+          <img src={natureImg} alt="Sunset ocean swim in Costa Rica — healing retreat with Iridescence Healing"
             loading="lazy" width={1200} height={1200}
             className="rounded-[2rem] shadow-soft object-cover w-full h-[420px] order-2 md:order-1" />
           <div className="order-1 md:order-2">
