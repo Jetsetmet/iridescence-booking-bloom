@@ -24,7 +24,7 @@ const items: Array<{
 }> = [
   {
     icon: Heart, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
-    desc: "A deep energy healing session weaving Reiki with crystal singing bowls — to clear stagnation, restore flow, and welcome your nervous system home.",
+    desc: "One-on-one Reiki sound healings that weave hands-on energy work with crystal singing bowls — to clear stagnation, restore flow, and welcome your nervous system home. Met specializes in couples, one-on-one and group sessions.",
     tiers: [
       { label: "Crystal Reiki & Sound", duration: "60 min", price: "$130" },
       { label: "Student Reiki & Sound", duration: "60 min", price: "$110" },
