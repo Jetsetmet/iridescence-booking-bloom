@@ -19,7 +19,8 @@ function About() {
   return (
     <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-2 gap-12 items-start">
       <div className="lg:sticky lg:top-24">
-        <img src={heroImg} alt="Met" loading="lazy" width={1080} height={1920}
+        <img src={heroImg} alt="Mehtap (Met) — Reiki Master, sound healer and intuitive energy guide in uptown New Orleans"
+          loading="lazy" width={1080} height={1920}
           className="rounded-[2rem] shadow-glow object-cover w-full h-[520px]" />
       </div>
       <div>
