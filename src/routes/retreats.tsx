@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Leaf, Sun, Heart, Sparkles } from "lucide-react";
+import { ArrowRight, Triangle, Sparkles } from "lucide-react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 
@@ -67,14 +67,14 @@ function Retreats() {
         <div className="mt-10 grid md:grid-cols-2 gap-6">
           {[
             {
-              icon: Sun,
+              icon: Triangle,
               dates: "December 2–9, 2025",
               title: "Winter Reset Retreat",
               blurb: "A week of slow mornings, ceremony and deep release as the year closes.",
               pdf: "https://iridescencehealing.com/wp-content/uploads/2025/05/29DecRetreat.pdf",
             },
             {
-              icon: Leaf,
+              icon: Triangle,
               dates: "January 11–16, 2026",
               title: "Somatic Awakening Retreat",
               blurb: "Begin the year aligned — nervous system reset, breath, sound and cacao.",
@@ -98,7 +98,7 @@ function Retreats() {
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
           <div className="flex items-center gap-2">
-            <Heart className="h-5 w-5 text-primary" />
+            <Triangle className="h-5 w-5 text-primary" />
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private journey</p>
           </div>
           <h2 className="mt-3 font-display text-4xl">4-Day Oneness Spiritual Emergence Retreat</h2>
