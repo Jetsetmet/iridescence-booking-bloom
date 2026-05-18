@@ -25,7 +25,7 @@ const offerings = [
 ];
 
 const testimonials = [
-  { quote: "Met held the most beautiful, safe container. I left feeling completely re-tuned to myself.", name: "Sarah K." },
+  { quote: "Mehtap held the most beautiful, safe container. I left feeling completely re-tuned to myself.", name: "Sarah K." },
   { quote: "The sound bath was unlike anything I've experienced — I cried, I laughed, I came home.", name: "Daniel R." },
   { quote: "A genuine healer. The Reiki session shifted something I'd been carrying for years.", name: "Aisha M." },
 ];
@@ -61,7 +61,7 @@ function Home() {
           <div className="relative">
             <img
               src={heroImg}
-              alt="Met leading meditation and energy healing at golden hour — Reiki and sound healing in New Orleans"
+              alt="Mehtap leading meditation and energy healing at golden hour — Reiki and sound healing in New Orleans"
               width={1080}
               height={1920}
               className="relative rounded-[2rem] shadow-card object-cover w-full h-[520px] lg:h-[640px]"
@@ -98,7 +98,7 @@ function Home() {
               className="group rounded-3xl overflow-hidden bg-card shadow-card border border-border hover:shadow-glow transition-all"
             >
               <div className="aspect-[5/4] overflow-hidden">
-                <img src={o.img} alt={`${o.title} in New Orleans with Met — Iridescence Healing`} loading="lazy" width={1280} height={960}
+                <img src={o.img} alt={`${o.title} in New Orleans with Mehtap - Iridescence Healing`} loading="lazy" width={1280} height={960}
                   className="h-full w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
               </div>
               <div className="p-6">
