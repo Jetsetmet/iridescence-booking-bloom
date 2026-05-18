@@ -29,7 +29,7 @@ const items: Array<{
     tiers: [
       { label: "\n", duration: "60 min", price: "Student " },
       { label: "Student Crystal Reiki & Sound", duration: "60 min", price: "$110" },
-      { label: "Crystal Reiki & Sound", duration: "90 min", price: "$170" },
+      { label: "\n", duration: "90 min", price: "$170" },
       { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
     ],
   },
