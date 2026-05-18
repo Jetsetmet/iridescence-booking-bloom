@@ -3,7 +3,7 @@ import { useState } from "react";
 import { z } from "zod";
 import { useServerFn } from "@tanstack/react-start";
 import { submitBooking } from "@/lib/funnel.functions";
-import { Loader2, Check, Sparkles } from "lucide-react";
+import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
 const offerings = ["Reiki", "Sound Bath", "Cacao Ceremony", "Breathwork", "Mentoring", "Not sure yet"];
@@ -83,7 +83,7 @@ function Book() {
           ))}
         </ul>
         <div className="mt-10 rounded-2xl bg-iridescent p-5 text-sm">
-          <Sparkles className="h-4 w-4" />
+          <Triangle className="h-4 w-4" />
           <p className="mt-2 font-medium">Not sure which session is right?</p>
           <a href="/quiz" className="mt-1 inline-block underline underline-offset-4">Take the 60-second quiz →</a>
         </div>

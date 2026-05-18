@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { submitQuiz } from "@/lib/funnel.functions";
-import { ArrowRight, ArrowLeft, Loader2, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowLeft, Loader2, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/quiz")({
@@ -179,7 +179,7 @@ function Quiz() {
           </div>
         ) : (
           <div className="animate-fade-up text-center">
-            <Sparkles className="mx-auto h-7 w-7 text-primary animate-shimmer" />
+            <Triangle className="mx-auto h-7 w-7 text-primary animate-shimmer" />
             <p className="mt-3 text-xs uppercase tracking-[0.2em] text-primary/80">Your path</p>
             <h2 className="mt-2 font-display text-4xl bg-iridescent bg-clip-text text-transparent">
               {recommendation}
