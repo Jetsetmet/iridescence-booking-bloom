@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThanksRouteImport } from './routes/thanks'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as EventsRouteImport } from './routes/events'
@@ -27,6 +28,11 @@ const ThanksRoute = ThanksRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuizRoute = QuizRouteImport.update({
@@ -73,6 +79,7 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
+  '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
 }
@@ -84,6 +91,7 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
+  '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
 }
@@ -96,6 +104,7 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/offerings': typeof OfferingsRoute
   '/quiz': typeof QuizRoute
+  '/reviews': typeof ReviewsRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
 }
@@ -109,6 +118,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/offerings'
     | '/quiz'
+    | '/reviews'
     | '/sitemap.xml'
     | '/thanks'
   fileRoutesByTo: FileRoutesByTo
@@ -120,6 +130,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/offerings'
     | '/quiz'
+    | '/reviews'
     | '/sitemap.xml'
     | '/thanks'
   id:
@@ -131,6 +142,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/offerings'
     | '/quiz'
+    | '/reviews'
     | '/sitemap.xml'
     | '/thanks'
   fileRoutesById: FileRoutesById
@@ -143,6 +155,7 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   OfferingsRoute: typeof OfferingsRoute
   QuizRoute: typeof QuizRoute
+  ReviewsRoute: typeof ReviewsRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ThanksRoute: typeof ThanksRoute
 }
@@ -161,6 +174,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quiz': {
@@ -223,9 +243,20 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   OfferingsRoute: OfferingsRoute,
   QuizRoute: QuizRoute,
+  ReviewsRoute: ReviewsRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ThanksRoute: ThanksRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
