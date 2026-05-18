@@ -4,8 +4,8 @@ import { Mail, MapPin, Instagram } from "lucide-react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Met — Reiki & Sound Healing in New Orleans" },
-      { name: "description", content: "Contact Met for Reiki, sound healing, cacao ceremonies, breathwork, yoga and private group sessions in uptown New Orleans." },
+      { title: "Contact Mehtap - Reiki & Sound Healing in New Orleans" },
+      { name: "description", content: "Contact Mehtap for Reiki, sound healing, cacao ceremonies, breathwork, yoga and private group sessions in uptown New Orleans." },
     ],
   }),
   component: Contact,
@@ -20,10 +20,10 @@ function Contact() {
         Questions, custom sessions, or private group ceremonies — I'd love to hear what brought you here.
       </p>
       <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <a href="mailto:met@iridescencehealing.com" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
+        <a href="mailto:hello@iridescencehealing.com" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Mail className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Email</div>
-          <div className="mt-1 text-xs text-muted-foreground break-all">met@iridescencehealing.com</div>
+          <div className="mt-1 text-xs text-muted-foreground break-all">hello@iridescencehealing.com</div>
         </a>
         <a href="https://instagram.com/iridescence_healing" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Instagram className="h-5 w-5 mx-auto text-primary" />

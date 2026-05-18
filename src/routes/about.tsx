@@ -5,9 +5,9 @@ import { Sparkles, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Met — New Orleans Reiki Master, Sound Healer & Intuitive Guide" },
-      { name: "description", content: "Meet Mehtap (Met) — certified Reiki Master, sound healer, breathwork guide, yoga teacher and intuitive energy practitioner in uptown New Orleans. 17+ years, 1000+ sessions." },
-      { property: "og:title", content: "About Met — Reiki Master & Intuitive Healer in New Orleans" },
+      { title: "About Mehtap - New Orleans Reiki Master, Sound Healer & Intuitive Guide" },
+      { name: "description", content: "Meet Mehtap - certified Reiki Master, sound healer, breathwork guide, yoga teacher and intuitive energy practitioner in uptown New Orleans. 17+ years, 1000+ sessions." },
+      { property: "og:title", content: "About Mehtap - Reiki Master & Intuitive Healer in New Orleans" },
       { property: "og:description", content: "Certified Reiki Master, sound healer and intuitive guide in uptown New Orleans." },
       { property: "og:image", content: heroImg },
     ],
@@ -19,18 +19,18 @@ function About() {
   return (
     <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-2 gap-12 items-start">
       <div className="lg:sticky lg:top-24">
-        <img src={heroImg} alt="Mehtap (Met) — Reiki Master, sound healer and intuitive energy guide in uptown New Orleans"
+        <img src={heroImg} alt="Mehtap - Reiki Master, sound healer and intuitive energy guide in uptown New Orleans"
           loading="lazy" width={1080} height={1920}
           className="rounded-[2rem] shadow-glow object-cover w-full h-[520px]" />
       </div>
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">About</p>
         <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">
-          With love, <span className="italic bg-iridescent bg-clip-text text-transparent">Met</span>.
+          With love, <span className="italic bg-iridescent bg-clip-text text-transparent">Mehtap</span>.
         </h1>
         <div className="mt-6 space-y-5 text-foreground/80 leading-relaxed text-pretty">
           <p>
-            I'm Mehtap - most people call me Met. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
+            I'm Mehtap. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
           </p>
           <p>
             My path to this work began as so many do — through my own quiet unraveling.

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
       { title: "Book a Session — Iridescence Healing" },
-      { name: "description", content: "Reserve a private Reiki, sound bath, cacao ceremony, breathwork or mentoring session with Met in New Orleans." },
+      { name: "description", content: "Reserve a private Reiki, sound bath, cacao ceremony, breathwork or mentoring session with Mehtap in New Orleans." },
     ],
   }),
   validateSearch: searchSchema,
@@ -48,7 +48,7 @@ function Book() {
     setLoading(true);
     try {
       await submit({ data: form });
-      toast.success("Booking received — Met will be in touch within 24 hours.");
+      toast.success("Booking received - Mehtap will be in touch within 24 hours.");
       navigate({ to: "/thanks" });
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Could not submit — please try again.");
@@ -65,11 +65,11 @@ function Book() {
           A soft place to land.
         </h1>
         <p className="mt-4 text-muted-foreground text-pretty">
-          Share a few details and your preferred timing. Met will personally confirm your session within 24 hours.
+          Share a few details and your preferred timing. Mehtap will personally confirm your session within 24 hours.
         </p>
         <ul className="mt-8 space-y-3 text-sm text-foreground/80">
           {[
-            "Personally confirmed by Met",
+            "Personally confirmed by Mehtap",
             "Quiet uptown New Orleans space",
             "Reschedule anytime, no fee",
             "Free 15-min discovery call if unsure",
@@ -123,7 +123,7 @@ function Book() {
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">What's bringing you in? (optional)</span>
           <textarea rows={4} value={form.notes} onChange={(e) => update("notes", e.target.value)}
-            placeholder="Anything you'd like Met to know about what you're moving through..."
+            placeholder="Anything you'd like Mehtap to know about what you're moving through..."
             className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <button
