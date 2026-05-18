@@ -33,13 +33,14 @@ function About() {
             I'm Mehtap - most people call me Met. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
           </p>
           <p>
-            We are all on a journey to reconnect with our inner wisdom and life purpose. Although the path of self-love and introspection can sometimes feel challenging, all the answers we seek are already within us. I invite you to trust your heart and intuition — they are always there to guide you. The signs from the universe and our divine connection, when followed, will lead us to peace, love and freedom.
+            My path to this work began as so many do — through my own quiet unraveling.
+            Years of seeking led me to the ancient practices that gently put me back together,
+            and I now offer them as a soft return for anyone called to slow down.
           </p>
           <p>
-            Alongside my passion for the healing arts, I continue to work in New Orleans as a stuntwoman in the film industry. While the pace and intensity of that world are thrilling, they've also shown me the importance of balance — physically, emotionally, and energetically. This inspired me to create the Energy Tune-Up, a practice that blends a variety of healing techniques to support inner peace, clarity, and self-love.
-          </p>
-          <p>
-            I'm truly grateful to share this sacred space with you and hold deep intention in offering love, healing, and peace to everyone I work with.
+            My approach is rooted in heart medicine, ancestral wisdom and a deep
+            trust in the body's innate intelligence. There is no agenda here other
+            than your remembering.
           </p>
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
