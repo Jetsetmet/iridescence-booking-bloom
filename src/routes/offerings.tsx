@@ -91,7 +91,8 @@ function Offerings() {
         {items.map((o, i) => (
           <article key={o.title} className={`grid md:grid-cols-2 gap-8 items-center ${i % 2 ? "md:[&>div:first-child]:order-2" : ""}`}>
             <div className="rounded-3xl overflow-hidden shadow-card">
-              <img src={o.img} alt={o.title} loading="lazy" width={1280} height={960}
+              <img src={o.img} alt={`${o.title} session with Met at Iridescence Healing in New Orleans`}
+                loading="lazy" width={1280} height={960}
                 className="w-full h-[360px] object-cover" />
             </div>
             <div>
