@@ -72,6 +72,18 @@ function Home() {
 
       {/* OFFERINGS */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-20">
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Welcome</p>
+          <p className="mt-4 font-display text-2xl sm:text-3xl leading-relaxed text-pretty">
+            An honour your path led you here.
+          </p>
+          <p className="mt-5 text-muted-foreground text-pretty">
+            A nurturing space uptown in New Orleans where ancient energy and heart medicine meet —
+            sound baths, Reiki, cacao, breathwork, meditation and mentoring to help you slow down,
+            reconnect, and remember the wisdom within you.
+          </p>
+          <p className="mt-4 text-muted-foreground italic">This is where your journey to wholeness begins. With love…</p>
+        </div>
         <div className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Offerings</p>
           <h2 className="mt-2 font-display text-4xl sm:text-5xl text-balance">
