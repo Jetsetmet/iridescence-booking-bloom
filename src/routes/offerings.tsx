@@ -43,7 +43,7 @@ const items: Array<{
   },
   {
     icon: Flame, title: "Cacao Ceremonies", img: cacaoImg, slug: "Cacao Ceremony",
-    desc: "Heart-opening ceremonial cacao with breath, intention and gentle sharing — for couples and retreat groups.",
+    desc: "Heart-opening ceremonial cacao with breath, intention, connection and gentle sharing - for couples and retreat groups.",
     tiers: [
       { label: "Couples Cacao", duration: "110 min", price: "$390" },
       { label: "Retreat Cacao", price: "Please email" },
