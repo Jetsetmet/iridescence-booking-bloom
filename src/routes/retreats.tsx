@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Triangle, Sparkles } from "lucide-react";
+import { ArrowRight, Triangle } from "lucide-react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 
@@ -33,7 +33,7 @@ function Retreats() {
               Reserve your spot <ArrowRight className="h-4 w-4" />
             </Link>
             <a href="https://divinewisdomretreats.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-              Divine Wisdom Retreats <Sparkles className="h-4 w-4" />
+              Divine Wisdom Retreats <Triangle className="h-4 w-4" />
             </a>
           </div>
         </div>

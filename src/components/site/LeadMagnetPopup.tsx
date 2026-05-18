@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { submitLead } from "@/lib/funnel.functions";
-import { X, Sparkles, Loader2 } from "lucide-react";
+import { X, Triangle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 const STORAGE_KEY = "ih_lead_popup_seen";
@@ -57,7 +57,7 @@ export function LeadMagnetPopup() {
           <X className="h-5 w-5" />
         </button>
         <div className="grid h-12 w-12 place-items-center rounded-full bg-iridescent mb-4 shadow-soft">
-          <Sparkles className="h-5 w-5 text-foreground" strokeWidth={1.5} />
+          <Triangle className="h-5 w-5 text-foreground" strokeWidth={1.5} />
         </div>
         {done ? (
           <>

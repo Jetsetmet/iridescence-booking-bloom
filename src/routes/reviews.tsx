@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Quote, Star, ArrowRight } from "lucide-react";
+import { Triangle, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/reviews")({
   head: () => ({
@@ -71,7 +71,7 @@ function Reviews() {
         </h1>
         <div className="mt-4 flex items-center justify-center gap-1 text-primary">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="h-4 w-4 fill-current" />
+            <Triangle key={i} className="h-4 w-4 fill-current" />
           ))}
           <span className="ml-2 text-sm text-muted-foreground">5★ average · 1000+ sessions held</span>
         </div>
@@ -83,7 +83,7 @@ function Reviews() {
             key={i}
             className="rounded-3xl border border-border bg-card p-7 shadow-soft flex flex-col"
           >
-            <Quote className="h-6 w-6 text-primary/60" />
+            <Triangle className="h-6 w-6 text-primary/60" />
             <blockquote className="mt-4 text-foreground/80 leading-relaxed text-pretty">
               {r.quote}
             </blockquote>

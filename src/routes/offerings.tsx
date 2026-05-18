@@ -5,7 +5,7 @@ import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
 import packagesImg from "@/assets/moon.jpg";
-import { ArrowRight, Heart, Music2, Flame, Wind, Sparkles, Triangle } from "lucide-react";
+import { ArrowRight, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
   head: () => ({
@@ -21,10 +21,10 @@ export const Route = createFileRoute("/offerings")({
 
 type Tier = { label: string; duration?: string; price: string; note?: string };
 const items: Array<{
-  icon: typeof Heart; title: string; img: string; slug: string; desc: string; tiers: Tier[];
+  icon: typeof Triangle; title: string; img: string; slug: string; desc: string; tiers: Tier[];
 }> = [
   {
-    icon: Heart, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
+    icon: Triangle, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
      desc: "Reiki sound healings that weave hands-on energy work with crystal and Tibetan singing bowls - to clear stagnation, restore flow and welcome your nervous system home. Mehtap specializes in couples, one-on-one and group sessions.",
     tiers: [
       { label: "Student", duration: "60 min", price: "$110" },
@@ -34,7 +34,7 @@ const items: Array<{
     ],
   },
   {
-    icon: Music2, title: "Sound Bath Journey", img: soundImg, slug: "Sound Bath",
+    icon: Triangle, title: "Sound Bath Journey", img: soundImg, slug: "Sound Bath",
      desc: "A sacred journey with Tibetan, crystal singing bowls, gongs and chimes - held for couples, intimate groups and retreats.",
     tiers: [
       { label: "Retreat Sound Bath Journey", price: "Please email" },
@@ -42,7 +42,7 @@ const items: Array<{
     ],
   },
   {
-    icon: Flame, title: "Cacao Ceremonies", img: cacaoImg, slug: "Cacao Ceremony",
+    icon: Triangle, title: "Cacao Ceremonies", img: cacaoImg, slug: "Cacao Ceremony",
     desc: "Heart-opening ceremonial cacao with breath, intention, connection and gentle sharing - for couples and retreat groups.",
     tiers: [
       { label: "Couples Cacao", duration: "110 min", price: "$390" },
@@ -50,7 +50,7 @@ const items: Array<{
     ],
   },
    {
-     icon: Wind, title: "Breath • Yoga", img: heroImg, slug: "Breathwork",
+     icon: Triangle, title: "Breath • Yoga", img: heroImg, slug: "Breathwork",
      desc: "Guided pranayama, somatic breath journeys and Kundalini yoga to release stored emotion and meet yourself in stillness.",
      tiers: [
        { label: "\n", duration: "60 min", price: "$130" },
@@ -59,14 +59,14 @@ const items: Array<{
      ],
    },
   {
-    icon: Sparkles, title: "Self-Love Mentoring", img: selfLoveImg, slug: "Mentoring",
+    icon: Triangle, title: "Self-Love Mentoring", img: selfLoveImg, slug: "Mentoring",
     desc: "A devotional mentorship for those called to reclaim their wholeness, intuition and inner power — offered in person and virtually.",
      tiers: [
        { label: "6 Week Mentoring Programme", price: "$720" },
      ],
   },
   {
-    icon: Sparkles, title: "In Person & Virtual Packages", img: packagesImg, slug: "Mentoring",
+    icon: Triangle, title: "In Person & Virtual Packages", img: packagesImg, slug: "Mentoring",
     desc: "Bundled session packages with a 10% discount — held in person in uptown New Orleans or virtually from anywhere.",
     tiers: [
       { label: "Four 60-min Sessions", duration: "10% discount", price: "$468" },

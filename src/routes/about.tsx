@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-meditation.jpg";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { Triangle, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -62,7 +62,7 @@ function About() {
             Book a Session <ArrowRight className="h-4 w-4" />
           </Link>
           <Link to="/quiz" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-            Find Your Path <Sparkles className="h-4 w-4" />
+            Find Your Path <Triangle className="h-4 w-4" />
           </Link>
         </div>
       </div>
