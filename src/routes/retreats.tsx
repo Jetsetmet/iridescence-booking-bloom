@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Leaf, Sun, Heart, Sparkles } from "lucide-react";
-import heroImg from "@/assets/full-moon.jpg";
+import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/sound-bowls.jpg";
 
 export const Route = createFileRoute("/retreats")({
