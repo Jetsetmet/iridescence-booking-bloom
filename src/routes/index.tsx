@@ -80,7 +80,7 @@ function Home() {
           <p className="mt-5 text-muted-foreground text-pretty">
             A nurturing space uptown in New Orleans where ancient energy and heart medicine meet -
             sound baths, Reiki, cacao, breathwork, meditation and mentoring to help you slow down,
-            reconnect, and remember the wisdom within you.
+            reconnect and remember the wisdom within you.
           </p>
           <p className="mt-4 text-muted-foreground italic">This is where your journey to wholeness begins. With love…</p>
         </div>
