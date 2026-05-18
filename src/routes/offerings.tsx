@@ -62,7 +62,7 @@ const items: Array<{
     icon: Sparkles, title: "Self-Love Mentoring", img: selfLoveImg, slug: "Mentoring",
     desc: "A devotional mentorship for those called to reclaim their wholeness, intuition and inner power — offered in person and virtually.",
     tiers: [
-      { label: "6 Week Cosmic Mentoring", price: "$720" },
+      { label: "Each offering is held with intention, presence and a safe container - so you can soften the rest.", price: "$720" },
     ],
   },
   {
