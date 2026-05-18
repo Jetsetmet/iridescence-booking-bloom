@@ -49,15 +49,15 @@ const items: Array<{
       { label: "Retreat Cacao", price: "Please email" },
     ],
   },
-  {
-    icon: Wind, title: "Meditation • Breath • Yoga", img: heroImg, slug: "Breathwork",
-    desc: "Guided pranayama, somatic breath journeys and gentle yoga to release stored emotion and meet yourself in stillness.",
-    tiers: [
-      { label: "Meditation • Breathwork", duration: "60 min", price: "$130" },
-      { label: "Meditation • Breath • Yoga", duration: "90 min", price: "$170" },
-      { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
-    ],
-  },
+   {
+     icon: Wind, title: "Breath • Yoga", img: heroImg, slug: "Breathwork",
+     desc: "Guided pranayama, somatic breath journeys and gentle yoga to release stored emotion and meet yourself in stillness.",
+     tiers: [
+       { label: "Meditation • Breathwork", duration: "60 min", price: "$130" },
+       { label: "Breath • Yoga", duration: "90 min", price: "$170" },
+       { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
+     ],
+   },
   {
     icon: Sparkles, title: "Self-Love Mentoring", img: selfLoveImg, slug: "Mentoring",
     desc: "A devotional mentorship for those called to reclaim their wholeness, intuition and inner power — offered in person and virtually.",
