@@ -48,7 +48,7 @@ function CacaoCeremonies() {
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid md:grid-cols-2 gap-10 items-center">
           <div>
             <div className="flex items-center gap-2 text-primary">
-              <Play className="h-4 w-4" />
+              <Triangle className="h-4 w-4" />
               <span className="text-xs uppercase tracking-wider">Cacao Starter Kit</span>
             </div>
             <h2 className="mt-2 font-display text-3xl sm:text-4xl">Bring the ritual home.</h2>
