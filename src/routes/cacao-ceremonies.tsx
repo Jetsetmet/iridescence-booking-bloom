@@ -47,9 +47,9 @@ function CacaoCeremonies() {
             with every sip.
           </h1>
           <p className="mt-6 text-foreground/75 leading-relaxed text-pretty text-lg">
-            After cacao changed my own life — softening old patterns, opening my heart and
-            reconnecting me to purpose — I began brewing it for others from a small family farm
-            in Costa Rica. Every cup is an invitation back to intuition, creativity and joy.
+            Ceremonial cacao sourced from a small family farm in Costa Rica — brewed by Met
+            to gently open the heart, soften old patterns and reconnect you to intuition,
+            creativity and joy.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
@@ -83,9 +83,8 @@ function CacaoCeremonies() {
           </div>
           <h2 className="mt-2 font-display text-3xl">Couples Cacao Ceremony</h2>
           <p className="mt-3 text-foreground/80 text-pretty">
-            When did you last truly see each other? Drop the armor, soften into presence
-            and remember why you chose one another — a guided ritual to reignite intimacy,
-            trust and soul-deep connection.
+            Cacao woven with Reiki, sound, breathwork and gentle connection exercises —
+            a nurturing space to meet on a soul level and deepen trust, intimacy and love.
           </p>
           <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft">
             Book a ceremony <ArrowRight className="h-4 w-4" />
@@ -95,7 +94,7 @@ function CacaoCeremonies() {
 
       {/* COUPLES CACAO CEREMONY */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
-        <div className="grid md:grid-cols-[2fr_3fr] gap-8 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
             <img
@@ -116,19 +115,23 @@ function CacaoCeremonies() {
               Couples Cacao Ceremony
             </h2>
             <p className="mt-3 text-foreground/80 text-pretty text-sm">
-              Ceremonial cacao woven with Reiki, sound and breathwork —
-              a sacred space to reconnect and soften into each other.
+              A heart-opening ritual blending ceremonial cacao with Reiki,
+              sound, breathwork and gentle couples exercises — a sacred space
+              to reconnect and soften into each other.
             </p>
-            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
+            <ul className="mt-5 space-y-2.5">
               {[
-                "Soul-level connection",
-                "Opens the heart",
-                "Reiki & sound healing",
-                "Nourish your love",
+                { title: "Authentic connection", body: "Meet on a soul level and deepen trust." },
+                { title: "Cacao opens the heart", body: "Invites compassionate, honest communication." },
+                { title: "Reiki & sound healing", body: "Release old patterns and restore harmony." },
+                { title: "Nourish your love", body: "Love felt, expressed and strengthened through shared presence." },
               ].map((item) => (
-                <li key={item} className="flex gap-2 items-center">
-                  <Triangle className="h-3 w-3 text-primary shrink-0" />
-                  <span className="text-sm text-foreground/80">{item}</span>
+                <li key={item.title} className="flex gap-3">
+                  <Triangle className="h-3.5 w-3.5 mt-1 text-primary shrink-0" />
+                  <div>
+                    <p className="font-display text-base leading-tight">{item.title}</p>
+                    <p className="mt-0.5 text-sm text-foreground/75 text-pretty">{item.body}</p>
+                  </div>
                 </li>
               ))}
             </ul>
