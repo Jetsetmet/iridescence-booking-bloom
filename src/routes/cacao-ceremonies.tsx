@@ -115,20 +115,25 @@ function CacaoCeremonies() {
               Couples Cacao Ceremony
             </h2>
             <p className="mt-4 text-foreground/80 text-pretty">
-              A heart-opening ritual weaving ceremonial cacao with Reiki, sound,
-              breathwork and gentle connection exercises — a soul-level return
-              to your bond, where trust deepens and love is felt anew.
+              A deeply nourishing, heart-opening experience that blends the
+              ancient healing power of ceremonial cacao with Reiki, sound
+              therapy, breathwork and gentle couples exercises — a sacred
+              space to reconnect, soften and feel each other again.
             </p>
-            <ul className="mt-6 grid sm:grid-cols-2 gap-x-5 gap-y-3">
+            <ul className="mt-6 space-y-3">
               {[
-                "Soul-level connection",
-                "Opens the heart",
-                "Reiki & sound healing",
-                "Nourish your love",
+                { title: "Authentic connection", body: "A safe, supportive space to meet each other on a soul level and deepen trust." },
+                { title: "Cacao opens the heart", body: "Invites compassionate communication and emotional alignment between you." },
+                { title: "Reiki & sound healing", body: "Supports the release of old patterns and helps restore harmony within the relationship." },
+                { title: "Nourish your love", body: "A nurturing container for love to be felt, expressed and strengthened through shared presence and intimacy." },
+                { title: "A journey back to your bond", body: "Whether you seek healing, deeper connection or more balance, this is a transformative path back to the core of your love." },
               ].map((item) => (
-                <li key={item} className="flex gap-2 items-center">
-                  <Triangle className="h-3.5 w-3.5 text-primary shrink-0" />
-                  <span className="text-sm text-foreground/80">{item}</span>
+                <li key={item.title} className="flex gap-3">
+                  <Triangle className="h-4 w-4 mt-1 text-primary shrink-0" />
+                  <div>
+                    <p className="font-display text-lg leading-tight">{item.title}</p>
+                    <p className="mt-1 text-sm text-foreground/75 text-pretty">{item.body}</p>
+                  </div>
                 </li>
               ))}
             </ul>
