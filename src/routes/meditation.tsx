@@ -76,6 +76,8 @@ function Meditation() {
         </div>
       </section>
 
+      <HeartOpeningFunnel />
+
       <section className="mx-auto max-w-4xl px-5 sm:px-8 py-16 text-center">
         <h2 className="font-display text-4xl">Private sessions</h2>
         <p className="mt-4 text-foreground/80 leading-relaxed">
