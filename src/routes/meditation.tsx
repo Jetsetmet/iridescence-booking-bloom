@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
 import heroImg from "@/assets/hero-meditation.jpg";
 import yogaImg from "@/assets/self-love.jpg";
+import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 
 export const Route = createFileRoute("/meditation")({
   head: () => ({
