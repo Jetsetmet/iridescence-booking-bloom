@@ -36,7 +36,7 @@ const items: Array<{
   },
   {
     icon: Triangle, title: "Sound Bath Journey", img: soundImg, slug: "Sound Bath",
-     desc: "A sacred journey with Tibetan, crystal singing bowls, gongs and chimes - held for couples, intimate groups and retreats.",
+     desc: "A sacred journey with Tibetan, crystal singing bowls, gongs and chimes - held for couples, intimate groups and retreats. See the dedicated Sound Baths page for retreat features.",
     tiers: [
       { label: "Retreat Sound Bath Journey", price: "Please email" },
       { label: "Couple & Group Bookings", duration: "90 min", price: "$140 pp", note: "up to 4, more on request" },
