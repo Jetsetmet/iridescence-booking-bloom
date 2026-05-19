@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Triangle, Sparkles } from "lucide-react";
+import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
+import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
@@ -89,6 +92,8 @@ function CacaoCeremonies() {
           </p>
         </div>
       </section>
+
+      <CacaoInvitesSection />
 
       {/* BENEFITS */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
