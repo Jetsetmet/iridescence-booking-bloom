@@ -19,6 +19,7 @@ import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as MeditationRouteImport } from './routes/meditation'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CacaoCeremoniesRouteImport } from './routes/cacao-ceremonies'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -73,6 +74,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CacaoCeremoniesRoute = CacaoCeremoniesRouteImport.update({
+  id: '/cacao-ceremonies',
+  path: '/cacao-ceremonies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
@@ -93,6 +99,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
@@ -108,6 +115,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
@@ -141,6 +150,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/cacao-ceremonies'
     | '/contact'
     | '/events'
     | '/meditation'
@@ -156,6 +166,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/cacao-ceremonies'
     | '/contact'
     | '/events'
     | '/meditation'
@@ -171,6 +182,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/cacao-ceremonies'
     | '/contact'
     | '/events'
     | '/meditation'
@@ -187,6 +199,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
+  CacaoCeremoniesRoute: typeof CacaoCeremoniesRoute
   ContactRoute: typeof ContactRoute
   EventsRoute: typeof EventsRoute
   MeditationRoute: typeof MeditationRoute
@@ -271,6 +284,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cacao-ceremonies': {
+      id: '/cacao-ceremonies'
+      path: '/cacao-ceremonies'
+      fullPath: '/cacao-ceremonies'
+      preLoaderRoute: typeof CacaoCeremoniesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/book': {
       id: '/book'
       path: '/book'
@@ -299,6 +319,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
+  CacaoCeremoniesRoute: CacaoCeremoniesRoute,
   ContactRoute: ContactRoute,
   EventsRoute: EventsRoute,
   MeditationRoute: MeditationRoute,
@@ -313,3 +334,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
