@@ -4,6 +4,8 @@ import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
 import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
+import couplesImg from "@/assets/couples-cacao.jpg";
+import couplesImg2 from "@/assets/couples-cacao-2.jpg";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
@@ -92,6 +94,69 @@ function CacaoCeremonies() {
       </section>
 
       <CacaoInvitesSection />
+
+      {/* COUPLES CACAO CEREMONY */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-24">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-2 gap-3">
+            <img
+              src={couplesImg}
+              alt="Couple sharing ceremonial cacao by candlelight — Couples Cacao Ceremony New Orleans"
+              loading="lazy"
+              width={1024}
+              height={1280}
+              className="rounded-2xl shadow-card object-cover w-full h-full aspect-[4/5]"
+            />
+            <img
+              src={couplesImg2}
+              alt="Couple holding hands during sound healing and cacao ritual — Iridescence Healing"
+              loading="lazy"
+              width={1280}
+              height={1024}
+              className="rounded-2xl shadow-card object-cover w-full h-full aspect-[4/5] mt-8"
+            />
+          </div>
+          <div>
+            <div className="flex items-center gap-2 text-primary">
+              <Heart className="h-4 w-4" />
+              <span className="text-xs uppercase tracking-wider">For Two · New Orleans</span>
+            </div>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
+              Couples Cacao Ceremony & Healing
+            </h2>
+            <p className="mt-4 text-foreground/80 text-pretty">
+              A deeply nourishing heart-opening experience blending the ancient healing
+              power of cacao with Reiki sound therapy breathwork and gentle couples
+              connection exercises.
+            </p>
+            <ul className="mt-6 space-y-4">
+              {[
+                { title: "Authentic connection", body: "A safe supportive space to meet each other on a soul level — deepening trust and emotional intimacy." },
+                { title: "Open hearts with cacao", body: "Ceremonial cacao gently invites emotional alignment and compassionate communication." },
+                { title: "Reiki & sound healing", body: "Energy work and sound therapy support the release of old patterns and restore harmony in the relationship." },
+                { title: "Nourish your love", body: "A nurturing space for love to be felt expressed and strengthened through shared presence and intimacy." },
+                { title: "A journey back to your bond", body: "Whether seeking healing deeper connection or more balance — a transformative path back to the core of your love." },
+              ].map((item) => (
+                <li key={item.title} className="flex gap-3">
+                  <Triangle className="h-4 w-4 mt-1 text-primary shrink-0" />
+                  <div>
+                    <p className="font-display text-lg leading-tight">{item.title}</p>
+                    <p className="mt-1 text-sm text-foreground/75 text-pretty">{item.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Book a couples ceremony <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Ask a question
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* BENEFITS */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
