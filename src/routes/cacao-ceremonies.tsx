@@ -115,9 +115,9 @@ function CacaoCeremonies() {
               Couples Cacao Ceremony
             </h2>
             <p className="mt-4 text-foreground/80 text-pretty">
-              Cacao woven with Reiki, sound, breathwork and gentle connection
-              exercises — a nurturing space to meet on a soul level and deepen
-              trust, intimacy and love.
+              A heart-opening ritual weaving ceremonial cacao with Reiki sound
+              breathwork and gentle connection exercises — a soul-level return
+              to your bond.
             </p>
             <ul className="mt-6 space-y-3">
               {[
