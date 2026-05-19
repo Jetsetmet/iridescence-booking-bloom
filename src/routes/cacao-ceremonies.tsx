@@ -85,6 +85,9 @@ function CacaoCeremonies() {
             Cacao woven with Reiki, sound, breathwork and gentle connection exercises —
             a nurturing space to meet on a soul level and deepen trust, intimacy and love.
           </p>
+          <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft">
+            Book a ceremony <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 
