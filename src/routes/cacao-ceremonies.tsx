@@ -94,7 +94,7 @@ function CacaoCeremonies() {
 
       {/* COUPLES CACAO CEREMONY */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid md:grid-cols-[2fr_3fr] gap-8 items-center">
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
             <img
