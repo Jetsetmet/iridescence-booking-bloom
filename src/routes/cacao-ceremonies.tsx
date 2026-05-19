@@ -124,7 +124,7 @@ function CacaoCeremonies() {
               {[
                 { title: "Authentic connection", body: "A safe, supportive space to meet each other on a soul level and deepen trust." },
                 { title: "Cacao opens the heart", body: "Invites compassionate communication and emotional alignment between you." },
-                { title: "Reiki & sound healing", body: "Supports the release of old patterns and helps restore harmony within the relationship." },
+                { title: "Reiki & sound healing", body: "A deeply nourishing, heart-opening experience that blends the ancient healing power of ceremonial cacao with Reiki, sound therapy, breathwork and gentle couples exercises — a sacred space to reconnect, soften and connect." },
                 { title: "Nourish your love", body: "A nurturing container for love to be felt, expressed and strengthened through shared presence and intimacy." },
                 { title: "A journey back to your bond", body: "Whether you seek healing, deeper connection or more balance, this is a transformative path back to the core of your love." },
               ].map((item) => (
