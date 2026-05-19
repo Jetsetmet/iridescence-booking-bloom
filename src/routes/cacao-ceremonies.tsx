@@ -36,7 +36,7 @@ function CacaoCeremonies() {
               loading="lazy"
               width={900}
               height={1100}
-              className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5] md:rotate-[2deg]"
+              className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5]"
             />
           </div>
 
