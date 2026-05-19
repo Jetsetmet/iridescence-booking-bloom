@@ -38,10 +38,6 @@ function CacaoCeremonies() {
               height={1100}
               className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5] md:rotate-[2deg]"
             />
-            <div className="absolute -bottom-4 -left-4 hidden md:flex items-center gap-2 rounded-full bg-card/95 backdrop-blur px-3.5 py-1.5 shadow-soft border border-border">
-              <Sparkles className="h-3.5 w-3.5 text-primary" />
-              <span className="text-[10px] tracking-wider uppercase">Costa Rica · single origin</span>
-            </div>
           </div>
 
           <h1 className="mt-4 font-display text-5xl sm:text-6xl lg:text-7xl text-balance leading-[1.02]">
