@@ -115,27 +115,24 @@ function CacaoCeremonies() {
               Couples Cacao Ceremony
             </h2>
             <p className="mt-4 text-foreground/80 text-pretty">
-              A heart-opening ritual weaving ceremonial cacao with Reiki sound
+              A heart-opening ritual weaving ceremonial cacao with Reiki, sound,
               breathwork and gentle connection exercises — a soul-level return
-              to your bond.
+              to your bond, where trust deepens and love is felt anew.
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-5 gap-y-3">
               {[
-                { title: "Soul-level connection", body: "Deepen trust and emotional intimacy in a safe held space." },
-                { title: "Cacao opens the heart", body: "Invites compassionate communication and emotional alignment." },
-                { title: "Reiki & sound", body: "Release old patterns and restore harmony together." },
-                { title: "Nourish your love", body: "Feel love expressed and strengthened through shared presence." },
+                "Soul-level connection",
+                "Opens the heart",
+                "Reiki & sound healing",
+                "Nourish your love",
               ].map((item) => (
-                <li key={item.title} className="flex gap-3">
-                  <Triangle className="h-4 w-4 mt-1 text-primary shrink-0" />
-                  <div>
-                    <p className="font-display text-lg leading-tight">{item.title}</p>
-                    <p className="mt-1 text-sm text-foreground/75 text-pretty">{item.body}</p>
-                  </div>
+                <li key={item} className="flex gap-2 items-center">
+                  <Triangle className="h-3.5 w-3.5 text-primary shrink-0" />
+                  <span className="text-sm text-foreground/80">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Book a couples ceremony <ArrowRight className="h-4 w-4" />
               </Link>
