@@ -15,12 +15,24 @@ export const Route = createFileRoute("/sound-baths")({
   component: SoundBaths,
 });
 
-const venues: Array<{ name: string; url: string }> = [
-  { name: "The Shala", url: "https://theshala.com" },
-  { name: "Sol Rising", url: "https://solrising.com" },
-  { name: "Casa Colibri", url: "https://casacolibri.com" },
-  { name: "Astanga Rooms", url: "https://ashtangarooms.com" },
-  { name: "Trilith Studios", url: "https://trilith.com" },
+const venues: Array<{ name: string; url?: string }> = [
+  { name: "Spyre New Orleans", url: "https://www.thecenternola.com/spyre" },
+  { name: "Wild Lotus Yoga", url: "https://wildlotusyoga.com/" },
+  { name: "Arora", url: "https://www.aroranola.com/" },
+  { name: "The Nest Costa Rica", url: "https://reganhillyer.com/pages/the-nest-private-immersions" },
+  { name: "Imiloa Institute", url: "https://imiloainstitute.com/" },
+  { name: "Holos", url: "https://holos.global/" },
+  { name: "Danyasa Yoga Retreat", url: "https://www.danyasa.com/" },
+  { name: "Tribe Boutique Hotel", url: "https://www.tribeboutiquehotel.com/" },
+  { name: "Awake Uvita", url: "https://www.awake.cr/" },
+  { name: "Synergy Uvita", url: "https://synergycostarica.com/" },
+  { name: "Yacumama", url: "https://www.yacumama.love/" },
+  { name: "Finca Mia", url: "https://www.fincamia.com/" },
+  { name: "The Shala" },
+  { name: "Sol Rising" },
+  { name: "Casa Colibri" },
+  { name: "Astanga Rooms" },
+  { name: "Trilith Studios" },
 ];
 
 function SoundBaths() {
@@ -63,18 +75,27 @@ function SoundBaths() {
             Public and private retreats across Europe, the US and Costa Rica. Click any space to visit their site.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            {venues.map((v) => (
-              <a
-                key={v.name}
-                href={v.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-5 py-2.5 text-sm font-medium hover:bg-accent transition-colors"
-              >
-                {v.name}
-                <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
-              </a>
-            ))}
+            {venues.map((v) =>
+              v.url ? (
+                <a
+                  key={v.name}
+                  href={v.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-5 py-2.5 text-sm font-medium hover:bg-accent transition-colors"
+                >
+                  {v.name}
+                  <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
+                </a>
+              ) : (
+                <span
+                  key={v.name}
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background/40 px-5 py-2.5 text-sm font-medium text-foreground/80"
+                >
+                  {v.name}
+                </span>
+              )
+            )}
             <span className="inline-flex items-center px-5 py-2.5 text-sm text-muted-foreground italic">and more…</span>
           </div>
         </div>
