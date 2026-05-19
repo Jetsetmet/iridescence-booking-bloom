@@ -51,6 +51,12 @@ function CacaoCeremonies() {
             to gently open the heart, soften old patterns and reconnect you to intuition,
             creativity and joy.
           </p>
+          <p className="mt-4 text-foreground/70 leading-relaxed text-pretty">
+            Ceremonial cacao deeply changed my life — it supported my emotional healing,
+            helped soften old patterns, opened my heart and reconnected me to my intuition,
+            creativity and sense of purpose. What began as a sacred daily ritual became the
+            foundation for everything I now create through Iridescence.
+          </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Book a ceremony <ArrowRight className="h-4 w-4" />
