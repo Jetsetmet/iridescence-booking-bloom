@@ -47,13 +47,9 @@ function CacaoCeremonies() {
             with every sip.
           </h1>
           <p className="mt-6 text-foreground/75 leading-relaxed text-pretty text-lg">
-            Ceremonial cacao sourced from a small family farm in Costa Rica — brewed by Met
-            to gently open the heart, soften old patterns and reconnect you to intuition,
-            creativity and joy.
-          </p>
-          <p className="mt-4 text-foreground/70 leading-relaxed text-pretty">
-            Cacao changed my life — it softened old patterns, opened my heart and reconnected
-            me to intuition and purpose. That daily ritual became the foundation of Iridescence.
+            After cacao changed my own life — softening old patterns, opening my heart and
+            reconnecting me to purpose — I began brewing it for others from a small family farm
+            in Costa Rica. Every cup is an invitation back to intuition, creativity and joy.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
