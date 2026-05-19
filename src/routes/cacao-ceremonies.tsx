@@ -4,7 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
 import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
-import couplesImg from "@/assets/couples-ceremony-new.webp";
+import couplesImg from "@/assets/couples-cacao-ceremony.png";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
