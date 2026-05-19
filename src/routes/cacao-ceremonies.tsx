@@ -64,7 +64,7 @@ function CacaoCeremonies() {
       </section>
 
       {/* OFFERINGS */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20 grid md:grid-cols-2 gap-6">
+      <section className="mx-auto max-w-3xl px-5 sm:px-8 pb-20">
         <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
           <div className="flex items-center gap-2 text-primary">
             <Triangle className="h-4 w-4" />
@@ -75,20 +75,6 @@ function CacaoCeremonies() {
             A circle of warmth and connection — sacred cacao, heart-opening meditation,
             free movement to release stagnant energy, and a closing sound healing and sharing circle.
           </p>
-        </div>
-        <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
-          <div className="flex items-center gap-2 text-primary">
-            <Triangle className="h-4 w-4" />
-            <span className="text-xs uppercase tracking-wider">For Two</span>
-          </div>
-          <h2 className="mt-2 font-display text-3xl">Couples Cacao Ceremony</h2>
-          <p className="mt-3 text-foreground/80 text-pretty">
-            Cacao woven with Reiki, sound, breathwork and gentle connection exercises —
-            a nurturing space to meet on a soul level and deepen trust, intimacy and love.
-          </p>
-          <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft">
-            Book a ceremony <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </section>
 
