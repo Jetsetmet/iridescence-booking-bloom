@@ -25,7 +25,7 @@ function CacaoCeremonies() {
             Let your heart <span className="italic bg-iridescent bg-clip-text text-transparent">glow</span> with every sip.
           </h1>
           <p className="mt-6 text-foreground/80 leading-relaxed text-pretty">
-            Ceremonial cacao — the food of the gods — honored for centuries as sacred medicine. Met's cacao is sourced from a small, family-run farm in Costa Rica's Southern Pacific zone and lovingly brewed with colorful spices to gently open the heart, soften old patterns and reconnect you to intuition, creativity and joy.
+            Ceremonial cacao sourced from a small family farm in Costa Rica — lovingly brewed by Met to gently open the heart, soften old patterns and reconnect you to intuition, creativity and joy.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
@@ -41,80 +41,50 @@ function CacaoCeremonies() {
           className="rounded-[2rem] shadow-glow object-cover w-full h-[480px]" />
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div className="flex items-center gap-2 text-primary">
-            <Triangle className="h-4 w-4" />
-            <span className="text-xs uppercase tracking-wider">Iridescence Cacao Starter Kit</span>
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="flex items-center gap-2 text-primary">
+              <Play className="h-4 w-4" />
+              <span className="text-xs uppercase tracking-wider">Cacao Starter Kit</span>
+            </div>
+            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Bring the ritual home.</h2>
+            <p className="mt-4 text-foreground/80 text-pretty">
+              Our Starter Kit includes premium ceremonial-grade cacao from Costa Rica with simple prep guidance to weave a heart-opening ritual into daily life. Watch Met's prep video to get started.
+            </p>
           </div>
-          <h2 className="mt-2 font-display text-3xl sm:text-4xl">Bring the ritual home.</h2>
-          <p className="mt-4 text-foreground/80 text-pretty">
-            An all-in-one introduction to creating a heart-opening cacao ritual at home. Each kit includes our premium ceremonial-grade cacao from Costa Rica, simple preparation guidance and ritual inspiration to support your daily practice. Rose Cardamom samples coming soon to New Orleans.
-          </p>
-          <a
-            href="https://youtu.be/zkVk49BEDP4"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-6 py-3 text-sm font-medium hover:bg-accent"
-          >
-            <Play className="h-4 w-4 text-primary" /> Watch the cacao prep video
-          </a>
-        </div>
-        <div className="rounded-[2rem] overflow-hidden shadow-card aspect-video bg-card">
-          <iframe
-            src="https://www.youtube.com/embed/zkVk49BEDP4"
-            title="Iridescence Cacao Prep Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
+          <div className="rounded-2xl overflow-hidden shadow-card aspect-video bg-background">
+            <iframe
+              src="https://www.youtube.com/embed/zkVk49BEDP4"
+              title="Iridescence Cacao Prep Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-16">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20 grid md:grid-cols-2 gap-6">
+        <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
           <div className="flex items-center gap-2 text-primary">
             <Triangle className="h-4 w-4" />
             <span className="text-xs uppercase tracking-wider">Group Ceremony</span>
           </div>
-          <h2 className="mt-2 font-display text-3xl sm:text-4xl">Cacao Ceremony — New Orleans</h2>
-          <p className="mt-4 text-foreground/80 text-pretty">
-            A circle of warmth and connection. Met's lovingly brewed cacao is sipped as sacred tea alongside heartfelt prayers, a heart-opening meditation, dance to release stagnant energy and a grounding sound healing and sharing circle to close.
-          </p>
+          <h2 className="mt-2 font-display text-3xl">New Orleans Cacao Circle</h2>
           <p className="mt-3 text-foreground/80 text-pretty">
-            Rich in magnesium and theobromine, ceremonial cacao gently uplifts mood, supports circulation and encourages the release of endorphins and serotonin — naturally inviting joy, clarity and inner bliss.
+            A circle of warmth and connection — sacred cacao, heart-opening meditation, free movement to release stagnant energy, and a closing sound healing and sharing circle.
           </p>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+        <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
           <div className="flex items-center gap-2 text-primary">
             <Triangle className="h-4 w-4" />
             <span className="text-xs uppercase tracking-wider">For Two</span>
           </div>
-          <h2 className="mt-2 font-display text-3xl sm:text-4xl">Couples Cacao Ceremony</h2>
-          <p className="mt-4 text-foreground/80 text-pretty">
-            A deeply nourishing experience blending ceremonial cacao with Reiki, sound therapy, breathwork and gentle connection exercises — a safe, supportive space to meet each other on a soul level and strengthen trust, intimacy and emotional alignment.
+          <h2 className="mt-2 font-display text-3xl">Couples Cacao Ceremony</h2>
+          <p className="mt-3 text-foreground/80 text-pretty">
+            Cacao woven with Reiki, sound, breathwork and gentle connection exercises — a nurturing space to meet on a soul level and deepen trust, intimacy and love.
           </p>
-          <ul className="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
-            {[
-              "Authentic soul-level connection",
-              "Heart-opening with ceremonial cacao",
-              "Reiki & sound to release old patterns",
-              "A nurturing space for love to be felt",
-            ].map((t) => (
-              <li key={t} className="flex items-start gap-2 rounded-2xl border border-border bg-background/60 px-4 py-3">
-                <Triangle className="h-3.5 w-3.5 mt-1 text-primary shrink-0" />
-                <span className="text-foreground/85">{t}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-8">
-            <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
-              Book couples cacao <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </section>
     </>
