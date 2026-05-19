@@ -92,10 +92,8 @@ function CacaoCeremonies() {
         </div>
       </section>
 
-      <CacaoInvitesSection />
-
       {/* COUPLES CACAO CEREMONY */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-24">
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
@@ -117,27 +115,24 @@ function CacaoCeremonies() {
               Couples Cacao Ceremony
             </h2>
             <p className="mt-4 text-foreground/80 text-pretty">
-              A heart-opening ritual weaving ceremonial cacao with Reiki sound
+              A heart-opening ritual weaving ceremonial cacao with Reiki, sound,
               breathwork and gentle connection exercises — a soul-level return
-              to your bond.
+              to your bond, where trust deepens and love is felt anew.
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-5 gap-y-3">
               {[
-                { title: "Soul-level connection", body: "Deepen trust and emotional intimacy in a safe held space." },
-                { title: "Cacao opens the heart", body: "Invites compassionate communication and emotional alignment." },
-                { title: "Reiki & sound", body: "Release old patterns and restore harmony together." },
-                { title: "Nourish your love", body: "Feel love expressed and strengthened through shared presence." },
+                "Soul-level connection",
+                "Opens the heart",
+                "Reiki & sound healing",
+                "Nourish your love",
               ].map((item) => (
-                <li key={item.title} className="flex gap-3">
-                  <Triangle className="h-4 w-4 mt-1 text-primary shrink-0" />
-                  <div>
-                    <p className="font-display text-lg leading-tight">{item.title}</p>
-                    <p className="mt-1 text-sm text-foreground/75 text-pretty">{item.body}</p>
-                  </div>
+                <li key={item} className="flex gap-2 items-center">
+                  <Triangle className="h-3.5 w-3.5 text-primary shrink-0" />
+                  <span className="text-sm text-foreground/80">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Book a couples ceremony <ArrowRight className="h-4 w-4" />
               </Link>
@@ -149,37 +144,7 @@ function CacaoCeremonies() {
         </div>
       </section>
 
-      {/* BENEFITS */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
-        <div className="flex items-center gap-2 text-primary justify-center">
-          <Triangle className="h-4 w-4" />
-          <span className="text-xs uppercase tracking-wider">Food of the Gods</span>
-        </div>
-        <h2 className="mt-2 font-display text-3xl sm:text-4xl text-center">The benefits of ceremonial cacao</h2>
-        <p className="mt-4 max-w-3xl mx-auto text-center text-foreground/80 text-pretty">
-          Honored for centuries by the Indigenous peoples of Central and South America as sacred
-          medicine, ceremonial cacao gently nourishes the heart, body and spirit.
-        </p>
-        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {[
-            { title: "Opens the heart", body: "Softens emotional armor and invites compassion, connection and presence." },
-            { title: "Uplifts the mood", body: "Encourages the natural release of endorphins and serotonin — joy, warmth and inner bliss." },
-            { title: "Calms the nervous system", body: "Rich in magnesium to ease tension and restore a sense of deep balance." },
-            { title: "Nourishes the heart", body: "Powerful antioxidants and flavonoids support circulation and cardiovascular health." },
-            { title: "Sharpens clarity", body: "Theobromine, a gentle stimulant, enhances mental focus without the jitters of caffeine." },
-            { title: "Awakens creativity", body: "Reconnects you to intuition, inspiration and your sense of purpose." },
-          ].map((b) => (
-            <div key={b.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
-              <div className="flex items-center gap-2 text-primary">
-                <Triangle className="h-3.5 w-3.5" />
-                <span className="text-[10px] uppercase tracking-wider">Benefit</span>
-              </div>
-              <h3 className="mt-2 font-display text-xl">{b.title}</h3>
-              <p className="mt-2 text-sm text-foreground/75 text-pretty">{b.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CacaoInvitesSection />
 
       {/* STARTER KIT */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-24">
@@ -208,6 +173,38 @@ function CacaoCeremonies() {
               className="w-full h-full"
             />
           </div>
+        </div>
+      </section>
+
+      {/* BENEFITS */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-24">
+        <div className="flex items-center gap-2 text-primary justify-center">
+          <Triangle className="h-4 w-4" />
+          <span className="text-xs uppercase tracking-wider">Food of the Gods</span>
+        </div>
+        <h2 className="mt-2 font-display text-3xl sm:text-4xl text-center">The benefits of ceremonial cacao</h2>
+        <p className="mt-4 max-w-3xl mx-auto text-center text-foreground/80 text-pretty">
+          Honored for centuries by the Indigenous peoples of Central and South America as sacred
+          medicine, ceremonial cacao gently nourishes the heart, body and spirit.
+        </p>
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { title: "Opens the heart", body: "Softens emotional armor and invites compassion, connection and presence." },
+            { title: "Uplifts the mood", body: "Encourages the natural release of endorphins and serotonin — joy, warmth and inner bliss." },
+            { title: "Calms the nervous system", body: "Rich in magnesium to ease tension and restore a sense of deep balance." },
+            { title: "Nourishes the heart", body: "Powerful antioxidants and flavonoids support circulation and cardiovascular health." },
+            { title: "Sharpens clarity", body: "Theobromine, a gentle stimulant, enhances mental focus without the jitters of caffeine." },
+            { title: "Awakens creativity", body: "Reconnects you to intuition, inspiration and your sense of purpose." },
+          ].map((b) => (
+            <div key={b.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <div className="flex items-center gap-2 text-primary">
+                <Triangle className="h-3.5 w-3.5" />
+                <span className="text-[10px] uppercase tracking-wider">Benefit</span>
+              </div>
+              <h3 className="mt-2 font-display text-xl">{b.title}</h3>
+              <p className="mt-2 text-sm text-foreground/75 text-pretty">{b.body}</p>
+            </div>
+          ))}
         </div>
       </section>
     </>
