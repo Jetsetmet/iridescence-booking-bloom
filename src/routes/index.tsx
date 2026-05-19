@@ -4,6 +4,7 @@ import soundImg from "@/assets/sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
+import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -159,6 +160,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <HeartOpeningFunnel />
 
       {/* FINAL CTA */}
       <section className="mx-auto max-w-5xl px-5 sm:px-8 py-20 text-center">

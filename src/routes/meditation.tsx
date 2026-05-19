@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
 import heroImg from "@/assets/hero-meditation.jpg";
 import yogaImg from "@/assets/self-love.jpg";
+import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 
 export const Route = createFileRoute("/meditation")({
   head: () => ({
@@ -74,6 +75,8 @@ function Meditation() {
           </div>
         </div>
       </section>
+
+      <HeartOpeningFunnel />
 
       <section className="mx-auto max-w-4xl px-5 sm:px-8 py-16 text-center">
         <h2 className="font-display text-4xl">Private sessions</h2>
