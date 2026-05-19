@@ -101,7 +101,7 @@ function CacaoCeremonies() {
             <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
             <img
               src={couplesImg}
-              alt="Couple sitting palm to palm in a sacred connection ritual — Couples Cacao Ceremony New Orleans"
+              alt="Two ceremonial cacao cups by candlelight — Couples Cacao Ceremony New Orleans"
               loading="lazy"
               width={1024}
               height={1280}
