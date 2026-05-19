@@ -24,46 +24,45 @@ function CacaoCeremonies() {
       {/* HERO — editorial split with offset image */}
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-iridescent opacity-[0.06]" aria-hidden />
-        <div className="mx-auto max-w-6xl px-5 sm:px-8 pt-20 pb-24 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          <div className="lg:col-span-7 relative z-10">
-            <p className="text-xs uppercase tracking-[0.25em] text-primary/80">Iridescence Cacao · New Orleans</p>
-            <h1 className="mt-3 font-display text-5xl sm:text-6xl lg:text-7xl text-balance leading-[1.02]">
-              Let your heart{" "}
-              <span className="italic bg-iridescent bg-clip-text text-transparent">glow</span>{" "}
-              with every sip.
-            </h1>
-            <p className="mt-6 max-w-xl text-foreground/75 leading-relaxed text-pretty text-lg">
-              Ceremonial cacao sourced from a small family farm in Costa Rica — brewed by Met
-              to gently open the heart, soften old patterns and reconnect you to intuition,
-              creativity and joy.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
-                Book a ceremony <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-                Private & retreat enquiries
-              </Link>
+        <div className="mx-auto max-w-5xl px-5 sm:px-8 pt-16 pb-20 relative">
+          <p className="text-xs uppercase tracking-[0.25em] text-primary/80">Iridescence Cacao · New Orleans</p>
+
+          {/* Floated image — text wraps around it on md+ */}
+          <div className="relative md:float-right md:ml-8 md:mb-4 mt-5 md:mt-2 w-full max-w-[18rem] sm:max-w-xs md:w-[19rem] lg:w-[22rem] md:shape-outside-[circle()]">
+            <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
+            <img
+              src={heroImg}
+              alt="Ceremonial cacao with flowers — Iridescence Healing New Orleans"
+              loading="lazy"
+              width={900}
+              height={1100}
+              className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5] md:rotate-[2deg]"
+            />
+            <div className="absolute -bottom-4 -left-4 hidden md:flex items-center gap-2 rounded-full bg-card/95 backdrop-blur px-3.5 py-1.5 shadow-soft border border-border">
+              <Sparkles className="h-3.5 w-3.5 text-primary" />
+              <span className="text-[10px] tracking-wider uppercase">Costa Rica · single origin</span>
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-sm lg:max-w-none">
-              <div className="absolute -inset-6 rounded-[2.5rem] bg-iridescent opacity-30 blur-2xl" aria-hidden />
-              <img
-                src={heroImg}
-                alt="Ceremonial cacao with flowers — Iridescence Healing New Orleans"
-                loading="lazy"
-                width={900}
-                height={1100}
-                className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5] lg:rotate-[2deg]"
-              />
-              <div className="absolute -bottom-5 -left-5 hidden md:flex items-center gap-2 rounded-full bg-card/90 backdrop-blur px-4 py-2 shadow-soft border border-border">
-                <Sparkles className="h-3.5 w-3.5 text-primary" />
-                <span className="text-xs tracking-wider uppercase">Costa Rica · single origin</span>
-              </div>
-            </div>
+          <h1 className="mt-4 font-display text-5xl sm:text-6xl lg:text-7xl text-balance leading-[1.02]">
+            Let your heart{" "}
+            <span className="italic bg-iridescent bg-clip-text text-transparent">glow</span>{" "}
+            with every sip.
+          </h1>
+          <p className="mt-6 text-foreground/75 leading-relaxed text-pretty text-lg">
+            Ceremonial cacao sourced from a small family farm in Costa Rica — brewed by Met
+            to gently open the heart, soften old patterns and reconnect you to intuition,
+            creativity and joy.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+              Book a ceremony <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+              Private & retreat enquiries
+            </Link>
           </div>
+          <div className="clear-both" />
         </div>
       </section>
 
