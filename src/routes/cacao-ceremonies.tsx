@@ -101,11 +101,11 @@ function CacaoCeremonies() {
             <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
             <img
               src={couplesImg}
-              alt="Two ceremonial cacao cups by candlelight — Couples Cacao Ceremony New Orleans"
+              alt="Two ceremonial cacao cups with rose petals — Couples Cacao Ceremony New Orleans"
               loading="lazy"
               width={1024}
-              height={1280}
-              className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5]"
+              height={1024}
+              className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-square"
             />
           </div>
           <div>
@@ -114,20 +114,19 @@ function CacaoCeremonies() {
               <span className="text-xs uppercase tracking-wider">For Two · New Orleans</span>
             </div>
             <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
-              Couples Cacao Ceremony & Healing
+              Couples Cacao Ceremony
             </h2>
             <p className="mt-4 text-foreground/80 text-pretty">
-              A deeply nourishing heart-opening experience blending the ancient healing
-              power of cacao with Reiki sound therapy breathwork and gentle couples
-              connection exercises.
+              A heart-opening ritual weaving ceremonial cacao with Reiki sound
+              breathwork and gentle connection exercises — a soul-level return
+              to your bond.
             </p>
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 space-y-3">
               {[
-                { title: "Authentic connection", body: "A safe supportive space to meet each other on a soul level — deepening trust and emotional intimacy." },
-                { title: "Open hearts with cacao", body: "Ceremonial cacao gently invites emotional alignment and compassionate communication." },
-                { title: "Reiki & sound healing", body: "Energy work and sound therapy support the release of old patterns and restore harmony in the relationship." },
-                { title: "Nourish your love", body: "A nurturing space for love to be felt expressed and strengthened through shared presence and intimacy." },
-                { title: "A journey back to your bond", body: "Whether seeking healing deeper connection or more balance — a transformative path back to the core of your love." },
+                { title: "Soul-level connection", body: "Deepen trust and emotional intimacy in a safe held space." },
+                { title: "Cacao opens the heart", body: "Invites compassionate communication and emotional alignment." },
+                { title: "Reiki & sound", body: "Release old patterns and restore harmony together." },
+                { title: "Nourish your love", body: "Feel love expressed and strengthened through shared presence." },
               ].map((item) => (
                 <li key={item.title} className="flex gap-3">
                   <Triangle className="h-4 w-4 mt-1 text-primary shrink-0" />
