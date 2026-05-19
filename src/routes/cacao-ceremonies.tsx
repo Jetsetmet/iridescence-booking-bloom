@@ -83,8 +83,9 @@ function CacaoCeremonies() {
           </div>
           <h2 className="mt-2 font-display text-3xl">Couples Cacao Ceremony</h2>
           <p className="mt-3 text-foreground/80 text-pretty">
-            Cacao woven with Reiki, sound, breathwork and gentle connection exercises —
-            a nurturing space to meet on a soul level and deepen trust, intimacy and love.
+            When did you last truly see each other? Drop the armor, soften into presence
+            and remember why you chose one another — a guided ritual to reignite intimacy,
+            trust and soul-deep connection.
           </p>
           <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft">
             Book a ceremony <ArrowRight className="h-4 w-4" />
