@@ -44,6 +44,8 @@ function CacaoCeremonies() {
           className="rounded-[2rem] shadow-glow object-cover w-full h-[320px] md:h-[360px] max-w-md mx-auto" />
       </section>
 
+      <CacaoInvitesSection variant="slim" />
+
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -96,7 +98,7 @@ function CacaoCeremonies() {
   );
 }
 
-function CacaoInvitesSection() {
+function CacaoInvitesSection({ variant = "full" }: { variant?: "full" | "slim" }) {
   const submit = useServerFn(submitLead);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -117,6 +119,47 @@ function CacaoInvitesSection() {
       setStatus("error");
       setErrorMsg(err instanceof Error ? err.message : "Something went wrong");
     }
+  }
+
+  if (variant === "slim") {
+    return (
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-12">
+        <div className="rounded-[2rem] border border-border bg-card/70 p-6 sm:p-8 shadow-soft flex flex-col md:flex-row md:items-center gap-5">
+          <div className="md:flex-1">
+            <div className="flex items-center gap-2 text-primary">
+              <Heart className="h-4 w-4" />
+              <span className="text-xs uppercase tracking-wider">Cacao Circle Invites</span>
+            </div>
+            <p className="mt-2 font-display text-xl sm:text-2xl">Get invited to the next New Orleans cacao circle.</p>
+          </div>
+          {status === "done" ? (
+            <p className="md:flex-1 text-sm text-primary">You're on the list — Met will be in touch.</p>
+          ) : (
+            <form onSubmit={handleSubmit} className="md:flex-1 flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Your email"
+                maxLength={255}
+                className="flex-1 rounded-full border border-border bg-background/70 px-5 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+              />
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60"
+              >
+                {status === "loading" ? <Loader2 className="h-4 w-4 animate-spin" /> : <>Invite me <ArrowRight className="h-4 w-4" /></>}
+              </button>
+            </form>
+          )}
+          {status === "error" && (
+            <p className="text-xs text-destructive md:basis-full">{errorMsg ?? "Please try again."}</p>
+          )}
+        </div>
+      </section>
+    );
   }
 
   return (
