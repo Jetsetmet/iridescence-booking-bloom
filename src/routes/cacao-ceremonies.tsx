@@ -93,6 +93,36 @@ function CacaoCeremonies() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
+        <div className="flex items-center gap-2 text-primary justify-center">
+          <Triangle className="h-4 w-4" />
+          <span className="text-xs uppercase tracking-wider">Food of the Gods</span>
+        </div>
+        <h2 className="mt-2 font-display text-3xl sm:text-4xl text-center">The benefits of ceremonial cacao</h2>
+        <p className="mt-4 max-w-3xl mx-auto text-center text-foreground/80 text-pretty">
+          Honored for centuries by the Indigenous peoples of Central and South America as sacred medicine, ceremonial cacao gently nourishes the heart, body and spirit.
+        </p>
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {[
+            { title: "Opens the heart", body: "Softens emotional armor and invites compassion, connection and presence." },
+            { title: "Uplifts the mood", body: "Encourages the natural release of endorphins and serotonin — joy, warmth and inner bliss." },
+            { title: "Calms the nervous system", body: "Rich in magnesium to ease tension and restore a sense of deep balance." },
+            { title: "Nourishes the heart", body: "Powerful antioxidants and flavonoids support circulation and cardiovascular health." },
+            { title: "Sharpens clarity", body: "Theobromine, a gentle stimulant, enhances mental focus without the jitters of caffeine." },
+            { title: "Awakens creativity", body: "Reconnects you to intuition, inspiration and your sense of purpose." },
+          ].map((b) => (
+            <div key={b.title} className="rounded-2xl border border-border bg-card p-6 shadow-soft">
+              <div className="flex items-center gap-2 text-primary">
+                <Triangle className="h-3.5 w-3.5" />
+                <span className="text-[10px] uppercase tracking-wider">Benefit</span>
+              </div>
+              <h3 className="mt-2 font-display text-xl">{b.title}</h3>
+              <p className="mt-2 text-sm text-foreground/75 text-pretty">{b.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <CacaoInvitesSection />
     </>
   );
