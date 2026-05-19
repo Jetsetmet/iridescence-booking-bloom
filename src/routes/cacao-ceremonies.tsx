@@ -4,6 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Triangle, Play, Heart, Loader2 } from "lucide-react";
 import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
+import cacaoLogo from "@/assets/cacao-logo.png";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
@@ -21,14 +22,14 @@ export const Route = createFileRoute("/cacao-ceremonies")({
 function CacaoCeremonies() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-[1.05fr_1fr] gap-12 items-center">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Cacao Ceremonies</p>
-          <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Iridescence Cacao · New Orleans</p>
+          <h1 className="mt-3 font-display text-5xl sm:text-6xl text-balance leading-[1.05]">
             Let your heart <span className="italic bg-iridescent bg-clip-text text-transparent">glow</span> with every sip.
           </h1>
-          <p className="mt-6 text-foreground/80 leading-relaxed text-pretty">
-            Ceremonial cacao sourced from a small family farm in Costa Rica — lovingly brewed by Met to gently open the heart, soften old patterns and reconnect you to intuition, creativity and joy.
+          <p className="mt-6 text-foreground/80 leading-relaxed text-pretty max-w-xl">
+            Ceremonial cacao sourced from a small family farm in Costa Rica — lovingly brewed by Mehtap to gently open the heart, soften old patterns and reconnect you to intuition, creativity and joy.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
@@ -39,9 +40,25 @@ function CacaoCeremonies() {
             </Link>
           </div>
         </div>
-        <img src={heroImg} alt="Ceremonial cacao with flowers — Iridescence Healing New Orleans"
-          loading="lazy" width={1200} height={1200}
-          className="rounded-[2rem] shadow-glow object-cover w-full h-[320px] md:h-[360px] max-w-md mx-auto" />
+        <div className="relative mx-auto w-full max-w-md">
+          <div className="absolute -inset-6 rounded-full bg-iridescent opacity-30 blur-3xl" aria-hidden />
+          <img
+            src={cacaoLogo}
+            alt="Iridescence Cacao emblem — ceremonial cacao New Orleans"
+            loading="eager"
+            width={900}
+            height={900}
+            className="relative w-full aspect-square object-contain drop-shadow-[0_18px_40px_rgba(0,0,0,0.25)]"
+          />
+          <img
+            src={heroImg}
+            alt="Ceremonial cacao with rose petals — Iridescence Healing New Orleans"
+            loading="lazy"
+            width={400}
+            height={400}
+            className="absolute -bottom-6 -right-2 sm:-right-6 w-28 sm:w-36 aspect-square object-cover rounded-2xl shadow-glow border-4 border-background"
+          />
+        </div>
       </section>
 
       <CacaoInvitesSection variant="slim" />
