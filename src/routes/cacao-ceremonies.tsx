@@ -41,7 +41,7 @@ function CacaoCeremonies() {
         </div>
         <img src={heroImg} alt="Ceremonial cacao with flowers — Iridescence Healing New Orleans"
           loading="lazy" width={1200} height={1200}
-          className="rounded-[2rem] shadow-glow object-cover w-full h-[480px]" />
+          className="rounded-[2rem] shadow-glow object-cover w-full h-[320px] md:h-[360px] max-w-md mx-auto" />
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
