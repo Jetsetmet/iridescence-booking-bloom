@@ -114,30 +114,28 @@ function CacaoCeremonies() {
             <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
               Couples Cacao Ceremony
             </h2>
-            <p className="mt-4 text-foreground/80 text-pretty">
-              A deeply nourishing, heart-opening experience that blends the
-              ancient healing power of ceremonial cacao with Reiki, sound
-              therapy, breathwork and gentle couples exercises — a sacred
-              space to reconnect, soften and feel each other again.
+            <p className="mt-3 text-foreground/80 text-pretty text-sm">
+              A heart-opening ritual blending ceremonial cacao with Reiki,
+              sound, breathwork and gentle couples exercises — a sacred space
+              to reconnect and soften into each other.
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-5 space-y-2.5">
               {[
-                { title: "Authentic connection", body: "A safe, supportive space to meet each other on a soul level and deepen trust." },
-                { title: "Cacao opens the heart", body: "Invites compassionate communication and emotional alignment between you." },
-                { title: "Reiki & sound healing", body: "A deeply nourishing, heart-opening experience that blends the ancient healing power of ceremonial cacao with Reiki, sound therapy, breathwork and gentle couples exercises — a sacred space to reconnect, soften and connect." },
-                { title: "Nourish your love", body: "A nurturing container for love to be felt, expressed and strengthened through shared presence and intimacy." },
-                { title: "A journey back to your bond", body: "Whether you seek healing, deeper connection or more balance, this is a transformative path back to the core of your love." },
+                { title: "Authentic connection", body: "Meet on a soul level and deepen trust." },
+                { title: "Cacao opens the heart", body: "Invites compassionate, honest communication." },
+                { title: "Reiki & sound healing", body: "Release old patterns and restore harmony." },
+                { title: "Nourish your love", body: "Love felt, expressed and strengthened through shared presence." },
               ].map((item) => (
                 <li key={item.title} className="flex gap-3">
-                  <Triangle className="h-4 w-4 mt-1 text-primary shrink-0" />
+                  <Triangle className="h-3.5 w-3.5 mt-1 text-primary shrink-0" />
                   <div>
-                    <p className="font-display text-lg leading-tight">{item.title}</p>
-                    <p className="mt-1 text-sm text-foreground/75 text-pretty">{item.body}</p>
+                    <p className="font-display text-base leading-tight">{item.title}</p>
+                    <p className="mt-0.5 text-sm text-foreground/75 text-pretty">{item.body}</p>
                   </div>
                 </li>
               ))}
             </ul>
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               <Link to="/book" search={{ offering: "Couples Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Book a couples ceremony <ArrowRight className="h-4 w-4" />
               </Link>
