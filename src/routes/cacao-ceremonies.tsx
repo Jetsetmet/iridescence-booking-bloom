@@ -1,5 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Triangle, Play } from "lucide-react";
+import { useState } from "react";
+import { useServerFn } from "@tanstack/react-start";
+import { ArrowRight, Triangle, Play, Heart, Loader2 } from "lucide-react";
+import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
@@ -87,6 +90,90 @@ function CacaoCeremonies() {
           </p>
         </div>
       </section>
+
+      <CacaoInvitesSection />
     </>
+  );
+}
+
+function CacaoInvitesSection() {
+  const submit = useServerFn(submitLead);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setStatus("loading");
+    setErrorMsg(null);
+    try {
+      await submit({ data: { email: email.trim(), name: name.trim() || undefined, source: "cacao_circle" } });
+      setStatus("done");
+      setName("");
+      setEmail("");
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Something went wrong");
+    }
+  }
+
+  return (
+    <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
+      <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <div className="flex items-center gap-2 text-primary">
+            <Heart className="h-4 w-4" />
+            <span className="text-xs uppercase tracking-wider">Cacao Circle Invites</span>
+          </div>
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl">Join the New Orleans cacao circle list.</h2>
+          <p className="mt-3 text-foreground/80 text-pretty">
+            Be the first to know when Met opens the next local cacao ceremony — quiet, intimate gatherings shared by email only.
+          </p>
+        </div>
+        {status === "done" ? (
+          <div className="rounded-2xl border border-border bg-background/60 p-6 text-center">
+            <Heart className="mx-auto h-6 w-6 text-primary" />
+            <p className="mt-3 font-display text-xl">You're on the list.</p>
+            <p className="mt-1 text-sm text-muted-foreground">Met will reach out when the next circle is open.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-3">
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name (optional)"
+              maxLength={120}
+              className="w-full rounded-full border border-border bg-background/70 px-5 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            />
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your email"
+              maxLength={255}
+              className="w-full rounded-full border border-border bg-background/70 px-5 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60"
+            >
+              {status === "loading" ? (
+                <><Loader2 className="h-4 w-4 animate-spin" /> Sending…</>
+              ) : (
+                <>Invite me to the circle <ArrowRight className="h-4 w-4" /></>
+              )}
+            </button>
+            {status === "error" && (
+              <p className="text-xs text-destructive">{errorMsg ?? "Please try again."}</p>
+            )}
+          </form>
+        )}
+      </div>
+    </section>
   );
 }
