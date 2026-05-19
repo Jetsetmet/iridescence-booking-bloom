@@ -4,8 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
 import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
-import couplesImg from "@/assets/couples-cacao.jpg";
-import couplesImg2 from "@/assets/couples-cacao-2.jpg";
+import couplesImg from "@/assets/couples-palms.jpg";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
@@ -98,22 +97,15 @@ function CacaoCeremonies() {
       {/* COUPLES CACAO CEREMONY */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-24">
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
             <img
               src={couplesImg}
-              alt="Couple sharing ceremonial cacao by candlelight — Couples Cacao Ceremony New Orleans"
+              alt="Couple sitting palm to palm in a sacred connection ritual — Couples Cacao Ceremony New Orleans"
               loading="lazy"
               width={1024}
               height={1280}
-              className="rounded-2xl shadow-card object-cover w-full h-full aspect-[4/5]"
-            />
-            <img
-              src={couplesImg2}
-              alt="Couple holding hands during sound healing and cacao ritual — Iridescence Healing"
-              loading="lazy"
-              width={1280}
-              height={1024}
-              className="rounded-2xl shadow-card object-cover w-full h-full aspect-[4/5] mt-8"
+              className="relative rounded-[2rem] shadow-glow object-cover w-full aspect-[4/5]"
             />
           </div>
           <div>
