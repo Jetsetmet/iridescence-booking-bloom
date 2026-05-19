@@ -5,6 +5,7 @@ import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
 import packagesImg from "@/assets/moon.jpg";
+import retreatsImg from "@/assets/costa-rica-waterfall.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
@@ -71,6 +72,15 @@ const items: Array<{
     tiers: [
       { label: "Four 60-min Sessions", duration: "10% discount", price: "$468" },
       { label: "Four 90-min Sessions", duration: "10% discount", price: "$612" },
+    ],
+  },
+  {
+    icon: Triangle, title: "Transformative Retreats", img: retreatsImg, slug: "Retreat",
+    desc: "Immersive Costa Rica journeys weaving Reiki, sound, cacao, yoga, breathwork and indigenous Temazcal into the quiet medicine of nature. Group retreats in December 2025 & January 2026, plus a private 4-day Oneness retreat.",
+    tiers: [
+      { label: "Winter Reset Retreat", duration: "Dec 2–9, 2025", price: "Puntarenas, CR" },
+      { label: "Somatic Awakening Retreat", duration: "Jan 11–16, 2026", price: "Puntarenas, CR" },
+      { label: "4-Day Oneness Private Retreat", duration: "Custom dates", price: "From $4,422 pp" },
     ],
   },
 ];
