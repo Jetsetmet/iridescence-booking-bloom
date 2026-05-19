@@ -115,23 +115,19 @@ function CacaoCeremonies() {
               Couples Cacao Ceremony
             </h2>
             <p className="mt-3 text-foreground/80 text-pretty text-sm">
-              A heart-opening ritual blending ceremonial cacao with Reiki,
-              sound, breathwork and gentle couples exercises — a sacred space
-              to reconnect and soften into each other.
+              Ceremonial cacao woven with Reiki, sound and breathwork —
+              a sacred space to reconnect and soften into each other.
             </p>
-            <ul className="mt-5 space-y-2.5">
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
               {[
-                { title: "Authentic connection", body: "Meet on a soul level and deepen trust." },
-                { title: "Cacao opens the heart", body: "Invites compassionate, honest communication." },
-                { title: "Reiki & sound healing", body: "Release old patterns and restore harmony." },
-                { title: "Nourish your love", body: "Love felt, expressed and strengthened through shared presence." },
+                "Soul-level connection",
+                "Opens the heart",
+                "Reiki & sound healing",
+                "Nourish your love",
               ].map((item) => (
-                <li key={item.title} className="flex gap-3">
-                  <Triangle className="h-3.5 w-3.5 mt-1 text-primary shrink-0" />
-                  <div>
-                    <p className="font-display text-base leading-tight">{item.title}</p>
-                    <p className="mt-0.5 text-sm text-foreground/75 text-pretty">{item.body}</p>
-                  </div>
+                <li key={item} className="flex gap-2 items-center">
+                  <Triangle className="h-3 w-3 text-primary shrink-0" />
+                  <span className="text-sm text-foreground/80">{item}</span>
                 </li>
               ))}
             </ul>
