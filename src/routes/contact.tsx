@@ -50,11 +50,16 @@ function Contact() {
           <div className="mt-3 font-medium text-sm">Instagram</div>
           <div className="mt-1 text-xs text-muted-foreground">@jetsetmet</div>
         </a>
-        <div className="rounded-3xl border border-border bg-card p-6 shadow-card">
+        <a
+          href="https://maps.google.com/?q=4932+Prytania+St+Suite+D+New+Orleans+LA+70130"
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow"
+        >
           <MapPin className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Location</div>
-          <div className="mt-1 text-xs text-muted-foreground">Uptown New Orleans, LA</div>
-        </div>
+          <div className="mt-1 text-xs text-muted-foreground">4932 Prytania St, Suite D<br />New Orleans, LA 70130</div>
+        </a>
       </div>
     </section>
   );
