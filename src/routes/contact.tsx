@@ -61,6 +61,18 @@ function Contact() {
           <div className="mt-1 text-xs text-muted-foreground">4932 Prytania St, Suite D<br />New Orleans, LA 70130</div>
         </a>
       </div>
+      <div className="mt-10 overflow-hidden rounded-3xl border border-border shadow-card">
+        <iframe
+          title="Iridescence Healing location map"
+          src="https://www.google.com/maps?q=4932+Prytania+St+Suite+D+New+Orleans+LA+70130&output=embed"
+          width="100%"
+          height="400"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
     </section>
   );
 }
