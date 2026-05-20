@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Instagram, Calendar } from "lucide-react";
+import { Mail, MapPin, Instagram, Calendar, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -19,7 +19,7 @@ function Contact() {
       <p className="mt-4 text-muted-foreground text-pretty">
         Questions, custom sessions, or private group ceremonies — I'd love to hear what brought you here.
       </p>
-      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         <a href="https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services?rwg_token=AFd1xnG8opsnB8WvxAc5Gu92w-ep4LAQyNqcaVA4S02XPh2Ls2RPId34yddJHpbz57l-ZkUuMTWlbLQRyenGhZi2TDn3gUVGPg%3D%3D" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Calendar className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Book a session</div>
@@ -60,6 +60,11 @@ function Contact() {
           <div className="mt-3 font-medium text-sm">Location</div>
           <div className="mt-1 text-xs text-muted-foreground">4932 Prytania St, Suite D<br />New Orleans, LA 70130</div>
         </a>
+        <div className="rounded-3xl border border-border bg-card p-6 shadow-card flex flex-col items-center justify-center">
+          <Sparkles className="h-5 w-5 text-primary" />
+          <p className="mt-3 font-display text-base text-balance italic">"What you seek is seeking you."</p>
+          <div className="mt-1 text-xs text-muted-foreground">— Rumi</div>
+        </div>
       </div>
       <div className="mt-10 overflow-hidden rounded-3xl border border-border shadow-card">
         <iframe
