@@ -25,11 +25,21 @@ function Contact() {
           <div className="mt-3 font-medium text-sm">Book a session</div>
           <div className="mt-1 text-xs text-muted-foreground">Square Appointments</div>
         </a>
-        <a href="mailto:hello@iridescencehealing.com" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
+        <button
+          type="button"
+          onClick={(e) => {
+            const user = "met";
+            const domain = "iridescencehealing.com";
+            window.location.href = `mailto:${user}@${domain}`;
+            const label = e.currentTarget.querySelector("[data-email]");
+            if (label) label.textContent = `${user}@${domain}`;
+          }}
+          className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow text-left w-full"
+        >
           <Mail className="h-5 w-5 mx-auto text-primary" />
-          <div className="mt-3 font-medium text-sm">Email</div>
-          <div className="mt-1 text-xs text-muted-foreground break-all">hello@iridescencehealing.com</div>
-        </a>
+          <div className="mt-3 font-medium text-sm text-center">Email</div>
+          <div data-email className="mt-1 text-xs text-muted-foreground break-all text-center">Click to reveal</div>
+        </button>
         <a href="https://instagram.com/iridescence_healing" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Instagram className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Instagram</div>
