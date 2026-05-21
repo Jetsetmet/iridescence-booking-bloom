@@ -26,9 +26,9 @@ const offerings = [
 ];
 
 const testimonials = [
-  { quote: "Mehtap held the most beautiful, safe container. I left feeling completely re-tuned to myself.", name: "Sarah K." },
-  { quote: "The sound bath was unlike anything I've experienced — I cried, I laughed, I came home.", name: "Daniel R." },
-  { quote: "A genuine healer. The Reiki session shifted something I'd been carrying for years.", name: "Aisha M." },
+  { quote: "Every time I leave a session I feel completely and utterly rejuvenated. Met is truly a shining star and I am so glad to have her help me in my journey.", name: "Brittany V." },
+  { quote: "Met is amazing. Every time she works on me, I feel like a new person. She's very intuitive and caring — the combo of oils, crystals and healing touch is like nothing I've ever experienced.", name: "Tara L." },
+  { quote: "I wasn't a believer. At all. It took one session to turn that around. Met has a special gift and I feel gratitude, above all, that she is in my life.", name: "Vincent J." },
 ];
 
 function Home() {
@@ -57,6 +57,14 @@ function Home() {
               >
                 View Offerings <Triangle className="h-4 w-4" />
               </Link>
+              <a
+                href="https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services?rwg_token=AFd1xnG8opsnB8WvxAc5Gu92w-ep4LAQyNqcaVA4S02XPh2Ls2RPId34yddJHpbz57l-ZkUuMTWlbLQRyenGhZi2TDn3gUVGPg%3D%3D"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent transition-colors"
+              >
+                Book directly on Square <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
           <div className="relative">
@@ -76,14 +84,20 @@ function Home() {
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Welcome</p>
           <p className="mt-4 font-display text-2xl sm:text-3xl leading-relaxed text-pretty">
-            An honour your path led you here.
+            I'm so grateful you're here — it's an honour your path led you to this space.
           </p>
           <p className="mt-5 text-muted-foreground text-pretty">
-            A nurturing space uptown in New Orleans where ancient energy and heart medicine meet -
-            sound baths, Reiki, cacao, breathwork, meditation and mentoring to help you slow down,
-            reconnect and remember the wisdom within you.
+            This is where ancient energy and heart medicine come together to support your journey inward.
+            Through gentle, holistic practices, I offer a nurturing space uptown in New Orleans to slow down,
+            reconnect and remember the wisdom within you. It's a gentle return to your inner light, where
+            healing can gracefully take root and blossom.
           </p>
-          <p className="mt-4 text-muted-foreground italic">This is where your journey to wholeness begins. With love…</p>
+          <p className="mt-4 text-muted-foreground text-pretty">
+            Feel free to explore and scroll down to discover how we can connect and journey together —
+            whether you're drawn to group sound baths, one-on-one Reiki, cacao ceremonies, meditation and
+            breathwork guidance, or self-love and personal growth mentoring, I'm here to support you.
+          </p>
+          <p className="mt-4 text-muted-foreground italic">With love…</p>
         </div>
         <div className="max-w-2xl">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Offerings</p>

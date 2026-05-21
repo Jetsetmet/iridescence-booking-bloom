@@ -17,9 +17,9 @@ export const Route = createFileRoute("/events")({
 });
 
 const events = [
-  { date: "Friday, May 30", time: "7:00 PM", title: "Full Moon Sound Bath", loc: "Uptown Studio, New Orleans", img: moonImg, slug: "Sound Bath" },
-  { date: "Sunday, June 9",  time: "5:30 PM", title: "Cacao + Heart Circle", loc: "Private Garden, Uptown", img: cacaoImg, slug: "Cacao Ceremony" },
-  { date: "Saturday, June 22", time: "9:00 AM", title: "Sunrise Breathwork Journey", loc: "Audubon Park", img: heroImg, slug: "Breathwork" },
+  { date: "Thursday, May 30", time: "6:30 PM", title: "Virtual \"Open Your Heart\" Breathwork Journey", loc: "Online · $25", img: heroImg, slug: "Breathwork" },
+  { date: "Thursday, June 4", time: "6:30 PM", title: "Cacao + Heart Circle", loc: "Uptown — location revealed when booked · space limited · $35", img: cacaoImg, slug: "Cacao Ceremony" },
+  { date: "Sunday, June 14", time: "11:00 AM", title: "New Moon Sound Bath", loc: "Location revealed when booked · space limited · $35", img: moonImg, slug: "Sound Bath" },
 ];
 
 function Events() {

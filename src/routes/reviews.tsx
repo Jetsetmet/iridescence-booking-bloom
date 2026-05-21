@@ -59,6 +59,11 @@ const reviews: { quote: string; author: string }[] = [
       "I'm not sure where to begin… maybe with, that I wasn't a believer. At all. It took one session to turn that around. I couldn't believe how I felt after. Back pain was not there. Mind was calm. For the first time in a very long time for me, I felt good. Met has a special gift and I feel gratitude, above all, that she is in my life. Can't recommend enough that if you have the chance to see her, take it. She is truly amazing.",
     author: "Vincent J.",
   },
+  {
+    quote:
+      "It was my first Reiki experience… Met exhales warmth and kindness. Through her stillness I found my ground. She supported me through the self love discovery and accepted me while I exposed my vulnerabilities. I am so grateful and appreciative. Love,",
+    author: "Irina V.",
+  },
 ];
 
 function Reviews() {

@@ -2,14 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
+import turkeyCappadociaImg from "@/assets/turkey-cappadocia.jpeg";
+import turkeyMosqueImg from "@/assets/turkey-blue-mosque.jpeg";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
     meta: [
-      { title: "Transformative Retreats — Costa Rica with Iridescence Healing" },
-      { name: "description", content: "Immersive Costa Rica retreats blending Reiki, sound healing, cacao, yoga, breathwork and nature immersion. December 2025 & January 2026." },
-      { property: "og:title", content: "Transformative Retreats — Costa Rica" },
-      { property: "og:description", content: "Deeply nourishing, spacious retreats in Puntarenas, Costa Rica — reconnect, release and step into clarity." },
+      { title: "Transformative Retreats — Turkey & Costa Rica with Iridescence Healing" },
+      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia (April 2026) and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
+      { property: "og:title", content: "Transformative Retreats — Turkey & Costa Rica" },
+      { property: "og:description", content: "Resonance & Remembrance in Turkey and a private Oneness Spiritual Emergence retreat in Costa Rica." },
       { property: "og:image", content: heroImg },
     ],
   }),
