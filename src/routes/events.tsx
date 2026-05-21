@@ -17,9 +17,27 @@ export const Route = createFileRoute("/events")({
 });
 
 const events = [
-  { date: "Thursday, May 30", time: "6:30 PM", title: "Virtual \"Open Your Heart\" Breathwork Journey", loc: "Online · $25", img: heroImg, slug: "Breathwork" },
-  { date: "Thursday, June 4", time: "6:30 PM", title: "Cacao + Heart Circle", loc: "Uptown — location revealed when booked · space limited · $35", img: cacaoImg, slug: "Cacao Ceremony" },
-  { date: "Sunday, June 14", time: "11:00 AM", title: "New Moon Sound Bath", loc: "Location revealed when booked · space limited · $35", img: moonImg, slug: "Sound Bath" },
+  {
+    date: "Thursday, May 30", time: "6:30 PM",
+    title: "Virtual \"Open Your Heart\" Breathwork Journey",
+    loc: "Online from anywhere · $25",
+    blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
+    img: heroImg, slug: "Breathwork",
+  },
+  {
+    date: "Thursday, June 4", time: "6:30 PM",
+    title: "Cacao + Heart Circle",
+    loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $35",
+    blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
+    img: cacaoImg, slug: "Cacao Ceremony",
+  },
+  {
+    date: "Sunday, June 14", time: "11:00 AM",
+    title: "New Moon Sound Bath",
+    loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
+    blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
+    img: moonImg, slug: "Sound Bath",
+  },
 ];
 
 function Events() {
@@ -44,6 +62,7 @@ function Events() {
                 <Calendar className="h-3.5 w-3.5" /> {e.date} · {e.time}
               </div>
               <h3 className="mt-2 font-display text-2xl">{e.title}</h3>
+              <p className="mt-2 text-sm text-foreground/80 text-pretty">{e.blurb}</p>
               <p className="mt-2 text-sm text-muted-foreground flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" /> {e.loc}
               </p>
