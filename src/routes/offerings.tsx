@@ -26,7 +26,7 @@ const items: Array<{
 }> = [
   {
     icon: Triangle, title: "Crystal Reiki & Sound", img: reikiImg, slug: "Reiki",
-     desc: "Reiki sound healings that weave hands-on energy work with crystal and Tibetan singing bowls - to clear stagnation, restore flow and welcome your nervous system home. Mehtap specializes in couples, one-on-one and group sessions.",
+     desc: "Over the past decade, Met's Reiki sessions have blossomed into a deeply intuitive, holistic experience — weaving hands-on energy work, healing crystal frequencies, chakra balancing, breath and visualization activations, soul cleansing of unhealthy cords, and powerful sound from 432Hz quartz bowls, 528Hz chimes and solfeggio frequencies. Each session is held in a safe, nurturing space to clear, balance and activate the chakra system, soften limiting beliefs, and guide you back to your truest self. Offered as one-on-one, couple and group sessions.",
     tiers: [
       { label: "Student", duration: "60 min", price: "$110" },
       { label: "\n", duration: "60 min", price: "$130" },
@@ -76,10 +76,9 @@ const items: Array<{
   },
   {
     icon: Triangle, title: "Transformative Retreats", img: retreatsImg, slug: "Retreat",
-    desc: "Immersive Costa Rica journeys weaving Reiki, sound, cacao, yoga, breathwork and indigenous Temazcal into the quiet medicine of nature. Group retreats in December 2025 & January 2026, plus a private 4-day Oneness retreat.",
+    desc: "Immersive journeys weaving Reiki, sound, cacao, yoga, breathwork and somatic practices into the quiet medicine of ancient lands — Istanbul & Cappadocia in April 2026, and a private 4-day Oneness retreat in Costa Rica.",
     tiers: [
-      { label: "Winter Reset Retreat", duration: "Dec 2–9, 2025", price: "Puntarenas, CR" },
-      { label: "Somatic Awakening Retreat", duration: "Jan 11–16, 2026", price: "Puntarenas, CR" },
+      { label: "Resonance & Remembrance — Turkey", duration: "April 11–18, 2026", price: "Istanbul & Cappadocia" },
       { label: "4-Day Oneness Private Retreat", duration: "Custom dates", price: "From $4,422 pp" },
     ],
   },

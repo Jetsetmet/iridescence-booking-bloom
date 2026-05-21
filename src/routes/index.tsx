@@ -26,9 +26,9 @@ const offerings = [
 ];
 
 const testimonials = [
-  { quote: "Every time I leave a session I feel completely and utterly rejuvenated. Met is truly a shining star and I am so glad to have her help me in my journey.", name: "Brittany V." },
-  { quote: "Met is amazing. Every time she works on me, I feel like a new person. She's very intuitive and caring — the combo of oils, crystals and healing touch is like nothing I've ever experienced.", name: "Tara L." },
-  { quote: "I wasn't a believer. At all. It took one session to turn that around. Met has a special gift and I feel gratitude, above all, that she is in my life.", name: "Vincent J." },
+  { quote: "My sessions with Met are always transformational. Her intuitive abilities to understand what I need each time I see her always astounds me. I experience shifts energetically and mentally and always experience deeper clarity in the days that follow. She is a gift and over the years has become an integral part of my healing journey. I can't recommend her enough.", name: "Emily C." },
+  { quote: "Met led a warm & intimate cacao ceremony for my bachelorette! She possesses a skill of helping the group be vulnerable with one another. Her sound bath was truly the best I've ever experienced. She came to our air bnb and made magic happen. I recommend her SO highly. If you're looking for an unforgettable group experience, she is very capable of creating that for you & your group!", name: "Greta S." },
+  { quote: "I've been going to Met for Reiki for many years, and every session reminds me why I trust her so deeply. Her energy is calming, her intuition is spot-on, and she creates a space where I can truly relax and heal. She is genuinely gifted, and I always leave feeling renewed and centered.", name: "Monica H." },
 ];
 
 function Home() {
