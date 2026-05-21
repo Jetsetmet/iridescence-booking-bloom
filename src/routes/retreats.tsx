@@ -2,14 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
+import turkeyCappadociaImg from "@/assets/turkey-cappadocia.jpeg";
+import turkeyMosqueImg from "@/assets/turkey-blue-mosque.jpeg";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
     meta: [
-      { title: "Transformative Retreats — Costa Rica with Iridescence Healing" },
-      { name: "description", content: "Immersive Costa Rica retreats blending Reiki, sound healing, cacao, yoga, breathwork and nature immersion. December 2025 & January 2026." },
-      { property: "og:title", content: "Transformative Retreats — Costa Rica" },
-      { property: "og:description", content: "Deeply nourishing, spacious retreats in Puntarenas, Costa Rica — reconnect, release and step into clarity." },
+      { title: "Transformative Retreats — Turkey & Costa Rica with Iridescence Healing" },
+      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia (April 2026) and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
+      { property: "og:title", content: "Transformative Retreats — Turkey & Costa Rica" },
+      { property: "og:description", content: "Resonance & Remembrance in Turkey and a private Oneness Spiritual Emergence retreat in Costa Rica." },
       { property: "og:image", content: heroImg },
     ],
   }),
@@ -58,40 +60,40 @@ function Retreats() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Upcoming</p>
-          <h2 className="mt-2 font-display text-4xl sm:text-5xl">Puntarenas, Costa Rica</h2>
-          <p className="mt-4 text-foreground/80">Two upcoming retreats in the southern Pacific — each spacious, nourishing and transformational.</p>
-        </div>
-
-        <div className="mt-10 grid md:grid-cols-2 gap-6">
-          {[
-            {
-              icon: Triangle,
-              dates: "December 2–9, 2025",
-              title: "Winter Reset Retreat",
-              blurb: "A week of slow mornings, ceremony and deep release as the year closes.",
-              pdf: "https://iridescencehealing.com/wp-content/uploads/2025/05/29DecRetreat.pdf",
-            },
-            {
-              icon: Triangle,
-              dates: "January 11–16, 2026",
-              title: "Somatic Awakening Retreat",
-              blurb: "Begin the year aligned — nervous system reset, breath, sound and cacao.",
-              pdf: "https://iridescencehealing.com/wp-content/uploads/2025/05/SomaticAwakeningRetreat.pdf",
-            },
-          ].map((r) => (
-            <div key={r.title} className="rounded-3xl border border-border bg-card p-7 shadow-soft">
-              <r.icon className="h-6 w-6 text-primary" />
-              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">{r.dates}</p>
-              <h3 className="mt-1 font-display text-2xl">{r.title}</h3>
-              <p className="mt-3 text-foreground/80 leading-relaxed">{r.blurb}</p>
-              <a href={r.pdf} target="_blank" rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                View brochure (PDF) <ArrowRight className="h-4 w-4" />
-              </a>
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-2 gap-3">
+            <img
+              src={turkeyCappadociaImg}
+              alt="Hot air balloons over Cappadocia, Turkey — Resonance & Remembrance retreat"
+              loading="lazy"
+              className="rounded-2xl shadow-soft object-cover w-full h-64 col-span-2"
+            />
+            <img
+              src={turkeyMosqueImg}
+              alt="Blue Mosque at sunset, Istanbul — Resonance & Remembrance retreat"
+              loading="lazy"
+              className="rounded-2xl shadow-soft object-cover w-full h-40 col-span-2"
+            />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">April 11–18, 2026 · Turkey</p>
             </div>
-          ))}
+            <h2 className="mt-3 font-display text-4xl">Resonance & Remembrance</h2>
+            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Breath, Sound, Cacao & Self-Discovery</p>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              A sacred journey through the vibrant energy of Istanbul and the ancient landscapes of Cappadocia. <em>Resonance & Remembrance</em> invites you to slow down, regulate the nervous system, and reconnect with the truth of who you are. Rooted in the wisdom of ancient lands and the remembrance of our deeper origins, this experience is an invitation to reconnect with your inner truth and the parts of yourself that may have been forgotten along the way.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              Through breathwork, sound healing, ceremonial cacao, yoga, somatic practices and deep inner inquiry, we'll gently release old stories, soften limiting patterns and create space for greater clarity, connection and self-remembrance. This is a journey back to self — held by ancient roots, sacred landscapes and the resonance already living within you.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Reserve your spot <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

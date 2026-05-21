@@ -42,6 +42,45 @@ function About() {
             trust in the body's innate intelligence. There is no agenda here other
             than your remembering.
           </p>
+          <p>
+            UK-born with Turkish Cypriot roots, I was introduced early on to the healing
+            power of prayer, energy, intention and plants — a connection that sparked a
+            lifelong passion for wellness and transformation.
+          </p>
+          <p>
+            My path has been shaped by profound personal loss and a deep bond with nature.
+            After losing my father at age 10 and facing my mother's life-threatening illness
+            just two years later, I found strength and solace in the natural world. A miraculous
+            kidney donation from my aunt saved my mother's life, reinforcing my faith in the
+            divine and the power of love and resilience.
+          </p>
+          <p>
+            These experiences guided me through grief, abandonment and self-discovery, until
+            I came to understand that self-love is the foundation of true healing — a message
+            that now lies at the heart of my work.
+          </p>
+          <p>
+            With over 17 years in energy medicine, holistic wellness and spiritual growth, I'm
+            a Reiki Master, Intuitive Shamanic Healer, Sound Healer, Yoga Teacher and Mentor.
+            In 2013, I founded Iridescence Healing in New Orleans, creating a sacred space for
+            growth and transformation.
+          </p>
+          <p>
+            My yoga path began in Los Angeles in 2005 and evolved through years of training in
+            Hatha, Restorative, Kids Yoga and Kundalini Yoga — further expanding into breathwork,
+            meditation and mantra.
+          </p>
+          <p>
+            In 2018, I began working with plant medicines, later deepening my connection through
+            a yearlong apprenticeship in Ecuador. This led me to offer heart-opening cacao
+            ceremonies and sacred healing work — now woven into ceremonies for couples and global retreats.
+          </p>
+          <p>
+            I've supported hundreds of clients through deep emotional release, energetic alignment
+            and spiritual transformation. My sessions combine sound frequencies, hands-on energy
+            healing, guided visualization and intuitive channeling to unlock the song of the heart
+            and support multidimensional healing.
+          </p>
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
           <div className="rounded-2xl border border-border bg-card p-4">
