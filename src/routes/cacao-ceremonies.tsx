@@ -168,11 +168,22 @@ function CacaoCeremonies() {
               <Triangle className="h-4 w-4" />
               <span className="text-xs uppercase tracking-wider">Cacao Starter Kit</span>
             </div>
-            <h2 className="mt-2 font-display text-3xl sm:text-4xl">Bring the ritual home.</h2>
+            <div className="mt-4 flex items-center gap-4">
+              <img
+                src={cacaoLogoImg}
+                alt="Iridescence Cacao logo"
+                loading="lazy"
+                width={120}
+                height={120}
+                className="h-24 w-24 sm:h-28 sm:w-28 rounded-full object-cover shadow-soft ring-1 ring-border shrink-0"
+              />
+              <h2 className="font-display text-3xl sm:text-4xl">Bring the ritual home.</h2>
+            </div>
             <p className="mt-4 text-foreground/80 text-pretty">
-              Our Starter Kit includes premium ceremonial-grade cacao from Costa Rica with simple
-              prep guidance to weave a heart-opening ritual into daily life. Watch Met's prep
-              video to get started.
+              Iridescence Cacao is sourced with love from a small family farm in Costa Rica —
+              honoring the land, the growers and the ancient spirit of this sacred plant.
+              Our Starter Kit includes premium ceremonial-grade cacao with simple prep guidance
+              to weave a heart-opening ritual into daily life. Watch Met's prep video to get started.
             </p>
             <Link to="/contact" className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft">
               Order a kit <ArrowRight className="h-4 w-4" />
