@@ -22,6 +22,7 @@ import { Route as EventsRouteImport } from './routes/events'
 import { Route as CrystalReikiRouteImport } from './routes/crystal-reiki'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CacaoCeremoniesRouteImport } from './routes/cacao-ceremonies'
+import { Route as BreathYogaRouteImport } from './routes/breath-yoga'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -91,6 +92,11 @@ const CacaoCeremoniesRoute = CacaoCeremoniesRouteImport.update({
   path: '/cacao-ceremonies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BreathYogaRoute = BreathYogaRouteImport.update({
+  id: '/breath-yoga',
+  path: '/breath-yoga',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
@@ -111,6 +117,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/breath-yoga': typeof BreathYogaRoute
   '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
   '/crystal-reiki': typeof CrystalReikiRoute
@@ -129,6 +136,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/breath-yoga': typeof BreathYogaRoute
   '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
   '/crystal-reiki': typeof CrystalReikiRoute
@@ -148,6 +156,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/breath-yoga': typeof BreathYogaRoute
   '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
   '/crystal-reiki': typeof CrystalReikiRoute
@@ -168,6 +177,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/breath-yoga'
     | '/cacao-ceremonies'
     | '/contact'
     | '/crystal-reiki'
@@ -186,6 +196,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/breath-yoga'
     | '/cacao-ceremonies'
     | '/contact'
     | '/crystal-reiki'
@@ -204,6 +215,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/breath-yoga'
     | '/cacao-ceremonies'
     | '/contact'
     | '/crystal-reiki'
@@ -223,6 +235,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
+  BreathYogaRoute: typeof BreathYogaRoute
   CacaoCeremoniesRoute: typeof CacaoCeremoniesRoute
   ContactRoute: typeof ContactRoute
   CrystalReikiRoute: typeof CrystalReikiRoute
@@ -331,6 +344,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CacaoCeremoniesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/breath-yoga': {
+      id: '/breath-yoga'
+      path: '/breath-yoga'
+      fullPath: '/breath-yoga'
+      preLoaderRoute: typeof BreathYogaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/book': {
       id: '/book'
       path: '/book'
@@ -359,6 +379,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
+  BreathYogaRoute: BreathYogaRoute,
   CacaoCeremoniesRoute: CacaoCeremoniesRoute,
   ContactRoute: ContactRoute,
   CrystalReikiRoute: CrystalReikiRoute,
