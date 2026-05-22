@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
-import heroImg from "@/assets/hero-meditation.jpg";
+import heroImg from "@/assets/breathwork-event.jpg";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/events")({
