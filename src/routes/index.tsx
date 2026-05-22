@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-meditation-new.jpg";
+import heroImg from "@/assets/hero-meditation.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
@@ -73,7 +73,7 @@ function Home() {
               alt="Mehtap leading meditation and energy healing at golden hour — Reiki and sound healing in New Orleans"
               width={1080}
               height={1920}
-              className="relative rounded-[2rem] shadow-card object-contain w-full h-[520px] lg:h-[640px] bg-card"
+              className="relative rounded-[2rem] shadow-card object-cover w-full h-[520px] lg:h-[640px]"
             />
           </div>
         </div>
