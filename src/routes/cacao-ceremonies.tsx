@@ -153,11 +153,11 @@ function CacaoCeremonies() {
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Pricing</p>
         <h2 className="mt-2 font-display text-3xl">Ceremony options</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
-          {[
+          {([
             { label: "Couples Cacao Ceremony", duration: "90 min", price: "$390" },
             { label: "Private & Retreat Ceremonies", duration: "by arrangement", price: "Enquire" },
             { label: "Iridescence Cacao Starter Kit", duration: "ships from New Orleans", price: "$22 + shipping" },
-          ].map((t, i) => (
+          ] as Array<{ label: string; duration: string; price: string; note?: string }>).map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
               <div>
                 <div className="text-sm font-medium">{t.label}</div>
