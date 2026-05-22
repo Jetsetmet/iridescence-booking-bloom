@@ -78,7 +78,8 @@ const items: Array<{
     icon: Triangle, title: "Transformative Retreats", img: retreatsImg, slug: "Retreat",
     desc: "Immersive journeys weaving Reiki, sound, cacao, yoga, breathwork and somatic practices into the quiet medicine of ancient lands — Istanbul & Cappadocia in April 2026, and a private 4-day Oneness retreat in Costa Rica.",
     tiers: [
-      { label: "Resonance & Remembrance — Turkey", duration: "April 11–18, 2026", price: "Istanbul & Cappadocia" },
+      { label: "Resonance & Remembrance — Turkey", duration: "May 19–25, 2026", price: "Istanbul & Cappadocia" },
+      { label: "Whispers of the Ancient Shores — Türkiye", duration: "June 2–8", price: "Alaçatı" },
       { label: "4-Day Oneness Private Retreat", duration: "Custom dates", price: "From $4,422 pp" },
     ],
   },
