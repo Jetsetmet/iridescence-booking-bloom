@@ -16,6 +16,7 @@ import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentor
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as MeditationRouteImport } from './routes/meditation'
 import { Route as EventsRouteImport } from './routes/events'
@@ -60,6 +61,11 @@ const RetreatsRoute = RetreatsRouteImport.update({
 const QuizRoute = QuizRouteImport.update({
   id: '/quiz',
   path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const OfferingsRoute = OfferingsRouteImport.update({
@@ -124,6 +130,7 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
+  '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -143,6 +150,7 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
+  '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -163,6 +171,7 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
+  '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -184,6 +193,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/meditation'
     | '/offerings'
+    | '/packages'
     | '/quiz'
     | '/retreats'
     | '/reviews'
@@ -203,6 +213,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/meditation'
     | '/offerings'
+    | '/packages'
     | '/quiz'
     | '/retreats'
     | '/reviews'
@@ -222,6 +233,7 @@ export interface FileRouteTypes {
     | '/events'
     | '/meditation'
     | '/offerings'
+    | '/packages'
     | '/quiz'
     | '/retreats'
     | '/reviews'
@@ -242,6 +254,7 @@ export interface RootRouteChildren {
   EventsRoute: typeof EventsRoute
   MeditationRoute: typeof MeditationRoute
   OfferingsRoute: typeof OfferingsRoute
+  PackagesRoute: typeof PackagesRoute
   QuizRoute: typeof QuizRoute
   RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -300,6 +313,13 @@ declare module '@tanstack/react-router' {
       path: '/quiz'
       fullPath: '/quiz'
       preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/offerings': {
@@ -386,6 +406,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventsRoute: EventsRoute,
   MeditationRoute: MeditationRoute,
   OfferingsRoute: OfferingsRoute,
+  PackagesRoute: PackagesRoute,
   QuizRoute: QuizRoute,
   RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,
