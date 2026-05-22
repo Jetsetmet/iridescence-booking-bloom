@@ -59,10 +59,6 @@ function About() {
             that now lies at the heart of my work.
           </p>
           <p>
-            With over 17 years in energy medicine, holistic wellness and spiritual growth, I'm
-            a Reiki Master, Intuitive Shamanic Healer, Sound Healer, Yoga Teacher and Mentor.
-            In 2013, I founded Iridescence Healing in New Orleans, creating a sacred space for
-            growth and transformation.
           </p>
           <p>
           </p>
