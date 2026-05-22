@@ -30,7 +30,6 @@ function About() {
         </h1>
         <div className="mt-6 space-y-5 text-foreground/80 leading-relaxed text-pretty">
           <p>
-            I'm Mehtap. I'm a certified Reiki Master, sound healer, breathwork guide and ceremony holder based in uptown New Orleans.
           </p>
           <p>
             My path to this work began as so many do — through my own quiet unraveling.
