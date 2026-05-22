@@ -161,8 +161,8 @@ function Retreats() {
           </ul>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="https://iridescencehealing.com/wp-content/uploads/2025/05/OnenessRetreatCostaRica.pdf"
-              target="_blank" rel="noopener noreferrer"
+            <a href="/Oneness_Retreat_Costa_Rica.pdf"
+              target="_blank" rel="noopener noreferrer" download
               className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Download brochure <ArrowRight className="h-4 w-4" />
             </a>
