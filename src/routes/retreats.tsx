@@ -174,6 +174,29 @@ function Retreats() {
         <RetreatFitQuiz />
       </section>
 
+      <section className="mx-auto max-w-4xl px-5 sm:px-8 pb-20">
+        <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Pricing</p>
+        <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
+        <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
+          {[
+            { label: "Resonance & Remembrance", duration: "May 19–25, 2026 · Istanbul & Cappadocia", price: "Enquire" },
+            { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Enquire" },
+            { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "From $4,422 pp" },
+          ].map((t, i) => (
+            <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
+              <div>
+                <div className="text-sm font-medium">{t.label}</div>
+                <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
+              </div>
+              <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+            </li>
+          ))}
+        </ul>
+        <div className="mt-8">
+          <Link to="/offerings" className="text-sm text-muted-foreground hover:text-foreground">← All offerings</Link>
+        </div>
+      </section>
+
     </>
   );
 }
