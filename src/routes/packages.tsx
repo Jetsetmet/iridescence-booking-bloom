@@ -18,6 +18,7 @@ export const Route = createFileRoute("/packages")({
 const tiers = [
   { label: "Four 60-min Sessions", note: "10% discount", price: "$468" },
   { label: "Four 90-min Sessions", note: "10% discount", price: "$612" },
+  { label: "Custom Package", note: "tailored to your needs", price: "Varies" },
 ];
 
 function Packages() {
@@ -25,7 +26,7 @@ function Packages() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={packagesImg} alt="Healing session packages" className="w-full h-[420px] object-cover" width={1280} height={960} />
+          <img src={packagesImg} alt="Healing session packages" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
         </div>
         <div>
           <div className="flex items-center gap-2 text-primary">
