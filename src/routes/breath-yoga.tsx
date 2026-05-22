@@ -26,7 +26,7 @@ function BreathYoga() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={heroImg} alt="Breathwork and Kundalini yoga session" className="w-full h-[420px] object-cover" width={1280} height={960} />
+          <img src={heroImg} alt="Breathwork and Kundalini yoga session" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
         </div>
         <div>
           <div className="flex items-center gap-2 text-primary">

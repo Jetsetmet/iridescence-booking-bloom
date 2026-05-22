@@ -61,7 +61,7 @@ function SoundBaths() {
         </div>
         <img src={heroImg} alt="Met holding a 432Hz crystal singing bowl at sunset on the beach — sound bath journey with Iridescence Healing"
           loading="lazy" width={1200} height={1200}
-          className="rounded-[2rem] shadow-glow object-cover w-full h-[480px]" />
+          className="rounded-[2rem] shadow-glow object-cover w-full h-auto md:h-[480px]" />
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
@@ -106,8 +106,6 @@ function SoundBaths() {
         <h2 className="mt-2 font-display text-3xl">Session options</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
-            { label: "Private Session", duration: "60 min", price: "$130" },
-            { label: "Private Session", duration: "90 min", price: "$170" },
             { label: "Couple & Group Booking", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
             { label: "Retreat & Venue Bookings", duration: "by arrangement", price: "Enquire" },
           ].map((t, i) => (

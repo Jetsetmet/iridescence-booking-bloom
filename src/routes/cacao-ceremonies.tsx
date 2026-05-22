@@ -76,18 +76,7 @@ function CacaoCeremonies() {
       </section>
 
       {/* OFFERINGS */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20 grid md:grid-cols-2 gap-6">
-        <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
-          <div className="flex items-center gap-2 text-primary">
-            <Triangle className="h-4 w-4" />
-            <span className="text-xs uppercase tracking-wider">Group Ceremony</span>
-          </div>
-          <h2 className="mt-2 font-display text-3xl">New Orleans Cacao Circle</h2>
-          <p className="mt-3 text-foreground/80 text-pretty">
-            A circle of warmth and connection — sacred cacao, heart-opening meditation,
-            free movement to release stagnant energy, and a closing sound healing and sharing circle.
-          </p>
-        </div>
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20 grid md:grid-cols-1 gap-6">
         <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
           <div className="flex items-center gap-2 text-primary">
             <Triangle className="h-4 w-4" />
@@ -166,9 +155,8 @@ function CacaoCeremonies() {
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
             { label: "Couples Cacao Ceremony", duration: "90 min", price: "$390" },
-            { label: "Group Cacao Circle", duration: "per person", price: "Enquire", note: "next New Orleans date by invite" },
             { label: "Private & Retreat Ceremonies", duration: "by arrangement", price: "Enquire" },
-            { label: "Iridescence Cacao Starter Kit", duration: "ships from New Orleans", price: "Enquire" },
+            { label: "Iridescence Cacao Starter Kit", duration: "ships from New Orleans", price: "$22 + shipping" },
           ].map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
               <div>
