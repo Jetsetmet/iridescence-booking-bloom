@@ -66,9 +66,6 @@ function About() {
             growth and transformation.
           </p>
           <p>
-            My yoga path began in Los Angeles in 2005 and evolved through years of training in
-            Hatha, Restorative, Kids Yoga and Kundalini Yoga — further expanding into breathwork,
-            meditation and mantra.
           </p>
           <p>
             In 2018, I began working with plant medicines, later deepening my connection through
