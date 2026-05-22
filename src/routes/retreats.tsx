@@ -42,7 +42,7 @@ function Retreats() {
         </div>
         <img src={heroImg} alt="Transformative healing retreats in Costa Rica with Met of Iridescence Healing"
           loading="lazy" width={1200} height={1200}
-          className="rounded-[2rem] shadow-glow object-cover w-full h-[480px]" />
+          className="rounded-[2rem] shadow-glow object-cover w-full h-auto md:h-[480px]" />
       </section>
 
       {/* TURKEY — Resonance & Remembrance */}
@@ -80,7 +80,7 @@ function Retreats() {
             src={istanbulCollageImg}
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
             loading="lazy"
-            className="rounded-[2rem] shadow-soft object-cover w-full h-[520px]"
+            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px]"
           />
         </div>
       </section>
@@ -92,7 +92,7 @@ function Retreats() {
             src={alacatiCollageImg}
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
             loading="lazy"
-            className="rounded-[2rem] shadow-soft object-cover w-full h-[520px] order-2 lg:order-1"
+            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px] order-2 lg:order-1"
           />
           <div className="order-1 lg:order-2">
             <div className="flex items-center gap-2">
@@ -125,7 +125,7 @@ function Retreats() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <img src={natureImg} alt="Sunset ocean swim in Costa Rica — healing retreat with Iridescence Healing"
             loading="lazy" width={1200} height={1200}
-            className="rounded-[2rem] shadow-soft object-cover w-full h-[420px] order-2 md:order-1" />
+            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[420px] order-2 md:order-1" />
           <div className="order-1 md:order-2">
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Why Costa Rica</p>
             <h2 className="mt-2 font-display text-4xl">The land remembers you.</h2>
@@ -179,9 +179,9 @@ function Retreats() {
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
-            { label: "Resonance & Remembrance", duration: "May 19–25, 2026 · Istanbul & Cappadocia", price: "Enquire" },
-            { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Enquire" },
-            { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "From $4,422 pp" },
+            { label: "Resonance & Remembrance", duration: "May 19–25, 2026 · Istanbul & Cappadocia", price: "Varies" },
+            { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Varies" },
+            { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
               <div>

@@ -27,14 +27,14 @@ function CrystalReiki() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={reikiImg} alt="Crystal Reiki session with Mehtap" className="w-full h-[420px] object-cover" width={1280} height={960} />
+          <img src={reikiImg} alt="Crystal Reiki session with Mehtap" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
         </div>
         <div>
           <div className="flex items-center gap-2 text-primary">
             <Triangle className="h-4 w-4" />
             <span className="text-xs uppercase tracking-wider">Sacred practice</span>
           </div>
-          <h1 className="mt-2 font-display text-4xl sm:text-5xl">Crystal Reiki & Sound</h1>
+          <h1 className="mt-2 font-display text-4xl sm:text-5xl">Crystal Reiki and Sound</h1>
           <p className="mt-4 text-muted-foreground text-pretty">
             Over the past decade, Met's Reiki sessions have blossomed into a deeply intuitive, holistic
             experience — weaving hands-on energy work, healing crystal frequencies, chakra balancing,
