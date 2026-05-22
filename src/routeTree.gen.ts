@@ -16,11 +16,14 @@ import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentor
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as MeditationRouteImport } from './routes/meditation'
 import { Route as EventsRouteImport } from './routes/events'
+import { Route as CrystalReikiRouteImport } from './routes/crystal-reiki'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CacaoCeremoniesRouteImport } from './routes/cacao-ceremonies'
+import { Route as BreathYogaRouteImport } from './routes/breath-yoga'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
@@ -60,6 +63,11 @@ const QuizRoute = QuizRouteImport.update({
   path: '/quiz',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const OfferingsRoute = OfferingsRouteImport.update({
   id: '/offerings',
   path: '/offerings',
@@ -75,6 +83,11 @@ const EventsRoute = EventsRouteImport.update({
   path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CrystalReikiRoute = CrystalReikiRouteImport.update({
+  id: '/crystal-reiki',
+  path: '/crystal-reiki',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -83,6 +96,11 @@ const ContactRoute = ContactRouteImport.update({
 const CacaoCeremoniesRoute = CacaoCeremoniesRouteImport.update({
   id: '/cacao-ceremonies',
   path: '/cacao-ceremonies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BreathYogaRoute = BreathYogaRouteImport.update({
+  id: '/breath-yoga',
+  path: '/breath-yoga',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BookRoute = BookRouteImport.update({
@@ -105,11 +123,14 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/breath-yoga': typeof BreathYogaRoute
   '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
+  '/crystal-reiki': typeof CrystalReikiRoute
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
+  '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -122,11 +143,14 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/breath-yoga': typeof BreathYogaRoute
   '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
+  '/crystal-reiki': typeof CrystalReikiRoute
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
+  '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -140,11 +164,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/book': typeof BookRoute
+  '/breath-yoga': typeof BreathYogaRoute
   '/cacao-ceremonies': typeof CacaoCeremoniesRoute
   '/contact': typeof ContactRoute
+  '/crystal-reiki': typeof CrystalReikiRoute
   '/events': typeof EventsRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
+  '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -159,11 +186,14 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/breath-yoga'
     | '/cacao-ceremonies'
     | '/contact'
+    | '/crystal-reiki'
     | '/events'
     | '/meditation'
     | '/offerings'
+    | '/packages'
     | '/quiz'
     | '/retreats'
     | '/reviews'
@@ -176,11 +206,14 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/breath-yoga'
     | '/cacao-ceremonies'
     | '/contact'
+    | '/crystal-reiki'
     | '/events'
     | '/meditation'
     | '/offerings'
+    | '/packages'
     | '/quiz'
     | '/retreats'
     | '/reviews'
@@ -193,11 +226,14 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/book'
+    | '/breath-yoga'
     | '/cacao-ceremonies'
     | '/contact'
+    | '/crystal-reiki'
     | '/events'
     | '/meditation'
     | '/offerings'
+    | '/packages'
     | '/quiz'
     | '/retreats'
     | '/reviews'
@@ -211,11 +247,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   BookRoute: typeof BookRoute
+  BreathYogaRoute: typeof BreathYogaRoute
   CacaoCeremoniesRoute: typeof CacaoCeremoniesRoute
   ContactRoute: typeof ContactRoute
+  CrystalReikiRoute: typeof CrystalReikiRoute
   EventsRoute: typeof EventsRoute
   MeditationRoute: typeof MeditationRoute
   OfferingsRoute: typeof OfferingsRoute
+  PackagesRoute: typeof PackagesRoute
   QuizRoute: typeof QuizRoute
   RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -276,6 +315,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuizRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/offerings': {
       id: '/offerings'
       path: '/offerings'
@@ -297,6 +343,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/crystal-reiki': {
+      id: '/crystal-reiki'
+      path: '/crystal-reiki'
+      fullPath: '/crystal-reiki'
+      preLoaderRoute: typeof CrystalReikiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -309,6 +362,13 @@ declare module '@tanstack/react-router' {
       path: '/cacao-ceremonies'
       fullPath: '/cacao-ceremonies'
       preLoaderRoute: typeof CacaoCeremoniesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/breath-yoga': {
+      id: '/breath-yoga'
+      path: '/breath-yoga'
+      fullPath: '/breath-yoga'
+      preLoaderRoute: typeof BreathYogaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/book': {
@@ -339,11 +399,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   BookRoute: BookRoute,
+  BreathYogaRoute: BreathYogaRoute,
   CacaoCeremoniesRoute: CacaoCeremoniesRoute,
   ContactRoute: ContactRoute,
+  CrystalReikiRoute: CrystalReikiRoute,
   EventsRoute: EventsRoute,
   MeditationRoute: MeditationRoute,
   OfferingsRoute: OfferingsRoute,
+  PackagesRoute: PackagesRoute,
   QuizRoute: QuizRoute,
   RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,
