@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThanksRouteImport } from './routes/thanks'
 import { Route as SoundBathsRouteImport } from './routes/sound-baths'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as QuizRouteImport } from './routes/quiz'
@@ -37,6 +38,11 @@ const SoundBathsRoute = SoundBathsRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SelfLoveMentoringRoute = SelfLoveMentoringRouteImport.update({
+  id: '/self-love-mentoring',
+  path: '/self-love-mentoring',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReviewsRoute = ReviewsRouteImport.update({
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
+  '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sound-baths': typeof SoundBathsRoute
   '/thanks': typeof ThanksRoute
@@ -123,6 +130,7 @@ export interface FileRoutesByTo {
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
+  '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sound-baths': typeof SoundBathsRoute
   '/thanks': typeof ThanksRoute
@@ -140,6 +148,7 @@ export interface FileRoutesById {
   '/quiz': typeof QuizRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
+  '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sound-baths': typeof SoundBathsRoute
   '/thanks': typeof ThanksRoute
@@ -158,6 +167,7 @@ export interface FileRouteTypes {
     | '/quiz'
     | '/retreats'
     | '/reviews'
+    | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/sound-baths'
     | '/thanks'
@@ -174,6 +184,7 @@ export interface FileRouteTypes {
     | '/quiz'
     | '/retreats'
     | '/reviews'
+    | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/sound-baths'
     | '/thanks'
@@ -190,6 +201,7 @@ export interface FileRouteTypes {
     | '/quiz'
     | '/retreats'
     | '/reviews'
+    | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/sound-baths'
     | '/thanks'
@@ -207,6 +219,7 @@ export interface RootRouteChildren {
   QuizRoute: typeof QuizRoute
   RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
+  SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SoundBathsRoute: typeof SoundBathsRoute
   ThanksRoute: typeof ThanksRoute
@@ -233,6 +246,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/self-love-mentoring': {
+      id: '/self-love-mentoring'
+      path: '/self-love-mentoring'
+      fullPath: '/self-love-mentoring'
+      preLoaderRoute: typeof SelfLoveMentoringRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reviews': {
@@ -327,6 +347,7 @@ const rootRouteChildren: RootRouteChildren = {
   QuizRoute: QuizRoute,
   RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,
+  SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   SoundBathsRoute: SoundBathsRoute,
   ThanksRoute: ThanksRoute,
@@ -334,3 +355,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
