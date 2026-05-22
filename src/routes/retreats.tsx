@@ -35,9 +35,6 @@ function Retreats() {
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Reserve your spot <ArrowRight className="h-4 w-4" />
             </Link>
-            <a href="https://divinewisdomretreats.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-              Divine Wisdom Retreats <Triangle className="h-4 w-4" />
-            </a>
           </div>
         </div>
         <img src={heroImg} alt="Transformative healing retreats in Costa Rica with Met of Iridescence Healing"
