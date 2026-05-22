@@ -57,7 +57,7 @@ function Meditation() {
             Kundalini yoga blends dynamic movement, breathwork and mantra to awaken the dormant energy within the body. Rooted in ancient yogic tradition, it is challenging and deeply transformative. Met has practiced yoga for over 20 years and teaches from her own lived journey.
           </p>
           <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-            She completed her Hatha Yoga teacher training at Wild Lotus Yoga in 2014, with additional training in restorative and children's yoga. In 2024 she deepened her path in India through intensive Kundalini training with Gurmukh and Guru Shabd of Golden Bridge Yoga — a profoundly challenging and life-changing experience. Her daily Kundalini practice continues to bring her peace, clarity and balance.
+            She completed her Hatha Yoga teacher training at Wild Lotus Yoga in 2014, with additional training in restorative and children's yoga. In 2023 she deepened her path in India through intensive Kundalini training with Gurmukh and Guru Shabd of Golden Bridge Yoga.
           </p>
         </div>
       </section>
