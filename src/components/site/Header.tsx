@@ -10,18 +10,7 @@ type NavItem =
 const nav: ReadonlyArray<NavItem> = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  {
-    label: "Offerings",
-    children: [
-      { to: "/offerings", label: "All Offerings" },
-      { to: "/sound-baths", label: "Sound Baths" },
-      { to: "/offerings", label: "Crystal Reiki" },
-      { to: "/cacao-ceremonies", label: "Cacao Ceremonies" },
-      { to: "/retreats", label: "Retreats" },
-      { to: "/meditation", label: "Meditation & Yoga" },
-      { to: "/self-love-mentoring", label: "Self-Love Mentoring" },
-    ],
-  },
+  { to: "/offerings", label: "Offerings" },
   { to: "/events", label: "Events" },
   { to: "/reviews", label: "Reviews" },
   { to: "/contact", label: "Contact" },
