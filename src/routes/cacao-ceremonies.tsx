@@ -5,6 +5,7 @@ import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
 import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
 import couplesImg from "@/assets/couples-ceremony-new.webp";
+import logoImg from "@/assets/logo.jpg";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
@@ -26,7 +27,17 @@ function CacaoCeremonies() {
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0 bg-iridescent opacity-[0.06]" aria-hidden />
         <div className="mx-auto max-w-5xl px-5 sm:px-8 pt-16 pb-20 relative">
-          <p className="text-xs uppercase tracking-[0.25em] text-primary/80">Iridescence Cacao · New Orleans</p>
+          <div className="flex items-center gap-3">
+            <img
+              src={logoImg}
+              alt="Iridescence Healing logo"
+              loading="lazy"
+              width={64}
+              height={64}
+              className="h-14 w-14 rounded-full object-cover shadow-soft ring-1 ring-border"
+            />
+            <p className="text-xs uppercase tracking-[0.25em] text-primary/80">Iridescence Cacao · New Orleans</p>
+          </div>
 
           {/* Floated image — text wraps around it on md+ */}
           <div className="relative md:float-right md:ml-8 md:mb-4 mt-5 md:mt-2 w-full max-w-[18rem] sm:max-w-xs md:w-[19rem] lg:w-[22rem] md:shape-outside-[circle()]">

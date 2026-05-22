@@ -4,7 +4,8 @@ import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 import turkeyMosqueImg from "@/assets/turkey-blue-mosque.jpeg";
-import turkeyHammamImg from "@/assets/turkey-hammam.jpg";
+import cappadociaCollageImg from "@/assets/cappadocia-collage.jpg";
+import alacatiImg from "@/assets/alacati.jpg";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
@@ -43,6 +44,94 @@ function Retreats() {
         <img src={heroImg} alt="Transformative healing retreats in Costa Rica with Met of Iridescence Healing"
           loading="lazy" width={1200} height={1200}
           className="rounded-[2rem] shadow-glow object-cover w-full h-[480px]" />
+      </section>
+
+      {/* TURKEY — Resonance & Remembrance */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">May 19–25, 2026 · Turkey</p>
+            </div>
+            <h2 className="mt-3 font-display text-4xl">Resonance & Remembrance</h2>
+            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Self-Discovery</p>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              Join us on a journey through the vibrant energy of Istanbul and the ancient landscapes of Cappadocia as we slow down, regulate the nervous system, release old stories, and reconnect with our inner truth.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              Through breathwork, sound healing, ceremonial cacao, somatic practices, and meaningful connection, this retreat offers space to reset, remember, and return to self.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              More than a spiritual retreat, <em>Resonance & Remembrance</em> is also an invitation to experience the beauty and magic of Turkey — wandering the Grand Bazaar, enjoying Turkish coffee, taking in breathtaking landscapes, experiencing the warmth of the hammam, savoring beautiful cuisine, and allowing yourself to be nurtured, inspired and pampered along the way.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              A journey of ancient roots, inner transformation, culture, beauty, and remembrance.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Reserve your spot <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Ask a question
+              </Link>
+            </div>
+          </div>
+          <div className="grid gap-3">
+            <img
+              src={turkeyMosqueImg}
+              alt="Blue Mosque at sunset, Istanbul — Resonance & Remembrance retreat"
+              loading="lazy"
+              className="rounded-2xl shadow-soft object-cover w-full h-56"
+            />
+            <img
+              src={cappadociaCollageImg}
+              alt="Cappadocia collage — hot air balloons over fairy chimneys, Resonance & Remembrance retreat"
+              loading="lazy"
+              width={1280}
+              height={960}
+              className="rounded-2xl shadow-soft object-cover w-full h-56"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* TURKEY — Whispers of the Ancient Shores */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+          <img
+            src={alacatiImg}
+            alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
+            loading="lazy"
+            width={1280}
+            height={960}
+            className="rounded-[2rem] shadow-soft object-cover w-full h-[420px] order-2 lg:order-1"
+          />
+          <div className="order-1 lg:order-2">
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">June 2–8 · Alaçatı, Türkiye</p>
+            </div>
+            <h2 className="mt-3 font-display text-4xl">Whispers of the Ancient Shores</h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              An invitation to slow down and immerse yourself in the beauty, rhythm, and soul of Alaçatı. Surrounded by ancient stone streets, sea breezes, olive groves, and the sparkling Mediterranean, we gather to reconnect with simplicity, joy, and the quieter moments that nourish us.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              Through Kundalini yoga, breathwork, ceremonial cacao, sound healing, and community, this retreat offers space to reset while embracing the magic of Turkish coastal life — wandering local markets, savoring Mediterranean cuisine, sharing long meals, exploring hidden corners, and experiencing the warmth, culture, and slower pace that make Alaçatı so special.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              A journey of connection, beauty, ancient roots, and the art of living well.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Reserve your spot <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Ask a question
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
@@ -95,52 +184,9 @@ function Retreats() {
             </Link>
           </div>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <div className="flex items-center gap-2">
-              <Triangle className="h-5 w-5 text-primary" />
-              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">April 11–18, 2026 · Turkey</p>
-            </div>
-            <h2 className="mt-3 font-display text-4xl">Resonance & Remembrance</h2>
-            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Breath, Sound, Cacao & Self-Discovery</p>
-            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-              A sacred journey through the vibrant energy of Istanbul and the ancient landscapes of Cappadocia. <em>Resonance & Remembrance</em> invites you to slow down, regulate the nervous system, and reconnect with the truth of who you are.
-            </p>
-            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
-              Through breathwork, sound healing, ceremonial cacao, yoga, somatic practices and deep inner inquiry, we'll gently release old stories, soften limiting patterns and create space for greater clarity, connection and self-remembrance — held by ancient roots, sacred landscapes and the resonance already living within you.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
-                Reserve your spot <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-                Ask a question
-              </Link>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            <img
-              src={turkeyMosqueImg}
-              alt="Blue Mosque at sunset, Istanbul — Resonance & Remembrance retreat"
-              loading="lazy"
-              className="rounded-2xl shadow-soft object-cover w-full h-56 col-span-2"
-            />
-            <img
-              src={turkeyHammamImg}
-              alt="Candlelit Turkish hammam doorway — Resonance & Remembrance retreat"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="rounded-2xl shadow-soft object-cover w-full h-40 col-span-2"
-            />
-          </div>
-        </div>
-
         <RetreatFitQuiz />
       </section>
+
     </>
   );
 }
