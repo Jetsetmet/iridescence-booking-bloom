@@ -107,7 +107,7 @@ function SoundBaths() {
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
             { label: "Couple & Group Booking", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
-            { label: "Retreat & Venue Bookings", duration: "by arrangement", price: "Enquire" },
+            { label: "Retreat & Venue Bookings", duration: "by arrangement", price: "Enquire", book: true },
           ].map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
               <div>
@@ -116,7 +116,11 @@ function SoundBaths() {
                   {t.duration}{t.note ? ` · ${t.note}` : ""}
                 </div>
               </div>
-              <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              {t.book ? (
+                <Link to="/book" search={{ offering: "Sound Bath" }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
+              ) : (
+                <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              )}
             </li>
           ))}
         </ul>

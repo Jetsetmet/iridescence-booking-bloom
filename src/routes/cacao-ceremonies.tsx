@@ -155,9 +155,9 @@ function CacaoCeremonies() {
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {([
             { label: "Couples Cacao Ceremony", duration: "90 min", price: "$390" },
-            { label: "Private & Retreat Ceremonies", duration: "by arrangement", price: "Enquire" },
+            { label: "Private & Retreat Ceremonies", duration: "by arrangement", price: "Enquire", book: true },
             { label: "Iridescence Cacao Starter Kit", duration: "ships from New Orleans", price: "$22 + shipping" },
-          ] as Array<{ label: string; duration: string; price: string; note?: string }>).map((t, i) => (
+          ] as Array<{ label: string; duration: string; price: string; note?: string; book?: boolean }>).map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
               <div>
                 <div className="text-sm font-medium">{t.label}</div>
@@ -165,7 +165,11 @@ function CacaoCeremonies() {
                   {t.duration}{t.note ? ` · ${t.note}` : ""}
                 </div>
               </div>
-              <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              {t.book ? (
+                <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
+              ) : (
+                <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              )}
             </li>
           ))}
         </ul>
