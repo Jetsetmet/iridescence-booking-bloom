@@ -110,7 +110,9 @@ export function Header() {
             {nav.map((n) =>
               n.children ? (
                 <div key={n.label} className="py-1">
-                  <div className="py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                  <div className={`py-1 text-xs uppercase tracking-[0.2em] ${
+                    n.label === "Offerings" ? "text-purple-600 font-medium" : "text-muted-foreground"
+                  }`}>
                     {n.label}
                   </div>
                   <div className="flex flex-col pl-3">
