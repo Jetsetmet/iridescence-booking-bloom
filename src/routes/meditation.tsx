@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
-import heroImg from "@/assets/hero-meditation.jpg";
+import heroImg from "@/assets/hero-meditation-new.jpg";
 import yogaImg from "@/assets/met-meditation.jpg";
 import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 
