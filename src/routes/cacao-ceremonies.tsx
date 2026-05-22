@@ -6,6 +6,7 @@ import { submitLead } from "@/lib/funnel.functions";
 import heroImg from "@/assets/cacao-ceremony.jpg";
 import couplesImg from "@/assets/couples-ceremony-new.webp";
 import logoImg from "@/assets/logo.jpg";
+import cacaoLogoImg from "@/assets/iridescence-cacao-logo.png";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
