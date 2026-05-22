@@ -3,9 +3,8 @@ import { ArrowRight, Triangle } from "lucide-react";
 import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
-import turkeyMosqueImg from "@/assets/turkey-blue-mosque.jpeg";
-import cappadociaCollageImg from "@/assets/cappadocia-collage.jpg";
-import alacatiImg from "@/assets/alacati.jpg";
+import istanbulCollageImg from "@/assets/turkey-istanbul-collage.png";
+import alacatiCollageImg from "@/assets/turkey-alacati-collage.png";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
@@ -77,22 +76,12 @@ function Retreats() {
               </Link>
             </div>
           </div>
-          <div className="grid gap-3">
-            <img
-              src={turkeyMosqueImg}
-              alt="Blue Mosque at sunset, Istanbul — Resonance & Remembrance retreat"
-              loading="lazy"
-              className="rounded-2xl shadow-soft object-cover w-full h-56"
-            />
-            <img
-              src={cappadociaCollageImg}
-              alt="Cappadocia collage — hot air balloons over fairy chimneys, Resonance & Remembrance retreat"
-              loading="lazy"
-              width={1280}
-              height={960}
-              className="rounded-2xl shadow-soft object-cover w-full h-56"
-            />
-          </div>
+          <img
+            src={istanbulCollageImg}
+            alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
+            loading="lazy"
+            className="rounded-[2rem] shadow-soft object-cover w-full"
+          />
         </div>
       </section>
 
@@ -100,12 +89,10 @@ function Retreats() {
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
-            src={alacatiImg}
+            src={alacatiCollageImg}
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
             loading="lazy"
-            width={1280}
-            height={960}
-            className="rounded-[2rem] shadow-soft object-cover w-full h-[420px] order-2 lg:order-1"
+            className="rounded-[2rem] shadow-soft object-cover w-full order-2 lg:order-1"
           />
           <div className="order-1 lg:order-2">
             <div className="flex items-center gap-2">
