@@ -43,7 +43,7 @@ function Meditation() {
         </div>
         <img src={heroImg} alt="Meditation and Kundalini yoga with Met of Iridescence Healing"
           loading="lazy" width={1200} height={1200}
-          className="rounded-[2rem] shadow-glow object-cover w-full h-[480px]" />
+          className="rounded-[2rem] shadow-glow object-contain w-full h-[480px] bg-card" />
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 grid md:grid-cols-2 gap-10 items-center">
