@@ -5,7 +5,6 @@ import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
 import packagesImg from "@/assets/moon.jpg";
-import retreatsImg from "@/assets/costa-rica-waterfall.jpg";
 import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
@@ -35,7 +34,6 @@ const cards: Card[] = [
   { title: "Breath & Yoga", img: heroImg, to: "/breath-yoga", blurb: "Guided pranayama, somatic breath journeys and Kundalini yoga.", from: "from $130" },
   { title: "Self-Love Mentoring", img: selfLoveImg, to: "/self-love-mentoring", blurb: "A devotional six-week mentorship to reclaim your wholeness and intuition.", from: "$720" },
   { title: "Session Packages", img: packagesImg, to: "/packages", blurb: "Bundled in-person or virtual sessions with a 10% discount.", from: "from $468" },
-  { title: "Transformative Retreats", img: retreatsImg, to: "/retreats", blurb: "Immersive journeys in Turkey, Costa Rica and beyond.", from: "from $4,422" },
 ];
 
 function Offerings() {
