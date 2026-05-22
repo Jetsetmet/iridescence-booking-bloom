@@ -68,10 +68,7 @@ function About() {
             ceremonies and sacred healing work — now woven into ceremonies for couples and global retreats.
           </p>
           <p>
-            I've supported hundreds of clients through deep emotional release, energetic alignment
-            and spiritual transformation. My sessions combine sound frequencies, hands-on energy
-            healing, guided visualization and intuitive channeling to unlock the song of the heart
-            and support multidimensional healing.
+            I've supported hundreds of clients through deep emotional release, energetic alignment and spiritual transformation.
           </p>
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
