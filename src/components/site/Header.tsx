@@ -19,6 +19,7 @@ const nav: ReadonlyArray<NavItem> = [
       { to: "/cacao-ceremonies", label: "Cacao Ceremonies" },
       { to: "/retreats", label: "Retreats" },
       { to: "/meditation", label: "Meditation & Yoga" },
+      { to: "/self-love-mentoring", label: "Self-Love Mentoring" },
     ],
   },
   { to: "/events", label: "Events" },
