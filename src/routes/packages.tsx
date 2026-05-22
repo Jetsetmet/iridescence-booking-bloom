@@ -59,7 +59,11 @@ function Packages() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.note}</div>
               </div>
-              <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              {t.price === "Varies" ? (
+                <Link to="/book" search={{ offering: t.label }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
+              ) : (
+                <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              )}
             </li>
           ))}
         </ul>

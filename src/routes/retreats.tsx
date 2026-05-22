@@ -185,7 +185,7 @@ function Retreats() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
               </div>
-              <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              <Link to="/book" search={{ offering: t.label }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
             </li>
           ))}
         </ul>
