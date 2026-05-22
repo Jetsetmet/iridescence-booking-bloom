@@ -101,24 +101,27 @@ function Offerings() {
 
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-16">
         <Tabs defaultValue={items[0].key} className="w-full">
-          <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0 pb-2">
-            <TabsList className="h-auto flex-wrap gap-1 bg-card/60 p-1.5 rounded-2xl">
+          <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0 pb-3">
+            <TabsList className="h-auto flex-nowrap gap-2 bg-card/40 backdrop-blur-sm p-2 rounded-3xl border border-border/60 shadow-soft">
               {items.map((o) => (
                 <TabsTrigger
                   key={o.key}
                   value={o.key}
-                  className="rounded-xl px-4 py-2 text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  className="relative rounded-2xl px-4 py-2.5 text-sm font-medium transition-all duration-300 ease-out
+                    data-[state=inactive]:bg-background/60 data-[state=inactive]:text-muted-foreground data-[state=inactive]:border data-[state=inactive]:border-border/40 data-[state=inactive]:hover:bg-accent/60 data-[state=inactive]:hover:text-foreground
+                    data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] data-[state=active]:ring-2 data-[state=active]:ring-primary/30"
                 >
-                  {o.tab}
+                  <span className="relative z-10 whitespace-nowrap">{o.tab}</span>
+                  <span className="absolute inset-1 rounded-xl bg-gradient-to-b from-white/10 to-transparent opacity-0 data-[state=active]:opacity-100 transition-opacity" />
                 </TabsTrigger>
               ))}
             </TabsList>
           </div>
 
           {items.map((o) => (
-            <TabsContent key={o.key} value={o.key} className="mt-8 focus-visible:ring-0">
+            <TabsContent key={o.key} value={o.key} className="mt-8 focus-visible:ring-0 animate-in fade-in slide-in-from-bottom-2 duration-500">
               <article className="grid md:grid-cols-2 gap-8 items-start">
-                <div className="rounded-3xl overflow-hidden shadow-card">
+                <div className="rounded-3xl overflow-hidden shadow-card ring-1 ring-border/40">
                   <img
                     src={o.img}
                     alt={`${o.title} session with Mehtap at Iridescence Healing in New Orleans`}
@@ -128,32 +131,32 @@ function Offerings() {
                     className="w-full h-[360px] md:h-[440px] object-cover"
                   />
                 </div>
-                <div>
+                <div className="bg-card/30 rounded-3xl p-6 sm:p-8 border border-border/40">
                   <div className="flex items-center gap-2 text-primary">
                     <Triangle className="h-4 w-4" />
                     <span className="text-xs uppercase tracking-wider">Sacred practice</span>
                   </div>
                   <h2 className="mt-2 font-display text-3xl sm:text-4xl">{o.title}</h2>
-                  <p className="mt-3 text-muted-foreground text-pretty">{o.desc}</p>
-                  <ul className="mt-5 divide-y divide-border rounded-2xl border border-border bg-card/50">
+                  <p className="mt-3 text-muted-foreground text-pretty leading-relaxed">{o.desc}</p>
+                  <ul className="mt-5 divide-y divide-border rounded-2xl border border-border bg-background/60 shadow-inner">
                     {o.tiers.map((t, ti) => (
-                      <li key={ti} className="flex items-baseline justify-between gap-4 px-4 py-3">
+                      <li key={ti} className="flex items-baseline justify-between gap-4 px-4 py-3 hover:bg-accent/30 transition-colors">
                         <div className="min-w-0">
                           <div className="text-sm font-medium">{t.label}</div>
                           {(t.duration || t.note) && (
-                            <div className="text-xs text-muted-foreground mt-0.5">
+                            <div className="text-xs text-muted-foreground mt-1">
                               {t.duration}{t.duration && t.note ? " · " : ""}{t.note}
                             </div>
                           )}
                         </div>
-                        <div className="text-sm font-display whitespace-nowrap text-primary">{t.price}</div>
+                        <div className="text-sm font-display whitespace-nowrap text-primary font-semibold">{t.price}</div>
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/book"
                     search={{ offering: o.slug }}
-                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+                    className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft hover:shadow-lg hover:scale-[1.02] transition-all"
                   >
                     Book {o.title} <ArrowRight className="h-4 w-4" />
                   </Link>
