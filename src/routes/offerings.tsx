@@ -101,15 +101,18 @@ function Offerings() {
 
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-16">
         <Tabs defaultValue={items[0].key} className="w-full">
-          <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0 pb-2">
-            <TabsList className="h-auto flex-wrap gap-1 bg-card/60 p-1.5 rounded-2xl">
+          <div className="overflow-x-auto -mx-5 sm:mx-0 px-5 sm:px-0 pb-3">
+            <TabsList className="h-auto flex-nowrap gap-2 bg-card/40 backdrop-blur-sm p-2 rounded-3xl border border-border/60 shadow-soft">
               {items.map((o) => (
                 <TabsTrigger
                   key={o.key}
                   value={o.key}
-                  className="rounded-xl px-4 py-2 text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  className="relative rounded-2xl px-4 py-2.5 text-sm font-medium transition-all duration-300 ease-out
+                    data-[state=inactive]:bg-background/60 data-[state=inactive]:text-muted-foreground data-[state=inactive]:border data-[state=inactive]:border-border/40 data-[state=inactive]:hover:bg-accent/60 data-[state=inactive]:hover:text-foreground
+                    data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg data-[state=active]:scale-[1.02] data-[state=active]:ring-2 data-[state=active]:ring-primary/30"
                 >
-                  {o.tab}
+                  <span className="relative z-10 whitespace-nowrap">{o.tab}</span>
+                  <span className="absolute inset-1 rounded-xl bg-gradient-to-b from-white/10 to-transparent opacity-0 data-[state=active]:opacity-100 transition-opacity" />
                 </TabsTrigger>
               ))}
             </TabsList>
