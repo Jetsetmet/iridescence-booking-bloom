@@ -51,7 +51,11 @@ export function Header() {
               <div key={n.label} className="relative group">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 text-muted-foreground hover:text-foreground transition-colors"
+                  className={`inline-flex items-center gap-1 transition-colors ${
+                    n.label === "Offerings"
+                      ? "text-purple-600 hover:text-purple-700 font-medium"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {n.label}
                   <ChevronDown className="h-3.5 w-3.5" />
@@ -106,7 +110,9 @@ export function Header() {
             {nav.map((n) =>
               n.children ? (
                 <div key={n.label} className="py-1">
-                  <div className="py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">
+                  <div className={`py-1 text-xs uppercase tracking-[0.2em] ${
+                    n.label === "Offerings" ? "text-purple-600 font-medium" : "text-muted-foreground"
+                  }`}>
                     {n.label}
                   </div>
                   <div className="flex flex-col pl-3">
