@@ -58,8 +58,8 @@ function Events() {
               loading="lazy" width={1280} height={960}
               className="h-52 w-full object-cover" />
             <div className="p-6 flex-1 flex flex-col">
-              <div className="text-xs text-primary uppercase tracking-wider flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5" /> {e.date} · {e.time}
+              <div className="text-xs text-primary uppercase tracking-wider flex items-center gap-1.5 font-bold whitespace-nowrap">
+                <Calendar className="h-3.5 w-3.5 shrink-0" /> {e.date} · {e.time}
               </div>
               <h3 className="mt-2 font-display text-2xl">{e.title}</h3>
               <p className="mt-2 text-sm text-foreground/80 text-pretty">{e.blurb}</p>
