@@ -68,7 +68,10 @@ function About() {
             ceremonies and sacred healing work — now woven into ceremonies for couples and global retreats.
           </p>
           <p>
-            I've supported hundreds of clients through deep emotional release, energetic alignment and spiritual transformation.
+            I've supported hundreds of clients through deep emotional release, energetic alignment and spiritual transformation — holding space with presence, compassion, and deep reverence for each person's journey.
+          </p>
+          <p className="mt-8">
+            My intention is simple: to guide others back to their own inner wisdom, where healing, love, and truth already reside. Thank you for trusting me on your journey...
           </p>
         </div>
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
