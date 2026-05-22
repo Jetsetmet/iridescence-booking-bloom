@@ -119,7 +119,7 @@ function Offerings() {
           </div>
 
           {items.map((o) => (
-            <TabsContent key={o.key} value={o.key} className="mt-8 focus-visible:ring- 0 animate-in fade-in slide-in-from-bottom-2 duration-500">
+            <TabsContent key={o.key} value={o.key} className="mt-8 focus-visible:ring-0 animate-in fade-in slide-in-from-bottom-2 duration-500">
               <article className="grid md:grid-cols-2 gap-8 items-start">
                 <div className="rounded-3xl overflow-hidden shadow-card ring-1 ring-border/40">
                   <img
