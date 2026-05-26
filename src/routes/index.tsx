@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-meditation.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
+import packagesSoundImg from "@/assets/packages-sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
@@ -20,7 +21,7 @@ export const Route = createFileRoute("/")({
 });
 
 const offerings = [
-  { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: soundImg },
+  { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: packagesSoundImg },
   { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore and reconnect.", img: reikiImg },
   { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg },
   { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg },
