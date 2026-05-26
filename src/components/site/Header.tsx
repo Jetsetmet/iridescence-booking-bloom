@@ -14,7 +14,7 @@ const nav: ReadonlyArray<NavItem> = [
     label: "Offerings",
     children: [
       { to: "/offerings", label: "All Offerings" },
-      { to: "/resonance-release", label: "The Resonance Reset (signature)" },
+      { to: "/resonance-release", label: "The Resonance Reset" },
       { to: "/crystal-reiki", label: "Reiki & Sound" },
       { to: "/self-love-mentoring", label: "Mentoring" },
       { to: "/cacao-ceremonies", label: "Cacao" },

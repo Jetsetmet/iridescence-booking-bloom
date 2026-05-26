@@ -20,6 +20,7 @@ export const Route = createFileRoute("/")({
 });
 
 const offerings = [
+  { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: soundImg },
   { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore and reconnect.", img: reikiImg },
   { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg },
   { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg },
@@ -105,30 +106,32 @@ function Home() {
             Choose the medicine that's calling you.
           </h2>
         </div>
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {offerings.map((o) => (
-            <Link
-              key={o.title}
-              to="/offerings"
-              className="group rounded-3xl overflow-hidden bg-card shadow-card border border-border hover:shadow-glow transition-all"
-            >
-              <div className="aspect-[5/4] overflow-hidden">
-                <img src={o.img} alt={`${o.title} in New Orleans with Mehtap - Iridescence Healing`} loading="lazy" width={1280} height={960}
-                  className="h-full w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-primary">
-                  <Triangle className="h-4 w-4" />
-                  <span className="text-xs uppercase tracking-wider">Sacred practice</span>
+        <div className="mt-12 -mx-5 sm:-mx-8">
+          <div className="flex gap-5 overflow-x-auto px-5 sm:px-8 pb-4 snap-x snap-mandatory scrollbar-hide">
+            {offerings.map((o) => (
+              <Link
+                key={o.title}
+                to="/offerings"
+                className="group flex-shrink-0 w-[280px] sm:w-[320px] rounded-3xl overflow-hidden bg-card shadow-card border border-border hover:shadow-glow transition-all snap-start"
+              >
+                <div className="aspect-[5/4] overflow-hidden">
+                  <img src={o.img} alt={`${o.title} in New Orleans with Mehtap - Iridescence Healing`} loading="lazy" width={1280} height={960}
+                    className="h-full w-full object-cover group-hover:scale-[1.04] transition-transform duration-700" />
                 </div>
-                <h3 className="mt-2 font-display text-2xl">{o.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{o.desc}</p>
-                <div className="mt-4 inline-flex items-center gap-1 text-sm text-primary group-hover:gap-2 transition-all">
-                  Learn more <ArrowRight className="h-3.5 w-3.5" />
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-primary">
+                    <Triangle className="h-4 w-4" />
+                    <span className="text-xs uppercase tracking-wider">Sacred practice</span>
+                  </div>
+                  <h3 className="mt-2 font-display text-2xl">{o.title}</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">{o.desc}</p>
+                  <div className="mt-4 inline-flex items-center gap-1 text-sm text-primary group-hover:gap-2 transition-all">
+                    Learn more <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
