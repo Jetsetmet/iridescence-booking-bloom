@@ -15,7 +15,7 @@ const nav: ReadonlyArray<NavItem> = [
     children: [
       { to: "/offerings", label: "All Offerings" },
       { to: "/crystal-reiki", label: "Crystal Reiki & Sound" },
-      { to: "/sound-baths", label: "Sound Baths" },
+      { to: "/resonance-release", label: "Resonance & Release" },
       { to: "/cacao-ceremonies", label: "Cacao Ceremonies" },
       { to: "/breath-yoga", label: "Breath & Yoga" },
       { to: "/self-love-mentoring", label: "Mentoring" },

@@ -6,7 +6,7 @@ import { submitBooking } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
-const offerings = ["Reiki", "Sound Bath", "Cacao Ceremony", "Breathwork", "Mentoring", "Not sure yet"];
+const offerings = ["Reiki", "Sound Bath", "Resonance & Release", "Cacao Ceremony", "Breathwork", "Mentoring", "Retreat", "Not sure yet"];
 
 const searchSchema = z.object({
   offering: z.string().optional(),
@@ -71,7 +71,6 @@ function Book() {
           {[
             "Personally confirmed by Mehtap",
             "Quiet uptown New Orleans space",
-            "Reschedule anytime, no fee",
             "Free 15-min discovery call if unsure",
           ].map((b) => (
             <li key={b} className="flex items-center gap-3">
@@ -82,15 +81,15 @@ function Book() {
             </li>
           ))}
         </ul>
-        <div className="mt-10 rounded-2xl bg-iridescent p-5 text-sm">
+        <div className="mt-10 rounded-2xl border border-border bg-card p-5 text-sm">
           <Triangle className="h-4 w-4" />
           <p className="mt-2 font-medium">Not sure which session is right?</p>
           <a href="/quiz" className="mt-1 inline-block underline underline-offset-4">Take the 60-second quiz →</a>
         </div>
-        <div className="mt-6 rounded-2xl border border-border bg-card p-5 text-sm">
-          <Triangle className="h-4 w-4 text-primary" />
+        <div className="mt-6 rounded-2xl bg-iridescent p-5 text-sm">
+          <Triangle className="h-4 w-4" />
           <p className="mt-2 font-medium">Already know what you'd like?</p>
-          <p className="mt-1 text-muted-foreground">Skip the form and pick a time directly.</p>
+          <p className="mt-1 text-foreground/80">Skip the form and pick a time directly.</p>
           <a
             href="https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services?rwg_token=AFd1xnG8opsnB8WvxAc5Gu92w-ep4LAQyNqcaVA4S02XPh2Ls2RPId34yddJHpbz57l-ZkUuMTWlbLQRyenGhZi2TDn3gUVGPg%3D%3D"
             target="_blank"

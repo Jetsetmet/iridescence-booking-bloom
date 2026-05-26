@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-meditation.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 
 export const Route = createFileRoute("/breath-yoga")({
@@ -9,7 +8,6 @@ export const Route = createFileRoute("/breath-yoga")({
       { name: "description", content: "Guided pranayama, somatic breath journeys and Kundalini yoga with Mehtap — private, couple and group sessions in New Orleans." },
       { property: "og:title", content: "Breath & Yoga — Iridescence Healing" },
       { property: "og:description", content: "Release stored emotion and meet yourself in stillness." },
-      { property: "og:image", content: heroImg },
     ],
   }),
   component: BreathYoga,
@@ -25,8 +23,8 @@ function BreathYoga() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
-        <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={heroImg} alt="Breathwork and Kundalini yoga session" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
+        <div className="rounded-3xl overflow-hidden shadow-card bg-iridescent/30 aspect-[4/3] md:h-[420px] flex items-center justify-center">
+          <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Image coming soon</span>
         </div>
         <div>
           <div className="flex items-center gap-2 text-primary">
