@@ -29,7 +29,7 @@ type Card = {
 
 const cards: Card[] = [
   { title: "Crystal Reiki & Sound", img: reikiImg, to: "/crystal-reiki", blurb: "Intuitive energy work woven with crystals, breath and 432Hz quartz bowls.", from: "from $110" },
-  { title: "Sound Bath Journey", img: soundImg, to: "/sound-baths", blurb: "Tibetan and crystal bowls, gongs and chimes for couples, groups and retreats.", from: "from $140 pp" },
+  { title: "Resonance & Release", img: soundImg, to: "/resonance-release", blurb: "Signature 1:1 immersive — breath, sound, Reiki and somatic release in one session.", from: "from $240" },
   { title: "Cacao Ceremonies", img: cacaoImg, to: "/cacao-ceremonies", blurb: "Heart-opening ceremonial cacao with breath, intention and connection.", from: "from $390" },
   { title: "Breath & Yoga", img: heroImg, to: "/breath-yoga", blurb: "Guided pranayama, somatic breath journeys and Kundalini yoga.", from: "from $130" },
   { title: "Self-Love Mentoring", img: selfLoveImg, to: "/self-love-mentoring", blurb: "A devotional six-week mentorship to reclaim your wholeness and intuition.", from: "$720" },

@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ThanksRouteImport } from './routes/thanks'
-import { Route as SoundBathsRouteImport } from './routes/sound-baths'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
 import { Route as ReviewsRouteImport } from './routes/reviews'
@@ -31,11 +30,6 @@ import { Route as IndexRouteImport } from './routes/index'
 const ThanksRoute = ThanksRouteImport.update({
   id: '/thanks',
   path: '/thanks',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SoundBathsRoute = SoundBathsRouteImport.update({
-  id: '/sound-baths',
-  path: '/sound-baths',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -136,7 +130,6 @@ export interface FileRoutesByFullPath {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/sound-baths': typeof SoundBathsRoute
   '/thanks': typeof ThanksRoute
 }
 export interface FileRoutesByTo {
@@ -156,7 +149,6 @@ export interface FileRoutesByTo {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/sound-baths': typeof SoundBathsRoute
   '/thanks': typeof ThanksRoute
 }
 export interface FileRoutesById {
@@ -177,7 +169,6 @@ export interface FileRoutesById {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/sound-baths': typeof SoundBathsRoute
   '/thanks': typeof ThanksRoute
 }
 export interface FileRouteTypes {
@@ -199,7 +190,6 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
-    | '/sound-baths'
     | '/thanks'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -219,7 +209,6 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
-    | '/sound-baths'
     | '/thanks'
   id:
     | '__root__'
@@ -239,7 +228,6 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
-    | '/sound-baths'
     | '/thanks'
   fileRoutesById: FileRoutesById
 }
@@ -260,7 +248,6 @@ export interface RootRouteChildren {
   ReviewsRoute: typeof ReviewsRoute
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  SoundBathsRoute: typeof SoundBathsRoute
   ThanksRoute: typeof ThanksRoute
 }
 
@@ -271,13 +258,6 @@ declare module '@tanstack/react-router' {
       path: '/thanks'
       fullPath: '/thanks'
       preLoaderRoute: typeof ThanksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sound-baths': {
-      id: '/sound-baths'
-      path: '/sound-baths'
-      fullPath: '/sound-baths'
-      preLoaderRoute: typeof SoundBathsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -412,7 +392,6 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewsRoute: ReviewsRoute,
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  SoundBathsRoute: SoundBathsRoute,
   ThanksRoute: ThanksRoute,
 }
 export const routeTree = rootRouteImport

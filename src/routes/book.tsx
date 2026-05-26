@@ -6,7 +6,7 @@ import { submitBooking } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
-const offerings = ["Reiki", "Sound Bath", "Cacao Ceremony", "Breathwork", "Mentoring", "Not sure yet"];
+const offerings = ["Reiki", "Sound Bath", "Resonance & Release", "Cacao Ceremony", "Breathwork", "Mentoring", "Retreat", "Not sure yet"];
 
 const searchSchema = z.object({
   offering: z.string().optional(),
