@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
-import breathYogaHero from "@/assets/breath-yoga-hero.webp";
+import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
 
 export const Route = createFileRoute("/breath-yoga")({
   head: () => ({
