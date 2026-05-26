@@ -5,9 +5,9 @@ import heroImg from "@/assets/sound-bowls.jpg";
 export const Route = createFileRoute("/resonance-release")({
   head: () => ({
     meta: [
-      { title: "Resonance & Release — Signature Deep Healing Experience" },
+      { title: "The Resonance Reset — Signature Deep Healing Experience" },
       { name: "description", content: "A 1:1 immersive deep healing experience weaving sound, Reiki, activating breathwork and intuitive somatic release with Mehtap." },
-      { property: "og:title", content: "Resonance & Release — Iridescence Healing" },
+      { property: "og:title", content: "The Resonance Reset — Iridescence Healing" },
       { property: "og:description", content: "Deep emotional release, nervous system reset and energetic realignment." },
       { property: "og:image", content: heroImg },
     ],
@@ -34,7 +34,7 @@ function ResonanceRelease() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={heroImg} alt="Resonance & Release immersive healing session"
+          <img src={heroImg} alt="The Resonance Reset immersive healing session"
             className="w-full h-auto md:h-[460px] object-cover" width={1280} height={960} />
         </div>
         <div>
@@ -43,7 +43,7 @@ function ResonanceRelease() {
             <span className="text-xs uppercase tracking-wider">Signature deep healing experience</span>
           </div>
           <h1 className="mt-2 font-display text-4xl sm:text-5xl">
-            Resonance &amp; <span className="italic bg-iridescent bg-clip-text text-transparent">Release</span>
+            The Resonance <span className="italic bg-iridescent bg-clip-text text-transparent">Reset</span>
           </h1>
           <p className="mt-4 text-muted-foreground text-pretty">
             A powerful, immersive 1:1 session designed to support deep emotional release,
@@ -51,7 +51,7 @@ function ResonanceRelease() {
           </p>
           <Link
             to="/book"
-            search={{ offering: "Resonance & Release" }}
+            search={{ offering: "The Resonance Reset" }}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
           >
             Apply for a session <ArrowRight className="h-4 w-4" />
@@ -64,7 +64,7 @@ function ResonanceRelease() {
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">The invitation</p>
           <p className="mt-3 text-foreground/80 text-pretty leading-relaxed">
             There are moments when surface-level work is no longer enough — when something deeper
-            is ready to be felt, released and transformed. Resonance &amp; Release is a space to meet
+            is ready to be felt, released and transformed. The Resonance Reset is a space to meet
             that moment through breath, sound and intuitive somatic work that gently yet powerfully
             unlocks what's been held within the body.
           </p>
@@ -149,7 +149,7 @@ function ResonanceRelease() {
         </div>
 
         <div className="rounded-3xl border border-border bg-card p-7 sm:p-10 text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Apply for Resonance &amp; Release</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Apply for The Resonance Reset</p>
           <h2 className="mt-2 font-display text-3xl">A high-touch, intentionally held experience</h2>
           <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-pretty">
             To ensure this work is aligned for you, all sessions begin with a short application.
@@ -157,7 +157,7 @@ function ResonanceRelease() {
           </p>
           <Link
             to="/book"
-            search={{ offering: "Resonance & Release" }}
+            search={{ offering: "The Resonance Reset" }}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
           >
             Begin your application <ArrowRight className="h-4 w-4" />
