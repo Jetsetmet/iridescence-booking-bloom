@@ -88,7 +88,7 @@ const blurbs: Record<string, string> = {
   "Sound Bath": "A sound bath — bowls, gongs and a soft place to land. Quiet the mind, drop in.",
   "Cacao Ceremony": "A cacao ceremony — heart-opening medicine held in sacred circle.",
   Breathwork: "Guided breathwork — to move what's been stored and meet yourself underneath.",
-  Mentoring: "Self-love mentoring — a four-session journey to come home to your wholeness.",
+  Mentoring: "Self-love mentoring — a 6-week journey to come home to your wholeness.",
   Retreat: "A retreat — full immersion away from daily life, woven with sound, breath, cacao and ceremony.",
 };
 
