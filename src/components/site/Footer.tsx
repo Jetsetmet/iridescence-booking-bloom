@@ -15,6 +15,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-4 text-sm">
           <Link to="/about" className="text-muted-foreground hover:text-foreground">About Met</Link>
           <Link to="/offerings" className="text-muted-foreground hover:text-foreground">Offerings</Link>
+          <Link to="/packages" className="text-muted-foreground hover:text-foreground">Packages</Link>
           <Link to="/retreats" className="text-muted-foreground hover:text-foreground">Retreats</Link>
           <Link to="/quiz" className="text-muted-foreground hover:text-foreground">Find Your Path</Link>
           <Link to="/events" className="text-muted-foreground hover:text-foreground">Events</Link>
