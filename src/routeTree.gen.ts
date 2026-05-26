@@ -14,6 +14,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
+import { Route as ResonanceReleaseRouteImport } from './routes/resonance-release'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OfferingsRouteImport } from './routes/offerings'
@@ -50,6 +51,11 @@ const ReviewsRoute = ReviewsRouteImport.update({
 const RetreatsRoute = RetreatsRouteImport.update({
   id: '/retreats',
   path: '/retreats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResonanceReleaseRoute = ResonanceReleaseRouteImport.update({
+  id: '/resonance-release',
+  path: '/resonance-release',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuizRoute = QuizRouteImport.update({
@@ -126,6 +132,7 @@ export interface FileRoutesByFullPath {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
@@ -145,6 +152,7 @@ export interface FileRoutesByTo {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
@@ -165,6 +173,7 @@ export interface FileRoutesById {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
@@ -186,6 +195,7 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/resonance-release'
     | '/retreats'
     | '/reviews'
     | '/self-love-mentoring'
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/resonance-release'
     | '/retreats'
     | '/reviews'
     | '/self-love-mentoring'
@@ -224,6 +235,7 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/resonance-release'
     | '/retreats'
     | '/reviews'
     | '/self-love-mentoring'
@@ -244,6 +256,7 @@ export interface RootRouteChildren {
   OfferingsRoute: typeof OfferingsRoute
   PackagesRoute: typeof PackagesRoute
   QuizRoute: typeof QuizRoute
+  ResonanceReleaseRoute: typeof ResonanceReleaseRoute
   RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
@@ -286,6 +299,13 @@ declare module '@tanstack/react-router' {
       path: '/retreats'
       fullPath: '/retreats'
       preLoaderRoute: typeof RetreatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resonance-release': {
+      id: '/resonance-release'
+      path: '/resonance-release'
+      fullPath: '/resonance-release'
+      preLoaderRoute: typeof ResonanceReleaseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quiz': {
@@ -388,6 +408,7 @@ const rootRouteChildren: RootRouteChildren = {
   OfferingsRoute: OfferingsRoute,
   PackagesRoute: PackagesRoute,
   QuizRoute: QuizRoute,
+  ResonanceReleaseRoute: ResonanceReleaseRoute,
   RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
