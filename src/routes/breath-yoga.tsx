@@ -24,11 +24,11 @@ function BreathYoga() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
-        <div className="rounded-3xl overflow-hidden shadow-card aspect-[4/3] md:h-[420px]">
+        <div className="rounded-3xl overflow-hidden shadow-card">
           <img
             src={breathYogaHero}
             alt="Hands in meditation mudra by the water during breathwork practice"
-            className="h-full w-full object-cover"
+            className="w-full h-auto md:h-[460px] object-cover"
           />
         </div>
         <div>
