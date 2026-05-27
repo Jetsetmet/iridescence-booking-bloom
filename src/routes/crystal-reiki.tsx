@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
 import { ArrowRight, Triangle, ExternalLink } from "lucide-react";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/crystal-reiki")({
   head: () => ({
@@ -93,7 +94,7 @@ function CrystalReiki() {
               {"book" in t && t.book ? (
                 <Link to="/book" search={{ offering: "Sound Bath" }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
               ) : (
-                <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+                <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
               )}
             </li>
           ))}
