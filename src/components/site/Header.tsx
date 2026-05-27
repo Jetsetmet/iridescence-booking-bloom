@@ -18,6 +18,7 @@ const nav: ReadonlyArray<NavItem> = [
       { to: "/crystal-reiki", label: "Reiki & Sound" },
       { to: "/self-love-mentoring", label: "Mentoring" },
       { to: "/cacao-ceremonies", label: "Cacao" },
+      { to: "/meditation", label: "Meditation, Breath & Kundalini" },
       { to: "/breath-yoga", label: "Breath & Yoga" },
     ],
   },
