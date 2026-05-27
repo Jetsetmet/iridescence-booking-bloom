@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
-import heroImg from "@/assets/hero-meditation.jpg";
+import heroImg from "@/assets/hero-meditation-v2.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
 import resonanceImg from "@/assets/resonance-reset.jpeg";
 import { ArrowRight } from "lucide-react";
