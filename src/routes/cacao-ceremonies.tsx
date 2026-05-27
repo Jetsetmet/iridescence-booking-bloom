@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
 import { submitLead } from "@/lib/funnel.functions";
+import { SQUARE_URL } from "@/lib/booking";
 import heroImg from "@/assets/cacao-ceremony.jpg";
 import couplesImg from "@/assets/couples-ceremony-new.webp";
 import logoImg from "@/assets/logo.jpg";
@@ -168,7 +169,7 @@ function CacaoCeremonies() {
               {t.book ? (
                 <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
               ) : (
-                <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+                <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
               )}
             </li>
           ))}
