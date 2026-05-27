@@ -33,7 +33,7 @@ function Retreats() {
             Immersive journeys that weave energy healing, cacao, yoga, sound, meditation, breathwork and indigenous Temazcal into the quiet medicine of nature. A safe, nurturing space to release what no longer serves and step into true freedom.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+            <Link to="/book" search={{ offering: "Retreat" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Reserve your spot <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -66,7 +66,7 @@ function Retreats() {
               A journey of ancient roots, inner transformation, culture, beauty, and remembrance.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+              <Link to="/book" search={{ offering: "Retreat", event: "Resonance & Remembrance — May 19–25, 2026 · Istanbul & Cappadocia" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Reserve your spot <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
@@ -108,7 +108,7 @@ function Retreats() {
               A journey of connection, beauty, ancient roots, and the art of living well.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+              <Link to="/book" search={{ offering: "Retreat", event: "Whispers of the Ancient Shores — June 2–8 · Alaçatı, Türkiye" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Reserve your spot <ArrowRight className="h-4 w-4" />
               </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
