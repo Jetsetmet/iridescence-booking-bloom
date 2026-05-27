@@ -7,7 +7,7 @@ export const Route = createFileRoute("/breath-yoga")({
   head: () => ({
     meta: [
       { title: "Breathwork & Kundalini Yoga Sessions in New Orleans" },
-      { name: "description", content: "Guided pranayama, somatic breath journeys and Kundalini yoga with Mehtap — private, couple and group sessions in New Orleans." },
+      { name: "description", content: "Guided pranayama, somatic breath journeys and Kundalini yoga with Mehtap — private and group sessions in New Orleans." },
       { property: "og:title", content: "Breath & Yoga — Iridescence Healing" },
       { property: "og:description", content: "Release stored emotion and meet yourself in stillness." },
     ],
@@ -41,7 +41,7 @@ function BreathYoga() {
           <p className="mt-4 text-muted-foreground text-pretty">
             Guided pranayama, somatic breath journeys and Kundalini yoga to release stored emotion,
             regulate the nervous system, and meet yourself in stillness. Each session is shaped to
-            your body and intention — held privately, as a couple, or in small groups.
+            your body and intention — held privately or in small groups.
           </p>
           <Link
             to="/book"
