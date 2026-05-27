@@ -1,9 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/breathwork-event.jpg";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
-import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
