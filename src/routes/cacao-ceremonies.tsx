@@ -8,6 +8,7 @@ import heroImg from "@/assets/cacao-ceremony.jpg";
 import couplesImg from "@/assets/couples-ceremony-new.webp";
 import logoImg from "@/assets/logo.jpg";
 import cacaoLogoImg from "@/assets/iridescence-cacao-logo.png";
+import iridescenceCacaoPhoto from "@/assets/iridescence-cacao-photo.jpg";
 
 export const Route = createFileRoute("/cacao-ceremonies")({
   head: () => ({
@@ -208,7 +209,17 @@ function CacaoCeremonies() {
               Order a kit <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-card aspect-video bg-background">
+          <div className="space-y-4">
+            <div className="relative">
+              <div className="absolute -inset-3 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
+              <img
+                src={iridescenceCacaoPhoto}
+                alt="Iridescence Cacao — ceremonial cacao from Costa Rica"
+                loading="lazy"
+                className="relative rounded-2xl shadow-glow object-cover w-full aspect-square"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-card aspect-video bg-background">
             <iframe
               src="https://www.youtube.com/embed/zkVk49BEDP4"
               title="Iridescence Cacao Prep Video"
@@ -216,6 +227,7 @@ function CacaoCeremonies() {
               allowFullScreen
               className="w-full h-full"
             />
+            </div>
           </div>
         </div>
       </section>
