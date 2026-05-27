@@ -45,7 +45,7 @@ function Contact() {
           <div className="mt-3 font-medium text-sm">Instagram</div>
           <div className="mt-1 text-xs text-muted-foreground">@iridescence_healing</div>
         </a>
-        <a href="https://instagram.com/jetsetmet" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
+        <a href="https://www.instagram.com/jetsetmet/" target="_blank" rel="noreferrer" className="rounded-3xl border border-border bg-card p-6 shadow-card hover:shadow-glow transition-shadow">
           <Triangle className="h-5 w-5 mx-auto text-primary" />
           <div className="mt-3 font-medium text-sm">Instagram</div>
           <div className="mt-1 text-xs text-muted-foreground">@jetsetmet</div>
