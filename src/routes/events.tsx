@@ -22,21 +22,21 @@ const events = [
     title: "Virtual \"Open Your Heart\" Breathwork Journey",
     loc: "Online from anywhere · $25",
     blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
-    img: heroImg, slug: "Breathwork",
+    img: heroImg, offering: "Breath & Yoga",
   },
   {
     date: "Thursday, June 4", time: "6:30 PM",
     title: "Cacao + Heart Circle",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
-    img: cacaoImg, slug: "Cacao Ceremony",
+    img: cacaoImg, offering: "Cacao Ceremony",
   },
   {
     date: "Sunday, June 14", time: "11:00 AM",
     title: "New Moon Sound Bath",
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
-    img: moonImg, slug: "Sound Bath",
+    img: moonImg, offering: "Reiki & Sound",
   },
 ];
 
@@ -68,7 +68,7 @@ function Events() {
               </p>
               <Link
                 to="/book"
-                search={{ event: `${e.title} — ${e.date}` }}
+                search={{ offering: e.offering, event: `${e.title} — ${e.date}` }}
                 className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
               >
                 Reserve Spot <ArrowRight className="h-3.5 w-3.5" />
