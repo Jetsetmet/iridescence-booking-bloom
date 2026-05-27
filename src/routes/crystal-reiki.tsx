@@ -8,7 +8,7 @@ export const Route = createFileRoute("/crystal-reiki")({
   head: () => ({
     meta: [
       { title: "Crystal Reiki & Sound Healing in New Orleans" },
-      { name: "description", content: "Intuitive Crystal Reiki sessions with crystal frequencies, chakra balancing, breath activations and 432Hz quartz bowls — private, couple and group bookings in New Orleans." },
+      { name: "description", content: "Intuitive Crystal Reiki sessions with crystal frequencies, chakra balancing, breath activations and 432Hz quartz bowls — private and group bookings in New Orleans." },
       { property: "og:title", content: "Crystal Reiki & Sound — Iridescence Healing" },
       { property: "og:description", content: "Hands-on energy work woven with crystals, breath and sacred sound." },
       { property: "og:image", content: reikiImg },
@@ -21,7 +21,7 @@ const tiers = [
   { label: "Student Session", duration: "60 min", price: "$110" },
   { label: "Private Session", duration: "60 min", price: "$130" },
   { label: "Private Session", duration: "90 min", price: "$170" },
-  { label: "Couple & Group Booking", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
+  { label: "Group Booking", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
   { label: "Retreat & Venue Bookings", duration: "by arrangement", price: "Enquire", book: true as const },
 ];
 
@@ -66,7 +66,7 @@ function CrystalReiki() {
           </p>
           <p className="mt-3 text-muted-foreground text-pretty">
             Each session is held in a safe, nurturing space to clear, balance and activate the chakra system,
-            soften limiting beliefs, and guide you back to your truest self. Offered as one-on-one, couple
+            soften limiting beliefs, and guide you back to your truest self. Offered as one-on-one
             and group sessions.
           </p>
           <Link
