@@ -186,7 +186,7 @@ function Retreats() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
               </div>
-              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
+              <Link to="/book" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
             </li>
           ))}
         </ul>
