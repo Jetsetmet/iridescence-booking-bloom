@@ -3,6 +3,7 @@ import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/breathwork-event.jpg";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -66,13 +67,14 @@ function Events() {
               <p className="mt-2 text-sm text-muted-foreground flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" /> {e.loc}
               </p>
-              <Link
-                to="/book"
-                search={{ offering: e.slug, event: e.title }}
+              <a
+                href={SQUARE_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
               >
                 Reserve Spot <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              </a>
             </div>
           </article>
         ))}
