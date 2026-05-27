@@ -18,7 +18,7 @@ export const Route = createFileRoute("/breath-yoga")({
 const tiers = [
   { label: "Private Session", duration: "60 min", price: "$130" },
   { label: "Private Session", duration: "90 min", price: "$170" },
-  { label: "Couple & Group Booking", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
+  { label: "Group Booking", duration: "90 min", price: "$140 pp", note: "up to 6, more on request" },
 ];
 
 function BreathYoga() {
