@@ -6,7 +6,7 @@ import { submitBooking } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
-const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breathwork", "Mentoring", "Retreat", "Not sure yet"];
+const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Mentoring", "Retreat", "Not sure yet"];
 
 const searchSchema = z.object({
   offering: z.string().optional(),
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
       { title: "Book a Session — Iridescence Healing" },
-      { name: "description", content: "Reserve a private Reiki, sound bath, cacao ceremony, breathwork or mentoring session with Mehtap in New Orleans." },
+      { name: "description", content: "Reserve a private Reiki, sound bath, cacao ceremony, breath & yoga or mentoring session with Mehtap in New Orleans." },
     ],
   }),
   validateSearch: searchSchema,
