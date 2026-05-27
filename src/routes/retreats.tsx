@@ -5,6 +5,7 @@ import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 import istanbulCollageImg from "@/assets/turkey-istanbul-collage.png";
 import alacatiCollageImg from "@/assets/turkey-alacati-collage.png";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
@@ -140,7 +141,7 @@ function Retreats() {
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private journey</p>
           </div>
           <h2 className="mt-3 font-display text-4xl">4-Day Oneness Spiritual Emergence Retreat</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Costa Rica · Teens, Young Adults & Adults · From $4,422 pp</p>
+          <p className="mt-2 text-sm text-muted-foreground">Costa Rica · Teens, Young Adults & Adults · <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="underline hover:text-primary">From $4,422 pp</a></p>
           <p className="mt-4 text-foreground/80 leading-relaxed text-pretty max-w-3xl">
             A one-on-one sanctuary in Costa Rica's wilderness — a gentle yet profound reset to shed old patterns, soothe the nervous system and awaken the joy that lives within. Designed with your heart's vision in mind.
           </p>
@@ -185,7 +186,7 @@ function Retreats() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
               </div>
-              <Link to="/book" search={{ offering: t.label }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
+              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
             </li>
           ))}
         </ul>
