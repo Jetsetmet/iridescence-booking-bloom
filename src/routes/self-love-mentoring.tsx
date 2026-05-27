@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle, Heart, Quote } from "lucide-react";
 import heroImg from "@/assets/self-love.jpg";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/self-love-mentoring")({
   head: () => ({
@@ -130,7 +131,7 @@ function SelfLoveMentoring() {
           <div className="md:flex-1">
             <div className="flex items-center gap-2 text-primary">
               <Heart className="h-4 w-4" />
-              <span className="text-xs uppercase tracking-wider">Six-Week Mentoring · $720</span>
+              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-xs uppercase tracking-wider hover:underline">Six-Week Mentoring · $720</a>
             </div>
             <p className="mt-2 font-display text-2xl sm:text-3xl">Let's begin this transformative journey together.</p>
             <p className="mt-2 text-sm text-muted-foreground">Sessions held in person in uptown New Orleans or via Zoom from anywhere. Please email for more info.</p>
@@ -158,7 +159,7 @@ function SelfLoveMentoring() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
               </div>
-              <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
             </li>
           ))}
         </ul>
