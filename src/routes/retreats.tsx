@@ -250,7 +250,12 @@ function RetreatFitQuiz() {
       </div>
       {submitted && (
         <div className="mt-6 rounded-2xl border border-border bg-background/60 p-5 text-sm text-foreground/85">
-          {yesCount >= 4 ? (
+          {answers[0] ? (
+            <p>
+              The 4-Day Oneness Spiritual Emergence Retreat in Costa Rica is calling you — a private, deeply nurturing reset at a softer pace.{" "}
+              <Link to="/contact" className="underline underline-offset-4 hover:text-primary">Reach out to reserve your spot →</Link>
+            </p>
+          ) : yesCount >= 4 ? (
             <p>This retreat is calling you. Reach out and let's hold a space for you.</p>
           ) : yesCount >= 2 ? (
             <p>There's a soft yes here. Let's connect so I can answer any questions and help you feel into it.</p>
