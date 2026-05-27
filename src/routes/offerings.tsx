@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
-import heroImg from "@/assets/hero-meditation-v2.jpg";
+import breathYogaImg from "@/assets/breath-yoga-hero.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
 import resonanceImg from "@/assets/resonance-reset.jpeg";
 import { ArrowRight } from "lucide-react";
@@ -31,7 +31,7 @@ const cards: Card[] = [
   { title: "Reiki & Sound", img: reikiImg, to: "/crystal-reiki", blurb: "Intuitive energy work woven with crystals, breath and 432Hz quartz bowls.", from: "from $110" },
   { title: "Mentoring", img: selfLoveImg, to: "/self-love-mentoring", blurb: "A devotional six-week mentorship to reclaim your wholeness and intuition.", from: "$720" },
   { title: "Cacao", img: cacaoImg, to: "/cacao-ceremonies", blurb: "Heart-opening ceremonial cacao with breath, intention and connection.", from: "from $390" },
-  { title: "Breath & Yoga", img: heroImg, to: "/breath-yoga", blurb: "Guided pranayama, somatic breath journeys and Kundalini yoga.", from: "from $130" },
+  { title: "Breath & Yoga", img: breathYogaImg, to: "/breath-yoga", blurb: "Guided pranayama, somatic breath journeys and Kundalini yoga.", from: "from $130" },
 ];
 
 function Offerings() {

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero-meditation-v2.jpg";
+import heroImg from "@/assets/hero-meditation.jpg";
 import { Triangle, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
