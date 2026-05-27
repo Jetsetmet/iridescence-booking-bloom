@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import packagesImg from "@/assets/moon.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/packages")({
   head: () => ({
@@ -62,7 +63,7 @@ function Packages() {
               {t.price === "Varies" ? (
                 <Link to="/book" search={{ offering: t.label }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
               ) : (
-                <div className="text-sm font-display text-primary whitespace-nowrap">{t.price}</div>
+                <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
               )}
             </li>
           ))}
