@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import soundImg from "@/assets/sound-bowls.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/hero-meditation.jpg";
 import selfLoveImg from "@/assets/self-love.jpg";
+import resonanceImg from "@/assets/resonance-reset.jpeg";
 import { ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/offerings")({
@@ -27,7 +27,7 @@ type Card = {
 };
 
 const cards: Card[] = [
-  { title: "The Resonance Reset", img: soundImg, to: "/resonance-release", blurb: "Signature 1:1 immersive — breath, sound, Reiki and somatic release in one session.", from: "from $240" },
+  { title: "The Resonance Reset", img: resonanceImg, to: "/resonance-release", blurb: "Signature 1:1 immersive — breath, sound, Reiki and somatic release in one session.", from: "from $240" },
   { title: "Reiki & Sound", img: reikiImg, to: "/crystal-reiki", blurb: "Intuitive energy work woven with crystals, breath and 432Hz quartz bowls.", from: "from $110" },
   { title: "Mentoring", img: selfLoveImg, to: "/self-love-mentoring", blurb: "A devotional six-week mentorship to reclaim your wholeness and intuition.", from: "$720" },
   { title: "Cacao", img: cacaoImg, to: "/cacao-ceremonies", blurb: "Heart-opening ceremonial cacao with breath, intention and connection.", from: "from $390" },
