@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle, Check } from "lucide-react";
-import heroImg from "@/assets/packages-new.jpg";
+import heroImg from "@/assets/resonance-reset.jpeg";
 import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/resonance-release")({
