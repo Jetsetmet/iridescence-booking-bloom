@@ -31,7 +31,7 @@ export function Footer() {
           <a href="https://instagram.com/iridescence_healing" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
             <Instagram className="h-4 w-4" /> @iridescence_healing
           </a>
-          <a href="https://instagram.com/jetsetmet" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
+          <a href="https://www.instagram.com/jetsetmet/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-foreground">
             <Instagram className="h-4 w-4" /> @jetsetmet
           </a>
         </div>
