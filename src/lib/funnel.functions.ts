@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import { z } from "zod";
+import { syncToMailchimp } from "./mailchimp.server";
 
 const emailSchema = z.string().trim().email().max(255).toLowerCase();
 
@@ -17,6 +18,7 @@ export const submitLead = createServerFn({ method: "POST" })
       .from("leads")
       .insert({ email: data.email, name: data.name ?? null, source: data.source });
     if (error && !error.message.includes("duplicate")) throw new Error(error.message);
+    await syncToMailchimp({ email: data.email, name: data.name, tags: [data.source] });
     return { ok: true };
   });
 
@@ -47,6 +49,11 @@ export const submitBooking = createServerFn({ method: "POST" })
       name: data.name,
       source: "booking",
     });
+    await syncToMailchimp({
+      email: data.email,
+      name: data.name,
+      tags: ["booking", `offering:${data.offering}`],
+    });
     return { ok: true };
   });
 
@@ -72,6 +79,11 @@ export const submitQuiz = createServerFn({ method: "POST" })
         email: data.email,
         name: data.name || null,
         source: "quiz",
+      });
+      await syncToMailchimp({
+        email: data.email,
+        name: data.name || null,
+        tags: ["quiz", `recommended:${data.recommended_offering}`],
       });
     }
     return { ok: true };
