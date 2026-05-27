@@ -68,6 +68,7 @@ function Events() {
               </p>
               <Link
                 to="/book"
+                search={{ event: `${e.title} — ${e.date}` }}
                 className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
               >
                 Reserve Spot <ArrowRight className="h-3.5 w-3.5" />
