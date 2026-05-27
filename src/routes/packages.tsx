@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import packagesImg from "@/assets/golden-light.webp";
+import packagesImg from "@/assets/flower-of-life-blue.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 import { SQUARE_URL } from "@/lib/booking";
 
