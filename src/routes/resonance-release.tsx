@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle, Check } from "lucide-react";
 import heroImg from "@/assets/packages-sound-bowls.jpg";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/resonance-release")({
   head: () => ({
@@ -137,10 +138,10 @@ function ResonanceRelease() {
           </div>
           <div className="rounded-2xl bg-iridescent p-6">
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Investment</p>
-            <div className="mt-2 font-display text-3xl">$240</div>
+            <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="mt-2 inline-block font-display text-3xl hover:underline">$240</a>
             <p className="text-xs text-muted-foreground">Introductory rate</p>
             <div className="mt-4 border-t border-border/40 pt-3">
-              <div className="font-display text-2xl">$690 · 3-session journey</div>
+              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="inline-block font-display text-2xl hover:underline">$690 · 3-session journey</a>
               <p className="mt-1 text-sm text-foreground/70">
                 A guided progression to support deeper release, integration and realignment over time.
               </p>
