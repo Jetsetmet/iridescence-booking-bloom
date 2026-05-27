@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle } from "lucide-react";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
-import kundaliniImg from "@/assets/kundalini-meditation.jpg";
+const kundaliniImg = "/lovable-uploads/00d2e4af-2537-44d5-abf0-17707a34b6a9.webp";
 import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 import { SQUARE_URL } from "@/lib/booking";
 
