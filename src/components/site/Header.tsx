@@ -37,7 +37,7 @@ export function Header() {
         <Link to="/" className="flex items-center gap-2 group">
           <img
             src={logo}
-            alt="Iridescence Healing"
+            alt="Iridescence Healing — Reiki, sound healing & cacao ceremonies in New Orleans"
             width={40}
             height={40}
             className="h-10 w-10 rounded-full object-cover shadow-glow group-hover:scale-105 transition-transform mix-blend-multiply"

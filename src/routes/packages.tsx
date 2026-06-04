@@ -27,7 +27,7 @@ function Packages() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={packagesImg} alt="Healing session packages" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
+          <img src={packagesImg} alt="Reiki and sound healing session packages with Mehtap — Iridescence Healing New Orleans" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
         </div>
         <div>
           <div className="flex items-center gap-2 text-primary">
