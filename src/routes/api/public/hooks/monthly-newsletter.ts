@@ -84,8 +84,7 @@ export const Route = createFileRoute('/api/public/hooks/monthly-newsletter')({
                   subject_line: `${monthLabel} · circles, ceremonies & quiet moments`,
                   preview_text: 'This month at Iridescence Healing.',
                   title: `Monthly Newsletter — ${monthLabel}`,
-                  from_name: 'Iridescence Healing',
-                  reply_to: 'hello@iridescencehealing.com',
+                  // from_name and reply_to fall back to audience defaults in Mailchimp
                 },
               }),
             },
