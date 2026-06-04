@@ -9,10 +9,14 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/offerings")({
   head: () => ({
     meta: [
-      { title: "Offerings — Reiki, Sound, Cacao, Breath & Mentoring in New Orleans" },
+      { title: "Healing Offerings in New Orleans | Iridescence Healing" },
       { name: "description", content: "Explore Iridescence Healing offerings: Crystal Reiki, sound baths, cacao ceremonies, breath & yoga, self-love mentoring, session packages and retreats." },
-      { property: "og:title", content: "Healing Offerings — Iridescence Healing" },
+      { property: "og:title", content: "Healing Offerings in New Orleans | Iridescence Healing" },
       { property: "og:description", content: "A curated path of sacred practices held with Mehtap in uptown New Orleans." },
+      { property: "og:url", content: "https://iridescence-booking-bloom.lovable.app/offerings" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://iridescence-booking-bloom.lovable.app/offerings" },
     ],
   }),
   component: Offerings,
