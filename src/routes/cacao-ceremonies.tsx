@@ -303,11 +303,13 @@ function CacaoInvitesSection() {
         ) : (
           <form onSubmit={handleSubmit} className="md:flex-1 flex flex-col sm:flex-row gap-2">
             <input
+              id="cacao-email"
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
+              aria-label="Your email for cacao circle invites"
               maxLength={255}
               className="flex-1 rounded-full border border-border bg-background/70 px-5 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/40"
             />
