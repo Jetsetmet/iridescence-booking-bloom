@@ -193,12 +193,16 @@ function Quiz() {
             <form onSubmit={onSaveAndBook} className="mt-8 space-y-3 text-left">
               <p className="text-sm font-medium">Save your result & book your session</p>
               <input
+                id="quiz-name"
+                aria-label="Your first name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your first name"
                 className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
               />
               <input
+                id="quiz-email"
+                aria-label="Your email"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}

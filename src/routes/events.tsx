@@ -65,7 +65,7 @@ function Events() {
               <div className="text-[11px] text-primary uppercase tracking-wider flex items-center gap-1.5 font-bold whitespace-nowrap">
                 <Calendar className="h-3 w-3 shrink-0" /> {e.date} · {e.time}
               </div>
-              <h3 className="mt-2 font-display text-2xl">{e.title}</h3>
+              <h2 className="mt-2 font-display text-2xl">{e.title}</h2>
               <p className="mt-2 text-sm text-foreground/80 text-pretty">{e.blurb}</p>
               <p className="mt-2 text-sm text-muted-foreground flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" /> {e.loc}
