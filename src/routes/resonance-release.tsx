@@ -35,7 +35,7 @@ function ResonanceRelease() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={heroImg} alt="The Resonance Reset immersive healing session"
+          <img src={heroImg} alt="The Resonance Reset — immersive sound healing and Reiki session in New Orleans with Mehtap"
             className="w-full h-auto md:h-[460px] object-cover" width={1280} height={960} />
         </div>
         <div>

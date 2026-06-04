@@ -54,7 +54,7 @@ function BreathYoga() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12 grid md:grid-cols-2 gap-10 items-center">
-        <img src={kundaliniImg} alt="Kundalini yoga practice"
+        <img src={kundaliniImg} alt="Kundalini yoga and breathwork practice with Mehtap — Iridescence Healing New Orleans"
           loading="lazy" width={1200} height={1200}
           className="rounded-[2rem] shadow-soft object-cover w-full h-[440px] order-2 md:order-1" />
         <div className="order-1 md:order-2">

@@ -29,7 +29,7 @@ function SelfLoveMentoring() {
             <div className="absolute -inset-4 rounded-[2rem] bg-iridescent opacity-25 blur-2xl" aria-hidden />
             <img
               src={heroImg}
-              alt="Self-love mentoring with Met — Iridescence Healing New Orleans"
+              alt="Self-love mentoring and intuitive coaching with Mehtap — Iridescence Healing New Orleans"
               loading="lazy"
               width={900}
               height={1100}

@@ -50,7 +50,7 @@ function CrystalReiki() {
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
         <div className="rounded-3xl overflow-hidden shadow-card">
-          <img src={reikiImg} alt="Crystal Reiki session with Mehtap" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
+          <img src={reikiImg} alt="Crystal Reiki energy healing session with Mehtap in New Orleans — chakra balancing and crystal therapy" className="w-full h-auto md:h-[420px] object-cover" width={1280} height={960} />
         </div>
         <div>
           <div className="flex items-center gap-2 text-primary">
@@ -102,7 +102,7 @@ function CrystalReiki() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20 grid lg:grid-cols-2 gap-12 items-center">
-        <img src={soundImg} alt="Met holding a 432Hz crystal singing bowl"
+        <img src={soundImg} alt="Mehtap holding a 432Hz crystal singing bowl during a sound bath journey in New Orleans"
           loading="lazy" width={1200} height={1200}
           className="rounded-[2rem] shadow-glow object-cover w-full h-auto md:h-[460px]" />
         <div>
