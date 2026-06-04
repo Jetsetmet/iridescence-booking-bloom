@@ -7,10 +7,14 @@ import { Calendar, MapPin, ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/events")({
   head: () => ({
     meta: [
-      { title: "Sound Baths, Cacao & Breathwork Events in New Orleans — Iridescence Healing" },
+      { title: "Healing Events in New Orleans | Iridescence Healing" },
       { name: "description", content: "Upcoming full moon sound baths, cacao ceremonies, breathwork circles and yoga gatherings in uptown New Orleans with Met. Small intimate groups." },
-      { property: "og:title", content: "Healing Events in New Orleans — Iridescence Healing" },
+      { property: "og:title", content: "Healing Events in New Orleans | Iridescence Healing" },
       { property: "og:description", content: "Full moon sound baths, cacao ceremonies and sunrise breathwork in New Orleans." },
+      { property: "og:url", content: "https://iridescence-booking-bloom.lovable.app/events" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://iridescence-booking-bloom.lovable.app/events" },
     ],
   }),
   component: Events,

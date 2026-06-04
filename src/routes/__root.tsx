@@ -76,8 +76,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Iridescence Healing — Reiki, Sound Healing & Energy Work in New Orleans" },
-      { name: "description", content: "Reiki, sound healing, cacao ceremonies, breathwork, yoga, self-love mentoring and intuitive energy guidance with Met in uptown New Orleans. Book in-person or virtual sessions." },
+      { title: "Iridescence Healing — Reiki & Sound Healing, New Orleans" },
+      { name: "description", content: "Reiki, sound healing, cacao, breathwork and intuitive energy guidance with Met in New Orleans. Book in-person or virtual sessions." },
       { name: "keywords", content: "New Orleans Reiki, sound healing New Orleans, sound bath, breathwork, cacao ceremony, energy healing, intuitive guide, self love mentoring, yoga, meditation, crystal healing, Reiki Master, uptown New Orleans" },
       { name: "author", content: "Iridescence Healing" },
       { property: "og:title", content: "Iridescence Healing — Reiki & Sound Healing in New Orleans" },

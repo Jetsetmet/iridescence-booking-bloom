@@ -11,11 +11,15 @@ import { NewsletterSignup } from "@/components/site/NewsletterSignup";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Reiki, Sound Healing & Energy Work in New Orleans | Iridescence Healing" },
-       { name: "description", content: "New Orleans Reiki Master Mehtap offers crystal Reiki, sound baths, cacao ceremonies, breathwork, yoga, meditation and self-love mentoring. 17+ years of intuitive energy healing in uptown New Orleans." },
-       { property: "og:title", content: "Reiki & Sound Healing in New Orleans - Iridescence Healing" },
-       { property: "og:description", content: "Crystal Reiki, sound baths, cacao ceremonies, breathwork and intuitive energy guidance with Mehtap in uptown New Orleans." },
+      { title: "Reiki & Sound Healing in New Orleans | Iridescence Healing" },
+      { name: "description", content: "New Orleans Reiki Master Mehtap offers Reiki, sound baths, cacao ceremonies and mentoring. 17+ years of energy healing in New Orleans." },
+      { property: "og:title", content: "Reiki & Sound Healing in New Orleans | Iridescence Healing" },
+      { property: "og:description", content: "Crystal Reiki, sound baths, cacao ceremonies, breathwork and intuitive energy guidance with Mehtap in uptown New Orleans." },
+      { property: "og:url", content: "https://iridescence-booking-bloom.lovable.app/" },
       { property: "og:image", content: heroImg },
+    ],
+    links: [
+      { rel: "canonical", href: "https://iridescence-booking-bloom.lovable.app/" },
     ],
   }),
   component: Home,
