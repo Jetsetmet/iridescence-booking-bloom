@@ -27,6 +27,7 @@ import { Route as BreathYogaRouteImport } from './routes/breath-yoga'
 import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
 
 const ThanksRoute = ThanksRouteImport.update({
   id: '/thanks',
@@ -118,6 +119,12 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicHooksMonthlyNewsletterRoute =
+  ApiPublicHooksMonthlyNewsletterRouteImport.update({
+    id: '/api/public/hooks/monthly-newsletter',
+    path: '/api/public/hooks/monthly-newsletter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -138,6 +145,7 @@ export interface FileRoutesByFullPath {
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
+  '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -158,6 +166,7 @@ export interface FileRoutesByTo {
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
+  '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -179,6 +188,7 @@ export interface FileRoutesById {
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
+  '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -201,6 +211,7 @@ export interface FileRouteTypes {
     | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/thanks'
+    | '/api/public/hooks/monthly-newsletter'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -221,6 +232,7 @@ export interface FileRouteTypes {
     | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/thanks'
+    | '/api/public/hooks/monthly-newsletter'
   id:
     | '__root__'
     | '/'
@@ -241,6 +253,7 @@ export interface FileRouteTypes {
     | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/thanks'
+    | '/api/public/hooks/monthly-newsletter'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -262,6 +275,7 @@ export interface RootRouteChildren {
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ThanksRoute: typeof ThanksRoute
+  ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -392,6 +406,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/monthly-newsletter': {
+      id: '/api/public/hooks/monthly-newsletter'
+      path: '/api/public/hooks/monthly-newsletter'
+      fullPath: '/api/public/hooks/monthly-newsletter'
+      preLoaderRoute: typeof ApiPublicHooksMonthlyNewsletterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -414,6 +435,7 @@ const rootRouteChildren: RootRouteChildren = {
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ThanksRoute: ThanksRoute,
+  ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
