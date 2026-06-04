@@ -70,7 +70,18 @@ export const Route = createFileRoute('/api/public/hooks/monthly-newsletter')({
           const now = new Date();
           const monthLabel = now.toLocaleString('en-US', { month: 'long', year: 'numeric' });
 
-          // 1. Create campaign
+          // 1. Pull audience defaults (from_name, reply_to) so we don't hardcode them
+          const audience = await mc(
+            MAILCHIMP_SERVER_PREFIX,
+            MAILCHIMP_API_KEY,
+            `/lists/${MAILCHIMP_AUDIENCE_ID}`,
+          );
+          const defaults = audience?.campaign_defaults || {};
+          if (!defaults.from_name || !defaults.from_email) {
+            throw new Error('Mailchimp audience is missing from_name/from_email defaults');
+          }
+
+          // 2. Create campaign
           const campaign = await mc(
             MAILCHIMP_SERVER_PREFIX,
             MAILCHIMP_API_KEY,
@@ -84,7 +95,8 @@ export const Route = createFileRoute('/api/public/hooks/monthly-newsletter')({
                   subject_line: `${monthLabel} · circles, ceremonies & quiet moments`,
                   preview_text: 'This month at Iridescence Healing.',
                   title: `Monthly Newsletter — ${monthLabel}`,
-                  // from_name and reply_to fall back to audience defaults in Mailchimp
+                  from_name: defaults.from_name,
+                  reply_to: defaults.from_email,
                 },
               }),
             },
@@ -93,7 +105,7 @@ export const Route = createFileRoute('/api/public/hooks/monthly-newsletter')({
           const campaignId = campaign?.id;
           if (!campaignId) throw new Error('No campaign id returned');
 
-          // 2. Set HTML content
+          // 3. Set HTML content
           await mc(
             MAILCHIMP_SERVER_PREFIX,
             MAILCHIMP_API_KEY,
@@ -104,7 +116,7 @@ export const Route = createFileRoute('/api/public/hooks/monthly-newsletter')({
             },
           );
 
-          // 3. Send
+          // 4. Send
           await mc(
             MAILCHIMP_SERVER_PREFIX,
             MAILCHIMP_API_KEY,
