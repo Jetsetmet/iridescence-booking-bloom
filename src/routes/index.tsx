@@ -182,6 +182,8 @@ function Home() {
 
       <HeartOpeningFunnel />
 
+      <NewsletterSignup />
+
       {/* FINAL CTA */}
       <section className="mx-auto max-w-5xl px-5 sm:px-8 py-20 text-center">
         <Triangle className="mx-auto h-6 w-6 text-primary animate-shimmer" />
