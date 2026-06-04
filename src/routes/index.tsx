@@ -6,6 +6,7 @@ import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
+import { NewsletterSignup } from "@/components/site/NewsletterSignup";
 
 export const Route = createFileRoute("/")({
   head: () => ({
