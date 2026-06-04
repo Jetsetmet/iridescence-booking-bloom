@@ -51,7 +51,8 @@ function Book() {
       toast.success("Booking received - Mehtap will be in touch within 24 hours.");
       navigate({ to: "/thanks" });
     } catch (err) {
-      toast.error(err instanceof Error ? err.message : "Could not submit — please try again.");
+      console.error("booking submit failed", err);
+      toast.error("Could not submit — please try again.");
     } finally {
       setLoading(false);
     }

@@ -283,8 +283,9 @@ function CacaoInvitesSection() {
       setStatus("done");
       setEmail("");
     } catch (err) {
+      console.error("cacao circle signup failed", err);
       setStatus("error");
-      setErrorMsg(err instanceof Error ? err.message : "Something went wrong");
+      setErrorMsg("Something went wrong — please try again.");
     }
   }
 
