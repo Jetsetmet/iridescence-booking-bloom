@@ -17,7 +17,10 @@ export const submitLead = createServerFn({ method: "POST" })
     const { error } = await supabaseAdmin
       .from("leads")
       .insert({ email: data.email, name: data.name ?? null, source: data.source });
-    if (error && !error.message.includes("duplicate")) throw new Error(error.message);
+    if (error && !error.message.includes("duplicate")) {
+      console.error("submitLead insert failed", error);
+      throw new Error("Unable to process your request. Please try again.");
+    }
     await syncToMailchimp({ email: data.email, name: data.name, tags: [data.source] });
     return { ok: true };
   });
@@ -42,7 +45,10 @@ export const submitBooking = createServerFn({ method: "POST" })
       preferred_date: data.preferred_date || null,
       notes: data.notes || null,
     });
-    if (error) throw new Error(error.message);
+    if (error) {
+      console.error("submitBooking insert failed", error);
+      throw new Error("Unable to process your request. Please try again.");
+    }
     // Also capture as a lead for the nurture list
     await supabaseAdmin.from("leads").insert({
       email: data.email,
@@ -73,7 +79,10 @@ export const submitQuiz = createServerFn({ method: "POST" })
       answers: data.answers,
       recommended_offering: data.recommended_offering,
     });
-    if (error) throw new Error(error.message);
+    if (error) {
+      console.error("submitQuiz insert failed", error);
+      throw new Error("Unable to process your request. Please try again.");
+    }
     if (data.email) {
       await supabaseAdmin.from("leads").insert({
         email: data.email,
