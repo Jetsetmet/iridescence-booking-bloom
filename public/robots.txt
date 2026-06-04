@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thanks
 
-Sitemap: https://www.iridescencehealing.com/sitemap.xml
+Sitemap: https://iridescence-booking-bloom.lovable.app/sitemap.xml
