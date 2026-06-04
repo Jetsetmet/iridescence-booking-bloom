@@ -1,10 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const BASE_URL = "https://www.iridescencehealing.com";
+const BASE_URL = "https://iridescence-booking-bloom.lovable.app";
 const paths = [
   { path: "/", priority: "1.0" },
   { path: "/about", priority: "0.8" },
   { path: "/offerings", priority: "0.9" },
+  { path: "/crystal-reiki", priority: "0.8" },
+  { path: "/resonance-release", priority: "0.8" },
+  { path: "/self-love-mentoring", priority: "0.8" },
+  { path: "/cacao-ceremonies", priority: "0.8" },
+  { path: "/breath-yoga", priority: "0.8" },
+  { path: "/meditation", priority: "0.7" },
+  { path: "/packages", priority: "0.7" },
+  { path: "/retreats", priority: "0.7" },
+  { path: "/reviews", priority: "0.6" },
   { path: "/quiz", priority: "0.9" },
   { path: "/book", priority: "1.0" },
   { path: "/events", priority: "0.8" },
