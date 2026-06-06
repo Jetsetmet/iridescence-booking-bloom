@@ -51,6 +51,12 @@ function Home() {
              <p className="mt-6 text-lg text-muted-foreground max-w-xl text-pretty">
                I'm Mehtap - offering heart led healing through Reiki, Sound and Ceremony in uptown New Orleans and virtually.
              </p>
+             <Link
+               to="/breath-yoga"
+               className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
+             >
+               Kundalini Yoga Classes Spyre 9.30 Saturday →
+             </Link>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/book"

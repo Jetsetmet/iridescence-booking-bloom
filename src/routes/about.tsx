@@ -78,6 +78,33 @@ function About() {
             My intention is simple: to guide others back to their own inner wisdom, where healing, love, and truth already reside. Thank you for trusting me on your journey...
           </p>
         </div>
+
+        <div className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Certified</p>
+          <div className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-foreground/80">
+            <ul className="space-y-1.5 list-disc pl-4">
+              <li>Usui / Tibetan Reiki Ryoho Master</li>
+              <li>Holy Fire Karuna Master</li>
+              <li>Egyptian Sekhem-Seichim Reiki Master</li>
+              <li>Sekhmet Reiki Ancient Egyptian Art of Healing</li>
+              <li>Shamanic Reiki</li>
+              <li>Certified Sound Healer (CMA)</li>
+              <li>Tae Kwon Do (Black Belt)</li>
+              <li>Transcendental Meditation (TM)</li>
+              <li>Cacao Ceremonialist</li>
+              <li>BrainGym</li>
+            </ul>
+            <ul className="space-y-1.5 list-disc pl-4">
+              <li className="font-medium text-foreground/90">Certified Yoga Teacher:</li>
+              <li>Kundalini Yoga</li>
+              <li>Hatha Yoga</li>
+              <li>Restorative Yoga</li>
+              <li>Kids Yoga</li>
+            </ul>
+          </div>
+          <p className="mt-4 text-xs text-muted-foreground italic">(References available on request)</p>
+        </div>
+
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
           <div className="rounded-2xl border border-border bg-card p-4">
             <div className="text-2xl font-display">1000+</div>
