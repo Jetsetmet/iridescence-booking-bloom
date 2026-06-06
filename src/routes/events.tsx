@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/breathwork-event.jpg";
+import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
 import { Calendar, MapPin, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/events")({
@@ -41,6 +42,13 @@ const events = [
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
     img: moonImg, offering: "Reiki & Sound",
+  },
+  {
+    date: "Every Saturday", time: "9:30 AM",
+    title: "Kundalini Yoga with Met",
+    loc: "Spyre · uptown New Orleans · all levels welcome",
+    blurb: "Come experience Kundalini Yoga with Met — breath, movement and meditation to awaken your energy and start your weekend grounded.",
+    img: breathYogaHero, offering: "Breath & Yoga",
   },
 ];
 
