@@ -30,7 +30,7 @@ const offerings = [
   { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: resonanceImg, to: "/offerings" as const },
   { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore and reconnect.", img: reikiImg, to: "/offerings" as const },
   { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg, to: "/offerings" as const },
-  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg, to: "/offerings" as const },
+  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles — perfect for bachelorette celebrations, couples, and private group gatherings.", img: cacaoImg, to: "/offerings" as const },
   { icon: Triangle, title: "Kundalini Yoga", desc: "Saturdays 9:30am at Spyre — breath, movement and meditation to awaken your energy.", img: breathYogaHero, to: "/breath-yoga" as const },
 ];
 
