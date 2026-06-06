@@ -26,10 +26,11 @@ export const Route = createFileRoute("/")({
 });
 
 const offerings = [
-  { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: resonanceImg },
-  { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore and reconnect.", img: reikiImg },
-  { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg },
-  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg },
+  { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: resonanceImg, to: "/offerings" as const },
+  { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore and reconnect.", img: reikiImg, to: "/offerings" as const },
+  { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg, to: "/offerings" as const },
+  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg, to: "/offerings" as const },
+  { icon: Triangle, title: "Kundalini Yoga", desc: "Saturdays 9:30am at Spyre — breath, movement and meditation to awaken your energy.", img: heroImg, to: "/breath-yoga" as const },
 ];
 
 const testimonials = [
@@ -51,12 +52,6 @@ function Home() {
              <p className="mt-6 text-lg text-muted-foreground max-w-xl text-pretty">
                I'm Mehtap - offering heart led healing through Reiki, Sound and Ceremony in uptown New Orleans and virtually.
              </p>
-             <Link
-               to="/breath-yoga"
-               className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-5 py-2.5 text-sm font-medium text-primary hover:bg-primary/10 transition-colors"
-             >
-               Kundalini Yoga Classes Spyre 9.30 Saturday →
-             </Link>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 to="/book"
@@ -123,7 +118,7 @@ function Home() {
             {offerings.map((o) => (
               <Link
                 key={o.title}
-                to="/offerings"
+                to={o.to}
                 className="group flex-shrink-0 w-[280px] sm:w-[320px] rounded-3xl overflow-hidden bg-card shadow-card border border-border hover:shadow-glow transition-all snap-start"
               >
                 <div className="aspect-[5/4] overflow-hidden">

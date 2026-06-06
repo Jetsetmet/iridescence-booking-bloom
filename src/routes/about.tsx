@@ -79,30 +79,35 @@ function About() {
           </p>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-border bg-card p-6 sm:p-8">
+        <div className="mt-10 rounded-2xl border border-border bg-card p-5 sm:p-6">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Certified</p>
-          <div className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm text-foreground/80">
-            <ul className="space-y-1.5 list-disc pl-4">
-              <li>Usui / Tibetan Reiki Ryoho Master</li>
-              <li>Holy Fire Karuna Master</li>
-              <li>Egyptian Sekhem-Seichim Reiki Master</li>
-              <li>Sekhmet Reiki Ancient Egyptian Art of Healing</li>
-              <li>Shamanic Reiki</li>
-              <li>Certified Sound Healer (CMA)</li>
-              <li>Tae Kwon Do (Black Belt)</li>
-              <li>Transcendental Meditation (TM)</li>
-              <li>Cacao Ceremonialist</li>
-              <li>BrainGym</li>
-            </ul>
-            <ul className="space-y-1.5 list-disc pl-4">
-              <li className="font-medium text-foreground/90">Certified Yoga Teacher:</li>
-              <li>Kundalini Yoga</li>
-              <li>Hatha Yoga</li>
-              <li>Restorative Yoga</li>
-              <li>Kids Yoga</li>
-            </ul>
+          <div className="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-4 text-xs text-foreground/75">
+            <div>
+              <p className="font-medium text-foreground/90 mb-1.5">Healing & Practice</p>
+              <ul className="space-y-0.5">
+                <li>Usui / Tibetan Reiki Ryoho Master</li>
+                <li>Holy Fire Karuna Master</li>
+                <li>Egyptian Sekhem-Seichim Reiki Master</li>
+                <li>Sekhmet Reiki — Ancient Egyptian Art of Healing</li>
+                <li>Shamanic Reiki</li>
+                <li>Certified Sound Healer (CMA)</li>
+                <li>Transcendental Meditation (TM)</li>
+                <li>Cacao Ceremonialist</li>
+                <li>BrainGym</li>
+                <li>Tae Kwon Do (Black Belt)</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium text-foreground/90 mb-1.5">Yoga Teacher</p>
+              <ul className="space-y-0.5">
+                <li>Kundalini Yoga</li>
+                <li>Hatha Yoga</li>
+                <li>Restorative Yoga</li>
+                <li>Kids Yoga</li>
+              </ul>
+            </div>
           </div>
-          <p className="mt-4 text-xs text-muted-foreground italic">(References available on request)</p>
+          <p className="mt-4 text-xs text-muted-foreground italic">References available on request</p>
         </div>
 
         <div className="mt-8 grid grid-cols-3 gap-3 text-xs">
