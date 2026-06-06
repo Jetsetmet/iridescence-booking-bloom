@@ -4,6 +4,7 @@ import soundImg from "@/assets/sound-bowls.jpg";
 import resonanceImg from "@/assets/resonance-reset.jpeg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
+import metYogaBeach from "@/assets/met-yoga-beach.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 import { NewsletterSignup } from "@/components/site/NewsletterSignup";
