@@ -4,7 +4,7 @@ import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 import istanbulCollageAsset from "@/assets/resonance-remembrance-2027.png.asset.json";
-import alacatiCollageImg from "@/assets/turkey-alacati-collage.png";
+import alacatiCollageAsset from "@/assets/whispers-ancient-shores-2027.png.asset.json";
 import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/retreats")({
@@ -90,7 +90,7 @@ function Retreats() {
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
-            src={alacatiCollageImg}
+            src={alacatiCollageAsset.url}
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
             loading="lazy"
             className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px] order-2 lg:order-1"
@@ -114,6 +114,9 @@ function Retreats() {
               <Link to="/book" search={{ offering: "Retreat", event: "Whispers of the Ancient Shores — June 2–8 · Alaçatı, Türkiye" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Reserve your spot <ArrowRight className="h-4 w-4" />
               </Link>
+              <a href="/whispers-ancient-shores-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Download poster (PDF) <ArrowRight className="h-4 w-4" />
+              </a>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
                 Ask a question
               </Link>
