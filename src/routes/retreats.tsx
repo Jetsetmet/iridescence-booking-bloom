@@ -81,7 +81,7 @@ function Retreats() {
             src={istanbulCollageAsset.url}
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
             loading="lazy"
-            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px]"
+            className="rounded-[2rem] shadow-soft object-contain w-full h-auto"
           />
         </div>
       </section>
@@ -93,7 +93,7 @@ function Retreats() {
             src={alacatiCollageAsset.url}
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
             loading="lazy"
-            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px] order-2 lg:order-1"
+            className="rounded-[2rem] shadow-soft object-contain w-full h-auto order-2 lg:order-1"
           />
           <div className="order-1 lg:order-2">
             <div className="flex items-center gap-2">
