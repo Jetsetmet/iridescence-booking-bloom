@@ -30,7 +30,7 @@ const offerings = [
   { icon: Triangle, title: "Crystal Reiki & Sound", desc: "One-on-one energy healing to clear, restore and reconnect.", img: reikiImg, to: "/offerings" as const },
   { icon: Triangle, title: "Sound Baths", desc: "Group and private sound journeys with crystal & Tibetan bowls.", img: soundImg, to: "/offerings" as const },
   { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles in sacred space.", img: cacaoImg, to: "/offerings" as const },
-  { icon: Triangle, title: "Kundalini Yoga", desc: "Saturdays 9:30am at Spyre — breath, movement and meditation to awaken your energy.", img: "/lovable-uploads/00d2e4af-2537-44d5-abf0-17707a34b6a9.webp", to: "/breath-yoga" as const },
+  { icon: Triangle, title: "Kundalini Yoga", desc: "Saturdays 9:30am at Spyre — breath, movement and meditation to awaken your energy.", img: "/src/assets/met-yoga-beach.jpg", to: "/breath-yoga" as const },
 ];
 
 const testimonials = [
