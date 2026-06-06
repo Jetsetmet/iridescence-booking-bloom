@@ -81,7 +81,7 @@ function Retreats() {
             src={istanbulCollageAsset.url}
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
             loading="lazy"
-            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px]"
+            className="rounded-[2rem] shadow-soft object-contain w-full h-auto"
           />
         </div>
       </section>
