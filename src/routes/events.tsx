@@ -49,7 +49,13 @@ const events = [
     loc: "Spyre · uptown New Orleans · all levels welcome · ongoing weekly class",
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
-    bookingUrl: "https://www.mindbodyonline.com",
+  },
+  {
+    date: "Every Wednesday", time: "10:30 AM",
+    title: "Anarchy Yoga",
+    loc: "Spyre · uptown New Orleans · all levels welcome · ongoing weekly class",
+    blurb: "A raw, liberating yoga practice that breaks the rules of tradition. Move freely, breathe deeply, and reconnect with your wild, untamed self.",
+    img: breathYogaHero, offering: "Breath & Yoga",
   },
 ];
 
@@ -79,24 +85,13 @@ function Events() {
               <p className="mt-2 text-sm text-muted-foreground flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" /> {e.loc}
               </p>
-              {e.bookingUrl ? (
-                <a
-                  href={e.bookingUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
-                >
-                  Book on MindBody <ArrowRight className="h-3.5 w-3.5" />
-                </a>
-              ) : (
-                <Link
-                  to="/book"
-                  search={{ offering: e.offering, event: `${e.title} — ${e.date}` }}
-                  className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
-                >
-                  Reserve Spot <ArrowRight className="h-3.5 w-3.5" />
-                </Link>
-              )}
+              <Link
+                to="/book"
+                search={{ offering: e.offering, event: `${e.title} — ${e.date}` }}
+                className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+              >
+                Reserve Spot <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </article>
         ))}
