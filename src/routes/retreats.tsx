@@ -3,7 +3,7 @@ import { ArrowRight, Triangle } from "lucide-react";
 import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
-import istanbulCollageImg from "@/assets/turkey-istanbul-collage.png";
+import istanbulCollageAsset from "@/assets/resonance-remembrance-2027.png.asset.json";
 import alacatiCollageImg from "@/assets/turkey-alacati-collage.png";
 import { SQUARE_URL } from "@/lib/booking";
 
@@ -75,7 +75,7 @@ function Retreats() {
             </div>
           </div>
           <img
-            src={istanbulCollageImg}
+            src={istanbulCollageAsset.url}
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
             loading="lazy"
             className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[520px]"
