@@ -30,8 +30,8 @@ const offerings = [
   { icon: Triangle, title: "The Resonance Reset", desc: "Signature immersive 1:1 session weaving breath, sound, Reiki and somatic release.", img: resonanceImg, to: "/offerings" as const },
   { icon: Triangle, title: "Crystal Reiki & Sound", desc: "Deep one-on-one energy healing to clear blocks, restore balance, and reconnect you to your inner calm. A truly nurturing experience.", img: reikiImg, to: "/offerings" as const },
   { icon: Triangle, title: "Sound Baths", desc: "Immersive group and private sound journeys with crystal and Tibetan singing bowls — melt into deep relaxation and leave feeling renewed.", img: soundImg, to: "/offerings" as const },
-  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles — perfect for bachelorette celebrations, couples, and private group gatherings.", img: cacaoImg, to: "/offerings" as const },
-  { icon: Triangle, title: "Kundalini Yoga", desc: "Come and experience Kundalini Yoga with Met every Saturday 9:30am at Spyre. Awaken your energy through breath, movement, and meditation — all levels warmly welcomed.", img: breathYogaHero, to: "/breath-yoga" as const },
+  { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles — perfect for bridal events, bachelorette celebrations, and couples sessions designed to create deeper connection and awareness.", img: cacaoImg, to: "/offerings" as const },
+  { icon: Triangle, title: "Kundalini Yoga", desc: "Come and experience Kundalini Yoga with Met. Awaken your energy through breath, movement, and meditation — all levels warmly welcomed.", img: breathYogaHero, to: "/breath-yoga" as const },
 ];
 
 const testimonials = [
