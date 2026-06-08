@@ -50,8 +50,17 @@ export function HeartOpeningFunnel() {
             <>
               <h3 className="font-display text-2xl">It's on its way ✨</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                Check your inbox for your 11-minute heart-opening meditation. Find a quiet spot, place a hand on your heart and begin when you're ready.
+                Your 11-minute heart-opening meditation is below. Find a quiet spot, place a hand on your heart and press play when you're ready. We've also sent the link to your inbox.
               </p>
+              <div className="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-border">
+                <iframe
+                  className="h-full w-full"
+                  src="https://www.youtube.com/embed/tdbMnz-Jpgs?rel=0"
+                  title="Heart-opening meditation with Met"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </>
           ) : (
             <>

@@ -63,10 +63,19 @@ export function LeadMagnetPopup() {
           <>
             <h3 className="font-display text-2xl">It's on its way ✨</h3>
             <p className="mt-3 text-sm text-muted-foreground">
-              Your free guided meditation is heading to your inbox. Take a slow breath — you're already on the path.
+              Your free guided meditation is ready below — and we've also sent the link to your inbox. Take a slow breath.
             </p>
-            <button onClick={dismiss} className="mt-6 w-full rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground">
-              Continue
+            <div className="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-border">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/tdbMnz-Jpgs?rel=0"
+                title="Heart-opening meditation with Met"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <button onClick={dismiss} className="mt-4 w-full rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground">
+              Close
             </button>
           </>
         ) : (
