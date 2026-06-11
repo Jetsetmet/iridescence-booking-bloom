@@ -1,10 +1,27 @@
 import { createServerFn } from "@tanstack/react-start";
-import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 import { syncToMailchimp } from "./mailchimp.server";
 import { enqueueNotification } from "./email/enqueue-notification.server";
 
 const emailSchema = z.string().trim().email().max(255).toLowerCase();
+
+// Use the publishable (anon) key for these public form inserts.
+// RLS policies allow anon INSERT on leads, bookings, and quiz_results,
+// so we avoid depending on the service-role key being present in the
+// server runtime environment.
+function getPublicClient() {
+  const url = process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL;
+  const key =
+    process.env.SUPABASE_PUBLISHABLE_KEY ??
+    process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+  if (!url || !key) {
+    throw new Error("Supabase public client not configured");
+  }
+  return createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
 
 const leadInput = z.object({
   email: emailSchema,
