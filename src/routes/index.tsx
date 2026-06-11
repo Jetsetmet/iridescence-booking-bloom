@@ -8,6 +8,7 @@ import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
 import { NewsletterSignup } from "@/components/site/NewsletterSignup";
+import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,7 +68,7 @@ function Home() {
                 View Offerings <Triangle className="h-4 w-4" />
               </Link>
               <a
-                href="https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services?rwg_token=AFd1xnG8opsnB8WvxAc5Gu92w-ep4LAQyNqcaVA4S02XPh2Ls2RPId34yddJHpbz57l-ZkUuMTWlbLQRyenGhZi2TDn3gUVGPg%3D%3D"
+                href={SQUARE_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent transition-colors"
