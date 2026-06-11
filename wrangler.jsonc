@@ -6,5 +6,10 @@
   "main": "./dist/server/server.js",
   "assets": {
     "directory": "./dist/client"
+  },
+  "vars": {
+    "SUPABASE_URL": "https://pfbudplkxugqhuaollcx.supabase.co",
+    "SUPABASE_PUBLISHABLE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBmYnVkcGxreHVncWh1YW9sbGN4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNDM2MjksImV4cCI6MjA5NDYxOTYyOX0.RH23fXwE_hXFB8lHBRP4DaR9NimzbvvDrp30sX_3iN0",
+    "SUPABASE_PROJECT_ID": "pfbudplkxugqhuaollcx"
   }
 }
