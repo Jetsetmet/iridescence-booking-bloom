@@ -32,7 +32,7 @@ const leadInput = z.object({
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => leadInput.parse(d))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin
+    const { error } = await getPublicClient()
       .from("leads")
       .insert({ email: data.email, name: data.name ?? null, source: data.source });
     if (error && !error.message.includes("duplicate")) {
@@ -55,7 +55,7 @@ const bookingInput = z.object({
 export const submitBooking = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => bookingInput.parse(d))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin.from("bookings").insert({
+    const { error } = await getPublicClient().from("bookings").insert({
       name: data.name,
       email: data.email,
       phone: data.phone || null,
@@ -68,7 +68,7 @@ export const submitBooking = createServerFn({ method: "POST" })
       throw new Error("Unable to process your request. Please try again.");
     }
     // Also capture as a lead for the nurture list
-    await supabaseAdmin.from("leads").insert({
+    await getPublicClient().from("leads").insert({
       email: data.email,
       name: data.name,
       source: "booking",
@@ -99,7 +99,7 @@ const quizInput = z.object({
 export const submitQuiz = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => quizInput.parse(d))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin.from("quiz_results").insert({
+    const { error } = await getPublicClient().from("quiz_results").insert({
       email: data.email || null,
       name: data.name || null,
       answers: data.answers,
@@ -110,7 +110,7 @@ export const submitQuiz = createServerFn({ method: "POST" })
       throw new Error("Unable to process your request. Please try again.");
     }
     if (data.email) {
-      await supabaseAdmin.from("leads").insert({
+      await getPublicClient().from("leads").insert({
         email: data.email,
         name: data.name || null,
         source: "quiz",
