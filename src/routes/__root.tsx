@@ -80,11 +80,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Reiki, sound healing, cacao, breathwork and intuitive energy guidance with Met in New Orleans. Book in-person or virtual sessions." },
       { name: "keywords", content: "New Orleans Reiki, sound healing New Orleans, sound bath, breathwork, cacao ceremony, energy healing, intuitive guide, self love mentoring, yoga, meditation, crystal healing, Reiki Master, uptown New Orleans" },
       { name: "author", content: "Iridescence Healing" },
-      { property: "og:title", content: "Iridescence Healing — Reiki & Sound Healing in New Orleans" },
-      { property: "og:description", content: "Reiki, sound healing, cacao, breathwork, yoga and intuitive energy guidance in uptown New Orleans." },
+      { property: "og:title", content: "Iridescence Healing — Reiki & Sound Healing, New Orleans" },
+      { property: "og:description", content: "Reiki, sound healing, cacao, breathwork and intuitive energy guidance with Met in New Orleans. Book in-person or virtual sessions." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Iridescence Healing" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Iridescence Healing — Reiki & Sound Healing, New Orleans" },
+      { name: "twitter:description", content: "Reiki, sound healing, cacao, breathwork and intuitive energy guidance with Met in New Orleans. Book in-person or virtual sessions." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c92fe2b4-5929-496f-a847-38ea48ee2fa2/id-preview-5525eb87--deb780b1-75ae-489c-aa24-abec8fc6ac34.lovable.app-1781153739216.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c92fe2b4-5929-496f-a847-38ea48ee2fa2/id-preview-5525eb87--deb780b1-75ae-489c-aa24-abec8fc6ac34.lovable.app-1781153739216.png" },
     ],
     links: [
       {
