@@ -1,13 +1,8 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useMemo } from "react";
 import { z } from "zod";
-import { useServerFn } from "@tanstack/react-start";
-import { submitBooking } from "@/lib/funnel.functions";
-import { Loader2, Check, Triangle } from "lucide-react";
-import { toast } from "sonner";
-import { SQUARE_URL } from "@/lib/booking";
-
-const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Mentoring", "Retreat", "Not sure yet"];
+import { Check, Triangle, Mail } from "lucide-react";
+import { BOOKING_EMAIL, buildBookingMailto } from "@/lib/booking";
 
 const searchSchema = z.object({
   offering: z.string().optional(),
@@ -27,49 +22,47 @@ export const Route = createFileRoute("/book")({
 
 function Book() {
   const search = Route.useSearch();
-  const navigate = useNavigate();
-  const submit = useServerFn(submitBooking);
+  const mailto = useMemo(
+    () => buildBookingMailto({ offering: search.offering, event: search.event }),
+    [search.offering, search.event],
+  );
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    offering: search.offering || offerings[0],
-    preferred_date: search.event ? `Event: ${search.event}` : "",
-    notes: "",
-  });
-  const [loading, setLoading] = useState(false);
-
-  function update<K extends keyof typeof form>(k: K, v: string) {
-    setForm((f) => ({ ...f, [k]: v }));
-  }
-
-  async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await submit({ data: form });
-      toast.success("Booking received - Mehtap will be in touch within 24 hours.");
-      navigate({ to: "/thanks" });
-    } catch (err) {
-      console.error("booking submit failed", err);
-      toast.error("Could not submit — please try again.");
-    } finally {
-      setLoading(false);
-    }
-  }
+  useEffect(() => {
+    // Auto-launch the user's email client so booking goes straight to Mehtap's inbox.
+    const t = setTimeout(() => {
+      window.location.href = mailto;
+    }, 400);
+    return () => clearTimeout(t);
+  }, [mailto]);
 
   return (
-    <section className="mx-auto max-w-5xl px-5 sm:px-8 py-16 grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
-      <div className="lg:sticky lg:top-24">
+    <section className="mx-auto max-w-2xl px-5 sm:px-8 py-20 text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Book your session</p>
-        <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">
-          A soft place to land.
-        </h1>
-        <p className="mt-4 text-muted-foreground text-pretty">
-          Share a few details and your preferred timing. Mehtap will personally confirm your session within 24 hours.
+      <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">A soft place to land.</h1>
+      <p className="mt-4 text-muted-foreground text-pretty">
+        Booking is personal here. Send Mehtap a quick note and she'll confirm your session within 24 hours.
+      </p>
+
+      {(search.offering || search.event) && (
+        <p className="mt-4 text-sm text-foreground/80">
+          {search.offering && <>Offering: <span className="font-medium">{search.offering}</span></>}
+          {search.event && <><br />Event: <span className="font-medium">{search.event}</span></>}
         </p>
-        <ul className="mt-8 space-y-3 text-sm text-foreground/80">
+      )}
+
+      <a
+        href={mailto}
+        className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-7 py-4 text-sm font-medium text-primary-foreground shadow-soft"
+      >
+        <Mail className="h-4 w-4" />
+        Email Mehtap to book
+      </a>
+      <p className="mt-3 text-xs text-muted-foreground">
+        If your email client doesn't open, write directly to{" "}
+        <a href={`mailto:${BOOKING_EMAIL}`} className="underline">{BOOKING_EMAIL}</a>.
+      </p>
+
+      <ul className="mt-12 space-y-3 text-sm text-foreground/80 inline-block text-left">
           {[
             "Personally confirmed by Mehtap",
             "Quiet uptown New Orleans space",
@@ -83,75 +76,11 @@ function Book() {
             </li>
           ))}
         </ul>
-        <div className="mt-10 rounded-2xl border border-border bg-card p-5 text-sm">
+      <div className="mt-10 rounded-2xl border border-border bg-card p-5 text-sm text-left">
           <Triangle className="h-4 w-4" />
           <p className="mt-2 font-medium">Not sure which session is right?</p>
           <a href="/quiz" className="mt-1 inline-block underline underline-offset-4">Take the 60-second quiz →</a>
         </div>
-        <div className="mt-6 rounded-2xl bg-iridescent p-5 text-sm">
-          <Triangle className="h-4 w-4" />
-          <p className="mt-2 font-medium">Already know what you'd like?</p>
-          <p className="mt-1 text-foreground/80">Skip the form and pick a time directly.</p>
-          <a
-            href={SQUARE_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-medium text-primary-foreground"
-          >
-            Book directly on Square →
-          </a>
-        </div>
-      </div>
-
-      <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-7 sm:p-10 space-y-5">
-        <div className="grid sm:grid-cols-2 gap-4">
-          <label htmlFor="book-name" className="block">
-            <span className="text-xs font-medium text-muted-foreground">Your name</span>
-            <input id="book-name" required value={form.name} onChange={(e) => update("name", e.target.value)}
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-          </label>
-          <label htmlFor="book-email" className="block">
-            <span className="text-xs font-medium text-muted-foreground">Email</span>
-            <input id="book-email" required type="email" value={form.email} onChange={(e) => update("email", e.target.value)}
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-          </label>
-        </div>
-        <label htmlFor="book-phone" className="block">
-          <span className="text-xs font-medium text-muted-foreground">Phone (optional)</span>
-          <input id="book-phone" value={form.phone} onChange={(e) => update("phone", e.target.value)}
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-        </label>
-        <label htmlFor="book-offering" className="block">
-          <span className="text-xs font-medium text-muted-foreground">Which offering calls you?</span>
-          <select id="book-offering" value={form.offering} onChange={(e) => update("offering", e.target.value)}
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring">
-            {offerings.map((o) => <option key={o} value={o}>{o}</option>)}
-          </select>
-        </label>
-        <label htmlFor="book-date" className="block">
-          <span className="text-xs font-medium text-muted-foreground">Preferred date / time</span>
-          <input id="book-date" value={form.preferred_date} onChange={(e) => update("preferred_date", e.target.value)}
-            placeholder="e.g. weekday evenings, or Sat May 25 afternoon"
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-        </label>
-        <label htmlFor="book-notes" className="block">
-          <span className="text-xs font-medium text-muted-foreground">What's bringing you in? (optional)</span>
-          <textarea id="book-notes" rows={4} value={form.notes} onChange={(e) => update("notes", e.target.value)}
-            placeholder="Anything you'd like Mehtap to know about what you're moving through..."
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
-        </label>
-        <button
-          type="submit"
-          disabled={loading}
-          className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60"
-        >
-          {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-          Request my session
-        </button>
-        <p className="text-[11px] text-center text-muted-foreground">
-          By submitting, you agree to be contacted about your session. Your info is never shared.
-        </p>
-      </form>
     </section>
   );
 }
