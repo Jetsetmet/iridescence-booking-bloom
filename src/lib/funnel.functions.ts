@@ -40,6 +40,11 @@ export const submitLead = createServerFn({ method: "POST" })
       throw new Error("Unable to process your request. Please try again.");
     }
     await syncToMailchimp({ email: data.email, name: data.name, tags: [data.source] });
+    await enqueueNotification(
+      "lead-magnet",
+      { name: data.name ?? "" },
+      data.email,
+    );
     return { ok: true };
   });
 
