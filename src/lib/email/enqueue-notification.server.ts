@@ -5,7 +5,7 @@ import { TEMPLATES } from '@/lib/email-templates/registry'
 
 const SITE_NAME = 'Iridescence Healing'
 const SENDER_DOMAIN = 'notify.notify.iridescencehealing.com'
-const FROM_DOMAIN = 'notify.notify.iridescencehealing.com'
+const FROM_DOMAIN = 'notify.iridescencehealing.com'
 
 function generateToken(): string {
   const bytes = new Uint8Array(32)
