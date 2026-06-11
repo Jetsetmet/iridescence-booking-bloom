@@ -2,6 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { supabaseAdmin } from "@/integrations/supabase/client.server";
 import { z } from "zod";
 import { syncToMailchimp } from "./mailchimp.server";
+import { enqueueNotification } from "./email/enqueue-notification.server";
 
 const emailSchema = z.string().trim().email().max(255).toLowerCase();
 
@@ -60,6 +61,14 @@ export const submitBooking = createServerFn({ method: "POST" })
       name: data.name,
       tags: ["booking", `offering:${data.offering}`],
     });
+    await enqueueNotification("booking-notification", {
+      name: data.name,
+      email: data.email,
+      phone: data.phone || "",
+      offering: data.offering,
+      preferred_date: data.preferred_date || "",
+      notes: data.notes || "",
+    });
     return { ok: true };
   });
 
@@ -95,5 +104,11 @@ export const submitQuiz = createServerFn({ method: "POST" })
         tags: ["quiz", `recommended:${data.recommended_offering}`],
       });
     }
+    await enqueueNotification("quiz-notification", {
+      name: data.name || "Anonymous",
+      email: data.email || "",
+      recommended_offering: data.recommended_offering,
+      answers: data.answers,
+    });
     return { ok: true };
   });
