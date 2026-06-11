@@ -29,6 +29,7 @@ import { Route as BookRouteImport } from './routes/book'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
+import { Route as AdminTestEmailRouteImport } from './routes/admin.test-email'
 import { Route as AdminNewsletterRouteImport } from './routes/admin.newsletter'
 import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/email/suppression'
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
@@ -136,6 +137,11 @@ const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
   path: '/email/unsubscribe',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminTestEmailRoute = AdminTestEmailRouteImport.update({
+  id: '/admin/test-email',
+  path: '/admin/test-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AdminNewsletterRoute = AdminNewsletterRouteImport.update({
   id: '/admin/newsletter',
   path: '/admin/newsletter',
@@ -192,6 +198,7 @@ export interface FileRoutesByFullPath {
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
+  '/admin/test-email': typeof AdminTestEmailRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
@@ -220,6 +227,7 @@ export interface FileRoutesByTo {
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
+  '/admin/test-email': typeof AdminTestEmailRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
@@ -249,6 +257,7 @@ export interface FileRoutesById {
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
+  '/admin/test-email': typeof AdminTestEmailRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
@@ -279,6 +288,7 @@ export interface FileRouteTypes {
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
+    | '/admin/test-email'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/api/public/hooks/monthly-newsletter'
@@ -307,6 +317,7 @@ export interface FileRouteTypes {
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
+    | '/admin/test-email'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/api/public/hooks/monthly-newsletter'
@@ -335,6 +346,7 @@ export interface FileRouteTypes {
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
+    | '/admin/test-email'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/api/public/hooks/monthly-newsletter'
@@ -364,6 +376,7 @@ export interface RootRouteChildren {
   ThanksRoute: typeof ThanksRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
   AdminNewsletterRoute: typeof AdminNewsletterRoute
+  AdminTestEmailRoute: typeof AdminTestEmailRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
   ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
@@ -514,6 +527,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmailUnsubscribeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/test-email': {
+      id: '/admin/test-email'
+      path: '/admin/test-email'
+      fullPath: '/admin/test-email'
+      preLoaderRoute: typeof AdminTestEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/admin/newsletter': {
       id: '/admin/newsletter'
       path: '/admin/newsletter'
@@ -580,6 +600,7 @@ const rootRouteChildren: RootRouteChildren = {
   ThanksRoute: ThanksRoute,
   UnsubscribeRoute: UnsubscribeRoute,
   AdminNewsletterRoute: AdminNewsletterRoute,
+  AdminTestEmailRoute: AdminTestEmailRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
   ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
