@@ -23,15 +23,16 @@ function generateToken(): string {
 export async function enqueueNotification(
   templateName: string,
   templateData: Record<string, any> = {},
+  recipientOverride?: string,
 ): Promise<void> {
   const template = TEMPLATES[templateName]
   if (!template) {
     console.error('enqueueNotification: template not found', { templateName })
     return
   }
-  const recipient = template.to
+  const recipient = template.to ?? recipientOverride
   if (!recipient) {
-    console.error('enqueueNotification: template has no fixed `to`', { templateName })
+    console.error('enqueueNotification: no recipient', { templateName })
     return
   }
 
