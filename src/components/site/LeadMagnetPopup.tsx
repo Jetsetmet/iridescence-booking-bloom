@@ -63,7 +63,7 @@ export function LeadMagnetPopup() {
           <>
             <h3 className="font-display text-2xl">It's on its way ✨</h3>
             <p className="mt-3 text-sm text-muted-foreground">
-              Your free guided meditation is ready below — and we've also sent the link to your inbox. Take a slow breath.
+              Your free meditation and breathwork for the heart is ready below — and we've also sent the link to your inbox. Take a slow breath.
             </p>
             <div className="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-border">
               <iframe
@@ -80,9 +80,9 @@ export function LeadMagnetPopup() {
           </>
         ) : (
           <>
-            <h3 className="font-display text-2xl text-balance">A gift to begin — free guided meditation</h3>
+            <h3 className="font-display text-2xl text-balance">A gift to begin — free meditation and breathwork for the heart</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              "Return to Your Inner Light" — a 10-minute breath & visualization journey from Met.
+              An 11-minute meditation and breathwork practice for the heart — for moments of grief, heartache or heaviness. Met holds you through every breath.
             </p>
             <form onSubmit={onSubmit} className="mt-5 space-y-3">
               <input
