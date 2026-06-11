@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as ThanksRouteImport } from './routes/thanks'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
@@ -35,6 +36,11 @@ import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/l
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
 
+const UnsubscribeRoute = UnsubscribeRouteImport.update({
+  id: '/unsubscribe',
+  path: '/unsubscribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ThanksRoute = ThanksRouteImport.update({
   id: '/thanks',
   path: '/thanks',
@@ -184,6 +190,7 @@ export interface FileRoutesByFullPath {
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -211,6 +218,7 @@ export interface FileRoutesByTo {
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -239,6 +247,7 @@ export interface FileRoutesById {
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/thanks': typeof ThanksRoute
+  '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -268,6 +277,7 @@ export interface FileRouteTypes {
     | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/thanks'
+    | '/unsubscribe'
     | '/admin/newsletter'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
@@ -295,6 +305,7 @@ export interface FileRouteTypes {
     | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/thanks'
+    | '/unsubscribe'
     | '/admin/newsletter'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
@@ -322,6 +333,7 @@ export interface FileRouteTypes {
     | '/self-love-mentoring'
     | '/sitemap.xml'
     | '/thanks'
+    | '/unsubscribe'
     | '/admin/newsletter'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
@@ -350,6 +362,7 @@ export interface RootRouteChildren {
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   ThanksRoute: typeof ThanksRoute
+  UnsubscribeRoute: typeof UnsubscribeRoute
   AdminNewsletterRoute: typeof AdminNewsletterRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
@@ -361,6 +374,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/unsubscribe': {
+      id: '/unsubscribe'
+      path: '/unsubscribe'
+      fullPath: '/unsubscribe'
+      preLoaderRoute: typeof UnsubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/thanks': {
       id: '/thanks'
       path: '/thanks'
@@ -558,6 +578,7 @@ const rootRouteChildren: RootRouteChildren = {
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   ThanksRoute: ThanksRoute,
+  UnsubscribeRoute: UnsubscribeRoute,
   AdminNewsletterRoute: AdminNewsletterRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
