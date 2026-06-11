@@ -127,29 +127,6 @@ function CrystalReiki() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-lg px-5 sm:px-8 pb-20 flex flex-col items-center text-center">
-        <div className="rounded-[2rem] overflow-hidden shadow-glow bg-black w-full aspect-[4/5]">
-          <video
-            src="/videos/uptown-studio.mov"
-            className="w-full h-full object-cover"
-            controls
-            playsInline
-            preload="metadata"
-          />
-        </div>
-        <div className="mt-8">
-          <div className="flex items-center justify-center gap-2 text-primary">
-            <Triangle className="h-4 w-4" />
-            <span className="text-xs uppercase tracking-wider">Uptown studio</span>
-          </div>
-          <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
-            A peek inside Met's <span className="italic bg-iridescent bg-clip-text text-transparent">Uptown</span> healing space
-          </h2>
-          <p className="mt-4 text-foreground/80 leading-relaxed text-pretty max-w-md mx-auto">
-            Reiki and sound sessions are held in this softly-lit Uptown New Orleans sanctuary — crystals, bowls and a nervous-system-safe space curated for your journey home to yourself.
-          </p>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
