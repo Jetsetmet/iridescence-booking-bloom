@@ -1,10 +1,27 @@
 import { createServerFn } from "@tanstack/react-start";
-import { supabaseAdmin } from "@/integrations/supabase/client.server";
+import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
 import { syncToMailchimp } from "./mailchimp.server";
 import { enqueueNotification } from "./email/enqueue-notification.server";
 
 const emailSchema = z.string().trim().email().max(255).toLowerCase();
+
+// Use the publishable (anon) key for these public form inserts.
+// RLS policies allow anon INSERT on leads, bookings, and quiz_results,
+// so we avoid depending on the service-role key being present in the
+// server runtime environment.
+function getPublicClient() {
+  const url = process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL;
+  const key =
+    process.env.SUPABASE_PUBLISHABLE_KEY ??
+    process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+  if (!url || !key) {
+    throw new Error("Supabase public client not configured");
+  }
+  return createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
 
 const leadInput = z.object({
   email: emailSchema,
@@ -15,7 +32,7 @@ const leadInput = z.object({
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => leadInput.parse(d))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin
+    const { error } = await getPublicClient()
       .from("leads")
       .insert({ email: data.email, name: data.name ?? null, source: data.source });
     if (error && !error.message.includes("duplicate")) {
@@ -38,7 +55,7 @@ const bookingInput = z.object({
 export const submitBooking = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => bookingInput.parse(d))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin.from("bookings").insert({
+    const { error } = await getPublicClient().from("bookings").insert({
       name: data.name,
       email: data.email,
       phone: data.phone || null,
@@ -51,7 +68,7 @@ export const submitBooking = createServerFn({ method: "POST" })
       throw new Error("Unable to process your request. Please try again.");
     }
     // Also capture as a lead for the nurture list
-    await supabaseAdmin.from("leads").insert({
+    await getPublicClient().from("leads").insert({
       email: data.email,
       name: data.name,
       source: "booking",
@@ -82,7 +99,7 @@ const quizInput = z.object({
 export const submitQuiz = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => quizInput.parse(d))
   .handler(async ({ data }) => {
-    const { error } = await supabaseAdmin.from("quiz_results").insert({
+    const { error } = await getPublicClient().from("quiz_results").insert({
       email: data.email || null,
       name: data.name || null,
       answers: data.answers,
@@ -93,7 +110,7 @@ export const submitQuiz = createServerFn({ method: "POST" })
       throw new Error("Unable to process your request. Please try again.");
     }
     if (data.email) {
-      await supabaseAdmin.from("leads").insert({
+      await getPublicClient().from("leads").insert({
         email: data.email,
         name: data.name || null,
         source: "quiz",
