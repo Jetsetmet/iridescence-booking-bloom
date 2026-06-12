@@ -80,7 +80,8 @@ function Retreats() {
           <img
             src={istanbulCollageAsset.url}
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
-            loading="lazy"
+            width={1400}
+            height={1000}
             className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto"
           />
         </div>
@@ -92,7 +93,8 @@ function Retreats() {
           <img
             src={alacatiCollageAsset.url}
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
-            loading="lazy"
+            width={1400}
+            height={1000}
             className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto order-2 lg:order-1"
           />
           <div className="order-1 lg:order-2">
@@ -128,7 +130,7 @@ function Retreats() {
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <img src={natureImg} alt="Sunset ocean swim in Costa Rica — healing retreat with Iridescence Healing"
-            loading="lazy" width={1200} height={1200}
+            width={1200} height={1200}
             className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[420px] order-2 md:order-1" />
           <div className="order-1 md:order-2">
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Why Costa Rica</p>
