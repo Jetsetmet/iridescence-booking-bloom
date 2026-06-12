@@ -1,11 +1,24 @@
 import * as React from 'react'
 import { render } from '@react-email/components'
-import { supabaseAdmin } from '@/integrations/supabase/client.server'
+import { createClient } from '@supabase/supabase-js'
 import { TEMPLATES } from '@/lib/email-templates/registry'
 
 const SITE_NAME = 'Iridescence Healing'
 const SENDER_DOMAIN = 'notify.notify.iridescencehealing.com'
 const FROM_DOMAIN = 'notify.iridescencehealing.com'
+
+// Use the publishable (anon) key — SUPABASE_SERVICE_ROLE_KEY is not available
+// in the Lovable Cloud server runtime. Email tables/RPC grant anon access.
+function getClient() {
+  const url = process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL
+  const key =
+    process.env.SUPABASE_PUBLISHABLE_KEY ??
+    process.env.VITE_SUPABASE_PUBLISHABLE_KEY
+  if (!url || !key) throw new Error('Supabase public client not configured')
+  return createClient(url, key, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  })
+}
 
 function generateToken(): string {
   const bytes = new Uint8Array(32)
@@ -37,11 +50,12 @@ export async function enqueueNotification(
   }
 
   try {
+    const supabase = getClient()
     const messageId = crypto.randomUUID()
     const normalizedEmail = recipient.toLowerCase()
 
     // Suppression check
-    const { data: suppressed } = await supabaseAdmin
+    const { data: suppressed } = await supabase
       .from('suppressed_emails')
       .select('id')
       .eq('email', normalizedEmail)
@@ -53,7 +67,7 @@ export async function enqueueNotification(
 
     // Unsubscribe token (reuse or create)
     let unsubscribeToken: string
-    const { data: existing } = await supabaseAdmin
+    const { data: existing } = await supabase
       .from('email_unsubscribe_tokens')
       .select('token, used_at')
       .eq('email', normalizedEmail)
@@ -62,13 +76,13 @@ export async function enqueueNotification(
       unsubscribeToken = existing.token
     } else {
       unsubscribeToken = generateToken()
-      await supabaseAdmin
+      await supabase
         .from('email_unsubscribe_tokens')
         .upsert(
           { token: unsubscribeToken, email: normalizedEmail },
           { onConflict: 'email', ignoreDuplicates: true },
         )
-      const { data: stored } = await supabaseAdmin
+      const { data: stored } = await supabase
         .from('email_unsubscribe_tokens')
         .select('token')
         .eq('email', normalizedEmail)
@@ -84,14 +98,14 @@ export async function enqueueNotification(
         ? template.subject(templateData)
         : template.subject
 
-    await supabaseAdmin.from('email_send_log').insert({
+    await supabase.from('email_send_log').insert({
       message_id: messageId,
       template_name: templateName,
       recipient_email: recipient,
       status: 'pending',
     })
 
-    const { error } = await supabaseAdmin.rpc('enqueue_email', {
+    const { error } = await supabase.rpc('enqueue_email', {
       queue_name: 'transactional_emails',
       payload: {
         message_id: messageId,
