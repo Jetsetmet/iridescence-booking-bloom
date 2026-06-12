@@ -124,15 +124,15 @@ function Book() {
         </div>
         <div className="mt-6 rounded-2xl bg-iridescent p-5 text-sm">
           <Triangle className="h-4 w-4" />
-          <p className="mt-2 font-medium">Already know what you'd like?</p>
-          <p className="mt-1 text-foreground/80">Skip the form and pick a time directly.</p>
+          <p className="mt-2 font-medium">Prefer to browse all services?</p>
+          <p className="mt-1 text-foreground/80">See every offering and pick your time directly on Square.</p>
           <a
             href="https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services?rwg_token=AFd1xnG8opsnB8WvxAc5Gu92w-ep4LAQyNqcaVA4S02XPh2Ls2RPId34yddJHpbz57l-ZkUuMTWlbLQRyenGhZi2TDn3gUVGPg%3D%3D"
             target="_blank"
             rel="noreferrer"
             className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-medium text-primary-foreground"
           >
-            Book directly on Square →
+            Open Square calendar →
           </a>
         </div>
       </div>
