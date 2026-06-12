@@ -85,7 +85,7 @@ function Retreats() {
             loading="eager"
             decoding="async"
             fetchPriority="high"
-            className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto"
+            className="rounded-[2rem] shadow-soft object-contain w-full max-w-[38rem] mx-auto h-auto"
           />
         </div>
       </section>
