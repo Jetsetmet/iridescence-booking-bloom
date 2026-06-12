@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
+import uptownVideo from "@/assets/uptown-studio.mp4.asset.json";
 import { ArrowRight, Triangle, ExternalLink } from "lucide-react";
 import { SQUARE_URL } from "@/lib/booking";
 
@@ -127,6 +128,29 @@ function CrystalReiki() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
+        <div className="mx-auto max-w-lg text-center">
+          <div className="flex items-center justify-center gap-2">
+            <Triangle className="h-5 w-5 text-primary" />
+            <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Uptown studio</p>
+          </div>
+          <div className="mt-5 aspect-[9/16] w-full overflow-hidden rounded-[2rem] border border-border shadow-glow bg-card">
+            <video
+              src={uptownVideo.url}
+              controls
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <h2 className="mt-6 font-display text-3xl sm:text-4xl">
+            A quiet <span className="italic bg-iridescent bg-clip-text text-transparent">healing space</span> in uptown New Orleans.
+          </h2>
+          <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+            A soft, sacred room held with crystals, sound and intention — a soft place to land for your session.
+          </p>
+        </div>
+      </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
