@@ -42,7 +42,7 @@ function Packages() {
           </p>
           <Link
             to="/book"
-            search={{ offering: "Package" }}
+            search={{ offering: "Packages: 4 Sessions" }}
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
           >
             Book a package <ArrowRight className="h-4 w-4" />
