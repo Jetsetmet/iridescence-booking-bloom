@@ -144,10 +144,10 @@ function CrystalReiki() {
             />
           </div>
           <h2 className="mt-6 font-display text-3xl sm:text-4xl">
-            A quiet <span className="italic bg-iridescent bg-clip-text text-transparent">healing space</span> in uptown New Orleans.
+            A sneak peek of the <span className="italic bg-iridescent bg-clip-text text-transparent">space</span>.
           </h2>
           <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
-            A soft, sacred room held with crystals, sound and intention — a soft place to land for your session.
+            A soft, sacred room in uptown New Orleans — held with crystals, sound and intention. A quiet place to land for your session.
           </p>
         </div>
       </section>
