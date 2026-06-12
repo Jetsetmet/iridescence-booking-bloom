@@ -101,7 +101,7 @@ function Book() {
           A soft place to land.
         </h1>
         <p className="mt-4 text-muted-foreground text-pretty">
-          Share a few details and your preferred timing. Mehtap will personally confirm your session within 24 hours.
+          Most sessions can be scheduled instantly — fill in your details and we'll send you straight to the Square calendar to pick your time. For retreats, events and mentoring, Mehtap will personally confirm within 24 hours.
         </p>
         <ul className="mt-8 space-y-3 text-sm text-foreground/80">
           {[
