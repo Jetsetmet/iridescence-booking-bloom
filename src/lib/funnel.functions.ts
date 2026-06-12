@@ -45,6 +45,11 @@ export const submitLead = createServerFn({ method: "POST" })
       { name: data.name ?? "" },
       data.email,
     );
+    await enqueueNotification("lead-notification", {
+      name: data.name ?? "",
+      email: data.email,
+      source: data.source,
+    });
     return { ok: true };
   });
 
