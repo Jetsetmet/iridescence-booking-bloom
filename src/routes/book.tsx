@@ -105,7 +105,7 @@ function Book() {
         </p>
         <ul className="mt-8 space-y-3 text-sm text-foreground/80">
           {[
-            "Personally confirmed by Mehtap",
+            "Instant calendar booking for most sessions",
             "Quiet uptown New Orleans space",
             "Free 15-min discovery call if unsure",
           ].map((b) => (
