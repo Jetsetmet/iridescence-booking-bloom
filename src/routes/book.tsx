@@ -169,7 +169,7 @@ function Book() {
           className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60"
         >
           {loading && <Loader2 className="h-4 w-4 animate-spin" />}
-          Request my session
+          {SQUARE_BOOKING_LINKS[form.offering] ? "Continue to booking calendar →" : "Request my session"}
         </button>
         <p className="text-[11px] text-center text-muted-foreground">
           By submitting, you agree to be contacted about your session. Your info is never shared.
