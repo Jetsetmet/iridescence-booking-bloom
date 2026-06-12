@@ -55,7 +55,7 @@ export function HeartOpeningFunnel() {
               <div className="mt-5 aspect-video w-full overflow-hidden rounded-xl border border-border">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/tdbMnz-Jpgs?rel=0"
+                  src="https://www.youtube.com/embed/DZl8dguC3cE?rel=0"
                   title="Heart-opening meditation with Met"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
