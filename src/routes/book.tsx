@@ -8,6 +8,14 @@ import { toast } from "sonner";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Mentoring", "Retreat", "Not sure yet"];
 
+const offeringAliases: Record<string, string> = {
+  Reiki: "Reiki & Sound",
+  "Sound Bath": "Reiki & Sound",
+  Breathwork: "Breath & Yoga",
+  Package: "The Resonance Reset",
+  "Couples Cacao Ceremony": "Cacao Ceremony",
+};
+
 const searchSchema = z.object({
   offering: z.string().optional(),
   event: z.string().optional(),
@@ -29,11 +37,12 @@ function Book() {
   const navigate = useNavigate();
   const submit = useServerFn(submitBooking);
 
+  const normalizedOffering = search.offering ? (offeringAliases[search.offering] || search.offering) : undefined;
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    offering: search.offering || offerings[0],
+    offering: normalizedOffering || offerings[0],
     preferred_date: search.event ? `Event: ${search.event}` : "",
     notes: "",
   });

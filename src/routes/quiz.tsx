@@ -92,6 +92,15 @@ const blurbs: Record<string, string> = {
   Retreat: "A retreat — full immersion away from daily life, woven with sound, breath, cacao and ceremony.",
 };
 
+const quizToBookingOffering: Record<string, string> = {
+  Reiki: "Reiki & Sound",
+  "Sound Bath": "Reiki & Sound",
+  "Cacao Ceremony": "Cacao Ceremony",
+  Breathwork: "Breath & Yoga",
+  Mentoring: "Mentoring",
+  Retreat: "Retreat",
+};
+
 function Quiz() {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
@@ -135,7 +144,7 @@ function Quiz() {
         },
       });
       toast.success("Saved — taking you to booking ✨");
-      navigate({ to: "/book", search: { offering: recommendation } });
+      navigate({ to: "/book", search: { offering: quizToBookingOffering[recommendation] || recommendation } });
     } catch {
       toast.error("Couldn't save — please try again.");
     } finally {
