@@ -48,7 +48,7 @@ export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
       { title: "Book a Session — Iridescence Healing" },
-      { name: "description", content: "Reserve a private Reiki, sound bath, cacao ceremony, breath & yoga or mentoring session with Mehtap in New Orleans." },
+      { name: "description", content: "Reserve a private Reiki, sound bath, cacao ceremony, breath & yoga, virtual sessions, group sound healing or mentoring session with Mehtap in New Orleans." },
     ],
   }),
   validateSearch: searchSchema,
