@@ -82,6 +82,9 @@ function Retreats() {
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
             width={1400}
             height={1000}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto"
           />
         </div>
@@ -95,6 +98,9 @@ function Retreats() {
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
             width={1400}
             height={1000}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
             className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto order-2 lg:order-1"
           />
           <div className="order-1 lg:order-2">
