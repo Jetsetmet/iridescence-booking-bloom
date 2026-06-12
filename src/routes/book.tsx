@@ -16,6 +16,16 @@ const offeringAliases: Record<string, string> = {
   "Couples Cacao Ceremony": "Cacao Ceremony",
 };
 
+// Direct Square booking links per offering. Reiki & Sound and Breath & Yoga
+// share the same service link (same price/duration). Add the rest as Mehtap
+// shares them.
+const SQUARE_BOOKING_LINKS: Record<string, string> = {
+  "Reiki & Sound":
+    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/U3BEZ2AVTRZLZMM74YJ3YH5C",
+  "Breath & Yoga":
+    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/U3BEZ2AVTRZLZMM74YJ3YH5C",
+};
+
 const searchSchema = z.object({
   offering: z.string().optional(),
   event: z.string().optional(),
@@ -57,6 +67,12 @@ function Book() {
     setLoading(true);
     try {
       await submit({ data: form });
+      const squareUrl = SQUARE_BOOKING_LINKS[form.offering];
+      if (squareUrl) {
+        toast.success("Got your details — sending you to Square to pick a time.");
+        window.location.href = squareUrl;
+        return;
+      }
       toast.success("Booking received - Mehtap will be in touch within 24 hours.");
       navigate({ to: "/thanks" });
     } catch (err) {
