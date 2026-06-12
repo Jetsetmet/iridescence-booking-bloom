@@ -144,7 +144,7 @@ function Quiz() {
         },
       });
       toast.success("Saved — taking you to booking ✨");
-      navigate({ to: "/book", search: { offering: recommendation } });
+      navigate({ to: "/book", search: { offering: quizToBookingOffering[recommendation] || recommendation } });
     } catch {
       toast.error("Couldn't save — please try again.");
     } finally {
