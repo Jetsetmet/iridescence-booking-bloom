@@ -6,14 +6,17 @@ import { submitBooking } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
-const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Mentoring", "Retreat", "Not sure yet"];
+const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
 const offeringAliases: Record<string, string> = {
   Reiki: "Reiki & Sound",
   "Sound Bath": "Reiki & Sound",
   Breathwork: "Breath & Yoga",
   Package: "The Resonance Reset",
-  "Couples Cacao Ceremony": "Cacao Ceremony",
+  "Couples Cacao Ceremony": "Couples Cacao",
+  "Virtual Session": "Virtual Sessions",
+  "Virtual Reiki": "Virtual Sessions",
+  "Group Sound": "Group Sound Healing",
 };
 
 // Direct Square booking links per offering. Reiki & Sound and Breath & Yoga
