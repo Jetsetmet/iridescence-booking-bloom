@@ -37,11 +37,12 @@ function Book() {
   const navigate = useNavigate();
   const submit = useServerFn(submitBooking);
 
+  const normalizedOffering = search.offering ? (offeringAliases[search.offering] || search.offering) : undefined;
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
-    offering: search.offering || offerings[0],
+    offering: normalizedOffering || offerings[0],
     preferred_date: search.event ? `Event: ${search.event}` : "",
     notes: "",
   });
