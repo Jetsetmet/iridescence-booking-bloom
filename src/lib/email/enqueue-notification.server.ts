@@ -7,14 +7,13 @@ const SITE_NAME = 'Iridescence Healing'
 const SENDER_DOMAIN = 'notify.notify.iridescencehealing.com'
 const FROM_DOMAIN = 'notify.iridescencehealing.com'
 
-// Use the publishable (anon) key — SUPABASE_SERVICE_ROLE_KEY is not available
-// in the Lovable Cloud server runtime. Email tables/RPC grant anon access.
+// Use the service role key — email_send_log, suppressed_emails,
+// email_unsubscribe_tokens, and the pgmq RPC wrappers are locked down so only
+// the service role can read/write/execute them.
 function getClient() {
   const url = process.env.SUPABASE_URL ?? process.env.VITE_SUPABASE_URL
-  const key =
-    process.env.SUPABASE_PUBLISHABLE_KEY ??
-    process.env.VITE_SUPABASE_PUBLISHABLE_KEY
-  if (!url || !key) throw new Error('Supabase public client not configured')
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!url || !key) throw new Error('Supabase service client not configured')
   return createClient(url, key, {
     auth: { persistSession: false, autoRefreshToken: false },
   })
