@@ -201,11 +201,6 @@ function Book() {
 
 const STRIPE_GIFT_LINK = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
 
-const withOrigin = (path: string) => {
-  if (path.startsWith("http")) return path;
-  return typeof window === "undefined" ? path : `${window.location.origin}${path}`;
-};
-
 function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { data: { email: string; name?: string; source?: string } }) => Promise<unknown> }) {
   const [form, setForm] = useState({
     purchaserName: "",
@@ -216,7 +211,7 @@ function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { dat
   const [submitting, setSubmitting] = useState(false);
   const [purchased, setPurchased] = useState(false);
 
-  const certUrl = withOrigin(form.duration === "90" ? giftCert90.url : giftCert60.url);
+  const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
   const certFilename = form.duration === "90"
     ? "Iridescence-Healing-Gift-Voucher-90.jpg"
     : "Iridescence-Healing-Gift-Voucher-60.jpg";
