@@ -3,7 +3,8 @@ import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/breathwork-event.jpg";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
-import { Calendar, MapPin, ArrowRight } from "lucide-react";
+import flyerAsset from "@/assets/hotel-wellness-flyer.jpg.asset.json";
+import { Calendar, MapPin, ArrowRight, Download } from "lucide-react";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
