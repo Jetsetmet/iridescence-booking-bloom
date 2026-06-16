@@ -2,9 +2,11 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { useServerFn } from "@tanstack/react-start";
-import { submitBooking } from "@/lib/funnel.functions";
+import { submitBooking, submitLead } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
+import giftCert60 from "@/assets/gift-certificate-60.jpg.asset.json";
+import giftCert90 from "@/assets/gift-certificate-90.jpg.asset.json";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
@@ -60,6 +62,7 @@ function Book() {
   const search = Route.useSearch();
   const navigate = useNavigate();
   const submit = useServerFn(submitBooking);
+  const subscribeLead = useServerFn(submitLead);
 
   const normalizedOffering = search.offering ? (offeringAliases[search.offering] || search.offering) : undefined;
   const [form, setForm] = useState({
@@ -190,5 +193,7 @@ function Book() {
         </p>
       </form>
     </section>
+    
   );
 }
+
