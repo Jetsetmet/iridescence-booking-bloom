@@ -5,8 +5,8 @@ import { useServerFn } from "@tanstack/react-start";
 import { submitBooking, submitLead } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
-import giftCert60 from "@/assets/voucher-preview-60.jpg.asset.json";
-import giftCert90 from "@/assets/voucher-preview-90.jpg.asset.json";
+import giftCert60 from "@/assets/gift-certificate-60.jpg.asset.json";
+import giftCert90 from "@/assets/gift-certificate-90.jpg.asset.json";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
@@ -201,6 +201,11 @@ function Book() {
 
 const STRIPE_GIFT_LINK = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
 
+const withOrigin = (path: string) => {
+  if (path.startsWith("http")) return path;
+  return typeof window === "undefined" ? path : `${window.location.origin}${path}`;
+};
+
 function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { data: { email: string; name?: string; source?: string } }) => Promise<unknown> }) {
   const [form, setForm] = useState({
     purchaserName: "",
@@ -211,7 +216,7 @@ function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { dat
   const [submitting, setSubmitting] = useState(false);
   const [purchased, setPurchased] = useState(false);
 
-  const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
+  const certUrl = withOrigin(form.duration === "90" ? giftCert90.url : giftCert60.url);
   const certFilename = form.duration === "90"
     ? "Iridescence-Healing-Gift-Voucher-90.jpg"
     : "Iridescence-Healing-Gift-Voucher-60.jpg";
