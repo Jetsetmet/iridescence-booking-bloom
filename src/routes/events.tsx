@@ -50,13 +50,7 @@ const events = [
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
   },
-  {
-    date: "Every Wednesday", time: "10:30 AM",
-    title: "Kundalini Yoga with Met @ Anarchy Yoga",
-    loc: "Anarchy Yoga · LGD New Orleans · all levels welcome · ongoing weekly class",
-    blurb: "A raw, liberating yoga practice that breaks the rules of tradition. Move freely, breathe deeply, and reconnect with your wild, untamed self.",
-    img: breathYogaHero, offering: "Breath & Yoga",
-  },
+  // Wednesday Kundalini @ Anarchy Yoga is paused — hidden until further notice.
 ];
 
 function Events() {
