@@ -309,7 +309,7 @@ function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { dat
 
         <div className="bg-accent/40 p-6 sm:p-8 flex items-center justify-center">
           <img
-            src={certUrl}
+            src={`${certUrl}?cb=1`}
             alt={`Iridescence Healing ${form.duration}-minute gift voucher preview`}
             className="w-full max-w-md rounded-xl shadow-soft"
           />
