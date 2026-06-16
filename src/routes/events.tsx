@@ -94,13 +94,50 @@ function Events() {
 
       <div className="mt-20 rounded-3xl border border-border bg-card p-6 sm:p-10">
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private events</p>
-        <h2 className="mt-2 font-display text-3xl sm:text-4xl max-w-xl">
-          Book Met for your hotel, retreat or special event
+        <h2 className="mt-2 font-display text-3xl sm:text-4xl max-w-2xl">
+          Book Met for your retreat, hotel, wedding, or special event
         </h2>
-        <p className="mt-3 max-w-2xl text-muted-foreground">
-          Bring Reiki, sound healing, breathwork or cacao ceremony to your guests. Wellness experiences designed for hotels, bridal parties, conscious gatherings and corporate events.
+        <p className="mt-3 max-w-2xl text-foreground/80">
+          Create a meaningful, memorable experience for your guests with Met's unique blend of sound healing, Reiki, breathwork, cacao ceremonies, meditation, and yoga.
         </p>
-        <div className="mt-8 grid lg:grid-cols-2 gap-8 items-center">
+        <p className="mt-4 max-w-2xl text-foreground/80">
+          Before moving to the US, Met spent over 15 years in the UK events industry, producing everything from intimate gatherings to large-scale events for thousands of attendees. That background lets her combine professionalism, presence, and exceptional guest care with transformational wellness offerings.
+        </p>
+        <p className="mt-4 max-w-2xl text-foreground/80">
+          Whether you're hosting a retreat, hotel wellness program, bridal celebration, wedding weekend, conscious gathering, private event, or corporate wellness experience, Met creates intentionally curated offerings that inspire connection, relaxation, healing, and renewal.
+        </p>
+
+        <div className="mt-8 grid lg:grid-cols-2 gap-8 items-start">
+          <div className="space-y-6">
+            <div>
+              <p className="text-sm font-medium text-primary uppercase tracking-wider">Available for</p>
+              <ul className="mt-3 grid sm:grid-cols-2 gap-2 text-sm text-foreground/80">
+                <li className="flex items-center gap-2"><span className="text-primary">·</span> Retreats & wellness experiences</li>
+                <li className="flex items-center gap-2"><span className="text-primary">·</span> Hotels & resorts</li>
+                <li className="flex items-center gap-2"><span className="text-primary">·</span> Bridal parties & wedding weekends</li>
+                <li className="flex items-center gap-2"><span className="text-primary">·</span> Corporate wellness events</li>
+                <li className="flex items-center gap-2"><span className="text-primary">·</span> Private & group gatherings</li>
+              </ul>
+            </div>
+            <p className="text-sm text-foreground/80">
+              Each experience is thoughtfully tailored to your guests, creating moments of connection, transformation, and lasting impact.
+            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href={flyerAsset.url}
+                download="iridescence-hotel-wellness-flyer.jpg"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+              >
+                Download flyer <Download className="h-4 w-4" />
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-accent"
+              >
+                Contact Met <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
           <a
             href={flyerAsset.url}
             download="iridescence-hotel-wellness-flyer.jpg"
@@ -115,29 +152,6 @@ function Events() {
               className="w-full h-auto object-cover"
             />
           </a>
-          <div className="space-y-4">
-            <p className="text-sm text-foreground/80">
-              Download the flyer to share with your venue, event coordinator or wellness programming team.
-            </p>
-            <a
-              href={flyerAsset.url}
-              download="iridescence-hotel-wellness-flyer.jpg"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
-            >
-              Download flyer <Download className="h-4 w-4" />
-            </a>
-            <div className="pt-4 border-t border-border">
-              <p className="text-sm text-muted-foreground">
-                Ready to collaborate? Send the details and we’ll create something aligned for your guests.
-              </p>
-              <Link
-                to="/contact"
-                className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-accent"
-              >
-                Contact Met <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-          </div>
         </div>
       </div>
     </section>
