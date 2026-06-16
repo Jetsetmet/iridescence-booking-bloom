@@ -37,7 +37,7 @@ const events = [
     img: cacaoImg, offering: "Cacao Ceremony",
   },
   {
-    date: "Thursday, August 28", time: "11:00 AM",
+    date: "Thursday, August 27", time: "6:30 PM",
     title: "Full Moon Sound Bath",
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
