@@ -23,22 +23,22 @@ export const Route = createFileRoute("/events")({
 
 const events = [
   {
-    date: "Thursday, May 30", time: "6:30 PM",
+    date: "Monday, July 20", time: "6:30 PM",
     title: "Virtual \"Open Your Heart\" Breathwork Journey",
     loc: "Online from anywhere · $25",
     blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
     img: heroImg, offering: "Breath & Yoga",
   },
   {
-    date: "Thursday, June 4", time: "6:30 PM",
+    date: "Wednesday, August 5", time: "6:30 PM",
     title: "Cacao + Heart Circle",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
     img: cacaoImg, offering: "Cacao Ceremony",
   },
   {
-    date: "Sunday, June 14", time: "11:00 AM",
-    title: "New Moon Sound Bath",
+    date: "Thursday, August 28", time: "11:00 AM",
+    title: "Full Moon Sound Bath",
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
     img: moonImg, offering: "Reiki & Sound",
