@@ -50,9 +50,9 @@ function SelfLoveMentoring() {
             resonates with your most authentic self.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/book" search={{ offering: "Mentoring" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+            <a href={MENTORING_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Begin the journey <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
               Email Met for more info
             </Link>
@@ -134,15 +134,15 @@ function SelfLoveMentoring() {
           <div className="md:flex-1">
             <div className="flex items-center gap-2 text-primary">
               <Heart className="h-4 w-4" />
-              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-xs uppercase tracking-wider hover:underline">Six-Week Mentoring · $720</a>
+              <a href={MENTORING_URL} target="_blank" rel="noreferrer" className="text-xs uppercase tracking-wider hover:underline">Six-Week Mentoring · $720</a>
             </div>
             <p className="mt-2 font-display text-2xl sm:text-3xl">Let's begin this transformative journey together.</p>
             <p className="mt-2 text-sm text-muted-foreground">Sessions held in person in uptown New Orleans or via Zoom from anywhere. Please email for more info.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link to="/book" search={{ offering: "Mentoring" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+            <a href={MENTORING_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Reserve your spot <ArrowRight className="h-4 w-4" />
-            </Link>
+            </a>
             <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
               Email Met
             </Link>
@@ -162,7 +162,7 @@ function SelfLoveMentoring() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
               </div>
-              <a href={SQUARE_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
+              <a href={MENTORING_URL} target="_blank" rel="noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
             </li>
           ))}
         </ul>
