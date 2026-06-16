@@ -141,7 +141,7 @@ function Events() {
           <a
             href={flyerAsset.url}
             download="iridescence-hotel-wellness-flyer.jpg"
-            className="group block rounded-2xl overflow-hidden border border-border shadow-card bg-background"
+            className="group block w-full max-w-[60%] justify-self-center rounded-2xl overflow-hidden border border-border shadow-card bg-background"
           >
             <img
               src={flyerAsset.url}
