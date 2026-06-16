@@ -177,6 +177,7 @@
   .font-body { font-family: var(--font-body); }
 
   .bg-iridescent { background-image: var(--gradient-iridescent); }
+  .bg-iridescent-box { background-image: var(--gradient-iridescent-box); }
   .bg-aura { background-image: var(--gradient-aura); }
   .bg-veil { background-image: var(--gradient-veil); }
 
