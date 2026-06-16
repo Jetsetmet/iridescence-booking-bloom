@@ -50,7 +50,7 @@ export function Header() {
                   type="button"
                   className={`inline-flex items-center gap-1 transition-colors ${
                     n.label === "Offerings"
-                      ? "text-purple-600 hover:text-purple-700 font-medium"
+                       ? "text-primary hover:text-primary/80 font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -108,7 +108,7 @@ export function Header() {
               n.children ? (
                 <div key={n.label} className="py-1">
                   <div className={`py-1 text-xs uppercase tracking-[0.2em] ${
-                    n.label === "Offerings" ? "text-purple-600 font-medium" : "text-muted-foreground"
+                    n.label === "Offerings" ? "text-primary font-medium" : "text-muted-foreground"
                   }`}>
                     {n.label}
                   </div>
