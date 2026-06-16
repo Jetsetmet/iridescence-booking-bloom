@@ -107,7 +107,7 @@ function Events() {
         </div>
 
         <div className="mt-8 grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          <div className="rounded-2xl border border-border bg-card p-5 shadow-card">
+          <div className="rounded-2xl border border-border bg-gradient-to-br from-lavender/30 via-periwinkle/20 to-rose/20 p-5 shadow-card">
             <p className="text-sm font-medium text-primary uppercase tracking-wider">Available for</p>
             <ul className="mt-3 grid gap-2 text-sm text-foreground/80">
               <li className="flex items-center gap-2"><span className="text-primary">·</span> Retreats & wellness experiences</li>
