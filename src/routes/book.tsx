@@ -100,6 +100,7 @@ function Book() {
   }
 
   return (
+    <>
     <section className="mx-auto max-w-5xl px-5 sm:px-8 py-16 grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
       <div className="lg:sticky lg:top-24">
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Book your session</p>
@@ -193,7 +194,128 @@ function Book() {
         </p>
       </form>
     </section>
-    
+    <GiftCertificateSection subscribeLead={subscribeLead} />
+    </>
+  );
+}
+
+const STRIPE_GIFT_LINK = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
+
+function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { data: { email: string; name?: string; source?: string } }) => Promise<unknown> }) {
+  const [form, setForm] = useState({
+    purchaserName: "",
+    purchaserEmail: "",
+    recipientName: "",
+    duration: "60" as "60" | "90",
+  });
+  const [submitting, setSubmitting] = useState(false);
+  const [purchased, setPurchased] = useState(false);
+
+  const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
+  const certFilename = form.duration === "90"
+    ? "Iridescence-Healing-Gift-Voucher-90.jpg"
+    : "Iridescence-Healing-Gift-Voucher-60.jpg";
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setSubmitting(true);
+    try {
+      await subscribeLead({
+        data: {
+          email: form.purchaserEmail,
+          name: form.purchaserName,
+          source: `gift-certificate-${form.duration}`,
+        },
+      });
+      setPurchased(true);
+      window.open(STRIPE_GIFT_LINK, "_blank", "noopener,noreferrer");
+      toast.success("Opening secure checkout — your voucher will be ready below once payment is complete.");
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Could not save your details — please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  return (
+    <section id="gift-certificates" className="mx-auto max-w-5xl px-5 sm:px-8 pb-20">
+      <div className="rounded-3xl border border-border bg-card shadow-card overflow-hidden grid lg:grid-cols-[1.1fr_1fr]">
+        <div className="p-8 sm:p-10">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Gift a session</p>
+          <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
+            A gift of peace, rest and renewal.
+          </h2>
+          <p className="mt-3 text-sm text-muted-foreground text-pretty">
+            Purchase a 60 or 90 minute gift voucher for any session of their choice — Reiki & Sound or Breath & Yoga. After checkout, your personalized voucher is ready to download right here.
+          </p>
+
+          <form onSubmit={onSubmit} className="mt-6 space-y-4">
+            <div className="grid sm:grid-cols-2 gap-3">
+              <label className="block">
+                <span className="text-xs font-medium text-muted-foreground">Your name</span>
+                <input required value={form.purchaserName} onChange={(e) => setForm((f) => ({ ...f, purchaserName: e.target.value }))}
+                  className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              </label>
+              <label className="block">
+                <span className="text-xs font-medium text-muted-foreground">Your email</span>
+                <input required type="email" value={form.purchaserEmail} onChange={(e) => setForm((f) => ({ ...f, purchaserEmail: e.target.value }))}
+                  className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              </label>
+            </div>
+            <label className="block">
+              <span className="text-xs font-medium text-muted-foreground">Recipient's name (optional)</span>
+              <input value={form.recipientName} onChange={(e) => setForm((f) => ({ ...f, recipientName: e.target.value }))}
+                placeholder="Who is this gift for?"
+                className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            </label>
+            <div>
+              <span className="text-xs font-medium text-muted-foreground">Voucher length</span>
+              <div className="mt-1 grid grid-cols-2 gap-3">
+                {(["60", "90"] as const).map((d) => (
+                  <button key={d} type="button" onClick={() => setForm((f) => ({ ...f, duration: d }))}
+                    className={`rounded-xl border px-4 py-3 text-sm transition ${form.duration === d ? "border-primary bg-primary/5 font-medium" : "border-input bg-background"}`}>
+                    {d} minutes
+                  </button>
+                ))}
+              </div>
+            </div>
+            <button type="submit" disabled={submitting}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60">
+              {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
+              Continue to secure checkout →
+            </button>
+            <p className="text-[11px] text-center text-muted-foreground">
+              Payment is processed securely by Stripe. After paying, return to this page to download your voucher.
+            </p>
+          </form>
+
+          {purchased && (
+            <div className="mt-6 rounded-2xl border border-primary/30 bg-iridescent p-5 text-sm">
+              <p className="font-medium">Your voucher is ready.</p>
+              <p className="mt-1 text-foreground/80">
+                Once Stripe confirms your payment, download your {form.duration}-minute gift voucher below and print or send it to {form.recipientName || "your recipient"}.
+              </p>
+              <a href={certUrl} download={certFilename}
+                className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-medium text-primary-foreground">
+                Download {form.duration}-min voucher →
+              </a>
+              <a href={STRIPE_GIFT_LINK} target="_blank" rel="noreferrer"
+                className="mt-3 ml-2 inline-flex items-center gap-2 rounded-full border border-primary/40 px-5 py-2.5 text-xs font-medium text-primary">
+                Re-open Stripe checkout
+              </a>
+            </div>
+          )}
+        </div>
+
+        <div className="bg-accent/40 p-6 sm:p-8 flex items-center justify-center">
+          <img
+            src={certUrl}
+            alt={`Iridescence Healing ${form.duration}-minute gift voucher preview`}
+            className="w-full max-w-md rounded-xl shadow-soft"
+          />
+        </div>
+      </div>
+    </section>
   );
 }
 
