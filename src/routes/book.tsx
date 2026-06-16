@@ -5,8 +5,8 @@ import { useServerFn } from "@tanstack/react-start";
 import { submitBooking, submitLead } from "@/lib/funnel.functions";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
-import giftCert60 from "@/assets/gift-certificate-60.jpg.asset.json";
-import giftCert90 from "@/assets/gift-certificate-90.jpg.asset.json";
+import giftCert60 from "@/assets/gift-voucher-60.png.asset.json";
+import giftCert90 from "@/assets/gift-voucher-90.png.asset.json";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
@@ -213,8 +213,8 @@ function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { dat
 
   const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
   const certFilename = form.duration === "90"
-    ? "Iridescence-Healing-Gift-Voucher-90.jpg"
-    : "Iridescence-Healing-Gift-Voucher-60.jpg";
+    ? "Iridescence-Healing-Gift-Voucher-90.png"
+    : "Iridescence-Healing-Gift-Voucher-60.png";
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();

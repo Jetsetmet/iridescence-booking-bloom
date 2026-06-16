@@ -129,7 +129,7 @@ function CrystalReiki() {
       </section>
 
       <section className="mx-auto max-w-6xl px-5 sm:px-8 pb-20">
-        <div className="mx-auto max-w-lg text-center">
+        <div className="mx-auto max-w-sm text-center">
           <div className="flex items-center justify-center gap-2">
             <Triangle className="h-5 w-5 text-primary" />
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Uptown studio</p>
@@ -138,8 +138,11 @@ function CrystalReiki() {
             <video
               src={uptownVideo.url}
               controls
+              autoPlay
+              muted
+              loop
               playsInline
-              preload="metadata"
+              preload="auto"
               className="h-full w-full object-cover"
             />
           </div>
