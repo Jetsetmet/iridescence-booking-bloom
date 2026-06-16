@@ -4,7 +4,8 @@ export const sendTestNotification = createServerFn({ method: "POST" })
   .inputValidator((data: { password: string; template: "booking-notification" | "quiz-notification" }) => data)
   .handler(async ({ data }) => {
     const adminPassword = process.env.NEWSLETTER_ADMIN_PASSWORD;
-    if (adminPassword && data.password !== adminPassword) {
+    if (!adminPassword) throw new Error("Admin password not configured");
+    if (data.password !== adminPassword) {
       throw new Error("Invalid password");
     }
 
