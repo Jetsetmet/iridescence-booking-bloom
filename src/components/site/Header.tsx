@@ -21,6 +21,7 @@ const nav: ReadonlyArray<NavItem> = [
       { to: "/breath-yoga", label: "Breath & Yoga" },
     ],
   },
+  { to: "/retreats", label: "Retreats" },
   { to: "/events", label: "Events" },
 ];
 
