@@ -151,7 +151,7 @@ function ResonanceRelease() {
 
         <div className="rounded-3xl border border-border bg-card p-7 sm:p-10 text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Apply for The Resonance Reset</p>
-          <h2 className="mt-2 font-display text-3xl">A high-touch, intentionally held experience</h2>
+          <h2 className="mt-2 font-display text-3xl">A deeply immersive, intentionally held experience</h2>
           <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-pretty">
             To ensure this work is aligned for you, all sessions begin with a short application.
             Once received, you'll be guided to the next step in booking your session.
