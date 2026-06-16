@@ -91,6 +91,55 @@ function Events() {
           </article>
         ))}
       </div>
+
+      <div className="mt-20 rounded-3xl border border-border bg-card p-6 sm:p-10">
+        <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private events</p>
+        <h2 className="mt-2 font-display text-3xl sm:text-4xl max-w-xl">
+          Book Met for your hotel, retreat or special event
+        </h2>
+        <p className="mt-3 max-w-2xl text-muted-foreground">
+          Bring Reiki, sound healing, breathwork or cacao ceremony to your guests. Wellness experiences designed for hotels, bridal parties, conscious gatherings and corporate events.
+        </p>
+        <div className="mt-8 grid lg:grid-cols-2 gap-8 items-center">
+          <a
+            href={flyerAsset.url}
+            download="iridescence-hotel-wellness-flyer.jpg"
+            className="group block rounded-2xl overflow-hidden border border-border shadow-card bg-background"
+          >
+            <img
+              src={flyerAsset.url}
+              alt="Exclusive wellness experiences for hotel events and guests — downloadable flyer"
+              loading="lazy"
+              width={1280}
+              height={1792}
+              className="w-full h-auto object-cover"
+            />
+          </a>
+          <div className="space-y-4">
+            <p className="text-sm text-foreground/80">
+              Download the flyer to share with your venue, event coordinator or wellness programming team.
+            </p>
+            <a
+              href={flyerAsset.url}
+              download="iridescence-hotel-wellness-flyer.jpg"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+            >
+              Download flyer <Download className="h-4 w-4" />
+            </a>
+            <div className="pt-4 border-t border-border">
+              <p className="text-sm text-muted-foreground">
+                Ready to collaborate? Send the details and we’ll create something aligned for your guests.
+              </p>
+              <Link
+                to="/contact"
+                className="mt-3 inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-accent"
+              >
+                Contact Met <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
