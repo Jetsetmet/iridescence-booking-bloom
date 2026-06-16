@@ -1,7 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle, Heart, Quote } from "lucide-react";
 import heroImg from "@/assets/self-love.jpg";
-import { SQUARE_URL } from "@/lib/booking";
+
+const MENTORING_URL =
+  "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/FZNMS3R4HBRDN6AUE3PW3MEQ";
+
 
 export const Route = createFileRoute("/self-love-mentoring")({
   head: () => ({
