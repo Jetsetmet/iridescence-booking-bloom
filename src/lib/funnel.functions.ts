@@ -1,9 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
-import { syncToMailchimp } from "./mailchimp.server";
-import { enqueueNotification } from "./email/enqueue-notification.server";
-import { notifyOwner } from "./email/notify-owner.server";
+// Server-only helpers are imported dynamically inside handlers to avoid
+// shipping them in the client bundle (top-level imports of .server.ts in
+// *.functions.ts modules can leak).
 
 const emailSchema = z.string().trim().email().max(255).toLowerCase();
 
