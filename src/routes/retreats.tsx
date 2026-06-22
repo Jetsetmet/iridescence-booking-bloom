@@ -27,7 +27,7 @@ function Retreats() {
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Transformative Retreats</p>
           <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">
-            Come home to <span className="italic bg-iridescent bg-clip-text text-transparent">yourself</span>.
+            Reconnect with the <span className="italic bg-iridescent bg-clip-text text-transparent">wisdom within</span>.
           </h1>
           <p className="mt-6 text-foreground/80 leading-relaxed text-pretty">
             Immersive journeys that weave energy healing, cacao, yoga, sound, meditation, breathwork and indigenous Temazcal into the quiet medicine of nature. A safe, nurturing space to release what no longer serves and step into true freedom.
