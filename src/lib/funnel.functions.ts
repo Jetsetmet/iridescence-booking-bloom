@@ -1,8 +1,9 @@
 import { createServerFn } from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
-import { syncToMailchimp } from "./mailchimp.server";
-import { enqueueNotification } from "./email/enqueue-notification.server";
+// Server-only helpers are imported dynamically inside handlers to avoid
+// shipping them in the client bundle (top-level imports of .server.ts in
+// *.functions.ts modules can leak).
 
 const emailSchema = z.string().trim().email().max(255).toLowerCase();
 
@@ -32,6 +33,9 @@ const leadInput = z.object({
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => leadInput.parse(d))
   .handler(async ({ data }) => {
+    const { syncToMailchimp } = await import("./mailchimp.server");
+    const { enqueueNotification } = await import("./email/enqueue-notification.server");
+    const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient()
       .from("leads")
       .insert({ email: data.email, name: data.name ?? null, source: data.source });
@@ -39,13 +43,23 @@ export const submitLead = createServerFn({ method: "POST" })
       console.error("submitLead insert failed", error);
       throw new Error("Unable to process your request. Please try again.");
     }
-    await syncToMailchimp({ email: data.email, name: data.name, tags: [data.source] });
-    await enqueueNotification(
-      "lead-magnet",
-      { name: data.name ?? "" },
-      data.email,
-    );
-    await enqueueNotification("lead-notification", {
+    try {
+      await syncToMailchimp({ email: data.email, name: data.name, tags: [data.source] });
+    } catch (e) {
+      console.error("submitLead mailchimp failed", e);
+    }
+    // Lead magnet goes to the user via the existing queue (best-effort)
+    try {
+      await enqueueNotification(
+        "lead-magnet",
+        { name: data.name ?? "" },
+        data.email,
+      );
+    } catch (e) {
+      console.error("submitLead lead-magnet enqueue failed", e);
+    }
+    // Owner notification — direct send, bypasses queue/service-role
+    await notifyOwner("lead-notification", {
       name: data.name ?? "",
       email: data.email,
       source: data.source,
@@ -65,6 +79,8 @@ const bookingInput = z.object({
 export const submitBooking = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => bookingInput.parse(d))
   .handler(async ({ data }) => {
+    const { syncToMailchimp } = await import("./mailchimp.server");
+    const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient().from("bookings").insert({
       name: data.name,
       email: data.email,
@@ -83,12 +99,16 @@ export const submitBooking = createServerFn({ method: "POST" })
       name: data.name,
       source: "booking",
     });
-    await syncToMailchimp({
-      email: data.email,
-      name: data.name,
-      tags: ["booking", `offering:${data.offering}`],
-    });
-    await enqueueNotification("booking-notification", {
+    try {
+      await syncToMailchimp({
+        email: data.email,
+        name: data.name,
+        tags: ["booking", `offering:${data.offering}`],
+      });
+    } catch (e) {
+      console.error("submitBooking mailchimp failed", e);
+    }
+    await notifyOwner("booking-notification", {
       name: data.name,
       email: data.email,
       phone: data.phone || "",
@@ -109,6 +129,8 @@ const quizInput = z.object({
 export const submitQuiz = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => quizInput.parse(d))
   .handler(async ({ data }) => {
+    const { syncToMailchimp } = await import("./mailchimp.server");
+    const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient().from("quiz_results").insert({
       email: data.email || null,
       name: data.name || null,
@@ -125,13 +147,17 @@ export const submitQuiz = createServerFn({ method: "POST" })
         name: data.name || null,
         source: "quiz",
       });
-      await syncToMailchimp({
-        email: data.email,
-        name: data.name || null,
-        tags: ["quiz", `recommended:${data.recommended_offering}`],
-      });
+      try {
+        await syncToMailchimp({
+          email: data.email,
+          name: data.name || null,
+          tags: ["quiz", `recommended:${data.recommended_offering}`],
+        });
+      } catch (e) {
+        console.error("submitQuiz mailchimp failed", e);
+      }
     }
-    await enqueueNotification("quiz-notification", {
+    await notifyOwner("quiz-notification", {
       name: data.name || "Anonymous",
       email: data.email || "",
       recommended_offering: data.recommended_offering,
