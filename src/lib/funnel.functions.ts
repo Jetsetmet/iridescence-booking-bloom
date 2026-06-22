@@ -33,6 +33,9 @@ const leadInput = z.object({
 export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => leadInput.parse(d))
   .handler(async ({ data }) => {
+    const { syncToMailchimp } = await import("./mailchimp.server");
+    const { enqueueNotification } = await import("./email/enqueue-notification.server");
+    const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient()
       .from("leads")
       .insert({ email: data.email, name: data.name ?? null, source: data.source });
@@ -76,6 +79,8 @@ const bookingInput = z.object({
 export const submitBooking = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => bookingInput.parse(d))
   .handler(async ({ data }) => {
+    const { syncToMailchimp } = await import("./mailchimp.server");
+    const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient().from("bookings").insert({
       name: data.name,
       email: data.email,
@@ -124,6 +129,8 @@ const quizInput = z.object({
 export const submitQuiz = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => quizInput.parse(d))
   .handler(async ({ data }) => {
+    const { syncToMailchimp } = await import("./mailchimp.server");
+    const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient().from("quiz_results").insert({
       email: data.email || null,
       name: data.name || null,
