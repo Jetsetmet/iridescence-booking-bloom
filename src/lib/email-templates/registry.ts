@@ -3,6 +3,7 @@ import { template as bookingNotification } from './booking-notification'
 import { template as quizNotification } from './quiz-notification'
 import { template as leadMagnet } from './lead-magnet'
 import { template as leadNotification } from './lead-notification'
+import { template as weeklyReport } from './weekly-report'
 
 export interface TemplateEntry {
   component: ComponentType<any>
@@ -26,4 +27,5 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'quiz-notification': quizNotification,
   'lead-magnet': leadMagnet,
   'lead-notification': leadNotification,
+  'weekly-report': weeklyReport,
 }
