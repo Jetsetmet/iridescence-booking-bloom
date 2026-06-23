@@ -65,10 +65,7 @@ const Email = ({
 }: Props) => (
   <Html lang="en" dir="ltr">
     <Head />
-    <Preview>
-      Weekly report — {bookings.length} enquiries, {leads.length} signups,{' '}
-      {quizzes.length} quizzes
-    </Preview>
+    <Preview>{`Weekly report — ${bookings.length} enquiries, ${leads.length} signups, ${quizzes.length} quizzes`}</Preview>
     <Body style={main}>
       <Container style={container}>
         <Heading style={h1}>Your weekly Iridescence report ✨</Heading>
