@@ -35,6 +35,7 @@ import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/em
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
+import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
 import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
 
 const UnsubscribeRoute = UnsubscribeRouteImport.update({
@@ -170,6 +171,12 @@ const LovableEmailQueueProcessRoute =
     path: '/lovable/email/queue/process',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksWeeklyReportRoute =
+  ApiPublicHooksWeeklyReportRouteImport.update({
+    id: '/api/public/hooks/weekly-report',
+    path: '/api/public/hooks/weekly-report',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksMonthlyNewsletterRoute =
   ApiPublicHooksMonthlyNewsletterRouteImport.update({
     id: '/api/public/hooks/monthly-newsletter',
@@ -202,6 +209,7 @@ export interface FileRoutesByFullPath {
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
+  '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -231,6 +239,7 @@ export interface FileRoutesByTo {
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
+  '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -261,6 +270,7 @@ export interface FileRoutesById {
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
+  '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -292,6 +302,7 @@ export interface FileRouteTypes {
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/api/public/hooks/monthly-newsletter'
+    | '/api/public/hooks/weekly-report'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -321,6 +332,7 @@ export interface FileRouteTypes {
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/api/public/hooks/monthly-newsletter'
+    | '/api/public/hooks/weekly-report'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -350,6 +362,7 @@ export interface FileRouteTypes {
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
     | '/api/public/hooks/monthly-newsletter'
+    | '/api/public/hooks/weekly-report'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -380,6 +393,7 @@ export interface RootRouteChildren {
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
   ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
+  ApiPublicHooksWeeklyReportRoute: typeof ApiPublicHooksWeeklyReportRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
   LovableEmailTransactionalSendRoute: typeof LovableEmailTransactionalSendRoute
@@ -569,6 +583,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LovableEmailQueueProcessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/weekly-report': {
+      id: '/api/public/hooks/weekly-report'
+      path: '/api/public/hooks/weekly-report'
+      fullPath: '/api/public/hooks/weekly-report'
+      preLoaderRoute: typeof ApiPublicHooksWeeklyReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/monthly-newsletter': {
       id: '/api/public/hooks/monthly-newsletter'
       path: '/api/public/hooks/monthly-newsletter'
@@ -604,6 +625,7 @@ const rootRouteChildren: RootRouteChildren = {
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
   ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
+  ApiPublicHooksWeeklyReportRoute: ApiPublicHooksWeeklyReportRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
   LovableEmailTransactionalSendRoute: LovableEmailTransactionalSendRoute,
