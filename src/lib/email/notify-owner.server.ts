@@ -1,10 +1,8 @@
 const OWNER_EMAIL = 'info@iridescencehealing.com'
 
 /**
- * Send an owner-notification email directly via Lovable Emails, bypassing the
- * pgmq queue and service-role-key dependency. Use for fire-and-forget
- * notifications where delivery should not block the user-facing submit but
- * should not silently fail either — failures are logged for observability.
+ * Queue an owner-notification email through the configured app-email pipeline.
+ * Failures are logged without blocking the user-facing form submission.
  */
 export async function notifyOwner(
   templateName: string,
