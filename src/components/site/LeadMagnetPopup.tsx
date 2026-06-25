@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
-import { submitLead } from "@/lib/funnel.functions";
+import { submitLeadRequest } from "@/lib/funnel-api";
 import { X, Triangle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -12,7 +11,6 @@ export function LeadMagnetPopup() {
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
-  const submit = useServerFn(submitLead);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -37,7 +35,7 @@ export function LeadMagnetPopup() {
     e.preventDefault();
     setLoading(true);
     try {
-      await submit({ data: { email, name: name || undefined, source: "lead_magnet" } });
+      await submitLeadRequest({ email, name: name || undefined, source: "lead_magnet" });
       setDone(true);
       if (typeof window !== "undefined") localStorage.setItem(STORAGE_KEY, "1");
       toast.success("Check your inbox — your meditation is on the way ✨");

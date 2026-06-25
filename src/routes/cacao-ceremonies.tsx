@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { ArrowRight, Triangle, Sparkles, Heart, Loader2 } from "lucide-react";
-import { submitLead } from "@/lib/funnel.functions";
+import { submitLeadRequest } from "@/lib/funnel-api";
 import { SQUARE_URL } from "@/lib/booking";
 import heroImg from "@/assets/cacao-ceremony.jpg";
 import couplesImg from "@/assets/couples-ceremony-new.webp";
@@ -268,7 +267,6 @@ function CacaoCeremonies() {
 }
 
 function CacaoInvitesSection() {
-  const submit = useServerFn(submitLead);
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "done" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -279,7 +277,7 @@ function CacaoInvitesSection() {
     setStatus("loading");
     setErrorMsg(null);
     try {
-      await submit({ data: { email: email.trim(), source: "cacao_circle" } });
+      await submitLeadRequest({ email: email.trim(), source: "cacao_circle" });
       setStatus("done");
       setEmail("");
     } catch (err) {

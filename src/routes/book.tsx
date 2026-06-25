@@ -1,8 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
-import { useServerFn } from "@tanstack/react-start";
-import { submitBooking, submitLead } from "@/lib/funnel.functions";
+import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
 import giftCert60 from "@/assets/gift-voucher-60.png.asset.json";
@@ -61,8 +60,6 @@ export const Route = createFileRoute("/book")({
 function Book() {
   const search = Route.useSearch();
   const navigate = useNavigate();
-  const submit = useServerFn(submitBooking);
-  const subscribeLead = useServerFn(submitLead);
 
   const normalizedOffering = search.offering ? (offeringAliases[search.offering] || search.offering) : undefined;
   const [form, setForm] = useState({
@@ -83,7 +80,7 @@ function Book() {
     e.preventDefault();
     setLoading(true);
     try {
-      await submit({ data: form });
+      await submitBookingRequest(form);
       const squareUrl = SQUARE_BOOKING_LINKS[form.offering];
       if (squareUrl) {
         toast.success("Got your details — sending you to Square to pick a time.");
@@ -194,14 +191,14 @@ function Book() {
         </p>
       </form>
     </section>
-    <GiftCertificateSection subscribeLead={subscribeLead} />
+    <GiftCertificateSection />
     </>
   );
 }
 
 const STRIPE_GIFT_LINK = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
 
-function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { data: { email: string; name?: string; source?: string } }) => Promise<unknown> }) {
+function GiftCertificateSection() {
   const [form, setForm] = useState({
     purchaserName: "",
     purchaserEmail: "",
@@ -220,12 +217,10 @@ function GiftCertificateSection({ subscribeLead }: { subscribeLead: (args: { dat
     e.preventDefault();
     setSubmitting(true);
     try {
-      await subscribeLead({
-        data: {
-          email: form.purchaserEmail,
-          name: form.purchaserName,
-          source: `gift-certificate-${form.duration}`,
-        },
+      await submitLeadRequest({
+        email: form.purchaserEmail,
+        name: form.purchaserName,
+        source: `gift-certificate-${form.duration}`,
       });
       setPurchased(true);
       window.open(STRIPE_GIFT_LINK, "_blank", "noopener,noreferrer");
