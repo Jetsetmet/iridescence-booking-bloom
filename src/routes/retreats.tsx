@@ -3,8 +3,8 @@ import { ArrowRight, Triangle } from "lucide-react";
 import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
-import istanbulCollageAsset from "@/assets/resonance-remembrance-2027.png.asset.json";
-import alacatiCollageAsset from "@/assets/whispers-ancient-shores-2027.png.asset.json";
+import istanbulCollageAsset from "@/assets/turkey-istanbul-collage.png.asset.json";
+import alacatiCollageAsset from "@/assets/turkey-alacati-collage.png.asset.json";
 import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/retreats")({
