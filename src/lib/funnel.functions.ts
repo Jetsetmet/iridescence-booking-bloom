@@ -34,7 +34,6 @@ export const submitLead = createServerFn({ method: "POST" })
   .inputValidator((d: unknown) => leadInput.parse(d))
   .handler(async ({ data }) => {
     const { syncToMailchimp } = await import("./mailchimp.server");
-    const { enqueueNotification } = await import("./email/enqueue-notification.server");
     const { notifyOwner } = await import("./email/notify-owner.server");
     const { error } = await getPublicClient()
       .from("leads")
@@ -48,16 +47,8 @@ export const submitLead = createServerFn({ method: "POST" })
     } catch (e) {
       console.error("submitLead mailchimp failed", e);
     }
-    // Lead magnet goes to the user via the existing queue (best-effort)
-    try {
-      await enqueueNotification(
-        "lead-magnet",
-        { name: data.name ?? "" },
-        data.email,
-      );
-    } catch (e) {
-      console.error("submitLead lead-magnet enqueue failed", e);
-    }
+    // The meditation email is queued by a database trigger so live and preview
+    // submissions behave the same even when the frontend deployment lags.
     // Owner notification — direct send, bypasses queue/service-role
     await notifyOwner("lead-notification", {
       name: data.name ?? "",
