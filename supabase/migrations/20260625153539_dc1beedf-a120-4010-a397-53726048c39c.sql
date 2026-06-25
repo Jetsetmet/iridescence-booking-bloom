@@ -1,0 +1,1 @@
+ALTER FUNCTION public.queue_meditation_email_for_lead() SET search_path = public, pgmq, extensions, pg_temp;
