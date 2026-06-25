@@ -37,6 +37,9 @@ import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/l
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
 import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
+import { Route as ApiPublicFormsQuizRouteImport } from './routes/api/public/forms/quiz'
+import { Route as ApiPublicFormsLeadRouteImport } from './routes/api/public/forms/lead'
+import { Route as ApiPublicFormsBookingRouteImport } from './routes/api/public/forms/booking'
 
 const UnsubscribeRoute = UnsubscribeRouteImport.update({
   id: '/unsubscribe',
@@ -183,6 +186,21 @@ const ApiPublicHooksMonthlyNewsletterRoute =
     path: '/api/public/hooks/monthly-newsletter',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicFormsQuizRoute = ApiPublicFormsQuizRouteImport.update({
+  id: '/api/public/forms/quiz',
+  path: '/api/public/forms/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicFormsLeadRoute = ApiPublicFormsLeadRouteImport.update({
+  id: '/api/public/forms/lead',
+  path: '/api/public/forms/lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicFormsBookingRoute = ApiPublicFormsBookingRouteImport.update({
+  id: '/api/public/forms/booking',
+  path: '/api/public/forms/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -208,6 +226,9 @@ export interface FileRoutesByFullPath {
   '/admin/test-email': typeof AdminTestEmailRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
+  '/api/public/forms/booking': typeof ApiPublicFormsBookingRoute
+  '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
+  '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -238,6 +259,9 @@ export interface FileRoutesByTo {
   '/admin/test-email': typeof AdminTestEmailRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
+  '/api/public/forms/booking': typeof ApiPublicFormsBookingRoute
+  '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
+  '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -269,6 +293,9 @@ export interface FileRoutesById {
   '/admin/test-email': typeof AdminTestEmailRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
+  '/api/public/forms/booking': typeof ApiPublicFormsBookingRoute
+  '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
+  '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -301,6 +328,9 @@ export interface FileRouteTypes {
     | '/admin/test-email'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
+    | '/api/public/forms/booking'
+    | '/api/public/forms/lead'
+    | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/weekly-report'
     | '/lovable/email/queue/process'
@@ -331,6 +361,9 @@ export interface FileRouteTypes {
     | '/admin/test-email'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
+    | '/api/public/forms/booking'
+    | '/api/public/forms/lead'
+    | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/weekly-report'
     | '/lovable/email/queue/process'
@@ -361,6 +394,9 @@ export interface FileRouteTypes {
     | '/admin/test-email'
     | '/email/unsubscribe'
     | '/lovable/email/suppression'
+    | '/api/public/forms/booking'
+    | '/api/public/forms/lead'
+    | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/weekly-report'
     | '/lovable/email/queue/process'
@@ -392,6 +428,9 @@ export interface RootRouteChildren {
   AdminTestEmailRoute: typeof AdminTestEmailRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
+  ApiPublicFormsBookingRoute: typeof ApiPublicFormsBookingRoute
+  ApiPublicFormsLeadRoute: typeof ApiPublicFormsLeadRoute
+  ApiPublicFormsQuizRoute: typeof ApiPublicFormsQuizRoute
   ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
   ApiPublicHooksWeeklyReportRoute: typeof ApiPublicHooksWeeklyReportRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
@@ -597,6 +636,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksMonthlyNewsletterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/forms/quiz': {
+      id: '/api/public/forms/quiz'
+      path: '/api/public/forms/quiz'
+      fullPath: '/api/public/forms/quiz'
+      preLoaderRoute: typeof ApiPublicFormsQuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/forms/lead': {
+      id: '/api/public/forms/lead'
+      path: '/api/public/forms/lead'
+      fullPath: '/api/public/forms/lead'
+      preLoaderRoute: typeof ApiPublicFormsLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/forms/booking': {
+      id: '/api/public/forms/booking'
+      path: '/api/public/forms/booking'
+      fullPath: '/api/public/forms/booking'
+      preLoaderRoute: typeof ApiPublicFormsBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -624,6 +684,9 @@ const rootRouteChildren: RootRouteChildren = {
   AdminTestEmailRoute: AdminTestEmailRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
+  ApiPublicFormsBookingRoute: ApiPublicFormsBookingRoute,
+  ApiPublicFormsLeadRoute: ApiPublicFormsLeadRoute,
+  ApiPublicFormsQuizRoute: ApiPublicFormsQuizRoute,
   ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
   ApiPublicHooksWeeklyReportRoute: ApiPublicHooksWeeklyReportRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
@@ -633,13 +696,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
