@@ -1,7 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
-import { submitQuiz } from "@/lib/funnel.functions";
+import { submitQuizRequest } from "@/lib/funnel-api";
 import { ArrowRight, ArrowLeft, Loader2, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
@@ -108,7 +107,6 @@ function Quiz() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const submit = useServerFn(submitQuiz);
   const navigate = useNavigate();
 
   const total = questions.length;
@@ -135,13 +133,11 @@ function Quiz() {
         const idx = answers[q.id];
         if (idx !== undefined) stringAnswers[q.id] = q.options[idx].label;
       }
-      await submit({
-        data: {
-          email: email || undefined,
-          name: name || undefined,
-          answers: stringAnswers,
-          recommended_offering: recommendation,
-        },
+      await submitQuizRequest({
+        email: email || undefined,
+        name: name || undefined,
+        answers: stringAnswers,
+        recommended_offering: recommendation,
       });
       toast.success("Saved — taking you to booking ✨");
       navigate({ to: "/book", search: { offering: quizToBookingOffering[recommendation] || recommendation } });

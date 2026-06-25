@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
-import { submitLead } from "@/lib/funnel.functions";
+import { submitLeadRequest } from "@/lib/funnel-api";
 import { Triangle, Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
@@ -9,15 +8,12 @@ export function NewsletterSignup() {
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);
-  const submit = useServerFn(submitLead);
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     try {
-      await submit({
-        data: { email, name: name || undefined, source: "newsletter" },
-      });
+      await submitLeadRequest({ email, name: name || undefined, source: "newsletter" });
       setDone(true);
       toast.success("Welcome to the circle ✨");
     } catch {
