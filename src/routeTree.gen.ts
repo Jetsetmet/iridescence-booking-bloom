@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as ThanksRouteImport } from './routes/thanks'
+import { Route as SoundHealingNewOrleansRouteImport } from './routes/sound-healing-new-orleans'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
 import { Route as ReviewsRouteImport } from './routes/reviews'
@@ -49,6 +50,11 @@ const UnsubscribeRoute = UnsubscribeRouteImport.update({
 const ThanksRoute = ThanksRouteImport.update({
   id: '/thanks',
   path: '/thanks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoundHealingNewOrleansRoute = SoundHealingNewOrleansRouteImport.update({
+  id: '/sound-healing-new-orleans',
+  path: '/sound-healing-new-orleans',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -220,6 +226,7 @@ export interface FileRoutesByFullPath {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
@@ -253,6 +260,7 @@ export interface FileRoutesByTo {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
@@ -287,6 +295,7 @@ export interface FileRoutesById {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
@@ -322,6 +331,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
@@ -355,6 +365,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
@@ -388,6 +399,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
@@ -422,6 +434,7 @@ export interface RootRouteChildren {
   ReviewsRoute: typeof ReviewsRoute
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SoundHealingNewOrleansRoute: typeof SoundHealingNewOrleansRoute
   ThanksRoute: typeof ThanksRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
   AdminNewsletterRoute: typeof AdminNewsletterRoute
@@ -452,6 +465,13 @@ declare module '@tanstack/react-router' {
       path: '/thanks'
       fullPath: '/thanks'
       preLoaderRoute: typeof ThanksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sound-healing-new-orleans': {
+      id: '/sound-healing-new-orleans'
+      path: '/sound-healing-new-orleans'
+      fullPath: '/sound-healing-new-orleans'
+      preLoaderRoute: typeof SoundHealingNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -678,6 +698,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewsRoute: ReviewsRoute,
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SoundHealingNewOrleansRoute: SoundHealingNewOrleansRoute,
   ThanksRoute: ThanksRoute,
   UnsubscribeRoute: UnsubscribeRoute,
   AdminNewsletterRoute: AdminNewsletterRoute,
