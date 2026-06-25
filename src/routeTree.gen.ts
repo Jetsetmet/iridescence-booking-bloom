@@ -18,6 +18,7 @@ import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentor
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as ResonanceReleaseRouteImport } from './routes/resonance-release'
+import { Route as ReikiNewOrleansRouteImport } from './routes/reiki-new-orleans'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OfferingsRouteImport } from './routes/offerings'
@@ -86,6 +87,11 @@ const RetreatsRoute = RetreatsRouteImport.update({
 const ResonanceReleaseRoute = ResonanceReleaseRouteImport.update({
   id: '/resonance-release',
   path: '/resonance-release',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReikiNewOrleansRoute = ReikiNewOrleansRouteImport.update({
+  id: '/reiki-new-orleans',
+  path: '/reiki-new-orleans',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuizRoute = QuizRouteImport.update({
@@ -227,6 +233,7 @@ export interface FileRoutesByFullPath {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/reiki-new-orleans': typeof ReikiNewOrleansRoute
   '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -262,6 +269,7 @@ export interface FileRoutesByTo {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/reiki-new-orleans': typeof ReikiNewOrleansRoute
   '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -298,6 +306,7 @@ export interface FileRoutesById {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/reiki-new-orleans': typeof ReikiNewOrleansRoute
   '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
@@ -335,6 +344,7 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/reiki-new-orleans'
     | '/resonance-release'
     | '/retreats'
     | '/reviews'
@@ -370,6 +380,7 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/reiki-new-orleans'
     | '/resonance-release'
     | '/retreats'
     | '/reviews'
@@ -405,6 +416,7 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/reiki-new-orleans'
     | '/resonance-release'
     | '/retreats'
     | '/reviews'
@@ -441,6 +453,7 @@ export interface RootRouteChildren {
   OfferingsRoute: typeof OfferingsRoute
   PackagesRoute: typeof PackagesRoute
   QuizRoute: typeof QuizRoute
+  ReikiNewOrleansRoute: typeof ReikiNewOrleansRoute
   ResonanceReleaseRoute: typeof ResonanceReleaseRoute
   RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -527,6 +540,13 @@ declare module '@tanstack/react-router' {
       path: '/resonance-release'
       fullPath: '/resonance-release'
       preLoaderRoute: typeof ResonanceReleaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reiki-new-orleans': {
+      id: '/reiki-new-orleans'
+      path: '/reiki-new-orleans'
+      fullPath: '/reiki-new-orleans'
+      preLoaderRoute: typeof ReikiNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quiz': {
@@ -713,6 +733,7 @@ const rootRouteChildren: RootRouteChildren = {
   OfferingsRoute: OfferingsRoute,
   PackagesRoute: PackagesRoute,
   QuizRoute: QuizRoute,
+  ReikiNewOrleansRoute: ReikiNewOrleansRoute,
   ResonanceReleaseRoute: ResonanceReleaseRoute,
   RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,

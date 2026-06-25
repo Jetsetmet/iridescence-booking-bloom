@@ -18,6 +18,9 @@ const paths = [
   { path: "/book", priority: "1.0" },
   { path: "/events", priority: "0.8" },
   { path: "/contact", priority: "0.6" },
+  { path: "/sound-healing-new-orleans", priority: "0.95" },
+  { path: "/sound-bath-new-orleans", priority: "0.95" },
+  { path: "/reiki-new-orleans", priority: "0.95" },
 ];
 
 export const Route = createFileRoute("/sitemap.xml")({
