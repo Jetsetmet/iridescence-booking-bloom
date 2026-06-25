@@ -13,15 +13,52 @@ import { SQUARE_URL } from "@/lib/booking";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Reiki & Sound Healing in New Orleans | Iridescence Healing" },
-      { name: "description", content: "New Orleans Reiki Master Mehtap offers Reiki, sound baths, cacao ceremonies and mentoring. 17+ years of energy healing in New Orleans." },
-      { property: "og:title", content: "Reiki & Sound Healing in New Orleans | Iridescence Healing" },
-      { property: "og:description", content: "Crystal Reiki, sound baths, cacao ceremonies, breathwork and intuitive energy guidance with Mehtap in uptown New Orleans." },
+      { title: "Sound Healing New Orleans | Sound Bath & Reiki — Iridescence Healing" },
+      { name: "description", content: "Sound Healing, Sound Baths and Reiki in New Orleans with Master practitioner Mehtap. 17+ years of crystal Reiki, sound bath ceremonies, cacao and breathwork in uptown New Orleans. Book in-person or virtual." },
+      { name: "keywords", content: "sound healing New Orleans, sound bath New Orleans, Reiki New Orleans, New Orleans Reiki Master, crystal Reiki New Orleans, cacao ceremony New Orleans, breathwork New Orleans, energy healing New Orleans, uptown New Orleans Reiki" },
+      { property: "og:title", content: "Sound Healing New Orleans | Sound Bath & Reiki — Iridescence Healing" },
+      { property: "og:description", content: "New Orleans' trusted Sound Healing, Sound Bath and Reiki practitioner. Crystal Reiki, cacao ceremonies, breathwork and intuitive guidance with Mehtap in uptown New Orleans." },
       { property: "og:url", content: "https://iridescence-booking-bloom.lovable.app/" },
       { property: "og:image", content: heroImg },
     ],
     links: [
       { rel: "canonical", href: "https://iridescence-booking-bloom.lovable.app/" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://iridescence-booking-bloom.lovable.app/#business",
+          name: "Iridescence Healing — Sound Healing, Sound Bath & Reiki New Orleans",
+          image: "https://iridescence-booking-bloom.lovable.app/og.jpg",
+          url: "https://iridescence-booking-bloom.lovable.app/",
+          telephone: "",
+          priceRange: "$$",
+          description:
+            "Sound Healing, Sound Bath and Reiki sessions in New Orleans with Master practitioner Mehtap. Crystal Reiki, cacao ceremonies, breathwork and intuitive energy guidance.",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "New Orleans",
+            addressRegion: "LA",
+            addressCountry: "US",
+          },
+          geo: { "@type": "GeoCoordinates", latitude: 29.9511, longitude: -90.0715 },
+          areaServed: [
+            { "@type": "City", name: "New Orleans" },
+            { "@type": "AdministrativeArea", name: "Louisiana" },
+          ],
+          makesOffer: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sound Healing New Orleans" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sound Bath New Orleans" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reiki New Orleans" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Crystal Reiki New Orleans" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cacao Ceremony New Orleans" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Breathwork New Orleans" } },
+          ],
+        }),
+      },
     ],
   }),
   component: Home,

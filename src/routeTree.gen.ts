@@ -11,11 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as ThanksRouteImport } from './routes/thanks'
+import { Route as SoundHealingNewOrleansRouteImport } from './routes/sound-healing-new-orleans'
+import { Route as SoundBathNewOrleansRouteImport } from './routes/sound-bath-new-orleans'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as RetreatsRouteImport } from './routes/retreats'
 import { Route as ResonanceReleaseRouteImport } from './routes/resonance-release'
+import { Route as ReikiNewOrleansRouteImport } from './routes/reiki-new-orleans'
 import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OfferingsRouteImport } from './routes/offerings'
@@ -51,6 +54,16 @@ const ThanksRoute = ThanksRouteImport.update({
   path: '/thanks',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SoundHealingNewOrleansRoute = SoundHealingNewOrleansRouteImport.update({
+  id: '/sound-healing-new-orleans',
+  path: '/sound-healing-new-orleans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoundBathNewOrleansRoute = SoundBathNewOrleansRouteImport.update({
+  id: '/sound-bath-new-orleans',
+  path: '/sound-bath-new-orleans',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
@@ -74,6 +87,11 @@ const RetreatsRoute = RetreatsRouteImport.update({
 const ResonanceReleaseRoute = ResonanceReleaseRouteImport.update({
   id: '/resonance-release',
   path: '/resonance-release',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReikiNewOrleansRoute = ReikiNewOrleansRouteImport.update({
+  id: '/reiki-new-orleans',
+  path: '/reiki-new-orleans',
   getParentRoute: () => rootRouteImport,
 } as any)
 const QuizRoute = QuizRouteImport.update({
@@ -215,11 +233,14 @@ export interface FileRoutesByFullPath {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/reiki-new-orleans': typeof ReikiNewOrleansRoute
   '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-bath-new-orleans': typeof SoundBathNewOrleansRoute
+  '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
@@ -248,11 +269,14 @@ export interface FileRoutesByTo {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/reiki-new-orleans': typeof ReikiNewOrleansRoute
   '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-bath-new-orleans': typeof SoundBathNewOrleansRoute
+  '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
@@ -282,11 +306,14 @@ export interface FileRoutesById {
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
   '/quiz': typeof QuizRoute
+  '/reiki-new-orleans': typeof ReikiNewOrleansRoute
   '/resonance-release': typeof ResonanceReleaseRoute
   '/retreats': typeof RetreatsRoute
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-bath-new-orleans': typeof SoundBathNewOrleansRoute
+  '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/admin/newsletter': typeof AdminNewsletterRoute
@@ -317,11 +344,14 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/reiki-new-orleans'
     | '/resonance-release'
     | '/retreats'
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-bath-new-orleans'
+    | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
@@ -350,11 +380,14 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/reiki-new-orleans'
     | '/resonance-release'
     | '/retreats'
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-bath-new-orleans'
+    | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
@@ -383,11 +416,14 @@ export interface FileRouteTypes {
     | '/offerings'
     | '/packages'
     | '/quiz'
+    | '/reiki-new-orleans'
     | '/resonance-release'
     | '/retreats'
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-bath-new-orleans'
+    | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
     | '/admin/newsletter'
@@ -417,11 +453,14 @@ export interface RootRouteChildren {
   OfferingsRoute: typeof OfferingsRoute
   PackagesRoute: typeof PackagesRoute
   QuizRoute: typeof QuizRoute
+  ReikiNewOrleansRoute: typeof ReikiNewOrleansRoute
   ResonanceReleaseRoute: typeof ResonanceReleaseRoute
   RetreatsRoute: typeof RetreatsRoute
   ReviewsRoute: typeof ReviewsRoute
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SoundBathNewOrleansRoute: typeof SoundBathNewOrleansRoute
+  SoundHealingNewOrleansRoute: typeof SoundHealingNewOrleansRoute
   ThanksRoute: typeof ThanksRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
   AdminNewsletterRoute: typeof AdminNewsletterRoute
@@ -452,6 +491,20 @@ declare module '@tanstack/react-router' {
       path: '/thanks'
       fullPath: '/thanks'
       preLoaderRoute: typeof ThanksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sound-healing-new-orleans': {
+      id: '/sound-healing-new-orleans'
+      path: '/sound-healing-new-orleans'
+      fullPath: '/sound-healing-new-orleans'
+      preLoaderRoute: typeof SoundHealingNewOrleansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sound-bath-new-orleans': {
+      id: '/sound-bath-new-orleans'
+      path: '/sound-bath-new-orleans'
+      fullPath: '/sound-bath-new-orleans'
+      preLoaderRoute: typeof SoundBathNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -487,6 +540,13 @@ declare module '@tanstack/react-router' {
       path: '/resonance-release'
       fullPath: '/resonance-release'
       preLoaderRoute: typeof ResonanceReleaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reiki-new-orleans': {
+      id: '/reiki-new-orleans'
+      path: '/reiki-new-orleans'
+      fullPath: '/reiki-new-orleans'
+      preLoaderRoute: typeof ReikiNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/quiz': {
@@ -673,11 +733,14 @@ const rootRouteChildren: RootRouteChildren = {
   OfferingsRoute: OfferingsRoute,
   PackagesRoute: PackagesRoute,
   QuizRoute: QuizRoute,
+  ReikiNewOrleansRoute: ReikiNewOrleansRoute,
   ResonanceReleaseRoute: ResonanceReleaseRoute,
   RetreatsRoute: RetreatsRoute,
   ReviewsRoute: ReviewsRoute,
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SoundBathNewOrleansRoute: SoundBathNewOrleansRoute,
+  SoundHealingNewOrleansRoute: SoundHealingNewOrleansRoute,
   ThanksRoute: ThanksRoute,
   UnsubscribeRoute: UnsubscribeRoute,
   AdminNewsletterRoute: AdminNewsletterRoute,
