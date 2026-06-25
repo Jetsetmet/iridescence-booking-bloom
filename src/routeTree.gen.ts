@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as ThanksRouteImport } from './routes/thanks'
 import { Route as SoundHealingNewOrleansRouteImport } from './routes/sound-healing-new-orleans'
+import { Route as SoundBathNewOrleansRouteImport } from './routes/sound-bath-new-orleans'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
 import { Route as ReviewsRouteImport } from './routes/reviews'
@@ -55,6 +56,11 @@ const ThanksRoute = ThanksRouteImport.update({
 const SoundHealingNewOrleansRoute = SoundHealingNewOrleansRouteImport.update({
   id: '/sound-healing-new-orleans',
   path: '/sound-healing-new-orleans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoundBathNewOrleansRoute = SoundBathNewOrleansRouteImport.update({
+  id: '/sound-bath-new-orleans',
+  path: '/sound-bath-new-orleans',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -226,6 +232,7 @@ export interface FileRoutesByFullPath {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-bath-new-orleans': typeof SoundBathNewOrleansRoute
   '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
@@ -260,6 +267,7 @@ export interface FileRoutesByTo {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-bath-new-orleans': typeof SoundBathNewOrleansRoute
   '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
@@ -295,6 +303,7 @@ export interface FileRoutesById {
   '/reviews': typeof ReviewsRoute
   '/self-love-mentoring': typeof SelfLoveMentoringRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sound-bath-new-orleans': typeof SoundBathNewOrleansRoute
   '/sound-healing-new-orleans': typeof SoundHealingNewOrleansRoute
   '/thanks': typeof ThanksRoute
   '/unsubscribe': typeof UnsubscribeRoute
@@ -331,6 +340,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-bath-new-orleans'
     | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
@@ -365,6 +375,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-bath-new-orleans'
     | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
@@ -399,6 +410,7 @@ export interface FileRouteTypes {
     | '/reviews'
     | '/self-love-mentoring'
     | '/sitemap.xml'
+    | '/sound-bath-new-orleans'
     | '/sound-healing-new-orleans'
     | '/thanks'
     | '/unsubscribe'
@@ -434,6 +446,7 @@ export interface RootRouteChildren {
   ReviewsRoute: typeof ReviewsRoute
   SelfLoveMentoringRoute: typeof SelfLoveMentoringRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SoundBathNewOrleansRoute: typeof SoundBathNewOrleansRoute
   SoundHealingNewOrleansRoute: typeof SoundHealingNewOrleansRoute
   ThanksRoute: typeof ThanksRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
@@ -472,6 +485,13 @@ declare module '@tanstack/react-router' {
       path: '/sound-healing-new-orleans'
       fullPath: '/sound-healing-new-orleans'
       preLoaderRoute: typeof SoundHealingNewOrleansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sound-bath-new-orleans': {
+      id: '/sound-bath-new-orleans'
+      path: '/sound-bath-new-orleans'
+      fullPath: '/sound-bath-new-orleans'
+      preLoaderRoute: typeof SoundBathNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -698,6 +718,7 @@ const rootRouteChildren: RootRouteChildren = {
   ReviewsRoute: ReviewsRoute,
   SelfLoveMentoringRoute: SelfLoveMentoringRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SoundBathNewOrleansRoute: SoundBathNewOrleansRoute,
   SoundHealingNewOrleansRoute: SoundHealingNewOrleansRoute,
   ThanksRoute: ThanksRoute,
   UnsubscribeRoute: UnsubscribeRoute,
