@@ -221,6 +221,7 @@ export type Database = {
         Args: { message_id: number; queue_name: string }
         Returns: boolean
       }
+      email_html_escape: { Args: { value: string }; Returns: string }
       enqueue_email: {
         Args: { payload: Json; queue_name: string }
         Returns: number
@@ -234,6 +235,7 @@ export type Database = {
         }
         Returns: number
       }
+      queue_missing_owner_notifications: { Args: never; Returns: number }
       read_email_batch: {
         Args: { batch_size: number; queue_name: string; vt: number }
         Returns: {
