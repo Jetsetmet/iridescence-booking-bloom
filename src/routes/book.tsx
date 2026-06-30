@@ -4,8 +4,8 @@ import { z } from "zod";
 import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
-import giftCert60 from "@/assets/gift-voucher-60.png.asset.json";
-import giftCert90 from "@/assets/gift-voucher-90.png.asset.json";
+import giftCert60 from "@/assets/gift-certificate-60.jpg.asset.json";
+import giftCert90 from "@/assets/gift-certificate-90.jpg.asset.json";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
@@ -141,28 +141,28 @@ function Book() {
         </div>
       </div>
 
-      <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-7 sm:p-10 space-y-5">
-        <div className="grid sm:grid-cols-2 gap-4">
+      <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-5 sm:p-6 space-y-3">
+        <div className="grid sm:grid-cols-2 gap-3">
           <label className="block">
             <span className="text-xs font-medium text-muted-foreground">Your name</span>
             <input required value={form.name} onChange={(e) => update("name", e.target.value)}
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </label>
           <label className="block">
             <span className="text-xs font-medium text-muted-foreground">Email</span>
             <input required type="email" value={form.email} onChange={(e) => update("email", e.target.value)}
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </label>
         </div>
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">Phone</span>
           <input required value={form.phone} onChange={(e) => update("phone", e.target.value)}
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">Which offering calls you?</span>
           <select value={form.offering} onChange={(e) => update("offering", e.target.value)}
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring">
             {offerings.map((o) => <option key={o} value={o}>{o}</option>)}
           </select>
         </label>
@@ -170,18 +170,18 @@ function Book() {
           <span className="text-xs font-medium text-muted-foreground">Preferred date / time</span>
           <input value={form.preferred_date} onChange={(e) => update("preferred_date", e.target.value)}
             placeholder="e.g. weekday evenings, or Sat May 25 afternoon"
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">What's bringing you in? (optional)</span>
-          <textarea rows={4} value={form.notes} onChange={(e) => update("notes", e.target.value)}
+          <textarea rows={2} value={form.notes} onChange={(e) => update("notes", e.target.value)}
             placeholder="Anything you'd like Mehtap to know about what you're moving through..."
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <button
           type="submit"
           disabled={loading}
-          className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60"
+          className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60"
         >
           {loading && <Loader2 className="h-4 w-4 animate-spin" />}
           {SQUARE_BOOKING_LINKS[form.offering] ? "Continue to booking calendar →" : "Request my session"}
@@ -210,8 +210,8 @@ function GiftCertificateSection() {
 
   const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
   const certFilename = form.duration === "90"
-    ? "Iridescence-Healing-Gift-Voucher-90.png"
-    : "Iridescence-Healing-Gift-Voucher-60.png";
+    ? "Iridescence-Healing-Gift-Voucher-90.jpg"
+    : "Iridescence-Healing-Gift-Voucher-60.jpg";
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -235,47 +235,47 @@ function GiftCertificateSection() {
   return (
     <section id="gift-certificates" className="mx-auto max-w-5xl px-5 sm:px-8 pb-20">
       <div className="rounded-3xl border border-border bg-card shadow-card overflow-hidden grid lg:grid-cols-[1.1fr_1fr]">
-        <div className="p-8 sm:p-10">
+        <div className="p-6 sm:p-7">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Gift a session</p>
-          <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
+          <h2 className="mt-2 font-display text-2xl sm:text-3xl text-balance">
             A gift of peace, rest and renewal.
           </h2>
-          <p className="mt-3 text-sm text-muted-foreground text-pretty">
+          <p className="mt-2 text-sm text-muted-foreground text-pretty">
             Purchase a 60 or 90 minute gift voucher for any session of their choice — Reiki & Sound or Breath & Yoga. After checkout, your personalized voucher is ready to download right here.
           </p>
 
-          <form onSubmit={onSubmit} className="mt-6 space-y-4">
+          <form onSubmit={onSubmit} className="mt-4 space-y-3">
             <div className="grid sm:grid-cols-2 gap-3">
               <label className="block">
                 <span className="text-xs font-medium text-muted-foreground">Your name</span>
                 <input required value={form.purchaserName} onChange={(e) => setForm((f) => ({ ...f, purchaserName: e.target.value }))}
-                  className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </label>
               <label className="block">
                 <span className="text-xs font-medium text-muted-foreground">Your email</span>
                 <input required type="email" value={form.purchaserEmail} onChange={(e) => setForm((f) => ({ ...f, purchaserEmail: e.target.value }))}
-                  className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                  className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
               </label>
             </div>
             <label className="block">
               <span className="text-xs font-medium text-muted-foreground">Recipient's name (optional)</span>
               <input value={form.recipientName} onChange={(e) => setForm((f) => ({ ...f, recipientName: e.target.value }))}
                 placeholder="Who is this gift for?"
-                className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+                className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
             </label>
             <div>
               <span className="text-xs font-medium text-muted-foreground">Voucher length</span>
               <div className="mt-1 grid grid-cols-2 gap-3">
                 {(["60", "90"] as const).map((d) => (
                   <button key={d} type="button" onClick={() => setForm((f) => ({ ...f, duration: d }))}
-                    className={`rounded-xl border px-4 py-3 text-sm transition ${form.duration === d ? "border-primary bg-primary/5 font-medium" : "border-input bg-background"}`}>
+                    className={`rounded-xl border px-3 py-2 text-sm transition ${form.duration === d ? "border-primary bg-primary/5 font-medium" : "border-input bg-background"}`}>
                     {d} minutes
                   </button>
                 ))}
               </div>
             </div>
             <button type="submit" disabled={submitting}
-              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-4 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60">
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-soft disabled:opacity-60">
               {submitting && <Loader2 className="h-4 w-4 animate-spin" />}
               Continue to secure checkout →
             </button>
@@ -302,7 +302,7 @@ function GiftCertificateSection() {
           )}
         </div>
 
-        <div className="bg-accent/40 p-6 sm:p-8 flex items-center justify-center">
+        <div className="bg-accent/40 p-4 sm:p-6 flex items-center justify-center">
           <img
             src={certUrl}
             alt={`Iridescence Healing ${form.duration}-minute gift voucher preview`}
