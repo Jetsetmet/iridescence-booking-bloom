@@ -155,8 +155,8 @@ function Book() {
           </label>
         </div>
         <label className="block">
-          <span className="text-xs font-medium text-muted-foreground">Phone (optional)</span>
-          <input value={form.phone} onChange={(e) => update("phone", e.target.value)}
+          <span className="text-xs font-medium text-muted-foreground">Phone</span>
+          <input required value={form.phone} onChange={(e) => update("phone", e.target.value)}
             className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <label className="block">
