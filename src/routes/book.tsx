@@ -141,7 +141,7 @@ function Book() {
         </div>
       </div>
 
-      <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-7 sm:p-10 space-y-5">
+      <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-5 sm:p-6 space-y-3">
         <div className="grid sm:grid-cols-2 gap-4">
           <label className="block">
             <span className="text-xs font-medium text-muted-foreground">Your name</span>
