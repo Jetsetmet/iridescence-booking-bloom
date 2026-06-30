@@ -13,7 +13,7 @@ export type LeadInput = z.infer<typeof leadInput>;
 export const bookingInput = z.object({
   name: z.string().trim().min(1).max(120),
   email: emailSchema,
-  phone: z.string().trim().max(40).optional().or(z.literal("")),
+  phone: z.string().trim().min(1).max(40),
   offering: z.string().trim().min(1).max(80),
   preferred_date: z.string().trim().max(120).optional().or(z.literal("")),
   notes: z.string().trim().max(2000).optional().or(z.literal("")),
