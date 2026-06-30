@@ -142,27 +142,27 @@ function Book() {
       </div>
 
       <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-5 sm:p-6 space-y-3">
-        <div className="grid sm:grid-cols-2 gap-4">
+        <div className="grid sm:grid-cols-2 gap-3">
           <label className="block">
             <span className="text-xs font-medium text-muted-foreground">Your name</span>
             <input required value={form.name} onChange={(e) => update("name", e.target.value)}
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </label>
           <label className="block">
             <span className="text-xs font-medium text-muted-foreground">Email</span>
             <input required type="email" value={form.email} onChange={(e) => update("email", e.target.value)}
-              className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+              className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
           </label>
         </div>
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">Phone</span>
           <input required value={form.phone} onChange={(e) => update("phone", e.target.value)}
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">Which offering calls you?</span>
           <select value={form.offering} onChange={(e) => update("offering", e.target.value)}
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring">
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring">
             {offerings.map((o) => <option key={o} value={o}>{o}</option>)}
           </select>
         </label>
@@ -170,13 +170,13 @@ function Book() {
           <span className="text-xs font-medium text-muted-foreground">Preferred date / time</span>
           <input value={form.preferred_date} onChange={(e) => update("preferred_date", e.target.value)}
             placeholder="e.g. weekday evenings, or Sat May 25 afternoon"
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <label className="block">
           <span className="text-xs font-medium text-muted-foreground">What's bringing you in? (optional)</span>
-          <textarea rows={4} value={form.notes} onChange={(e) => update("notes", e.target.value)}
+          <textarea rows={2} value={form.notes} onChange={(e) => update("notes", e.target.value)}
             placeholder="Anything you'd like Mehtap to know about what you're moving through..."
-            className="mt-1 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
+            className="mt-1 w-full rounded-xl border border-input bg-background px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-ring" />
         </label>
         <button
           type="submit"
