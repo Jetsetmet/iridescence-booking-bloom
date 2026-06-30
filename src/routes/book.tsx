@@ -302,7 +302,7 @@ function GiftCertificateSection() {
           )}
         </div>
 
-        <div className="bg-accent/40 p-6 sm:p-8 flex items-center justify-center">
+        <div className="bg-accent/40 p-4 sm:p-6 flex items-center justify-center">
           <img
             src={certUrl}
             alt={`Iridescence Healing ${form.duration}-minute gift voucher preview`}
