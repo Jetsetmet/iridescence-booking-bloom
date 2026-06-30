@@ -210,8 +210,8 @@ function GiftCertificateSection() {
 
   const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
   const certFilename = form.duration === "90"
-    ? "Iridescence-Healing-Gift-Voucher-90.png"
-    : "Iridescence-Healing-Gift-Voucher-60.png";
+    ? "Iridescence-Healing-Gift-Voucher-90.jpg"
+    : "Iridescence-Healing-Gift-Voucher-60.jpg";
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
