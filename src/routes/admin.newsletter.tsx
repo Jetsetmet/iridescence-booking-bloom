@@ -46,7 +46,7 @@ function AdminNewsletter() {
     try {
       const fullCtaUrl = ctaUrl.startsWith("http")
         ? ctaUrl
-        : `https://project--deb780b1-75ae-489c-aa24-abec8fc6ac34.lovable.app${ctaUrl}`;
+        : `https://iridescence-booking-bloom.lovable.app${ctaUrl}`;
 
       const result = await sendFn({
         data: {
