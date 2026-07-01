@@ -24,7 +24,7 @@ export const Route = createFileRoute('/api/public/hooks/monthly-newsletter')({
             monthLabel,
             bodyHtml: `<p>A gentle hello as we step into ${monthLabel}. Below are this month's gatherings — small, intentional spaces to soften, breathe, and come home to yourself.</p>`,
             ctaText: 'See upcoming events',
-            ctaUrl: 'https://project--deb780b1-75ae-489c-aa24-abec8fc6ac34.lovable.app/events',
+            ctaUrl: 'https://iridescence-booking-bloom.lovable.app/events',
           });
 
           const { campaignId } = await createCampaignAndSend({
