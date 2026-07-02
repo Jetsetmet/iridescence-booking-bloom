@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
-import uptownVideo from "@/assets/uptown-studio.mp4.asset.json";
 import { ArrowRight, Triangle, ExternalLink } from "lucide-react";
 import { SQUARE_URL } from "@/lib/booking";
 
