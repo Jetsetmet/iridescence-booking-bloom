@@ -135,7 +135,7 @@ function CrystalReiki() {
           </div>
           <div className="mt-5 aspect-[9/16] w-full overflow-hidden rounded-[2rem] border border-border shadow-glow bg-card">
             <video
-              src={uptownVideo.url}
+              src="/media/uptown-studio.mp4"
               controls
               autoPlay
               muted

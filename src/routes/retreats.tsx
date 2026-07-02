@@ -3,8 +3,6 @@ import { ArrowRight, Triangle } from "lucide-react";
 import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
-import istanbulCollageAsset from "@/assets/turkey-istanbul-collage.png.asset.json";
-import alacatiCollageAsset from "@/assets/turkey-alacati-collage.png.asset.json";
 import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/retreats")({
@@ -78,7 +76,7 @@ function Retreats() {
             </div>
           </div>
           <img
-            src={istanbulCollageAsset.url}
+            src="/media/turkey-istanbul-collage.png"
             alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
             width={1400}
             height={1000}
@@ -94,7 +92,7 @@ function Retreats() {
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
-            src={alacatiCollageAsset.url}
+            src="/media/turkey-alacati-collage.png"
             alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
             width={1400}
             height={1000}
