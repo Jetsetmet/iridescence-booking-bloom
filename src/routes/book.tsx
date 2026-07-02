@@ -4,8 +4,6 @@ import { z } from "zod";
 import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
-import giftCert60 from "@/assets/gift-certificate-60.jpg.asset.json";
-import giftCert90 from "@/assets/gift-certificate-90.jpg.asset.json";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
