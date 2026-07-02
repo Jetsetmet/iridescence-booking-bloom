@@ -206,7 +206,7 @@ function GiftCertificateSection() {
   const [submitting, setSubmitting] = useState(false);
   const [purchased, setPurchased] = useState(false);
 
-  const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
+  const certUrl = form.duration === "90" ? "/media/gift-certificate-90.jpg" : "/media/gift-certificate-60.jpg";
   const certFilename = form.duration === "90"
     ? "Iridescence-Healing-Gift-Voucher-90.jpg"
     : "Iridescence-Healing-Gift-Voucher-60.jpg";
