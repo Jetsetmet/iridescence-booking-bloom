@@ -4,8 +4,6 @@ import { z } from "zod";
 import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
 import { Loader2, Check, Triangle } from "lucide-react";
 import { toast } from "sonner";
-import giftCert60 from "@/assets/gift-certificate-60.jpg.asset.json";
-import giftCert90 from "@/assets/gift-certificate-90.jpg.asset.json";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
@@ -208,7 +206,7 @@ function GiftCertificateSection() {
   const [submitting, setSubmitting] = useState(false);
   const [purchased, setPurchased] = useState(false);
 
-  const certUrl = form.duration === "90" ? giftCert90.url : giftCert60.url;
+  const certUrl = form.duration === "90" ? "/media/gift-certificate-90.jpg" : "/media/gift-certificate-60.jpg";
   const certFilename = form.duration === "90"
     ? "Iridescence-Healing-Gift-Voucher-90.jpg"
     : "Iridescence-Healing-Gift-Voucher-60.jpg";

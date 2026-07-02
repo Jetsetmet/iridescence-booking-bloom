@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
-import uptownVideo from "@/assets/uptown-studio.mp4.asset.json";
 import { ArrowRight, Triangle, ExternalLink } from "lucide-react";
 import { SQUARE_URL } from "@/lib/booking";
 
@@ -136,7 +135,7 @@ function CrystalReiki() {
           </div>
           <div className="mt-5 aspect-[9/16] w-full overflow-hidden rounded-[2rem] border border-border shadow-glow bg-card">
             <video
-              src={uptownVideo.url}
+              src="/media/uptown-studio.mp4"
               controls
               autoPlay
               muted
