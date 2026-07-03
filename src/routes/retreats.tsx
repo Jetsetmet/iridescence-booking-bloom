@@ -9,7 +9,7 @@ export const Route = createFileRoute("/retreats")({
   head: () => ({
     meta: [
       { title: "Transformative Retreats — Turkey & Costa Rica with Iridescence Healing" },
-      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia (April 2026) and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
+      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia (June 2026) and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
       { property: "og:title", content: "Transformative Retreats — Turkey & Costa Rica" },
       { property: "og:description", content: "Resonance & Remembrance in Turkey and a private Oneness Spiritual Emergence retreat in Costa Rica." },
       { property: "og:image", content: heroImg },
@@ -64,7 +64,7 @@ function Retreats() {
               A journey of ancient roots, inner transformation, culture, beauty, and remembrance.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/book" search={{ offering: "Retreat", event: "Resonance & Remembrance — May 19–25, 2026 · Istanbul & Cappadocia" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+              <Link to="/book" search={{ offering: "Retreat", event: "Resonance & Remembrance — June 9–15, 2026 · Istanbul & Cappadocia" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Reserve your spot <ArrowRight className="h-4 w-4" />
               </Link>
               <a href="/resonance-remembrance-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
@@ -189,7 +189,7 @@ function Retreats() {
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
-            { label: "Resonance & Remembrance", duration: "May 19–25, 2026 · Istanbul & Cappadocia", price: "Varies" },
+            { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "Varies" },
             { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Varies" },
             { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
