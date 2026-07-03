@@ -47,7 +47,7 @@ function Retreats() {
           <div>
             <div className="flex items-center gap-2">
               <Triangle className="h-5 w-5 text-primary" />
-              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">May 19–25, 2026 · Turkey</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">June 9–15, 2026 · Turkey</p>
             </div>
             <h2 className="mt-3 font-display text-4xl">Resonance & Remembrance</h2>
             <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Self-Discovery</p>
