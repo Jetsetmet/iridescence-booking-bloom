@@ -189,6 +189,7 @@ function Book() {
         </p>
       </form>
     </section>
+    <WellnessConsultantSection />
     <GiftCertificateSection />
     </>
   );
