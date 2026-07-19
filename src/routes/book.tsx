@@ -189,6 +189,7 @@ function Book() {
         </p>
       </form>
     </section>
+    <WellnessConsultantSection />
     <GiftCertificateSection />
     </>
   );
@@ -311,4 +312,34 @@ function GiftCertificateSection() {
     </section>
   );
 }
+
+function WellnessConsultantSection() {
+  return (
+    <section id="wellness-consultant" className="mx-auto max-w-5xl px-5 sm:px-8 py-16">
+      <div className="rounded-3xl border border-border bg-card shadow-card overflow-hidden p-6 sm:p-8 lg:p-10">
+        <div className="max-w-3xl">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Bespoke experiences</p>
+          <h2 className="mt-2 font-display text-2xl sm:text-3xl text-balance">
+            Book me as your Wellness Experience Consultant
+          </h2>
+          <p className="mt-3 text-sm text-muted-foreground text-pretty">
+            I partner with hotels, retreat centers, event planners, corporate teams and private hosts to design and deliver
+            immersive wellness experiences that feel intentional, elegant and deeply restorative. From curated sound baths
+            and Reiki circles to cacao ceremonies, breathwork journeys and heart-centered group rituals, every experience is
+            tailored to your guests, your space and the energy you want to create. Whether you are planning a retreat,
+            wellness weekend, team gathering, wedding celebration or hotel guest offering, I bring the container, the ceremony
+            and the care that leaves people feeling transformed.
+          </p>
+          <a
+            href="mailto:info@iridescencehealing.com?subject=Wellness%20Experience%20Consultant%20Inquiry"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+          >
+            Email me about your event →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
