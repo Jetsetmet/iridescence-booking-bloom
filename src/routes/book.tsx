@@ -323,12 +323,13 @@ function WellnessConsultantSection() {
             Book me as your Wellness Experience Consultant
           </h2>
           <p className="mt-3 text-sm text-muted-foreground text-pretty">
-            I partner with hotels, retreat centers, event planners, corporate teams and private hosts to design and deliver
+            I partner with hotels, spas, retreat centers, event planners, corporate teams and private hosts to design and deliver
             immersive wellness experiences that feel intentional, elegant and deeply restorative. From curated sound baths
             and Reiki circles to cacao ceremonies, breathwork journeys and heart-centered group rituals, every experience is
-            tailored to your guests, your space and the energy you want to create. Whether you are planning a retreat,
-            wellness weekend, team gathering, wedding celebration or hotel guest offering, I bring the container, the ceremony
-            and the care that leaves people feeling transformed.
+            tailored to your guests, your space and the energy you want to create. Whether you are planning a spa day,
+            retreat, wellness weekend, team gathering, wedding celebration or hotel guest offering, I work with you to create an
+            overall wellness experience that weaves together the right treatments, ceremonies and moments of stillness so every
+            guest leaves feeling transformed.
           </p>
           <a
             href="mailto:info@iridescencehealing.com?subject=Wellness%20Experience%20Consultant%20Inquiry"
