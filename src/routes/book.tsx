@@ -318,7 +318,7 @@ function WellnessConsultantSection() {
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Bespoke experiences</p>
           <h2 className="mt-2 font-display text-2xl sm:text-3xl text-balance">
-            Book me as your Wellness Experience Consultant
+            Book me as your Wellness Experience Designer & Consultant
           </h2>
           <p className="mt-3 text-sm text-muted-foreground text-pretty">
             I partner with hotels, retreats, corporate teams and private hosts to design immersive wellness experiences—from bespoke guest programming to sound baths, Reiki, cacao ceremonies and transformational group experiences—all thoughtfully tailored to your space and your guests. Whether you are planning a spa day, retreat, wellness weekend, team gathering, wedding celebration or hotel guest offering, I work with you to create an overall wellness experience that weaves together the right treatments, ceremonies and moments of stillness so every guest leaves feeling transformed.
