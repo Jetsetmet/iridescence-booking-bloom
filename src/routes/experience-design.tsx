@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle, Sparkles } from "lucide-react";
-import metImg from "@/assets/met-experience-design.jpg.asset.json";
 
 export const Route = createFileRoute("/experience-design")({
   head: () => ({
@@ -62,7 +61,7 @@ function ExperienceDesign() {
           </div>
           <div className="order-1 md:order-2 relative flex justify-center md:justify-start md:sticky md:top-24">
             <img
-              src={metImg.url}
+              src="/media/met-experience-design.jpg"
               alt="Mehtap — wellness experience designer and facilitator for hospitality and retreats"
               width={1080}
               height={1350}
