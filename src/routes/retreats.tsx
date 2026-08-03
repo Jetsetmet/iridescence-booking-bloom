@@ -287,9 +287,9 @@ function Retreats() {
           </div>
           <ul className="mt-7 grid gap-3 sm:grid-cols-2">
             {[
-              { title: "Cacao + Heart Circle", when: "Wednesday, August 5 · 6:30 PM", detail: "Intimate uptown sanctuary · $35" },
+              { title: "Cacao + Heart Circle", when: "Wednesday, September 10 · 6:30 PM", detail: "Intimate uptown sanctuary · $35" },
               { title: "Full Moon Sound Bath", when: "Thursday, August 27 · 6:30 PM", detail: "A hidden New Orleans space · $35" },
-              { title: "Virtual \"Open Your Heart\" Breathwork Journey", when: "Monday, July 20 · 6:30 PM", detail: "Online from anywhere · $25" },
+              { title: "Virtual \"Open Your Heart\" Breathwork Journey", when: "Monday, August 17 · 6:30 PM", detail: "Online from anywhere · $25" },
               { title: "Kundalini Yoga with Met @ Spyre", when: "Every Saturday · 9:30 AM", detail: "Spyre, New Orleans · drop-in" },
             ].map((e) => (
               <li key={e.title} className="rounded-2xl border border-border bg-background/60 px-5 py-4">
