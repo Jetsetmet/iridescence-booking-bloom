@@ -31,21 +31,21 @@ function ExperienceDesign() {
     <>
       {/* HERO */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          <div className="text-center lg:text-left">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div className="text-center lg:text-left pt-2 lg:pt-8">
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">For hotels, retreats & luxury brands</p>
             <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-balance">
               Wellness Experience Design for <span className="italic bg-iridescent bg-clip-text text-transparent">Hospitality & Retreats</span>
             </h1>
           </div>
-          <div className="relative">
+          <div className="relative flex justify-center lg:justify-end">
             <img
               src={metImg.url}
               alt="Mehtap — wellness experience designer and facilitator for hospitality and retreats"
               width={1080}
               height={1350}
               loading="eager"
-              className="relative rounded-[2rem] shadow-card object-cover w-full h-[400px] sm:h-[480px] lg:h-[540px]"
+              className="relative rounded-[2rem] shadow-card object-contain w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] h-auto"
             />
           </div>
         </div>
