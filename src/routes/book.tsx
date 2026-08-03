@@ -6,7 +6,7 @@ import { SQUARE_BOOKING_LINKS, SQUARE_URL } from "@/lib/booking";
 import { Loader2, Check, Triangle, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 
-const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Experience Design", "Retreat", "Not sure yet"];
+const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
 
 const offeringAliases: Record<string, string> = {
   Reiki: "Reiki & Sound",
