@@ -26,28 +26,28 @@ export const Route = createFileRoute("/events")({
 const events = [
   {
     date: "Monday, August 17", time: "6:30 PM",
-    title: "Virtual \"Open Your Heart\" Breathwork Journey",
+    title: "Virtual \"Open Your Heart\" Breathwork Journey", anchor: "breathwork",
     loc: "Online from anywhere · $25",
     blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
     img: heroImg, offering: "Breath & Yoga",
   },
   {
     date: "Wednesday, September 10", time: "6:30 PM",
-    title: "Cacao + Heart Circle",
+    title: "Cacao + Heart Circle", anchor: "cacao",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
     img: cacaoImg, offering: "Cacao Ceremony",
   },
   {
     date: "Thursday, August 27", time: "6:30 PM",
-    title: "Full Moon Sound Bath",
+    title: "Full Moon Sound Bath", anchor: "sound-bath",
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
     img: moonImg, offering: "Reiki & Sound",
   },
   {
     date: "Every Saturday", time: "9:30 AM",
-    title: "Kundalini Yoga with Met @ Spyre",
+    title: "Kundalini Yoga with Met @ Spyre", anchor: "kundalini",
     loc: "Spyre · LGD New Orleans · all levels welcome · ongoing weekly class",
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
