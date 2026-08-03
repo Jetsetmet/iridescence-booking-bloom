@@ -23,6 +23,7 @@ import { Route as QuizRouteImport } from './routes/quiz'
 import { Route as PackagesRouteImport } from './routes/packages'
 import { Route as OfferingsRouteImport } from './routes/offerings'
 import { Route as MeditationRouteImport } from './routes/meditation'
+import { Route as ExperienceDesignRouteImport } from './routes/experience-design'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as CrystalReikiRouteImport } from './routes/crystal-reiki'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -112,6 +113,11 @@ const OfferingsRoute = OfferingsRouteImport.update({
 const MeditationRoute = MeditationRouteImport.update({
   id: '/meditation',
   path: '/meditation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceDesignRoute = ExperienceDesignRouteImport.update({
+  id: '/experience-design',
+  path: '/experience-design',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EventsRoute = EventsRouteImport.update({
@@ -229,6 +235,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/crystal-reiki': typeof CrystalReikiRoute
   '/events': typeof EventsRoute
+  '/experience-design': typeof ExperienceDesignRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
@@ -265,6 +272,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/crystal-reiki': typeof CrystalReikiRoute
   '/events': typeof EventsRoute
+  '/experience-design': typeof ExperienceDesignRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
@@ -302,6 +310,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/crystal-reiki': typeof CrystalReikiRoute
   '/events': typeof EventsRoute
+  '/experience-design': typeof ExperienceDesignRoute
   '/meditation': typeof MeditationRoute
   '/offerings': typeof OfferingsRoute
   '/packages': typeof PackagesRoute
@@ -340,6 +349,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/crystal-reiki'
     | '/events'
+    | '/experience-design'
     | '/meditation'
     | '/offerings'
     | '/packages'
@@ -376,6 +386,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/crystal-reiki'
     | '/events'
+    | '/experience-design'
     | '/meditation'
     | '/offerings'
     | '/packages'
@@ -412,6 +423,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/crystal-reiki'
     | '/events'
+    | '/experience-design'
     | '/meditation'
     | '/offerings'
     | '/packages'
@@ -449,6 +461,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CrystalReikiRoute: typeof CrystalReikiRoute
   EventsRoute: typeof EventsRoute
+  ExperienceDesignRoute: typeof ExperienceDesignRoute
   MeditationRoute: typeof MeditationRoute
   OfferingsRoute: typeof OfferingsRoute
   PackagesRoute: typeof PackagesRoute
@@ -575,6 +588,13 @@ declare module '@tanstack/react-router' {
       path: '/meditation'
       fullPath: '/meditation'
       preLoaderRoute: typeof MeditationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience-design': {
+      id: '/experience-design'
+      path: '/experience-design'
+      fullPath: '/experience-design'
+      preLoaderRoute: typeof ExperienceDesignRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/events': {
@@ -729,6 +749,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CrystalReikiRoute: CrystalReikiRoute,
   EventsRoute: EventsRoute,
+  ExperienceDesignRoute: ExperienceDesignRoute,
   MeditationRoute: MeditationRoute,
   OfferingsRoute: OfferingsRoute,
   PackagesRoute: PackagesRoute,
