@@ -5,7 +5,6 @@ import resonanceImg from "@/assets/resonance-reset.jpeg";
 import reikiImg from "@/assets/reiki-hands.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
-import experienceDesignImg from "@/assets/experience-design.png.asset.json";
 import { ArrowRight, Triangle } from "lucide-react";
 
 import { HeartOpeningFunnel } from "@/components/site/HeartOpeningFunnel";
@@ -71,7 +70,7 @@ const offerings = [
   { icon: Triangle, title: "Crystal Reiki & Sound", desc: "Deep one-on-one energy healing to clear blocks, restore balance, and reconnect you to your inner calm. A truly nurturing experience.", img: reikiImg, to: "/offerings" as const },
   { icon: Triangle, title: "Sound Baths", desc: "Immersive group and private sound journeys with crystal and Tibetan singing bowls — melt into deep relaxation and leave feeling renewed.", img: soundImg, to: "/offerings" as const },
   { icon: Triangle, title: "Cacao Ceremony", desc: "Heart-opening ceremonial cacao circles — perfect for bridal events, bachelorette celebrations, and couples sessions designed to create deeper connection and awareness.", img: cacaoImg, to: "/offerings" as const },
-  { icon: Triangle, title: "Experience Design", desc: "Bespoke wellness experiences for retreats, hotels, spas and special events — crafted to elevate your guests and create lasting transformation.", img: experienceDesignImg.url, to: "/experience-design" as const },
+  { icon: Triangle, title: "Experience Design", desc: "Bespoke wellness experiences for retreats, hotels, spas and special events — crafted to elevate your guests and create lasting transformation.", img: "/media/experience-design.png", to: "/experience-design" as const },
   { icon: Triangle, title: "Kundalini Yoga", desc: "Come and experience Kundalini Yoga with Met. Awaken your energy through breath, movement, and meditation — all levels warmly welcomed.", img: breathYogaHero, to: "/breath-yoga" as const },
 
 ];
