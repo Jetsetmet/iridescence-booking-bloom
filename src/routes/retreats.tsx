@@ -5,6 +5,10 @@ import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
+import breathworkImg from "@/assets/breathwork-event.jpg";
+import moonImg from "@/assets/full-moon.jpg";
+import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
+import { SectionNav } from "@/components/site/SectionNav";
 import { SQUARE_URL } from "@/lib/booking";
 
 export const Route = createFileRoute("/retreats")({
@@ -23,6 +27,17 @@ export const Route = createFileRoute("/retreats")({
 function Retreats() {
   return (
     <>
+      <SectionNav
+        items={[
+          { id: "turkey-resonance", label: "Resonance & Remembrance" },
+          { id: "turkey-alacati", label: "Whispers of the Ancient Shores" },
+          { id: "costa-rica", label: "Costa Rica retreat" },
+          { id: "cacao", label: "Cacao ceremonies" },
+          { id: "sound-baths", label: "Sound baths" },
+          { id: "events", label: "Events in New Orleans" },
+          { id: "pricing", label: "Pricing" },
+        ]}
+      />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Transformative Retreats</p>
@@ -44,7 +59,7 @@ function Retreats() {
       </section>
 
       {/* TURKEY — Resonance & Remembrance */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+      <section id="turkey-resonance" className="mx-auto max-w-6xl px-5 sm:px-8 py-12 scroll-mt-24">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <div>
             <div className="flex items-center gap-2">
@@ -91,7 +106,7 @@ function Retreats() {
       </section>
 
       {/* TURKEY — Whispers of the Ancient Shores */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+      <section id="turkey-alacati" className="mx-auto max-w-6xl px-5 sm:px-8 py-12 scroll-mt-24">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
             src="/media/turkey-alacati-collage.png"
