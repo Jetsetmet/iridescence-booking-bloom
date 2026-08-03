@@ -209,6 +209,14 @@ function Retreats() {
             <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
               Perfect for intimate circles, bridal celebrations, couples, and private groups seeking a meaningful, memorable experience.
             </p>
+            <ul className="mt-5 space-y-2 text-sm text-foreground/75">
+              <li>· <span className="font-medium text-foreground">What happens:</span> opening ritual, ceremonial-grade cacao, guided breath, live sound, journaling and optional sharing.</li>
+              <li>· <span className="font-medium text-foreground">Length:</span> 90 minutes for group circles · up to 2 hours for private ceremonies.</li>
+              <li>· <span className="font-medium text-foreground">Group circles:</span> $35 per person in an intimate uptown New Orleans sanctuary (address shared once your spot is held).</li>
+              <li>· <span className="font-medium text-foreground">Private ceremonies:</span> tailored to your group, venue and occasion — enquire for pricing.</li>
+              <li>· <span className="font-medium text-foreground">Bring:</span> comfortable clothes, a journal and water. Cushions, blankets and cacao are provided.</li>
+              <li>· <span className="font-medium text-foreground">Please note:</span> cacao is a gentle heart medicine, not a psychedelic. Let me know in advance if you are pregnant or taking antidepressants or heart medication.</li>
+            </ul>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/events" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Upcoming cacao circles <ArrowRight className="h-4 w-4" />
@@ -236,6 +244,14 @@ function Retreats() {
             <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
               Offered in group circles under the full moon, as part of retreats, and as private sessions for individuals and groups.
             </p>
+            <ul className="mt-5 space-y-2 text-sm text-foreground/75">
+              <li>· <span className="font-medium text-foreground">Instruments:</span> crystal singing bowls, Tibetan bowls, gong, chimes, ocean drum and voice.</li>
+              <li>· <span className="font-medium text-foreground">Length:</span> 60–75 minutes for group sound baths · 60 or 90 minutes for private sessions.</li>
+              <li>· <span className="font-medium text-foreground">Full moon circles:</span> $35 per person, uptown New Orleans (address shared once your spot is held).</li>
+              <li>· <span className="font-medium text-foreground">Private &amp; group bookings:</span> in-studio or at your home, hotel, spa or event — enquire for pricing.</li>
+              <li>· <span className="font-medium text-foreground">Bring:</span> layers and anything that helps you rest. Mats, bolsters, blankets and eye pillows are provided.</li>
+              <li>· <span className="font-medium text-foreground">Good to know:</span> nothing is required of you — you simply lie down and receive. Suitable for complete beginners.</li>
+            </ul>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/events" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Join a sound bath <ArrowRight className="h-4 w-4" />
@@ -268,6 +284,22 @@ function Retreats() {
             <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
               Not ready for a full retreat? Join a smaller circle in uptown New Orleans. From full moon sound baths and cacao + heart circles to breathwork journeys and Saturday Kundalini, these gatherings are designed to keep you connected, resourced, and held.
             </p>
+          </div>
+          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+            {[
+              { title: "Cacao + Heart Circle", when: "Wednesday, August 5 · 6:30 PM", detail: "Intimate uptown sanctuary · $35" },
+              { title: "Full Moon Sound Bath", when: "Thursday, August 27 · 6:30 PM", detail: "A hidden New Orleans space · $35" },
+              { title: "Virtual \"Open Your Heart\" Breathwork Journey", when: "Monday, July 20 · 6:30 PM", detail: "Online from anywhere · $25" },
+              { title: "Kundalini Yoga with Met @ Spyre", when: "Every Saturday · 9:30 AM", detail: "Spyre, New Orleans · drop-in" },
+            ].map((e) => (
+              <li key={e.title} className="rounded-2xl border border-border bg-background/60 px-5 py-4">
+                <div className="text-sm font-medium">{e.title}</div>
+                <div className="text-xs text-primary/80 mt-1">{e.when}</div>
+                <div className="text-xs text-muted-foreground mt-0.5">{e.detail}</div>
+              </li>
+            ))}
+          </ul>
+          <div className="max-w-3xl">
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/events" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 View all events <ArrowRight className="h-4 w-4" />
