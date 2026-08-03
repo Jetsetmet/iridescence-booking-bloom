@@ -73,7 +73,7 @@ const journeys = [
     title: "Retreats & Events",
     subtitle: "Retreats • Ceremonies • Cacao • Group Experiences",
     to: "/retreats",
-    img: cacaoImg,
+    img: soundImg,
   },
   {
     title: "Experience Design",
