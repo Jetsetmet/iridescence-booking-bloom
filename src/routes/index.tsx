@@ -89,7 +89,7 @@ function Home() {
               A gentle return to your <span className="italic">inner light</span>.
             </h1>
              <p className="mt-6 text-lg text-muted-foreground max-w-xl text-pretty">
-               I'm Mehtap - offering heart led healing through Reiki, Sound and Ceremony in uptown New Orleans and virtually.
+               I'm Mehtap, a Transformational Practitioner, Retreat Facilitator and Wellness Experience Designer, creating immersive wellness experiences through Reiki, Sound and Ceremony for individuals, retreats and hospitality destinations worldwide.
              </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
