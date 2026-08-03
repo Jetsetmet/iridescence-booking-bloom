@@ -2,7 +2,8 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
-import { Loader2, Check, Triangle } from "lucide-react";
+import { SQUARE_BOOKING_LINKS, SQUARE_URL } from "@/lib/booking";
+import { Loader2, Check, Triangle, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
@@ -19,24 +20,6 @@ const offeringAliases: Record<string, string> = {
   "Virtual Session": "Virtual Sessions",
   "Virtual Reiki": "Virtual Sessions",
   "Group Sound": "Group Sound Healing",
-};
-
-// Direct Square booking links per offering. Reiki & Sound and Breath & Yoga
-// share the same service link (same price/duration). Add the rest as Mehtap
-// shares them.
-const SQUARE_BOOKING_LINKS: Record<string, string> = {
-  "Reiki & Sound":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/U3BEZ2AVTRZLZMM74YJ3YH5C",
-  "Breath & Yoga":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/U3BEZ2AVTRZLZMM74YJ3YH5C",
-  "Couples Cacao":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/RQ3LP5ULWAE5RXHPWVR3FJKU",
-  "Virtual Sessions":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/WQFLAUAIP75JEBCFINXJNGRZ",
-  "Packages: 4 Sessions":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/24ESVLDL62I4CW7FD5UVSJQS",
-  "The Resonance Reset":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/5DTU6QUUPQGBO5INBGKDNCGX",
 };
 
 const searchSchema = z.object({
