@@ -186,7 +186,99 @@ function Retreats() {
         <RetreatFitQuiz />
       </section>
 
-      <section className="mx-auto max-w-4xl px-5 sm:px-8 pb-20">
+      {/* CACAO CEREMONIES */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+          <img
+            src={cacaoImg}
+            alt="Ceremonial cacao circle in New Orleans — heart-opening medicine with Met"
+            width={1200}
+            height={800}
+            loading="lazy"
+            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[420px]"
+          />
+          <div>
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Heart medicine</p>
+            </div>
+            <h2 className="mt-3 font-display text-4xl">Ceremonial Cacao</h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              Cacao has long been used as a gentle heart-opening medicine — a way to soften the chest, deepen connection, and listen to what we usually rush past. In ceremony, we gather with intention, sip the sacred brew, and allow breath, sound, and sharing to guide us back to ourselves.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              Perfect for intimate circles, bridal celebrations, couples, and private groups seeking a meaningful, memorable experience.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/events" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Upcoming cacao circles <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/book" search={{ offering: "Cacao Ceremony" }} className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Book a private cacao ceremony
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOUND BATHS */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+          <div className="order-2 lg:order-1">
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Nervous system reset</p>
+            </div>
+            <h2 className="mt-3 font-display text-4xl">Sound Baths</h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              Lie back and let the frequencies of crystal singing bowls, Tibetan bowls, chimes, and gong wash through your body. Sound baths are a powerful yet effortless way to move from stress into stillness, from tension into release.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              Offered in group circles under the full moon, as part of retreats, and as private sessions for individuals and groups.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/events" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Join a sound bath <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/book" search={{ offering: "Reiki & Sound" }} className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Book a private sound bath
+              </Link>
+            </div>
+          </div>
+          <img
+            src={soundImg}
+            alt="Sound bath with crystal singing bowls in New Orleans — deep relaxation and healing"
+            width={1200}
+            height={800}
+            loading="lazy"
+            className="rounded-[2rem] shadow-soft object-cover w-full h-auto md:h-[420px] order-1 lg:order-2"
+          />
+        </div>
+      </section>
+
+      {/* UPCOMING EVENTS */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Local circles</p>
+            </div>
+            <h2 className="mt-3 font-display text-4xl">New Orleans Events & Gatherings</h2>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              Not ready for a full retreat? Join a smaller circle in uptown New Orleans. From full moon sound baths and cacao + heart circles to breathwork journeys and Saturday Kundalini, these gatherings are designed to keep you connected, resourced, and held.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/events" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                View all events <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/book" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Reserve your spot
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Pricing</p>
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
