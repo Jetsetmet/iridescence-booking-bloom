@@ -279,6 +279,8 @@ function Retreats() {
           </div>
         </div>
       </section>
+
+      <section className="mx-auto max-w-4xl px-5 sm:px-8 pb-20">
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Pricing</p>
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
