@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Triangle, Sparkles } from "lucide-react";
+import metImg from "@/assets/met-experience-design.jpg.asset.json";
 
 export const Route = createFileRoute("/experience-design")({
   head: () => ({
