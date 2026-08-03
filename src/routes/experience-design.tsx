@@ -29,16 +29,38 @@ const services = [
 function ExperienceDesign() {
   return (
     <>
-      {/* HERO */}
+      {/* HERO + BLURB */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-          <div className="text-center lg:text-left pt-2 lg:pt-8">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary/80">For hotels, retreats & luxury brands</p>
-            <h1 className="mt-4 font-display text-4xl sm:text-5xl lg:text-6xl text-balance">
-              Wellness Experience Design for <span className="italic bg-iridescent bg-clip-text text-transparent">Hospitality & Retreats</span>
-            </h1>
+          <div className="order-2 lg:order-1">
+            <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-10 shadow-soft">
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">For hotels, retreats & luxury brands</p>
+              <h1 className="mt-4 font-display text-4xl sm:text-5xl text-balance">
+                Wellness Experience Design for <span className="italic bg-iridescent bg-clip-text text-transparent">Hospitality & Retreats</span>
+              </h1>
+              <div className="mt-6 space-y-4 text-foreground/80 leading-relaxed text-pretty">
+                <p>
+                  Beyond private healing and retreat facilitation, I collaborate with hotels, wellness destinations, luxury hospitality brands and retreat spaces to design immersive guest experiences that inspire connection, restoration and lasting wellbeing.
+                </p>
+                <p>
+                  Drawing on over 20 years of experience in energy medicine, sound healing, yoga and transformational facilitation, combined with 15 years in event production and 15 years in the film industry as a professional stunt performer, I bring together creativity, operational thinking and a deep understanding of human experience to create experiences that are both memorable and meaningful.
+                </p>
+                <p>
+                  From signature sound journeys and immersive wellness programming to guest journey design, staff training and experience development, my work helps organisations create distinctive offerings that deepen guest connection while remaining true to their brand.
+                </p>
+                <p>
+                  I have had the privilege of facilitating at internationally recognised retreat centres and wellness destinations, designing experiences that blend sound, breath, movement, ritual and energy medicine into thoughtfully curated journeys that support relaxation, emotional wellbeing and human connection.
+                </p>
+                <p>
+                  Whether developing a bespoke wellness concept, consulting on guest experience, or creating a signature programme for a luxury destination, my intention is always the same:
+                </p>
+                <p className="text-center font-display text-2xl sm:text-3xl text-balance pt-2">
+                  To create experiences that people don't simply remember — they <span className="italic text-primary">feel</span>.
+                </p>
+              </div>
+            </div>
           </div>
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-start lg:sticky lg:top-24">
             <img
               src={metImg.url}
               alt="Mehtap — wellness experience designer and facilitator for hospitality and retreats"
@@ -47,32 +69,6 @@ function ExperienceDesign() {
               loading="eager"
               className="relative rounded-[2rem] shadow-card object-contain w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] h-auto"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* MAIN BLURB */}
-      <section className="mx-auto max-w-5xl px-5 sm:px-8 pb-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
-          <div className="max-w-3xl mx-auto">
-            <p className="text-foreground/80 leading-relaxed text-pretty">
-              Beyond private healing and retreat facilitation, I collaborate with hotels, wellness destinations, luxury hospitality brands and retreat spaces to design immersive guest experiences that inspire connection, restoration and lasting wellbeing.
-            </p>
-            <p className="mt-5 text-foreground/80 leading-relaxed text-pretty">
-              Drawing on over 20 years of experience in energy medicine, sound healing, yoga and transformational facilitation, combined with 15 years in event production and 15 years in the film industry as a professional stunt performer, I bring together creativity, operational thinking and a deep understanding of human experience to create experiences that are both memorable and meaningful.
-            </p>
-            <p className="mt-5 text-foreground/80 leading-relaxed text-pretty">
-              From signature sound journeys and immersive wellness programming to guest journey design, staff training and experience development, my work helps organisations create distinctive offerings that deepen guest connection while remaining true to their brand.
-            </p>
-            <p className="mt-5 text-foreground/80 leading-relaxed text-pretty">
-              I have had the privilege of facilitating at internationally recognised retreat centres and wellness destinations, designing experiences that blend sound, breath, movement, ritual and energy medicine into thoughtfully curated journeys that support relaxation, emotional wellbeing and human connection.
-            </p>
-            <p className="mt-5 text-foreground/80 leading-relaxed text-pretty">
-              Whether developing a bespoke wellness concept, consulting on guest experience, or creating a signature programme for a luxury destination, my intention is always the same:
-            </p>
-            <p className="mt-6 text-center font-display text-2xl sm:text-3xl text-balance">
-              To create experiences that people don't simply remember — they <span className="italic text-primary">feel</span>.
-            </p>
           </div>
         </div>
       </section>
