@@ -31,8 +31,8 @@ function ExperienceDesign() {
     <>
       {/* HERO + BLURB */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-          <div className="order-2 lg:order-1">
+        <div className="grid md:grid-cols-[minmax(0,1fr)_minmax(260px,0.72fr)] gap-8 lg:gap-14 items-start">
+          <div className="order-2 md:order-1">
             <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-10 shadow-soft">
               <p className="text-xs uppercase tracking-[0.2em] text-primary/80">For hotels, retreats & luxury brands</p>
               <h1 className="mt-4 font-display text-4xl sm:text-5xl text-balance">
@@ -60,7 +60,7 @@ function ExperienceDesign() {
               </div>
             </div>
           </div>
-          <div className="order-1 lg:order-2 relative flex justify-center lg:justify-start lg:sticky lg:top-24">
+          <div className="order-1 md:order-2 relative flex justify-center md:justify-start md:sticky md:top-24">
             <img
               src={metImg.url}
               alt="Mehtap — wellness experience designer and facilitator for hospitality and retreats"
