@@ -29,13 +29,10 @@ function Retreats() {
     <>
       <SectionNav
         items={[
-          { id: "turkey-resonance", label: "Resonance & Remembrance" },
-          { id: "turkey-alacati", label: "Whispers of the Ancient Shores" },
-          { id: "costa-rica", label: "Costa Rica retreat" },
-          { id: "cacao", label: "Cacao ceremonies" },
+          { id: "turkey-resonance", label: "Retreats" },
+          { id: "cacao", label: "Cacao" },
           { id: "sound-baths", label: "Sound baths" },
-          { id: "events", label: "Events in New Orleans" },
-          { id: "pricing", label: "Pricing" },
+          { id: "events", label: "Events" },
         ]}
       />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16 grid lg:grid-cols-2 gap-12 items-center">
