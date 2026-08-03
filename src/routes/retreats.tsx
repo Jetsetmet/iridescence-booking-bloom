@@ -163,7 +163,7 @@ function Retreats() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-16">
+      <section id="costa-rica" className="mx-auto max-w-6xl px-5 sm:px-8 py-16 scroll-mt-24">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
           <div className="flex items-center gap-2">
             <Triangle className="h-5 w-5 text-primary" />
@@ -202,7 +202,7 @@ function Retreats() {
       </section>
 
       {/* CACAO CEREMONIES */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+      <section id="cacao" className="mx-auto max-w-6xl px-5 sm:px-8 py-12 scroll-mt-24">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
             src={cacaoImg}
@@ -245,7 +245,7 @@ function Retreats() {
       </section>
 
       {/* SOUND BATHS */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+      <section id="sound-baths" className="mx-auto max-w-6xl px-5 sm:px-8 py-12 scroll-mt-24">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <div className="order-2 lg:order-1">
             <div className="flex items-center gap-2">
@@ -288,7 +288,7 @@ function Retreats() {
       </section>
 
       {/* UPCOMING EVENTS */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+      <section id="events" className="mx-auto max-w-6xl px-5 sm:px-8 py-12 scroll-mt-24">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2">
@@ -300,17 +300,27 @@ function Retreats() {
               Not ready for a full retreat? Join a smaller circle in uptown New Orleans. From full moon sound baths and cacao + heart circles to breathwork journeys and Saturday Kundalini, these gatherings are designed to keep you connected, resourced, and held.
             </p>
           </div>
-          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+          <ul className="mt-7 grid gap-5 sm:grid-cols-2">
             {[
-              { title: "Cacao + Heart Circle", when: "Wednesday, September 10 · 6:30 PM", detail: "Intimate uptown sanctuary · $35" },
-              { title: "Full Moon Sound Bath", when: "Thursday, August 27 · 6:30 PM", detail: "A hidden New Orleans space · $35" },
-              { title: "Virtual \"Open Your Heart\" Breathwork Journey", when: "Monday, August 17 · 6:30 PM", detail: "Online from anywhere · $25" },
-              { title: "Kundalini Yoga with Met @ Spyre", when: "Every Saturday · 9:30 AM", detail: "Spyre, New Orleans · drop-in" },
+              { title: "Cacao + Heart Circle", when: "Wednesday, September 10 · 6:30 PM", detail: "Intimate uptown sanctuary · $35", img: cacaoImg },
+              { title: "Full Moon Sound Bath", when: "Thursday, August 27 · 6:30 PM", detail: "A hidden New Orleans space · $35", img: moonImg },
+              { title: "Virtual \"Open Your Heart\" Breathwork Journey", when: "Monday, August 17 · 6:30 PM", detail: "Online from anywhere · $25", img: breathworkImg },
+              { title: "Kundalini Yoga with Met @ Spyre", when: "Every Saturday · 9:30 AM", detail: "Spyre, New Orleans · drop-in", img: breathYogaHero },
             ].map((e) => (
-              <li key={e.title} className="rounded-2xl border border-border bg-background/60 px-5 py-4">
-                <div className="text-sm font-medium">{e.title}</div>
-                <div className="text-xs text-primary/80 mt-1">{e.when}</div>
-                <div className="text-xs text-muted-foreground mt-0.5">{e.detail}</div>
+              <li key={e.title} className="overflow-hidden rounded-2xl border border-border bg-background/60">
+                <img
+                  src={e.img}
+                  alt={`${e.title} — ${e.detail}`}
+                  width={1200}
+                  height={800}
+                  loading="lazy"
+                  className="h-40 w-full object-cover"
+                />
+                <div className="px-5 py-4">
+                  <div className="text-sm font-medium">{e.title}</div>
+                  <div className="text-xs text-primary/80 mt-1">{e.when}</div>
+                  <div className="text-xs text-muted-foreground mt-0.5">{e.detail}</div>
+                </div>
               </li>
             ))}
           </ul>
@@ -327,7 +337,7 @@ function Retreats() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-5 sm:px-8 pb-20">
+      <section id="pricing" className="mx-auto max-w-4xl px-5 sm:px-8 pb-20 scroll-mt-24">
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Pricing</p>
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
