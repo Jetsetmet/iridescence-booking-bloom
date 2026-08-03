@@ -5,7 +5,6 @@ import heroImg from "@/assets/breathwork-event.jpg";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
 import flyerAsset from "@/assets/hotel-wellness-flyer.jpg.asset.json";
 import { Calendar, MapPin, ArrowRight, Download } from "lucide-react";
-import { SectionNav } from "@/components/site/SectionNav";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -25,29 +24,29 @@ export const Route = createFileRoute("/events")({
 
 const events = [
   {
-    date: "Monday, August 17", time: "6:30 PM",
-    title: "Virtual \"Open Your Heart\" Breathwork Journey", anchor: "breathwork",
+    date: "Monday, July 20", time: "6:30 PM",
+    title: "Virtual \"Open Your Heart\" Breathwork Journey",
     loc: "Online from anywhere · $25",
     blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
     img: heroImg, offering: "Breath & Yoga",
   },
   {
-    date: "Wednesday, September 10", time: "6:30 PM",
-    title: "Cacao + Heart Circle", anchor: "cacao",
+    date: "Wednesday, August 5", time: "6:30 PM",
+    title: "Cacao + Heart Circle",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
     img: cacaoImg, offering: "Cacao Ceremony",
   },
   {
     date: "Thursday, August 27", time: "6:30 PM",
-    title: "Full Moon Sound Bath", anchor: "sound-bath",
+    title: "Full Moon Sound Bath",
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
     img: moonImg, offering: "Reiki & Sound",
   },
   {
     date: "Every Saturday", time: "9:30 AM",
-    title: "Kundalini Yoga with Met @ Spyre", anchor: "kundalini",
+    title: "Kundalini Yoga with Met @ Spyre",
     loc: "Spyre · LGD New Orleans · all levels welcome · ongoing weekly class",
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
@@ -57,18 +56,7 @@ const events = [
 
 function Events() {
   return (
-    <>
-      <SectionNav
-        items={[
-          { id: "upcoming", label: "Upcoming circles" },
-          { id: "breathwork", label: "Breathwork journey" },
-          { id: "cacao", label: "Cacao + heart circle" },
-          { id: "sound-bath", label: "Full moon sound bath" },
-          { id: "kundalini", label: "Kundalini yoga" },
-          { id: "private-events", label: "Private events" },
-        ]}
-      />
-      <section id="upcoming" className="mx-auto max-w-7xl px-5 sm:px-8 py-16 scroll-mt-24">
+    <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16">
       <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Gather</p>
       <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance max-w-3xl">
         Upcoming circles & ceremonies.
@@ -79,7 +67,7 @@ function Events() {
 
       <div className="mt-12 grid md:grid-cols-3 gap-6">
         {events.map((e) => (
-          <article id={e.anchor} key={e.title} className="scroll-mt-24 rounded-3xl overflow-hidden bg-card border border-border shadow-card flex flex-col">
+          <article key={e.title} className="rounded-3xl overflow-hidden bg-card border border-border shadow-card flex flex-col">
             <img src={e.img} alt={`${e.title} — ${e.loc}, healing ceremony in New Orleans`}
               loading="lazy" width={1280} height={960}
               className="h-52 w-full object-cover" />
@@ -104,7 +92,7 @@ function Events() {
         ))}
       </div>
 
-      <div id="private-events" className="scroll-mt-24 mt-20 rounded-3xl border border-border bg-card p-6 sm:p-8 lg:p-10">
+      <div className="mt-20 rounded-3xl border border-border bg-card p-6 sm:p-8 lg:p-10">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private events</p>
           <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
@@ -167,7 +155,6 @@ function Events() {
           </Link>
         </div>
       </div>
-      </section>
-    </>
+    </section>
   );
 }
