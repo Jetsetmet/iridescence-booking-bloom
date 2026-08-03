@@ -2,7 +2,8 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
-import { Loader2, Check, Triangle } from "lucide-react";
+import { SQUARE_BOOKING_LINKS, SQUARE_URL } from "@/lib/booking";
+import { Loader2, Check, Triangle, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 
 const offerings = ["The Resonance Reset", "Reiki & Sound", "Cacao Ceremony", "Breath & Yoga", "Couples Cacao", "Virtual Sessions", "Packages: 4 Sessions", "Group Sound Healing", "Mentoring", "Retreat", "Not sure yet"];
@@ -19,24 +20,6 @@ const offeringAliases: Record<string, string> = {
   "Virtual Session": "Virtual Sessions",
   "Virtual Reiki": "Virtual Sessions",
   "Group Sound": "Group Sound Healing",
-};
-
-// Direct Square booking links per offering. Reiki & Sound and Breath & Yoga
-// share the same service link (same price/duration). Add the rest as Mehtap
-// shares them.
-const SQUARE_BOOKING_LINKS: Record<string, string> = {
-  "Reiki & Sound":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/U3BEZ2AVTRZLZMM74YJ3YH5C",
-  "Breath & Yoga":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/U3BEZ2AVTRZLZMM74YJ3YH5C",
-  "Couples Cacao":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/RQ3LP5ULWAE5RXHPWVR3FJKU",
-  "Virtual Sessions":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/WQFLAUAIP75JEBCFINXJNGRZ",
-  "Packages: 4 Sessions":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/24ESVLDL62I4CW7FD5UVSJQS",
-  "The Resonance Reset":
-    "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/5DTU6QUUPQGBO5INBGKDNCGX",
 };
 
 const searchSchema = z.object({
@@ -69,6 +52,7 @@ function Book() {
     notes: "",
   });
   const [loading, setLoading] = useState(false);
+  const [showForm, setShowForm] = useState(Boolean(search.event));
 
   function update<K extends keyof typeof form>(k: K, v: string) {
     setForm((f) => ({ ...f, [k]: v }));
@@ -96,20 +80,28 @@ function Book() {
 
   return (
     <>
-    <section className="mx-auto max-w-5xl px-5 sm:px-8 py-16 grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
-      <div className="lg:sticky lg:top-24">
+    <section className="mx-auto max-w-3xl px-5 sm:px-8 py-16">
+      <div className="text-center">
         <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Book your session</p>
         <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">
           A soft place to land.
         </h1>
-        <p className="mt-4 text-muted-foreground text-pretty">
-          Most sessions can be scheduled instantly — fill in your details and we'll send you straight to the Square calendar to pick your time. For retreats, events and mentoring, Mehtap will personally confirm within 24 hours.
+        <p className="mt-4 text-muted-foreground text-pretty mx-auto max-w-xl">
+          Booking is instant. Choose your session and pick a time that suits you on the calendar — you'll get confirmation straight away.
         </p>
-        <ul className="mt-8 space-y-3 text-sm text-foreground/80">
+        <a
+          href={SQUARE_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-medium text-primary-foreground shadow-soft"
+        >
+          Book your session now →
+        </a>
+        <ul className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-foreground/80">
           {[
-            "Instant calendar booking for most sessions",
+            "Instant calendar booking",
             "Quiet uptown New Orleans space",
-            "Free 15-min discovery call if unsure",
+            "Free 15-min discovery call",
           ].map((b) => (
             <li key={b} className="flex items-center gap-3">
               <span className="grid h-6 w-6 place-items-center rounded-full bg-accent">
@@ -119,27 +111,31 @@ function Book() {
             </li>
           ))}
         </ul>
-        <div className="mt-10 rounded-2xl border border-border bg-card p-5 text-sm">
-          <Triangle className="h-4 w-4" />
-          <p className="mt-2 font-medium">Not sure which session is right?</p>
-          <a href="/quiz" className="mt-1 inline-block underline underline-offset-4">Take the 60-second quiz →</a>
-        </div>
-        <div className="mt-6 rounded-2xl bg-iridescent p-5 text-sm">
-          <Triangle className="h-4 w-4" />
-          <p className="mt-2 font-medium">Prefer to browse all services?</p>
-          <p className="mt-1 text-foreground/80">See every offering and pick your time directly on Square.</p>
-          <a
-            href="https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services?rwg_token=AFd1xnG8opsnB8WvxAc5Gu92w-ep4LAQyNqcaVA4S02XPh2Ls2RPId34yddJHpbz57l-ZkUuMTWlbLQRyenGhZi2TDn3gUVGPg%3D%3D"
-            target="_blank"
-            rel="noreferrer"
-            className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-medium text-primary-foreground"
-          >
-            Open Square calendar →
-          </a>
-        </div>
       </div>
 
-      <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card shadow-card p-5 sm:p-6 space-y-3">
+      <div className="mt-10 rounded-2xl bg-iridescent p-5 text-sm text-center">
+        <Triangle className="mx-auto h-4 w-4" />
+        <p className="mt-2 font-medium">Not sure which session is right for you?</p>
+        <a href="/quiz" className="mt-1 inline-block underline underline-offset-4">Take the 60-second quiz — it books you straight in →</a>
+      </div>
+
+      <div className="mt-10 rounded-3xl border border-border bg-card shadow-card p-5 sm:p-6">
+        <button
+          type="button"
+          onClick={() => setShowForm((s) => !s)}
+          className="w-full flex items-center justify-between gap-4 text-left"
+        >
+          <span>
+            <span className="block font-medium">Don't see your preferred time, or have a question?</span>
+            <span className="mt-1 block text-sm text-muted-foreground">
+              Send me a note about retreats, events, mentoring or a special request and I'll reply within 24 hours.
+            </span>
+          </span>
+          <ChevronDown className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform ${showForm ? "rotate-180" : ""}`} />
+        </button>
+
+        {showForm && (
+      <form onSubmit={onSubmit} className="mt-5 space-y-3">
         <div className="grid sm:grid-cols-2 gap-3">
           <label className="block">
             <span className="text-xs font-medium text-muted-foreground">Your name</span>
@@ -188,6 +184,8 @@ function Book() {
           By submitting, you agree to be contacted about your session. Your info is never shared.
         </p>
       </form>
+        )}
+      </div>
     </section>
     <WellnessConsultantSection />
     <GiftCertificateSection />

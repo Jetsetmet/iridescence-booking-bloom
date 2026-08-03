@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { submitQuizRequest } from "@/lib/funnel-api";
+import { SQUARE_BOOKING_LINKS } from "@/lib/booking";
 import { ArrowRight, ArrowLeft, Loader2, Triangle } from "lucide-react";
 import { toast } from "sonner";
 
@@ -140,7 +141,13 @@ function Quiz() {
         recommended_offering: recommendation,
       });
       toast.success("Saved — taking you to booking ✨");
-      navigate({ to: "/book", search: { offering: quizToBookingOffering[recommendation] || recommendation } });
+      const offering = quizToBookingOffering[recommendation] || recommendation;
+      const squareUrl = SQUARE_BOOKING_LINKS[offering];
+      if (squareUrl) {
+        window.location.href = squareUrl;
+        return;
+      }
+      navigate({ to: "/book", search: { offering } });
     } catch {
       toast.error("Couldn't save — please try again.");
     } finally {
