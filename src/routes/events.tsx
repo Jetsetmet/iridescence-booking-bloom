@@ -4,7 +4,7 @@ import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/breathwork-event.jpg";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
 import flyerAsset from "@/assets/hotel-wellness-flyer.jpg.asset.json";
-import { Calendar, MapPin, ArrowRight, Download } from "lucide-react";
+import { Calendar, MapPin, ArrowRight, Download, CreditCard } from "lucide-react";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -24,18 +24,20 @@ export const Route = createFileRoute("/events")({
 
 const events = [
   {
-    date: "Monday, July 20", time: "6:30 PM",
+    date: "Monday, August 17", time: "6:30 PM",
     title: "Virtual \"Open Your Heart\" Breathwork Journey",
     loc: "Online from anywhere · $25",
     blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
     img: heroImg, offering: "Breath & Yoga",
+    price: "$25", payUrl: "",
   },
   {
-    date: "Wednesday, August 5", time: "6:30 PM",
+    date: "Wednesday, September 9", time: "6:30 PM",
     title: "Cacao + Heart Circle",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
     img: cacaoImg, offering: "Cacao Ceremony",
+    price: "$35", payUrl: "",
   },
   {
     date: "Thursday, August 27", time: "6:30 PM",
@@ -43,6 +45,7 @@ const events = [
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $35",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
     img: moonImg, offering: "Reiki & Sound",
+    price: "$35", payUrl: "",
   },
   {
     date: "Every Saturday", time: "9:30 AM",
@@ -50,6 +53,7 @@ const events = [
     loc: "Spyre · LGD New Orleans · all levels welcome · ongoing weekly class",
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
+    price: "", payUrl: "",
   },
   // Wednesday Kundalini @ Anarchy Yoga is paused — hidden until further notice.
 ];
@@ -80,13 +84,29 @@ function Events() {
               <p className="mt-2 text-sm text-muted-foreground flex items-center gap-1.5">
                 <MapPin className="h-3.5 w-3.5" /> {e.loc}
               </p>
-              <Link
-                to="/book"
-                search={{ offering: e.offering, event: `${e.title} — ${e.date}` }}
-                className="mt-5 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
-              >
-                Reserve Spot <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
+              <div className="mt-5 flex flex-col gap-2">
+                {e.payUrl ? (
+                  <a
+                    href={e.payUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+                  >
+                    Reserve Spot — Pay {e.price} <CreditCard className="h-3.5 w-3.5" />
+                  </a>
+                ) : null}
+                <Link
+                  to="/book"
+                  search={{ offering: e.offering, event: `${e.title} — ${e.date}` }}
+                  className={
+                    e.payUrl
+                      ? "inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background px-5 py-2.5 text-sm font-medium hover:bg-accent"
+                      : "inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+                  }
+                >
+                  {e.payUrl ? "Ask a question" : "Reserve Spot"} <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
             </div>
           </article>
         ))}
