@@ -2,7 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { submitBookingRequest, submitLeadRequest } from "@/lib/funnel-api";
-import { SQUARE_BOOKING_LINKS, SQUARE_URL, getEventPayLink } from "@/lib/booking";
+import { SQUARE_BOOKING_LINKS, SQUARE_URL } from "@/lib/booking";
 import { Loader2, Check, Triangle, ChevronDown } from "lucide-react";
 import { toast } from "sonner";
 
@@ -63,12 +63,6 @@ function Book() {
     setLoading(true);
     try {
       await submitBookingRequest(form);
-      const eventPayUrl = getEventPayLink(search.event);
-      if (eventPayUrl) {
-        toast.success("Got your details — sending you to secure checkout to hold your spot.");
-        window.location.href = eventPayUrl;
-        return;
-      }
       const squareUrl = SQUARE_BOOKING_LINKS[form.offering];
       if (squareUrl) {
         toast.success("Got your details — sending you to Square to pick a time.");

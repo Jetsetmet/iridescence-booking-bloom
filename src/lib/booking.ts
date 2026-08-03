@@ -17,20 +17,3 @@ export const SQUARE_BOOKING_LINKS: Record<string, string> = {
   "The Resonance Reset":
     "https://book.squareup.com/appointments/375ed9f0-ab7e-432c-a72d-65545ae811a5/location/8Z003QJZ46SBG/services/5DTU6QUUPQGBO5INBGKDNCGX",
 };
-
-// Stripe payment links per event title. Once a link is added here, the booking
-// form sends the guest straight to Stripe to pay after their details are
-// captured (and after the owner notification email is queued).
-export const EVENT_PAY_LINKS: Record<string, string> = {
-  'Virtual "Open Your Heart" Breathwork Journey': "",
-  "Cacao + Heart Circle": "",
-  "Full Moon Sound Bath": "",
-};
-
-export function getEventPayLink(eventValue?: string): string | undefined {
-  if (!eventValue) return undefined;
-  const match = Object.entries(EVENT_PAY_LINKS).find(
-    ([title, url]) => url && eventValue.includes(title),
-  );
-  return match?.[1];
-}
