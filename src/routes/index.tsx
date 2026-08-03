@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-meditation.jpg";
 import reikiImg from "@/assets/reiki-hands.jpg";
-import cacaoImg from "@/assets/cacao-ceremony.jpg";
+import soundImg from "@/assets/sound-bowls.jpg";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
 import { ArrowRight, Triangle } from "lucide-react";
 
@@ -73,7 +73,7 @@ const journeys = [
     title: "Retreats & Events",
     subtitle: "Retreats • Ceremonies • Cacao • Group Experiences",
     to: "/retreats",
-    img: cacaoImg,
+    img: soundImg,
   },
   {
     title: "Experience Design",
