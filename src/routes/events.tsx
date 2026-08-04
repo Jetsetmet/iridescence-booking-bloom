@@ -53,7 +53,7 @@ const events = [
     loc: "Spyre · LGD New Orleans · all levels welcome · ongoing weekly class",
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
-    price: "", payUrl: "",
+    price: "", payUrl: "https://spyrecenter.com/schedule-class/",
   },
   // Wednesday Kundalini @ Anarchy Yoga is paused — hidden until further notice.
 ];
