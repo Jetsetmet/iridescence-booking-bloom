@@ -53,7 +53,7 @@ const events = [
     loc: "Spyre · LGD New Orleans · all levels welcome · ongoing weekly class",
     blurb: "Come experience Kundalini Yoga with Met every Saturday morning. Breath, movement and meditation to awaken your energy and start your weekend grounded.",
     img: breathYogaHero, offering: "Breath & Yoga",
-    price: "", payUrl: "",
+    price: "", payUrl: "https://spyrecenter.com/schedule-class/",
   },
   // Wednesday Kundalini @ Anarchy Yoga is paused — hidden until further notice.
 ];
@@ -92,7 +92,7 @@ function Events() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
                   >
-                    Reserve Spot — Pay {e.price} <CreditCard className="h-3.5 w-3.5" />
+                    {e.price ? `Reserve Spot — Pay ${e.price}` : "Reserve Spot"} <CreditCard className="h-3.5 w-3.5" />
                   </a>
                 ) : null}
                 <Link
