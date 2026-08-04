@@ -114,12 +114,15 @@ function Events() {
 
       <div className="mt-20 rounded-3xl border border-border bg-card p-6 sm:p-8 lg:p-10">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private events</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private events & experience design</p>
           <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
             Book Met for your retreat, hotel, wedding, or special event
           </h2>
           <p className="mt-3 text-foreground/80 text-pretty">
             Create a meaningful, memorable experience for your guests with Met's unique blend of sound healing, Reiki, breathwork, cacao ceremonies, meditation, and yoga.
+          </p>
+          <p className="mt-3 text-foreground/80 text-pretty">
+            Beyond facilitating on the day, Met also works as a Wellness Experience Designer — partnering with hotels, resorts, retreat spaces and luxury hospitality brands to concept, curate and deliver full guest wellness journeys, from programming and ritual design to staff training and on-site delivery.
           </p>
           <p className="mt-4 text-sm text-muted-foreground text-pretty">
             Before moving to the US, Met spent over 15 years in the UK events industry, producing everything from intimate gatherings to large-scale events for thousands of attendees. That background lets her combine professionalism, presence, and exceptional guest care with transformational wellness offerings.
@@ -135,6 +138,7 @@ function Events() {
               <li className="flex items-center gap-2"><span className="text-primary">·</span> Bridal parties & wedding weekends</li>
               <li className="flex items-center gap-2"><span className="text-primary">·</span> Corporate wellness events</li>
               <li className="flex items-center gap-2"><span className="text-primary">·</span> Private & group gatherings</li>
+              <li className="flex items-center gap-2"><span className="text-primary">·</span> Wellness experience design & consulting</li>
             </ul>
           </div>
           <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-background p-5">
@@ -172,6 +176,12 @@ function Events() {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-accent"
           >
             Contact Met <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            to="/experience-design"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-accent"
+          >
+            Explore Experience Design <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>
