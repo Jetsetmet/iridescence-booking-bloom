@@ -112,56 +112,16 @@ function Events() {
         ))}
       </div>
 
-      <div className="mt-20 rounded-3xl border border-border bg-card p-6 sm:p-8 lg:p-10">
+      <div className="mt-20 rounded-3xl border border-border bg-card p-6 sm:p-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Private events & experience design</p>
           <h2 className="mt-2 font-display text-3xl sm:text-4xl text-balance">
             Book Met for your retreat, hotel, wedding, or special event
           </h2>
-          <p className="mt-3 text-foreground/80 text-pretty">
-            Create a meaningful, memorable experience for your guests with Met's unique blend of sound healing, Reiki, breathwork, cacao ceremonies, meditation, and yoga.
-          </p>
-          <p className="mt-3 text-foreground/80 text-pretty">
-            Beyond facilitating on the day, Met also works as a Wellness Experience Designer — partnering with hotels, resorts, retreat spaces and luxury hospitality brands to concept, curate and deliver full guest wellness journeys, from programming and ritual design to staff training and on-site delivery.
-          </p>
-          <p className="mt-4 text-sm text-muted-foreground text-pretty">
-            Before moving to the US, Met spent over 15 years in the UK events industry, producing everything from intimate gatherings to large-scale events for thousands of attendees. That background lets her combine professionalism, presence, and exceptional guest care with transformational wellness offerings.
+          <p className="mt-3 text-sm text-muted-foreground text-pretty">
+            Sound healing, Reiki, breathwork, cacao and wellness experience design for private gatherings and hospitality. Let’s create something memorable together.
           </p>
         </div>
-
-        <div className="mt-8 grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-          <div className="rounded-2xl border border-border bg-iridescent-box p-5 shadow-card">
-            <p className="text-sm font-medium text-primary uppercase tracking-wider">Available for</p>
-            <ul className="mt-3 grid gap-2 text-sm text-foreground/80">
-              <li className="flex items-center gap-2"><span className="text-primary">·</span> Retreats & wellness experiences</li>
-              <li className="flex items-center gap-2"><span className="text-primary">·</span> Hotels & resorts</li>
-              <li className="flex items-center gap-2"><span className="text-primary">·</span> Bridal parties & wedding weekends</li>
-              <li className="flex items-center gap-2"><span className="text-primary">·</span> Corporate wellness events</li>
-              <li className="flex items-center gap-2"><span className="text-primary">·</span> Private & group gatherings</li>
-              <li className="flex items-center gap-2"><span className="text-primary">·</span> Wellness experience design & consulting</li>
-            </ul>
-          </div>
-          <div className="flex flex-col items-center justify-center rounded-2xl border border-border bg-background p-5">
-            <a
-              href={flyerAsset.url}
-              download="iridescence-hotel-wellness-flyer.jpg"
-              className="group block w-full max-w-[40%] rounded-xl overflow-hidden border border-border shadow-card bg-background"
-            >
-              <img
-                src={flyerAsset.url}
-                alt="Exclusive wellness experiences for hotel events and guests — downloadable flyer"
-                loading="lazy"
-                width={1280}
-                height={1792}
-                className="w-full h-auto object-cover"
-              />
-            </a>
-          </div>
-        </div>
-
-        <p className="mt-6 text-center text-sm text-muted-foreground text-pretty max-w-2xl mx-auto">
-          Each experience is thoughtfully tailored to your guests, creating moments of connection, transformation, and lasting impact.
-        </p>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
           <a
