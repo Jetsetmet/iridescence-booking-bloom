@@ -4,6 +4,7 @@ import { template as quizNotification } from './quiz-notification'
 import { template as leadMagnet } from './lead-magnet'
 import { template as leadNotification } from './lead-notification'
 import { template as weeklyReport } from './weekly-report'
+import { template as stripePaymentNotification } from './stripe-payment-notification'
 
 export interface TemplateEntry {
   component: ComponentType<any>
@@ -28,4 +29,5 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'lead-magnet': leadMagnet,
   'lead-notification': leadNotification,
   'weekly-report': weeklyReport,
+  'stripe-payment-notification': stripePaymentNotification,
 }

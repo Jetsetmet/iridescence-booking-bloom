@@ -39,6 +39,7 @@ import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/em
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
+import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe/webhook'
 import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
 import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
 import { Route as ApiPublicFormsQuizRouteImport } from './routes/api/public/forms/quiz'
@@ -198,6 +199,11 @@ const LovableEmailQueueProcessRoute =
     path: '/lovable/email/queue/process',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
+  id: '/api/public/stripe/webhook',
+  path: '/api/public/stripe/webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicHooksWeeklyReportRoute =
   ApiPublicHooksWeeklyReportRouteImport.update({
     id: '/api/public/hooks/weekly-report',
@@ -259,6 +265,7 @@ export interface FileRoutesByFullPath {
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
+  '/api/public/stripe/webhook': typeof ApiPublicStripeWebhookRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -296,6 +303,7 @@ export interface FileRoutesByTo {
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
+  '/api/public/stripe/webhook': typeof ApiPublicStripeWebhookRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -334,6 +342,7 @@ export interface FileRoutesById {
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
+  '/api/public/stripe/webhook': typeof ApiPublicStripeWebhookRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
   '/lovable/email/transactional/preview': typeof LovableEmailTransactionalPreviewRoute
   '/lovable/email/transactional/send': typeof LovableEmailTransactionalSendRoute
@@ -373,6 +382,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/weekly-report'
+    | '/api/public/stripe/webhook'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -410,6 +420,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/weekly-report'
+    | '/api/public/stripe/webhook'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -447,6 +458,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/weekly-report'
+    | '/api/public/stripe/webhook'
     | '/lovable/email/queue/process'
     | '/lovable/email/transactional/preview'
     | '/lovable/email/transactional/send'
@@ -485,6 +497,7 @@ export interface RootRouteChildren {
   ApiPublicFormsQuizRoute: typeof ApiPublicFormsQuizRoute
   ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
   ApiPublicHooksWeeklyReportRoute: typeof ApiPublicHooksWeeklyReportRoute
+  ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
   LovableEmailTransactionalPreviewRoute: typeof LovableEmailTransactionalPreviewRoute
   LovableEmailTransactionalSendRoute: typeof LovableEmailTransactionalSendRoute
@@ -702,6 +715,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LovableEmailQueueProcessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/stripe/webhook': {
+      id: '/api/public/stripe/webhook'
+      path: '/api/public/stripe/webhook'
+      fullPath: '/api/public/stripe/webhook'
+      preLoaderRoute: typeof ApiPublicStripeWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/weekly-report': {
       id: '/api/public/hooks/weekly-report'
       path: '/api/public/hooks/weekly-report'
@@ -773,6 +793,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicFormsQuizRoute: ApiPublicFormsQuizRoute,
   ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
   ApiPublicHooksWeeklyReportRoute: ApiPublicHooksWeeklyReportRoute,
+  ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
   LovableEmailTransactionalPreviewRoute: LovableEmailTransactionalPreviewRoute,
   LovableEmailTransactionalSendRoute: LovableEmailTransactionalSendRoute,
@@ -780,13 +801,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
