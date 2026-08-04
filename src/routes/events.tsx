@@ -119,7 +119,13 @@ function Events() {
             Book Met for your retreat, hotel, wedding, or special event
           </h2>
           <p className="mt-3 text-foreground/80 text-pretty">
-            From retreats and weddings to hotels and corporate gatherings, Met creates immersive wellness experiences tailored to your guests. For full hospitality consulting and programming details, visit the <Link to="/experience-design" className="text-primary underline underline-offset-4">Experience Design page</Link>.
+            Create a meaningful, memorable experience for your guests with Met's unique blend of sound healing, Reiki, breathwork, cacao ceremonies, meditation, and yoga.
+          </p>
+          <p className="mt-3 text-foreground/80 text-pretty">
+            Beyond facilitating on the day, Met also works as a Wellness Experience Designer — partnering with hotels, resorts, retreat spaces and luxury hospitality brands to concept, curate and deliver full guest wellness journeys, from programming and ritual design to staff training and on-site delivery.
+          </p>
+          <p className="mt-4 text-sm text-muted-foreground text-pretty">
+            Before moving to the US, Met spent over 15 years in the UK events industry, producing everything from intimate gatherings to large-scale events for thousands of attendees. That background lets her combine professionalism, presence, and exceptional guest care with transformational wellness offerings.
           </p>
         </div>
 
