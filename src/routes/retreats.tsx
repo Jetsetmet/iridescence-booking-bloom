@@ -152,28 +152,39 @@ function Retreats() {
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Included</p>
             <h3 className="mt-2 font-display text-3xl">Your Experience Includes</h3>
 
-            <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
-              <li>7 nights boutique 4 & 5-star accommodation</li>
+            <h4 className="mt-8 font-display text-2xl">İstanbul</h4>
+            <ul className="mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
+              <li>3 nights boutique accommodation in İstanbul</li>
               <li>Daily breakfast</li>
               <li>Selected lunches & dinners</li>
-              <li>Internal flight from Istanbul to Cappadocia</li>
               <li>Private airport transfers & luxury ground transportation</li>
-              <li>Yoga, breathwork & meditation</li>
-              <li>Immersive sound healing journey</li>
-              <li>Ceremonial cacao experience</li>
-              <li>Gentle somatic movement & nervous system practices</li>
-              <li>Traditional Turkish Hammam experience</li>
-              <li>Whirling Dervish Ceremony</li>
-              <li>Bosphorus Sunset Cruise</li>
               <li>Guided visits to the Blue Mosque, Hagia Sophia & Grand Bazaar</li>
+              <li>Bosphorus Sunset Cruise</li>
+              <li>Traditional Turkish Hammam experience</li>
+              <li>Turkish coffee & fortune reading experience</li>
+              <li>Welcome circle & intention setting</li>
+            </ul>
+
+            <h4 className="mt-8 font-display text-2xl">Cappadocia</h4>
+            <ul className="mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
+              <li>4 nights boutique accommodation in Cappadocia</li>
+              <li>Internal flight from İstanbul to Cappadocia</li>
               <li>Göreme Open-Air Museum</li>
               <li>Exploration of an ancient underground city</li>
               <li>Visit to a local artisan village</li>
-              <li>Turkish coffee & fortune reading experience</li>
               <li>Guided valley walk in Cappadocia</li>
-              <li>Access to the wellness facilities at both boutique hotels</li>
-              <li>Welcome & closing ceremonies</li>
+              <li>Whirling Dervish Ceremony</li>
               <li>Plenty of free time to relax, explore and soak in the beauty of Türkiye</li>
+            </ul>
+
+            <h4 className="mt-8 font-display text-2xl">Healing & Wellness Practices</h4>
+            <ul className="mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
+              <li>Daily yoga, breathwork & meditation</li>
+              <li>Immersive sound healing journey</li>
+              <li>Ceremonial cacao experience</li>
+              <li>Gentle somatic movement & nervous system practices</li>
+              <li>Access to wellness facilities at both boutique hotels</li>
+              <li>Welcome & closing ceremonies</li>
             </ul>
 
             <h4 className="mt-8 font-display text-2xl">Optional Experiences</h4>
