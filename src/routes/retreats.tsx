@@ -63,6 +63,9 @@ function Retreats() {
             <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
               A journey of ancient roots, inner transformation, culture, beauty, and remembrance.
             </p>
+            <ul className="mt-5 space-y-1.5 text-sm text-foreground/80 list-disc pl-5">
+              <li>Luxury hotel with wellness spa, including pool and Turkish hammam in Cappadocia</li>
+            </ul>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/book" search={{ offering: "Retreat", event: "Resonance & Remembrance — June 9–15, 2026 · Istanbul & Cappadocia" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Reserve your spot <ArrowRight className="h-4 w-4" />
