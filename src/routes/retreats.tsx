@@ -147,27 +147,23 @@ function Retreats() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Resonance & Remembrance — What's Included */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Included</p>
-          <h2 className="mt-2 font-display text-4xl">Resonance & Remembrance</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Everything included in your journey</p>
+          <div className="mt-12 border-t border-border pt-10">
+            <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Included</p>
+            <h3 className="mt-2 font-display text-3xl">Everything included in your journey</h3>
 
-          <ul className="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
-            <li>Yoga, breathwork & meditation</li>
-            <li>Sound healing journey</li>
-            <li>Gentle movement & somatic practices</li>
-            <li>Cacao ceremony</li>
-            <li>Boutique 4 and 5 star accommodation</li>
-            <li>Wellness centre in both hotels inc hammam</li>
-            <li>Daily breakfast & selected meals</li>
-            <li>Private transportation</li>
-            <li>Internal flight (İstanbul–Cappadocia)</li>
-          </ul>
+            <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
+              <li>Yoga, breathwork & meditation</li>
+              <li>Sound healing journey</li>
+              <li>Gentle movement & somatic practices</li>
+              <li>Cacao ceremony</li>
+              <li>Boutique 4 and 5 star accommodation</li>
+              <li>Wellness centre in both hotels inc hammam</li>
+              <li>Daily breakfast & selected meals</li>
+              <li>Private transportation</li>
+              <li>Internal flight (İstanbul–Cappadocia)</li>
+            </ul>
+          </div>
         </div>
       </section>
 
