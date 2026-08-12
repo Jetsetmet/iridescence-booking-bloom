@@ -50,7 +50,7 @@ function Retreats() {
               <p className="text-xs uppercase tracking-[0.2em] text-primary/80">June 9–15, 2026 · Turkey</p>
             </div>
             <h2 className="mt-3 font-display text-4xl">Resonance & Remembrance</h2>
-            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Self-Discovery</p>
+            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Self-Discovery · $4,200 per person</p>
             <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
               Join us on a journey through the vibrant energy of Istanbul and the ancient landscapes of Cappadocia as we slow down, regulate the nervous system, release old stories, and reconnect with our inner truth.
             </p>
@@ -189,7 +189,7 @@ function Retreats() {
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
-            { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "Varies" },
+            { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "$4,200 per person" },
             { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Varies" },
             { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
