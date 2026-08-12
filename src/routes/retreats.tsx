@@ -88,6 +88,65 @@ function Retreats() {
         </div>
       </section>
 
+      {/* Resonance & Remembrance — Itinerary */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Itinerary</p>
+          <h2 className="mt-2 font-display text-4xl">Resonance & Remembrance</h2>
+          <p className="mt-2 text-sm text-muted-foreground">A 7-Day Journey Through Istanbul & Cappadocia · Subject to change</p>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-8">
+            {[
+              {
+                day: "Day 1",
+                title: "Arrival in İstanbul",
+                items: ["Arrival & boutique hotel check-in", "Welcome circle & intention setting", "Sunset Bosphorus Cruise", "Traditional Turkish welcome dinner"],
+              },
+              {
+                day: "Day 2",
+                title: "The Heart of İstanbul",
+                items: ["Morning yoga, breathwork & meditation", "Explore the Blue Mosque & Hagia Sophia", "Wander the Grand Bazaar", "Traditional Turkish coffee experience", "Group dinner"],
+              },
+              {
+                day: "Day 3",
+                title: "Ancient Rituals",
+                items: ["Morning yoga & breathwork", "Traditional Turkish Hammam experience", "Visit the Spice Bazaar", "Flight to Cappadocia", "Evening at leisure"],
+              },
+              {
+                day: "Day 4",
+                title: "Landscapes of Wonder",
+                items: ["Optional sunrise hot air balloon flight", "Breathwork amongst the valleys", "Explore Göreme Open-Air Museum", "Free afternoon to relax or explore", "Whirling Dervish Ceremony then dinner"],
+              },
+              {
+                day: "Day 5",
+                title: "Culture, Connection & Ceremony",
+                items: ["Morning movement practice", "Heart-opening cacao ceremony", "Explore an ancient underground city", "Visit a local artisan village", "Sunset sound healing journey"],
+              },
+              {
+                day: "Day 6",
+                title: "Integration & Celebration",
+                items: ["Sunrise valley walk", "Free time to rest or explore", "Closing ceremony", "Farewell celebration dinner"],
+              },
+              {
+                day: "Day 7",
+                title: "Farewell",
+                items: ["Final meditation & reflection", "Breakfast", "Airport transfers"],
+              },
+            ].map((d, i) => (
+              <div key={i} className="rounded-2xl border border-border bg-background/60 p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-primary/80">{d.day}</p>
+                <h3 className="mt-1 font-display text-2xl">{d.title}</h3>
+                <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc pl-5">
+                  {d.items.map((item, j) => (
+                    <li key={j}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TURKEY — Whispers of the Ancient Shores */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
