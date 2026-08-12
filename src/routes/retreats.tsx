@@ -150,18 +150,37 @@ function Retreats() {
 
           <div className="mt-12 border-t border-border pt-10">
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Included</p>
-            <h3 className="mt-2 font-display text-3xl">Everything included in your journey</h3>
+            <h3 className="mt-2 font-display text-3xl">Your Experience Includes</h3>
 
             <ul className="mt-6 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
+              <li>7 nights boutique 4 & 5-star accommodation</li>
+              <li>Daily breakfast</li>
+              <li>Selected lunches & dinners</li>
+              <li>Internal flight from Istanbul to Cappadocia</li>
+              <li>Private airport transfers & luxury ground transportation</li>
               <li>Yoga, breathwork & meditation</li>
-              <li>Sound healing journey</li>
-              <li>Gentle movement & somatic practices</li>
-              <li>Cacao ceremony</li>
-              <li>Boutique 4 and 5 star accommodation</li>
-              <li>Wellness centre in both hotels inc hammam</li>
-              <li>Daily breakfast & selected meals</li>
-              <li>Private transportation</li>
-              <li>Internal flight (İstanbul–Cappadocia)</li>
+              <li>Immersive sound healing journey</li>
+              <li>Ceremonial cacao experience</li>
+              <li>Gentle somatic movement & nervous system practices</li>
+              <li>Traditional Turkish Hammam experience</li>
+              <li>Whirling Dervish Ceremony</li>
+              <li>Bosphorus Sunset Cruise</li>
+              <li>Guided visits to the Blue Mosque, Hagia Sophia & Grand Bazaar</li>
+              <li>Göreme Open-Air Museum</li>
+              <li>Exploration of an ancient underground city</li>
+              <li>Visit to a local artisan village</li>
+              <li>Turkish coffee & fortune reading experience</li>
+              <li>Guided valley walk in Cappadocia</li>
+              <li>Access to the wellness facilities at both boutique hotels</li>
+              <li>Welcome & closing ceremonies</li>
+              <li>Plenty of free time to relax, explore and soak in the beauty of Türkiye</li>
+            </ul>
+
+            <h4 className="mt-8 font-display text-2xl">Optional Experiences</h4>
+            <ul className="mt-4 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-foreground/85 list-disc pl-5">
+              <li>Sunrise hot air balloon flight</li>
+              <li>Additional spa treatments & massages</li>
+              <li>Horseback riding through the valleys</li>
             </ul>
           </div>
         </div>
