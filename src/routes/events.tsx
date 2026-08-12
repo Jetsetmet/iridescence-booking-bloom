@@ -3,8 +3,7 @@ import moonImg from "@/assets/full-moon.jpg";
 import cacaoImg from "@/assets/cacao-ceremony.jpg";
 import heroImg from "@/assets/breathwork-event.jpg";
 import breathYogaHero from "@/assets/breath-yoga-hero.jpg";
-import flyerAsset from "@/assets/hotel-wellness-flyer.jpg.asset.json";
-import { Calendar, MapPin, ArrowRight, Download, CreditCard } from "lucide-react";
+import { Calendar, MapPin, ArrowRight, CreditCard } from "lucide-react";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -124,13 +123,6 @@ function Events() {
         </div>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href={flyerAsset.url}
-            download="iridescence-hotel-wellness-flyer.jpg"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
-          >
-            Download flyer <Download className="h-4 w-4" />
-          </a>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3 text-sm font-medium hover:bg-accent"
