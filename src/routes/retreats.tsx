@@ -50,10 +50,7 @@ function Retreats() {
               <p className="text-xs uppercase tracking-[0.2em] text-primary/80">June 9–15, 2026 · Turkey</p>
             </div>
             <h2 className="mt-3 font-display text-4xl">Resonance & Remembrance</h2>
-            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Self-Discovery</p>
-            <p className="mt-3 inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-lg font-display text-primary">
-              $4,200 per person
-            </p>
+            <p className="mt-2 text-sm text-muted-foreground">An Istanbul & Cappadocia Journey of Self-Discovery · $4,200 per person</p>
             <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
               Join us on a journey through the vibrant energy of Istanbul and the ancient landscapes of Cappadocia as we slow down, regulate the nervous system, release old stories, and reconnect with our inner truth.
             </p>
