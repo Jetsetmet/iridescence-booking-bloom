@@ -6,6 +6,7 @@ import { SQUARE_URL } from "@/lib/booking";
 import tribeLogo from "@/assets/tribe-logo.png.asset.json";
 import synergyLogo from "@/assets/synergy-logo.png.asset.json";
 import spyreLogo from "@/assets/spyre-logo.png.asset.json";
+import nolayogafestLogo from "@/assets/nolayogafest-logo.png.asset.json";
 
 export const Route = createFileRoute("/crystal-reiki")({
   head: () => ({
