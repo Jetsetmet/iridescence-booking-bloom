@@ -49,9 +49,6 @@ const Email = () => (
             Together we'll wander bustling bazaars, sip traditional Turkish coffee, experience the warmth of a traditional hammam, witness the mesmerising Whirling Dervish Ceremony, watch the sunrise over Cappadocia's incredible valleys, and create space to reconnect with ourselves through breathwork, sound healing, cacao, movement and meaningful connection.
           </Text>
           <Text style={bodyText}>
-            We'll be staying at the beautiful Sacred Mansion, a boutique luxury hotel nestled in the heart of Cappadocia, where ancient architecture meets modern comfort and every detail invites you to slow down, breathe deeply and simply be.
-          </Text>
-          <Text style={bodyText}>
             This retreat is an invitation to experience the beauty of another culture while remembering something beautiful within yourself.
           </Text>
 
