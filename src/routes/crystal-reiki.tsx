@@ -198,7 +198,7 @@ function CrystalReikiPage() {
             <Triangle className="h-5 w-5 text-primary" />
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Featured at</p>
           </div>
-          <h2 className="mt-3 font-display text-3xl sm:text-4xl">Retreat spaces Met has held sound baths at</h2>
+          <h2 className="mt-3 font-display text-3xl sm:text-4xl">Retreats and Venues Met has held space at</h2>
           <p className="mt-3 text-foreground/80 text-pretty max-w-2xl">
             Public and private retreats across Europe, the US and Costa Rica. Click any space to visit their site.
           </p>
