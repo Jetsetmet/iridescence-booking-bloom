@@ -193,7 +193,8 @@ function Book() {
   );
 }
 
-const STRIPE_GIFT_LINK = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
+const STRIPE_GIFT_LINK_60 = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
+const STRIPE_GIFT_LINK_90 = "https://buy.stripe.com/00wfZi94i7Tqdrw1rp1Jm0n";
 
 function GiftCertificateSection() {
   const [form, setForm] = useState({
