@@ -67,9 +67,10 @@ function Retreats() {
               <li>Luxury hotel with wellness spa, including pool and Turkish hammam in Cappadocia</li>
             </ul>
             <div className="mt-7 flex flex-wrap gap-3">
-              <a href="mailto:info@iridescencehealing.com?subject=Reserving my spot — Resonance & Remembrance retreat" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+              <a href="https://buy.stripe.com/00w3cwdky7Tq1IOc631Jm0m" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
                 Reserve your spot <ArrowRight className="h-4 w-4" />
               </a>
+              <p className="text-xs text-muted-foreground mt-2">Full cancellation available up to 3 months before the retreat date.</p>
               <a href="/resonance-remembrance-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
                 Download poster (PDF) <ArrowRight className="h-4 w-4" />
               </a>
