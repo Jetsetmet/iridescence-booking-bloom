@@ -185,3 +185,33 @@ export async function createCampaignAndSchedule(opts: {
 
   return { campaignId, scheduledFor: opts.scheduleTime };
 }
+
+/**
+ * Replace the HTML of an already-scheduled campaign, keeping its send time.
+ * Mailchimp requires the campaign to be unscheduled before content edits.
+ */
+export async function updateScheduledCampaignContent(opts: {
+  campaignId: string;
+  html: string;
+  scheduleTime: string;
+}): Promise<{ campaignId: string; scheduledFor: string }> {
+  const apiKey = process.env.MAILCHIMP_API_KEY;
+  const server = process.env.MAILCHIMP_SERVER_PREFIX;
+  if (!apiKey || !server) throw new Error("Missing Mailchimp environment variables");
+
+  await mc(server, apiKey, `/campaigns/${opts.campaignId}/actions/unschedule`, {
+    method: "POST",
+  });
+
+  await mc(server, apiKey, `/campaigns/${opts.campaignId}/content`, {
+    method: "PUT",
+    body: JSON.stringify({ html: opts.html }),
+  });
+
+  await mc(server, apiKey, `/campaigns/${opts.campaignId}/actions/schedule`, {
+    method: "POST",
+    body: JSON.stringify({ schedule_time: opts.scheduleTime }),
+  });
+
+  return { campaignId: opts.campaignId, scheduledFor: opts.scheduleTime };
+}

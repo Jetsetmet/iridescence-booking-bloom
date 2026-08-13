@@ -72,11 +72,15 @@ const Email = () => (
             <Text key={i} style={listItem}>✨ {item}</Text>
           ))}
 
-          <Text style={highlight}>Only 10 places available.</Text>
+          <Text style={highlight}>Only 10 places available · $4,200 per person</Text>
 
-          <Button href="https://www.iridescencehealing.com/retreats" style={cta}>
-            Reserve your place
+          <Button href="mailto:info@iridescencehealing.com?subject=Reserving%20my%20spot%20%E2%80%94%20Resonance%20%26%20Remembrance%20Retreat" style={cta}>
+            Reserve your spot
           </Button>
+          <Button href="https://buy.stripe.com/00w3cwdky7Tq1IOc631Jm0m" style={cta}>
+            Confirm & pay
+          </Button>
+          <Text style={eventMeta}>Full cancellation available up to 3 months before the retreat date.</Text>
         </Section>
 
         <Heading as="h2" style={h2}>🌙 Upcoming Events</Heading>

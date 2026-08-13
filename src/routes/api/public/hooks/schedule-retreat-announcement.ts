@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router';
 import { render } from '@react-email/components';
 import * as React from 'react';
 import { TEMPLATES } from '@/lib/email-templates/registry';
-import { createCampaignAndSchedule } from '@/lib/mailchimp.server';
+import { createCampaignAndSchedule, updateScheduledCampaignContent } from '@/lib/mailchimp.server';
 
 // One-time hook: schedules the retreat announcement newsletter to the Mailchimp
 // audience. Protected by the Supabase anon key.
@@ -43,6 +43,19 @@ export const Route = createFileRoute('/api/public/hooks/schedule-retreat-announc
           const html = await render(element);
 
           const scheduleTime = getTomorrow9amChicago();
+
+          const url = new URL(request.url);
+          const existingId = url.searchParams.get('campaignId');
+          if (existingId) {
+            const updated = await updateScheduledCampaignContent({
+              campaignId: existingId,
+              html,
+              scheduleTime,
+            });
+            return new Response(JSON.stringify({ success: true, ...updated }), {
+              headers: { 'Content-Type': 'application/json' },
+            });
+          }
 
           const { campaignId, scheduledFor } = await createCampaignAndSchedule({
             subjectLine: 'A Journey Awaits...',
