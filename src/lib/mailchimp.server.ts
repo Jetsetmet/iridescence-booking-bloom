@@ -215,3 +215,18 @@ export async function updateScheduledCampaignContent(opts: {
 
   return { campaignId: opts.campaignId, scheduledFor: opts.scheduleTime };
 }
+
+/** Send a Mailchimp test email of a campaign to specific addresses. */
+export async function sendCampaignTest(opts: {
+  campaignId: string;
+  emails: string[];
+}): Promise<void> {
+  const apiKey = process.env.MAILCHIMP_API_KEY;
+  const server = process.env.MAILCHIMP_SERVER_PREFIX;
+  if (!apiKey || !server) throw new Error("Missing Mailchimp environment variables");
+
+  await mc(server, apiKey, `/campaigns/${opts.campaignId}/actions/test`, {
+    method: "POST",
+    body: JSON.stringify({ test_emails: opts.emails, send_type: "html" }),
+  });
+}
