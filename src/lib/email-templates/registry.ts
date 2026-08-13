@@ -31,4 +31,5 @@ export const TEMPLATES: Record<string, TemplateEntry> = {
   'lead-notification': leadNotification,
   'weekly-report': weeklyReport,
   'stripe-payment-notification': stripePaymentNotification,
+  'retreat-announcement': retreatAnnouncement,
 }
