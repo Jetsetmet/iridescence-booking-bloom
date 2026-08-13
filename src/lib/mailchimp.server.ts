@@ -107,12 +107,12 @@ async function mc(prefix: string, key: string, path: string, init?: RequestInit)
   return res.status === 204 ? null : await res.json();
 }
 
-export async function createCampaignAndSend(opts: {
+async function createCampaign(opts: {
   subjectLine: string;
   previewText?: string;
   html: string;
   title?: string;
-}): Promise<{ campaignId: string }> {
+}): Promise<{ campaignId: string; server: string; apiKey: string }> {
   const apiKey = process.env.MAILCHIMP_API_KEY;
   const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
   const server = process.env.MAILCHIMP_SERVER_PREFIX;
@@ -151,9 +151,37 @@ export async function createCampaignAndSend(opts: {
     body: JSON.stringify({ html: opts.html }),
   });
 
+  return { campaignId, server, apiKey };
+}
+
+export async function createCampaignAndSend(opts: {
+  subjectLine: string;
+  previewText?: string;
+  html: string;
+  title?: string;
+}): Promise<{ campaignId: string }> {
+  const { campaignId, server, apiKey } = await createCampaign(opts);
+
   await mc(server, apiKey, `/campaigns/${campaignId}/actions/send`, {
     method: "POST",
   });
 
   return { campaignId };
+}
+
+export async function createCampaignAndSchedule(opts: {
+  subjectLine: string;
+  previewText?: string;
+  html: string;
+  title?: string;
+  scheduleTime: string; // ISO 8601, e.g. "2026-08-13T14:00:00Z"
+}): Promise<{ campaignId: string; scheduledFor: string }> {
+  const { campaignId, server, apiKey } = await createCampaign(opts);
+
+  await mc(server, apiKey, `/campaigns/${campaignId}/actions/schedule`, {
+    method: "POST",
+    body: JSON.stringify({ schedule_time: opts.scheduleTime }),
+  });
+
+  return { campaignId, scheduledFor: opts.scheduleTime };
 }

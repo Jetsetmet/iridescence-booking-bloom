@@ -41,6 +41,7 @@ import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/l
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe/webhook'
 import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
+import { Route as ApiPublicHooksScheduleRetreatAnnouncementRouteImport } from './routes/api/public/hooks/schedule-retreat-announcement'
 import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
 import { Route as ApiPublicFormsQuizRouteImport } from './routes/api/public/forms/quiz'
 import { Route as ApiPublicFormsLeadRouteImport } from './routes/api/public/forms/lead'
@@ -210,6 +211,12 @@ const ApiPublicHooksWeeklyReportRoute =
     path: '/api/public/hooks/weekly-report',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksScheduleRetreatAnnouncementRoute =
+  ApiPublicHooksScheduleRetreatAnnouncementRouteImport.update({
+    id: '/api/public/hooks/schedule-retreat-announcement',
+    path: '/api/public/hooks/schedule-retreat-announcement',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicHooksMonthlyNewsletterRoute =
   ApiPublicHooksMonthlyNewsletterRouteImport.update({
     id: '/api/public/hooks/monthly-newsletter',
@@ -264,6 +271,7 @@ export interface FileRoutesByFullPath {
   '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
+  '/api/public/hooks/schedule-retreat-announcement': typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/api/public/stripe/webhook': typeof ApiPublicStripeWebhookRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -302,6 +310,7 @@ export interface FileRoutesByTo {
   '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
+  '/api/public/hooks/schedule-retreat-announcement': typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/api/public/stripe/webhook': typeof ApiPublicStripeWebhookRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -341,6 +350,7 @@ export interface FileRoutesById {
   '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
+  '/api/public/hooks/schedule-retreat-announcement': typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
   '/api/public/stripe/webhook': typeof ApiPublicStripeWebhookRoute
   '/lovable/email/queue/process': typeof LovableEmailQueueProcessRoute
@@ -381,6 +391,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/lead'
     | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
+    | '/api/public/hooks/schedule-retreat-announcement'
     | '/api/public/hooks/weekly-report'
     | '/api/public/stripe/webhook'
     | '/lovable/email/queue/process'
@@ -419,6 +430,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/lead'
     | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
+    | '/api/public/hooks/schedule-retreat-announcement'
     | '/api/public/hooks/weekly-report'
     | '/api/public/stripe/webhook'
     | '/lovable/email/queue/process'
@@ -457,6 +469,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/lead'
     | '/api/public/forms/quiz'
     | '/api/public/hooks/monthly-newsletter'
+    | '/api/public/hooks/schedule-retreat-announcement'
     | '/api/public/hooks/weekly-report'
     | '/api/public/stripe/webhook'
     | '/lovable/email/queue/process'
@@ -496,6 +509,7 @@ export interface RootRouteChildren {
   ApiPublicFormsLeadRoute: typeof ApiPublicFormsLeadRoute
   ApiPublicFormsQuizRoute: typeof ApiPublicFormsQuizRoute
   ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
+  ApiPublicHooksScheduleRetreatAnnouncementRoute: typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   ApiPublicHooksWeeklyReportRoute: typeof ApiPublicHooksWeeklyReportRoute
   ApiPublicStripeWebhookRoute: typeof ApiPublicStripeWebhookRoute
   LovableEmailQueueProcessRoute: typeof LovableEmailQueueProcessRoute
@@ -729,6 +743,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksWeeklyReportRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/schedule-retreat-announcement': {
+      id: '/api/public/hooks/schedule-retreat-announcement'
+      path: '/api/public/hooks/schedule-retreat-announcement'
+      fullPath: '/api/public/hooks/schedule-retreat-announcement'
+      preLoaderRoute: typeof ApiPublicHooksScheduleRetreatAnnouncementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/hooks/monthly-newsletter': {
       id: '/api/public/hooks/monthly-newsletter'
       path: '/api/public/hooks/monthly-newsletter'
@@ -792,6 +813,8 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicFormsLeadRoute: ApiPublicFormsLeadRoute,
   ApiPublicFormsQuizRoute: ApiPublicFormsQuizRoute,
   ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
+  ApiPublicHooksScheduleRetreatAnnouncementRoute:
+    ApiPublicHooksScheduleRetreatAnnouncementRoute,
   ApiPublicHooksWeeklyReportRoute: ApiPublicHooksWeeklyReportRoute,
   ApiPublicStripeWebhookRoute: ApiPublicStripeWebhookRoute,
   LovableEmailQueueProcessRoute: LovableEmailQueueProcessRoute,
