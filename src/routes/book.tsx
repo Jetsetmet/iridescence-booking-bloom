@@ -193,7 +193,8 @@ function Book() {
   );
 }
 
-const STRIPE_GIFT_LINK = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
+const STRIPE_GIFT_LINK_60 = "https://buy.stripe.com/cNieVegwKc9G4V09XV1Jm0i";
+const STRIPE_GIFT_LINK_90 = "https://buy.stripe.com/00wfZi94i7Tqdrw1rp1Jm0n";
 
 function GiftCertificateSection() {
   const [form, setForm] = useState({
@@ -220,7 +221,8 @@ function GiftCertificateSection() {
         source: `gift-certificate-${form.duration}`,
       });
       setPurchased(true);
-      window.open(STRIPE_GIFT_LINK, "_blank", "noopener,noreferrer");
+      const stripeLink = form.duration === "90" ? STRIPE_GIFT_LINK_90 : STRIPE_GIFT_LINK_60;
+      window.open(stripeLink, "_blank", "noopener,noreferrer");
       toast.success("Opening secure checkout — your voucher will be ready below once payment is complete.");
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Could not save your details — please try again.");
@@ -291,7 +293,7 @@ function GiftCertificateSection() {
                 className="mt-3 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-xs font-medium text-primary-foreground">
                 Download {form.duration}-min voucher →
               </a>
-              <a href={STRIPE_GIFT_LINK} target="_blank" rel="noreferrer"
+              <a href={form.duration === "90" ? STRIPE_GIFT_LINK_90 : STRIPE_GIFT_LINK_60} target="_blank" rel="noreferrer"
                 className="mt-3 ml-2 inline-flex items-center gap-2 rounded-full border border-primary/40 px-5 py-2.5 text-xs font-medium text-primary">
                 Re-open Stripe checkout
               </a>
