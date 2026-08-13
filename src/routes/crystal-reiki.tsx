@@ -164,23 +164,25 @@ function CrystalReiki() {
           <p className="mt-3 text-foreground/80 text-pretty max-w-2xl">
             Public and private retreats across Europe, the US and Costa Rica. Click any space to visit their site.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {venues.map((v) =>
               v.url ? (
                 <a key={v.name} href={v.url} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-5 py-2.5 text-sm font-medium hover:bg-accent transition-colors">
-                  {v.name}
-                  <ExternalLink className="h-3.5 w-3.5 text-muted-foreground" />
+                  className="group flex items-center gap-3 rounded-2xl border border-border bg-background/70 px-4 py-3 text-sm font-medium hover:bg-accent transition-colors">
+                  <VenueLogo name={v.name} url={v.url} />
+                  <span className="flex-1 leading-tight">{v.name}</span>
+                  <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               ) : (
                 <span key={v.name}
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background/40 px-5 py-2.5 text-sm font-medium text-foreground/80">
-                  {v.name}
+                  className="flex items-center gap-3 rounded-2xl border border-border bg-background/40 px-4 py-3 text-sm font-medium text-foreground/80">
+                  <VenueLogo name={v.name} />
+                  <span className="flex-1 leading-tight">{v.name}</span>
                 </span>
               )
             )}
-            <span className="inline-flex items-center px-5 py-2.5 text-sm text-muted-foreground italic">and more…</span>
           </div>
+          <p className="mt-4 text-sm text-muted-foreground italic">and more…</p>
         </div>
         <div className="mt-10">
           <Link to="/offerings" className="text-sm text-muted-foreground hover:text-foreground">← All offerings</Link>
