@@ -7,6 +7,23 @@ import { createCampaignAndSchedule } from '@/lib/mailchimp.server';
 // One-time hook: schedules the retreat announcement newsletter to the Mailchimp
 // audience. Protected by the Supabase anon key.
 
+function getTomorrow9amChicago(): string {
+  const now = new Date();
+  // Build a date representing "now" in America/Chicago, then add one day and
+  // pin it to 9:00 AM local time.
+  const chicagoNow = new Date(
+    now.toLocaleString('en-US', { timeZone: 'America/Chicago' }),
+  );
+  const tomorrow = new Date(chicagoNow);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  tomorrow.setHours(9, 0, 0, 0);
+
+  // Convert the Chicago-local 9 AM to a UTC ISO timestamp
+  const offset = tomorrow.getTime() - chicagoNow.getTime();
+  const utcTime = new Date(now.getTime() + offset);
+  return utcTime.toISOString();
+}
+
 export const Route = createFileRoute('/api/public/hooks/schedule-retreat-announcement')({
   server: {
     handlers: {
@@ -25,17 +42,7 @@ export const Route = createFileRoute('/api/public/hooks/schedule-retreat-announc
           const element = React.createElement(template.component, template.previewData || {});
           const html = await render(element);
 
-          // Default: tomorrow 9:00 AM Chicago (UTC-5) = 14:00 UTC
-          const now = new Date();
-          const tomorrow9amChicago = new Date(Date.UTC(
-            now.getUTCFullYear(),
-            now.getUTCMonth(),
-            now.getUTCDate() + 1,
-            14,
-            0,
-            0,
-          ));
-          const scheduleTime = tomorrow9amChicago.toISOString();
+          const scheduleTime = getTomorrow9amChicago();
 
           const { campaignId, scheduledFor } = await createCampaignAndSchedule({
             subjectLine: 'A Journey Awaits...',
