@@ -299,7 +299,7 @@ function Retreats() {
         <h2 className="mt-2 font-display text-3xl">Retreat investment</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
-            { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "$4,200 per person" },
+            { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "$4,200 per person", href: "https://buy.stripe.com/00w3cwdky7Tq1IOc631Jm0m" },
             { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Varies" },
             { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
@@ -308,7 +308,11 @@ function Retreats() {
                 <div className="text-sm font-medium">{t.label}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{t.duration}</div>
               </div>
-              <Link to="/book" search={{ offering: "Retreat", event: `${t.label} — ${t.duration}` }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
+              {'href' in t && t.href ? (
+                <a href={t.href} target="_blank" rel="noopener noreferrer" className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</a>
+              ) : (
+                <Link to="/book" search={{ offering: "Retreat", event: `${t.label} — ${t.duration}` }} className="text-sm font-display text-primary whitespace-nowrap hover:underline">{t.price}</Link>
+              )}
             </li>
           ))}
         </ul>
