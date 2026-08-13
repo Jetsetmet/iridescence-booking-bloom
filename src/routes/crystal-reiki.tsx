@@ -3,6 +3,9 @@ import reikiImg from "@/assets/reiki-hands.jpg";
 import soundImg from "@/assets/sound-bowls.jpg";
 import { ArrowRight, Triangle, ExternalLink } from "lucide-react";
 import { SQUARE_URL } from "@/lib/booking";
+import tribeLogo from "@/assets/tribe-logo.png.asset.json";
+import synergyLogo from "@/assets/synergy-logo.png.asset.json";
+import spyreLogo from "@/assets/spyre-logo.png.asset.json";
 
 export const Route = createFileRoute("/crystal-reiki")({
   head: () => ({
@@ -25,17 +28,17 @@ const tiers = [
   { label: "Retreat & Venue Bookings", duration: "by arrangement", price: "Enquire", book: true as const },
 ];
 
-const venues: Array<{ name: string; url?: string }> = [
-  { name: "Spyre New Orleans", url: "https://www.thecenternola.com/spyre" },
+const venues: Array<{ name: string; url?: string; logo?: string }> = [
+  { name: "Spyre New Orleans", url: "https://spyrecenter.com/", logo: spyreLogo.url },
   { name: "Wild Lotus Yoga", url: "https://wildlotusyoga.com/" },
   { name: "Arora", url: "https://www.aroranola.com/" },
   { name: "The Nest Costa Rica", url: "https://reganhillyer.com/pages/the-nest-private-immersions" },
   { name: "Imiloa Institute", url: "https://imiloainstitute.com/" },
   { name: "Holos", url: "https://holos.global/" },
   { name: "Danyasa Yoga Retreat", url: "https://www.danyasa.com/" },
-  { name: "Tribe Boutique Hotel", url: "https://www.tribeboutiquehotel.com/" },
+  { name: "Tribe Boutique Hotel", url: "https://www.tribeboutiquehotel.com/", logo: tribeLogo.url },
   { name: "Awake Uvita", url: "https://www.awake.cr/" },
-  { name: "Synergy Uvita", url: "https://synergycostarica.com/" },
+  { name: "Synergy Uvita", url: "https://synergycostarica.com/", logo: synergyLogo.url },
   { name: "Yacumama", url: "https://www.yacumama.love/" },
   { name: "Finca Mia", url: "https://www.fincamia.com/" },
   { name: "The Shala" },
@@ -49,8 +52,9 @@ function CrystalReiki() {
   return <CrystalReikiPage />;
 }
 
-function VenueLogo({ name, url }: { name: string; url?: string }) {
+function VenueLogo({ name, url, logo }: { name: string; url?: string; logo?: string }) {
   const domain = url ? new URL(url).hostname.replace(/^www\./, "") : null;
+  const src = logo ?? (domain ? `https://www.google.com/s2/favicons?domain=${domain}&sz=128` : null);
   const initials = name
     .split(" ")
     .slice(0, 2)
@@ -58,9 +62,9 @@ function VenueLogo({ name, url }: { name: string; url?: string }) {
     .join("");
   return (
     <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-background">
-      {domain ? (
+      {src ? (
         <img
-          src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
+          src={src}
           alt={`${name} logo`}
           loading="lazy"
           width={32}
@@ -201,14 +205,14 @@ function CrystalReikiPage() {
               v.url ? (
                 <a key={v.name} href={v.url} target="_blank" rel="noopener noreferrer"
                   className="group flex items-center gap-3 rounded-2xl border border-border bg-background/70 px-4 py-3 text-sm font-medium hover:bg-accent transition-colors">
-                  <VenueLogo name={v.name} url={v.url} />
+                  <VenueLogo name={v.name} url={v.url} logo={v.logo} />
                   <span className="flex-1 leading-tight">{v.name}</span>
                   <ExternalLink className="h-3.5 w-3.5 shrink-0 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
                 </a>
               ) : (
                 <span key={v.name}
                   className="flex items-center gap-3 rounded-2xl border border-border bg-background/40 px-4 py-3 text-sm font-medium text-foreground/80">
-                  <VenueLogo name={v.name} />
+                  <VenueLogo name={v.name} logo={v.logo} />
                   <span className="flex-1 leading-tight">{v.name}</span>
                 </span>
               )
