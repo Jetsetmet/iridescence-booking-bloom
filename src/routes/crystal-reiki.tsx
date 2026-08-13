@@ -6,6 +6,7 @@ import { SQUARE_URL } from "@/lib/booking";
 import tribeLogo from "@/assets/tribe-logo.png.asset.json";
 import synergyLogo from "@/assets/synergy-logo.png.asset.json";
 import spyreLogo from "@/assets/spyre-logo.png.asset.json";
+import nolayogafestLogo from "@/assets/nolayogafest-logo.png.asset.json";
 
 export const Route = createFileRoute("/crystal-reiki")({
   head: () => ({
@@ -29,7 +30,7 @@ const tiers = [
 ];
 
 const venues: Array<{ name: string; url?: string; logo?: string }> = [
-  { name: "NOLA Yoga Festival", url: "https://www.nolayogafest.com/" },
+  { name: "NOLA Yoga Festival", url: "https://www.nolayogafest.com/", logo: nolayogafestLogo.url },
   { name: "Spyre New Orleans", url: "https://spyrecenter.com/", logo: spyreLogo.url },
   { name: "Wild Lotus Yoga", url: "https://wildlotusyoga.com/" },
   { name: "Arora", url: "https://www.aroranola.com/" },
