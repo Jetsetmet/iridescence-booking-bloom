@@ -30,7 +30,7 @@ const tiers = [
 ];
 
 const venues: Array<{ name: string; url?: string; logo?: string }> = [
-  { name: "NOLA Yoga Festival", url: "https://www.nolayogafest.com/" },
+  { name: "NOLA Yoga Festival", url: "https://www.nolayogafest.com/", logo: nolayogafestLogo.url },
   { name: "Spyre New Orleans", url: "https://spyrecenter.com/", logo: spyreLogo.url },
   { name: "Wild Lotus Yoga", url: "https://wildlotusyoga.com/" },
   { name: "Arora", url: "https://www.aroranola.com/" },
