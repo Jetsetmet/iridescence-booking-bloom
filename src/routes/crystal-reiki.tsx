@@ -46,6 +46,38 @@ const venues: Array<{ name: string; url?: string }> = [
 ];
 
 function CrystalReiki() {
+  return <CrystalReikiPage />;
+}
+
+function VenueLogo({ name, url }: { name: string; url?: string }) {
+  const domain = url ? new URL(url).hostname.replace(/^www\./, "") : null;
+  const initials = name
+    .split(" ")
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("");
+  return (
+    <span className="grid h-9 w-9 shrink-0 place-items-center overflow-hidden rounded-lg border border-border bg-background">
+      {domain ? (
+        <img
+          src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
+          alt={`${name} logo`}
+          loading="lazy"
+          width={32}
+          height={32}
+          className="h-6 w-6 object-contain"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
+      ) : (
+        <span className="text-[11px] font-semibold text-muted-foreground">{initials}</span>
+      )}
+    </span>
+  );
+}
+
+function CrystalReikiPage() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 sm:px-8 py-16 grid md:grid-cols-2 gap-10 items-start">
