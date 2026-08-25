@@ -40,7 +40,7 @@ const events = [
   },
   {
     date: "Thursday, August 27", time: "6:30 PM",
-    title: "Full Moon Sound Bath",
+    title: "Full Moon Lunar Eclipse Sound Bath - Thursday 27th",
     loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $40",
     blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
     img: moonImg, offering: "Reiki & Sound",

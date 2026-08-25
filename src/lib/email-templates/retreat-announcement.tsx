@@ -98,7 +98,7 @@ const Email = () => (
         <Section style={eventCard}>
           <Text style={eventEmoji}>🌕</Text>
           <Text style={eventDate}>Thursday, August 27 · 6:30 PM</Text>
-          <Heading as="h3" style={h3}>Full Moon Sound Bath</Heading>
+          <Heading as="h3" style={h3}>Full Moon Lunar Eclipse Sound Bath - Thursday 27th</Heading>
           <Text style={bodyText}>
             Lie back and allow the soothing vibrations of crystal bowls, chimes and gong to wash through the body, calming the mind and inviting the nervous system home.
           </Text>
