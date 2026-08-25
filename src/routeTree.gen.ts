@@ -43,6 +43,7 @@ import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/
 import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
 import { Route as ApiPublicHooksScheduleRetreatAnnouncementRouteImport } from './routes/api/public/hooks/schedule-retreat-announcement'
 import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
+import { Route as ApiPublicHooksEclipseSoundBathRouteImport } from './routes/api/public/hooks/eclipse-sound-bath'
 import { Route as ApiPublicFormsQuizRouteImport } from './routes/api/public/forms/quiz'
 import { Route as ApiPublicFormsLeadRouteImport } from './routes/api/public/forms/lead'
 import { Route as ApiPublicFormsBookingRouteImport } from './routes/api/public/forms/booking'
@@ -223,6 +224,12 @@ const ApiPublicHooksMonthlyNewsletterRoute =
     path: '/api/public/hooks/monthly-newsletter',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicHooksEclipseSoundBathRoute =
+  ApiPublicHooksEclipseSoundBathRouteImport.update({
+    id: '/api/public/hooks/eclipse-sound-bath',
+    path: '/api/public/hooks/eclipse-sound-bath',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ApiPublicFormsQuizRoute = ApiPublicFormsQuizRouteImport.update({
   id: '/api/public/forms/quiz',
   path: '/api/public/forms/quiz',
@@ -270,6 +277,7 @@ export interface FileRoutesByFullPath {
   '/api/public/forms/booking': typeof ApiPublicFormsBookingRoute
   '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
+  '/api/public/hooks/eclipse-sound-bath': typeof ApiPublicHooksEclipseSoundBathRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/schedule-retreat-announcement': typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
@@ -309,6 +317,7 @@ export interface FileRoutesByTo {
   '/api/public/forms/booking': typeof ApiPublicFormsBookingRoute
   '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
+  '/api/public/hooks/eclipse-sound-bath': typeof ApiPublicHooksEclipseSoundBathRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/schedule-retreat-announcement': typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
@@ -349,6 +358,7 @@ export interface FileRoutesById {
   '/api/public/forms/booking': typeof ApiPublicFormsBookingRoute
   '/api/public/forms/lead': typeof ApiPublicFormsLeadRoute
   '/api/public/forms/quiz': typeof ApiPublicFormsQuizRoute
+  '/api/public/hooks/eclipse-sound-bath': typeof ApiPublicHooksEclipseSoundBathRoute
   '/api/public/hooks/monthly-newsletter': typeof ApiPublicHooksMonthlyNewsletterRoute
   '/api/public/hooks/schedule-retreat-announcement': typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   '/api/public/hooks/weekly-report': typeof ApiPublicHooksWeeklyReportRoute
@@ -390,6 +400,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/booking'
     | '/api/public/forms/lead'
     | '/api/public/forms/quiz'
+    | '/api/public/hooks/eclipse-sound-bath'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/schedule-retreat-announcement'
     | '/api/public/hooks/weekly-report'
@@ -429,6 +440,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/booking'
     | '/api/public/forms/lead'
     | '/api/public/forms/quiz'
+    | '/api/public/hooks/eclipse-sound-bath'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/schedule-retreat-announcement'
     | '/api/public/hooks/weekly-report'
@@ -468,6 +480,7 @@ export interface FileRouteTypes {
     | '/api/public/forms/booking'
     | '/api/public/forms/lead'
     | '/api/public/forms/quiz'
+    | '/api/public/hooks/eclipse-sound-bath'
     | '/api/public/hooks/monthly-newsletter'
     | '/api/public/hooks/schedule-retreat-announcement'
     | '/api/public/hooks/weekly-report'
@@ -508,6 +521,7 @@ export interface RootRouteChildren {
   ApiPublicFormsBookingRoute: typeof ApiPublicFormsBookingRoute
   ApiPublicFormsLeadRoute: typeof ApiPublicFormsLeadRoute
   ApiPublicFormsQuizRoute: typeof ApiPublicFormsQuizRoute
+  ApiPublicHooksEclipseSoundBathRoute: typeof ApiPublicHooksEclipseSoundBathRoute
   ApiPublicHooksMonthlyNewsletterRoute: typeof ApiPublicHooksMonthlyNewsletterRoute
   ApiPublicHooksScheduleRetreatAnnouncementRoute: typeof ApiPublicHooksScheduleRetreatAnnouncementRoute
   ApiPublicHooksWeeklyReportRoute: typeof ApiPublicHooksWeeklyReportRoute
@@ -757,6 +771,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicHooksMonthlyNewsletterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/hooks/eclipse-sound-bath': {
+      id: '/api/public/hooks/eclipse-sound-bath'
+      path: '/api/public/hooks/eclipse-sound-bath'
+      fullPath: '/api/public/hooks/eclipse-sound-bath'
+      preLoaderRoute: typeof ApiPublicHooksEclipseSoundBathRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/forms/quiz': {
       id: '/api/public/forms/quiz'
       path: '/api/public/forms/quiz'
@@ -812,6 +833,7 @@ const rootRouteChildren: RootRouteChildren = {
   ApiPublicFormsBookingRoute: ApiPublicFormsBookingRoute,
   ApiPublicFormsLeadRoute: ApiPublicFormsLeadRoute,
   ApiPublicFormsQuizRoute: ApiPublicFormsQuizRoute,
+  ApiPublicHooksEclipseSoundBathRoute: ApiPublicHooksEclipseSoundBathRoute,
   ApiPublicHooksMonthlyNewsletterRoute: ApiPublicHooksMonthlyNewsletterRoute,
   ApiPublicHooksScheduleRetreatAnnouncementRoute:
     ApiPublicHooksScheduleRetreatAnnouncementRoute,
