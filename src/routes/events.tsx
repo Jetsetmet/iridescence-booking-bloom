@@ -38,14 +38,15 @@ const events = [
     img: cacaoImg, offering: "Cacao Ceremony",
     price: "$40", payUrl: "https://buy.stripe.com/00w00kcgu7Tq1IO5HF1Jm0k",
   },
-  {
-    date: "Thursday, August 27", time: "6:00 PM",
-    title: "Full Moon Lunar Eclipse Sound Bath",
-    loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $40",
-    blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
-    img: moonImg, offering: "Reiki & Sound",
-    price: "$40", payUrl: "https://buy.stripe.com/00w6oI5S66Pm87c8TR1Jm0l",
-  },
+  // Full Moon Lunar Eclipse Sound Bath — hidden until next date is confirmed.
+  // {
+  //   date: "Thursday, August 27", time: "6:00 PM",
+  //   title: "Full Moon Lunar Eclipse Sound Bath",
+  //   loc: "A hidden New Orleans space · address shared once your spot is held · only a few cushions left · $40",
+  //   blurb: "Lie back as crystal bowls, chimes and gong wash through the body and invite the nervous system home.",
+  //   img: moonImg, offering: "Reiki & Sound",
+  //   price: "$40", payUrl: "https://buy.stripe.com/00w6oI5S66Pm87c8TR1Jm0l",
+  // },
   {
     date: "Every Saturday", time: "9:30 AM",
     title: "Kundalini Yoga with Met @ Spyre",
