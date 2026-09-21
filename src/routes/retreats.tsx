@@ -30,12 +30,8 @@ function Retreats() {
           <p className="mt-6 text-foreground/80 leading-relaxed text-pretty">
             Immersive journeys that weave energy healing, cacao, yoga, sound, meditation, breathwork and indigenous Temazcal into the quiet medicine of nature. A safe, nurturing space to release what no longer serves and step into true freedom.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/book" search={{ offering: "Retreat" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
-              Reserve your spot <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
-        </div>
+
         <img src={heroImg} alt="Transformative healing retreats in Costa Rica with Met of Iridescence Healing"
           loading="lazy" width={1200} height={1200}
           className="rounded-[2rem] shadow-glow object-cover w-full h-auto md:h-[480px]" />
