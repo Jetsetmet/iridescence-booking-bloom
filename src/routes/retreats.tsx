@@ -46,7 +46,7 @@ function Retreats() {
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
-            src="/media/whispers-ancient-shores-poster.png"
+            src="/media/whispers-poster-2027.png"
             alt="Whispers of the Ancient Shores — Yoga & Sound Healing Retreat in Alaçatı, Türkiye, 1–7 June 2027 with Met Salih & Tara Loftis"
             width={1700}
             height={2200}
