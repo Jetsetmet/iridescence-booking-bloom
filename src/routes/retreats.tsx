@@ -237,6 +237,9 @@ function Retreats() {
               <a href="mailto:info@iridescencehealing.com?subject=Whispers%20of%20the%20Ancient%20Shores%20%E2%80%94%20Ala%C3%A7at%C4%B1%20Retreat" className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-7 py-3.5 text-sm font-medium text-primary hover:bg-accent">
                 Email to confirm & pay <ArrowRight className="h-4 w-4" />
               </a>
+              <a href="/whispers-ancient-shores-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Download poster (PDF) <ArrowRight className="h-4 w-4" />
+              </a>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
                 Ask a question
               </Link>
