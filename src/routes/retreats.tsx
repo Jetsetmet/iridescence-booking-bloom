@@ -9,7 +9,7 @@ export const Route = createFileRoute("/retreats")({
   head: () => ({
     meta: [
       { title: "Transformative Retreats — Turkey & Costa Rica with Iridescence Healing" },
-      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia (June 2026) and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
+      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia (June 2026), Alaçatı, Türkiye (1–7 June 2027) and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
       { property: "og:title", content: "Transformative Retreats — Turkey & Costa Rica" },
       { property: "og:description", content: "Resonance & Remembrance in Turkey and a private Oneness Spiritual Emergence retreat in Costa Rica." },
       { property: "og:image", content: heroImg },
@@ -374,7 +374,7 @@ function Retreats() {
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
             { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "$4,200 per person", href: "https://buy.stripe.com/00w3cwdky7Tq1IOc631Jm0m" },
-            { label: "Whispers of the Ancient Shores", duration: "June 2–8 · Alaçatı, Türkiye", price: "Varies" },
+            { label: "Whispers of the Ancient Shores", duration: "1–7 June 2027 · Alaçatı, Türkiye", price: "From $2,900 pp" },
             { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
