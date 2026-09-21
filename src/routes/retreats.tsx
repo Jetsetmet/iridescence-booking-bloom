@@ -72,12 +72,6 @@ function Retreats() {
               A journey of connection, beauty, ancient roots, and the art of living well.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/book" search={{ offering: "Retreat", event: "Whispers of the Ancient Shores — 1–7 June 2027 · Alaçatı, Türkiye" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
-                Reserve your spot <ArrowRight className="h-4 w-4" />
-              </Link>
-              <a href="mailto:info@iridescencehealing.com?subject=Whispers%20of%20the%20Ancient%20Shores%20%E2%80%94%20Ala%C3%A7at%C4%B1%20Retreat" className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-7 py-3.5 text-sm font-medium text-primary hover:bg-accent">
-                Email to confirm & pay <ArrowRight className="h-4 w-4" />
-              </a>
               <a href="/whispers-ancient-shores-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
                 Download poster (PDF) <ArrowRight className="h-4 w-4" />
               </a>
