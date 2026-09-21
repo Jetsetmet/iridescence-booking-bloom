@@ -220,7 +220,7 @@ function Retreats() {
               <p className="text-xs uppercase tracking-[0.2em] text-primary/80">1–7 June, 2027 · Alaçatı, Türkiye</p>
             </div>
             <h2 className="mt-3 font-display text-4xl">Whispers of the Ancient Shores</h2>
-            <p className="mt-2 text-sm text-muted-foreground">A Yoga & Sound Healing Retreat with Met Salih & Tara Loftis · From $2,900 per person</p>
+            <p className="mt-2 text-sm text-muted-foreground">A Yoga & Sound Healing Retreat with Met Salih & Tara Loftis · From $2,800 per person</p>
             <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
               A soul-nourishing journey of yoga, sound healing, cacao, breathwork, movement and water activities, woven together with the rich culture, beauty and ancient energy of Türkiye's Aegean shores.
             </p>
@@ -254,20 +254,38 @@ function Retreats() {
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Investment</p>
           <h2 className="mt-2 font-display text-4xl">Whispers of the Ancient Shores</h2>
-          <p className="mt-2 text-sm text-muted-foreground">1–7 June, 2027 · Alaçatı, Türkiye · Early bird pricing ends December 1</p>
+          <p className="mt-2 text-sm text-muted-foreground">1–7 June, 2027 · Alaçatı, Türkiye · Tiered pricing — rates go up Nov 1 and again Feb 1</p>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {[
-              { room: "Shared room", early: "$2,900", late: "$3,100" },
-              { room: "Single room", early: "$3,300", late: "$3,500" },
+              {
+                room: "Shared room",
+                tiers: [
+                  { price: "$2,800", note: "Book by November 1, 2026" },
+                  { price: "$2,900", note: "Nov 1, 2026 – Feb 1, 2027" },
+                  { price: "$3,100", note: "After February 1, 2027" },
+                ],
+              },
+              {
+                room: "Single room",
+                tiers: [
+                  { price: "$3,300", note: "Book by November 1, 2026" },
+                  { price: "$3,400", note: "Nov 1, 2026 – Feb 1, 2027" },
+                  { price: "$3,500", note: "After February 1, 2027" },
+                ],
+              },
             ].map((p) => (
               <div key={p.room} className="rounded-2xl border border-border bg-background/60 p-6">
                 <h3 className="font-display text-2xl">{p.room}</h3>
-                <p className="mt-3 text-sm text-foreground/85">
-                  <span className="font-display text-3xl text-primary">{p.early}</span>
-                  <span className="ml-2 text-muted-foreground">per person · before Dec 1</span>
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.late} per person after December 1</p>
+                <p className="mt-1 text-sm text-muted-foreground">per person · tiered pricing</p>
+                <ul className="mt-4 divide-y divide-border">
+                  {p.tiers.map((t, i) => (
+                    <li key={i} className="flex items-baseline justify-between gap-4 py-3">
+                      <span className="font-display text-2xl text-primary">{t.price}</span>
+                      <span className="text-xs text-muted-foreground text-right">{t.note}</span>
+                    </li>
+                  ))}
+                </ul>
                 <Link
                   to="/book"
                   search={{ offering: "Retreat", event: `Whispers of the Ancient Shores — 1–7 June 2027 · ${p.room}` }}
@@ -374,7 +392,7 @@ function Retreats() {
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
             { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "$4,200 per person", href: "https://buy.stripe.com/00w3cwdky7Tq1IOc631Jm0m" },
-            { label: "Whispers of the Ancient Shores", duration: "1–7 June 2027 · Alaçatı, Türkiye", price: "From $2,900 pp" },
+            { label: "Whispers of the Ancient Shores", duration: "1–7 June 2027 · Alaçatı, Türkiye", price: "From $2,800 pp" },
             { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
