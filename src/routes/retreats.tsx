@@ -260,6 +260,7 @@ function Retreats() {
             {[
               {
                 room: "Shared room",
+                stripe: "https://buy.stripe.com/14A5kE94ia1ydrwc631Jm0o",
                 tiers: [
                   { price: "$2,800", note: "Book by November 1, 2026" },
                   { price: "$2,900", note: "Nov 1, 2026 – Feb 1, 2027" },
@@ -268,6 +269,7 @@ function Retreats() {
               },
               {
                 room: "Single room",
+                stripe: "https://buy.stripe.com/cNicN694i5Li87c2vt1Jm0p",
                 tiers: [
                   { price: "$3,300", note: "Book by November 1, 2026" },
                   { price: "$3,400", note: "Nov 1, 2026 – Feb 1, 2027" },
@@ -286,13 +288,23 @@ function Retreats() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/book"
-                  search={{ offering: "Retreat", event: `Whispers of the Ancient Shores — 1–7 June 2027 · ${p.room}` }}
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
-                >
-                  Reserve this room <ArrowRight className="h-4 w-4" />
-                </Link>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <a
+                    href={p.stripe}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+                  >
+                    Confirm & pay <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <Link
+                    to="/book"
+                    search={{ offering: "Retreat", event: `Whispers of the Ancient Shores — 1–7 June 2027 · ${p.room}` }}
+                    className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-6 py-3 text-sm font-medium text-primary hover:bg-accent"
+                  >
+                    Reserve this room <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
@@ -392,7 +404,7 @@ function Retreats() {
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {[
             { label: "Resonance & Remembrance", duration: "June 9–15, 2026 · Istanbul & Cappadocia", price: "$4,200 per person", href: "https://buy.stripe.com/00w3cwdky7Tq1IOc631Jm0m" },
-            { label: "Whispers of the Ancient Shores", duration: "1–7 June 2027 · Alaçatı, Türkiye", price: "From $2,800 pp" },
+            { label: "Whispers of the Ancient Shores", duration: "1–7 June 2027 · Alaçatı, Türkiye", price: "From $2,800 pp", href: "https://buy.stripe.com/14A5kE94ia1ydrwc631Jm0o" },
             { label: "4-Day Oneness Spiritual Emergence", duration: "Private · Costa Rica", price: "Varies" },
           ].map((t, i) => (
             <li key={i} className="flex items-baseline justify-between gap-4 px-5 py-4">
