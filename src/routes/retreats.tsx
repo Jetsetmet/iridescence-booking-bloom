@@ -41,6 +41,149 @@ function Retreats() {
           className="rounded-[2rem] shadow-glow object-cover w-full h-auto md:h-[480px]" />
       </section>
 
+
+      {/* TURKEY — Whispers of the Ancient Shores */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+          <img
+            src="/media/turkey-alacati-collage.png"
+            alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
+            width={1400}
+            height={1000}
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+            className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto order-2 lg:order-1"
+          />
+          <div className="order-1 lg:order-2">
+            <div className="flex items-center gap-2">
+              <Triangle className="h-5 w-5 text-primary" />
+              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">1–7 June, 2027 · Alaçatı, Türkiye</p>
+            </div>
+            <h2 className="mt-3 font-display text-4xl">Whispers of the Ancient Shores</h2>
+            <p className="mt-2 text-sm text-muted-foreground">A Yoga & Sound Healing Retreat with Met Salih & Tara Loftis · From $2,800 per person</p>
+            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
+              A soul-nourishing journey of yoga, sound healing, cacao, breathwork, movement and water activities, woven together with the rich culture, beauty and ancient energy of Türkiye's Aegean shores.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              An invitation to slow down and immerse yourself in the beauty, rhythm, and soul of Alaçatı. Surrounded by ancient stone streets, sea breezes, olive groves, and the sparkling Mediterranean, we gather to reconnect with simplicity, joy, and the quieter moments that nourish us — including time at Ilıca Beach, famous for its white sand and warm thermal spring water.
+            </p>
+            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
+              A journey of connection, beauty, ancient roots, and the art of living well.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <Link to="/book" search={{ offering: "Retreat", event: "Whispers of the Ancient Shores — 1–7 June 2027 · Alaçatı, Türkiye" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+                Reserve your spot <ArrowRight className="h-4 w-4" />
+              </Link>
+              <a href="mailto:info@iridescencehealing.com?subject=Whispers%20of%20the%20Ancient%20Shores%20%E2%80%94%20Ala%C3%A7at%C4%B1%20Retreat" className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-7 py-3.5 text-sm font-medium text-primary hover:bg-accent">
+                Email to confirm & pay <ArrowRight className="h-4 w-4" />
+              </a>
+              <a href="/whispers-ancient-shores-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Download poster (PDF) <ArrowRight className="h-4 w-4" />
+              </a>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+                Ask a question
+              </Link>
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">More info: +1 504 345 3444</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Whispers of the Ancient Shores — Details & Pricing */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Investment</p>
+          <h2 className="mt-2 font-display text-4xl">Whispers of the Ancient Shores</h2>
+          <p className="mt-2 text-sm text-muted-foreground">1–7 June, 2027 · Alaçatı, Türkiye · Tiered pricing — rates go up Nov 1 and again Feb 1</p>
+
+          <div className="mt-8 grid sm:grid-cols-2 gap-6">
+            {[
+              {
+                room: "Shared room",
+                stripe: "https://buy.stripe.com/14A5kE94ia1ydrwc631Jm0o",
+                tiers: [
+                  { price: "$2,800", note: "Book by November 1, 2026" },
+                  { price: "$2,900", note: "Nov 1, 2026 – Feb 1, 2027" },
+                  { price: "$3,100", note: "After February 1, 2027" },
+                ],
+              },
+              {
+                room: "Single room",
+                stripe: "https://buy.stripe.com/3cI3cwgwK1v2drw0nl1Jm0q",
+                tiers: [
+                  { price: "$3,300", note: "Book by November 1, 2026" },
+                  { price: "$3,400", note: "Nov 1, 2026 – Feb 1, 2027" },
+                  { price: "$3,500", note: "After February 1, 2027" },
+                ],
+              },
+            ].map((p) => (
+              <div key={p.room} className="rounded-2xl border border-border bg-background/60 p-6">
+                <h3 className="font-display text-2xl">{p.room}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">per person · tiered pricing</p>
+                <ul className="mt-4 divide-y divide-border">
+                  {p.tiers.map((t, i) => (
+                    <li key={i} className="flex items-baseline justify-between gap-4 py-3">
+                      <span className="font-display text-2xl text-primary">{t.price}</span>
+                      <span className="text-xs text-muted-foreground text-right">{t.note}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 flex flex-wrap gap-3">
+                  <a
+                    href={p.stripe}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
+                  >
+                    Confirm & pay <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <Link
+                    to="/book"
+                    search={{ offering: "Retreat", event: `Whispers of the Ancient Shores — 1–7 June 2027 · ${p.room}` }}
+                    className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-6 py-3 text-sm font-medium text-primary hover:bg-accent"
+                  >
+                    Reserve this room <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 border-t border-border pt-10 grid md:grid-cols-2 gap-10">
+            <div>
+              <h3 className="font-display text-2xl">Your experience includes</h3>
+              <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc pl-5">
+                <li>6 nights accommodation in Alaçatı</li>
+                <li>Daily hotel breakfast & selected dinners</li>
+                <li>Daily yoga & meditation</li>
+                <li>Sound healing journeys & cacao ceremonies</li>
+                <li>Breathwork & gentle somatic movement</li>
+                <li>Water activities & beach time at Ilıca Beach</li>
+                <li>Authentic local cuisine</li>
+                <li>Excursions, culture & exploration</li>
+                <li>Time to rest, connect & rejuvenate</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-display text-2xl">Explore Alaçatı</h3>
+              <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc pl-5">
+                <li>Charming whitewashed stone streets</li>
+                <li>Local markets & artisans</li>
+                <li>Turkish cuisine & seaside cafés</li>
+                <li>Ancient energy & Aegean beauty</li>
+              </ul>
+              <h3 className="mt-8 font-display text-2xl">Your facilitators</h3>
+              <p className="mt-3 text-sm text-foreground/85">
+                <strong>Mehtap (Met) Salih</strong> — Founder of Iridescence Healing · Sound healer, Reiki master, yoga & cacao facilitator.
+              </p>
+              <p className="mt-2 text-sm text-foreground/85">
+                <strong>Tara Loftis</strong> — Yoga teacher, sound healer, hypnotherapist, Reiki healer & plant medicine apprentice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* TURKEY — Resonance & Remembrance */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
@@ -197,149 +340,6 @@ function Retreats() {
               <li>Additional spa treatments & massages</li>
               <li>Horseback riding through the valleys</li>
             </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* TURKEY — Whispers of the Ancient Shores */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
-          <img
-            src="/media/turkey-alacati-collage.png"
-            alt="Alaçatı, Türkiye — whitewashed stone streets and bougainvillea, Whispers of the Ancient Shores retreat"
-            width={1400}
-            height={1000}
-            loading="eager"
-            decoding="async"
-            fetchPriority="high"
-            className="rounded-[2rem] shadow-soft object-contain w-full max-w-lg mx-auto h-auto order-2 lg:order-1"
-          />
-          <div className="order-1 lg:order-2">
-            <div className="flex items-center gap-2">
-              <Triangle className="h-5 w-5 text-primary" />
-              <p className="text-xs uppercase tracking-[0.2em] text-primary/80">1–7 June, 2027 · Alaçatı, Türkiye</p>
-            </div>
-            <h2 className="mt-3 font-display text-4xl">Whispers of the Ancient Shores</h2>
-            <p className="mt-2 text-sm text-muted-foreground">A Yoga & Sound Healing Retreat with Met Salih & Tara Loftis · From $2,800 per person</p>
-            <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-              A soul-nourishing journey of yoga, sound healing, cacao, breathwork, movement and water activities, woven together with the rich culture, beauty and ancient energy of Türkiye's Aegean shores.
-            </p>
-            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
-              An invitation to slow down and immerse yourself in the beauty, rhythm, and soul of Alaçatı. Surrounded by ancient stone streets, sea breezes, olive groves, and the sparkling Mediterranean, we gather to reconnect with simplicity, joy, and the quieter moments that nourish us — including time at Ilıca Beach, famous for its white sand and warm thermal spring water.
-            </p>
-            <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
-              A journey of connection, beauty, ancient roots, and the art of living well.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-3">
-              <Link to="/book" search={{ offering: "Retreat", event: "Whispers of the Ancient Shores — 1–7 June 2027 · Alaçatı, Türkiye" }} className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
-                Reserve your spot <ArrowRight className="h-4 w-4" />
-              </Link>
-              <a href="mailto:info@iridescencehealing.com?subject=Whispers%20of%20the%20Ancient%20Shores%20%E2%80%94%20Ala%C3%A7at%C4%B1%20Retreat" className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-7 py-3.5 text-sm font-medium text-primary hover:bg-accent">
-                Email to confirm & pay <ArrowRight className="h-4 w-4" />
-              </a>
-              <a href="/whispers-ancient-shores-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-                Download poster (PDF) <ArrowRight className="h-4 w-4" />
-              </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
-                Ask a question
-              </Link>
-            </div>
-            <p className="mt-3 text-xs text-muted-foreground">More info: +1 504 345 3444</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Whispers of the Ancient Shores — Details & Pricing */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
-          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Investment</p>
-          <h2 className="mt-2 font-display text-4xl">Whispers of the Ancient Shores</h2>
-          <p className="mt-2 text-sm text-muted-foreground">1–7 June, 2027 · Alaçatı, Türkiye · Tiered pricing — rates go up Nov 1 and again Feb 1</p>
-
-          <div className="mt-8 grid sm:grid-cols-2 gap-6">
-            {[
-              {
-                room: "Shared room",
-                stripe: "https://buy.stripe.com/14A5kE94ia1ydrwc631Jm0o",
-                tiers: [
-                  { price: "$2,800", note: "Book by November 1, 2026" },
-                  { price: "$2,900", note: "Nov 1, 2026 – Feb 1, 2027" },
-                  { price: "$3,100", note: "After February 1, 2027" },
-                ],
-              },
-              {
-                room: "Single room",
-                stripe: "https://buy.stripe.com/3cI3cwgwK1v2drw0nl1Jm0q",
-                tiers: [
-                  { price: "$3,300", note: "Book by November 1, 2026" },
-                  { price: "$3,400", note: "Nov 1, 2026 – Feb 1, 2027" },
-                  { price: "$3,500", note: "After February 1, 2027" },
-                ],
-              },
-            ].map((p) => (
-              <div key={p.room} className="rounded-2xl border border-border bg-background/60 p-6">
-                <h3 className="font-display text-2xl">{p.room}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">per person · tiered pricing</p>
-                <ul className="mt-4 divide-y divide-border">
-                  {p.tiers.map((t, i) => (
-                    <li key={i} className="flex items-baseline justify-between gap-4 py-3">
-                      <span className="font-display text-2xl text-primary">{t.price}</span>
-                      <span className="text-xs text-muted-foreground text-right">{t.note}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <a
-                    href={p.stripe}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft"
-                  >
-                    Confirm & pay <ArrowRight className="h-4 w-4" />
-                  </a>
-                  <Link
-                    to="/book"
-                    search={{ offering: "Retreat", event: `Whispers of the Ancient Shores — 1–7 June 2027 · ${p.room}` }}
-                    className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-6 py-3 text-sm font-medium text-primary hover:bg-accent"
-                  >
-                    Reserve this room <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 border-t border-border pt-10 grid md:grid-cols-2 gap-10">
-            <div>
-              <h3 className="font-display text-2xl">Your experience includes</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc pl-5">
-                <li>6 nights accommodation in Alaçatı</li>
-                <li>Daily hotel breakfast & selected dinners</li>
-                <li>Daily yoga & meditation</li>
-                <li>Sound healing journeys & cacao ceremonies</li>
-                <li>Breathwork & gentle somatic movement</li>
-                <li>Water activities & beach time at Ilıca Beach</li>
-                <li>Authentic local cuisine</li>
-                <li>Excursions, culture & exploration</li>
-                <li>Time to rest, connect & rejuvenate</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-display text-2xl">Explore Alaçatı</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc pl-5">
-                <li>Charming whitewashed stone streets</li>
-                <li>Local markets & artisans</li>
-                <li>Turkish cuisine & seaside cafés</li>
-                <li>Ancient energy & Aegean beauty</li>
-              </ul>
-              <h3 className="mt-8 font-display text-2xl">Your facilitators</h3>
-              <p className="mt-3 text-sm text-foreground/85">
-                <strong>Mehtap (Met) Salih</strong> — Founder of Iridescence Healing · Sound healer, Reiki master, yoga & cacao facilitator.
-              </p>
-              <p className="mt-2 text-sm text-foreground/85">
-                <strong>Tara Loftis</strong> — Yoga teacher, sound healer, hypnotherapist, Reiki healer & plant medicine apprentice.
-              </p>
-            </div>
           </div>
         </div>
       </section>
