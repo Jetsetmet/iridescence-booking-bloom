@@ -258,16 +258,34 @@ function Retreats() {
 
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
             {[
-              { room: "Shared room", early: "$2,900", late: "$3,100" },
-              { room: "Single room", early: "$3,300", late: "$3,500" },
+              {
+                room: "Shared room",
+                tiers: [
+                  { price: "$2,800", note: "Book by November 1, 2026" },
+                  { price: "$2,900", note: "Nov 1, 2026 – Feb 1, 2027" },
+                  { price: "$3,100", note: "After February 1, 2027" },
+                ],
+              },
+              {
+                room: "Single room",
+                tiers: [
+                  { price: "$3,300", note: "Book by November 1, 2026" },
+                  { price: "$3,400", note: "Nov 1, 2026 – Feb 1, 2027" },
+                  { price: "$3,100", note: "After February 1, 2027" },
+                ],
+              },
             ].map((p) => (
               <div key={p.room} className="rounded-2xl border border-border bg-background/60 p-6">
                 <h3 className="font-display text-2xl">{p.room}</h3>
-                <p className="mt-3 text-sm text-foreground/85">
-                  <span className="font-display text-3xl text-primary">{p.early}</span>
-                  <span className="ml-2 text-muted-foreground">per person · before Dec 1</span>
-                </p>
-                <p className="mt-2 text-sm text-muted-foreground">{p.late} per person after December 1</p>
+                <p className="mt-1 text-sm text-muted-foreground">per person · tiered pricing</p>
+                <ul className="mt-4 divide-y divide-border">
+                  {p.tiers.map((t, i) => (
+                    <li key={i} className="flex items-baseline justify-between gap-4 py-3">
+                      <span className="font-display text-2xl text-primary">{t.price}</span>
+                      <span className="text-xs text-muted-foreground text-right">{t.note}</span>
+                    </li>
+                  ))}
+                </ul>
                 <Link
                   to="/book"
                   search={{ offering: "Retreat", event: `Whispers of the Ancient Shores — 1–7 June 2027 · ${p.room}` }}
