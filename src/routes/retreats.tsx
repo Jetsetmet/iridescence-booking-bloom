@@ -75,7 +75,7 @@ function Retreats() {
                 Ask a question
               </Link>
             </div>
-            <p className="mt-3 text-xs text-muted-foreground">More info: +1 504 345 3444</p>
+            <p className="mt-3 text-base text-muted-foreground">More info: <a href="tel:+15043453444" className="font-medium underline decoration-dotted underline-offset-4 hover:text-foreground">+1 504 345 3444</a></p>
           </div>
         </div>
       </section>
