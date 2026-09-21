@@ -269,7 +269,7 @@ function Retreats() {
               },
               {
                 room: "Single room",
-                stripe: "https://buy.stripe.com/cNicN694i5Li87c2vt1Jm0p",
+                stripe: "https://buy.stripe.com/3cI3cwgwK1v2drw0nl1Jm0q",
                 tiers: [
                   { price: "$3,300", note: "Book by November 1, 2026" },
                   { price: "$3,400", note: "Nov 1, 2026 – Feb 1, 2027" },
