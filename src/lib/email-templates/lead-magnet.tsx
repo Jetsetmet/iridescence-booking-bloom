@@ -17,7 +17,7 @@ interface Props {
   name?: string
 }
 
-const MEDITATION_URL = 'https://www.youtube.com/watch?v=DZl8dguC3cE'
+const MEDITATION_URL = 'https://www.youtube.com/watch?v=FmXDAoPIr_0'
 
 const Email = ({ name = '' }: Props) => (
   <Html lang="en" dir="ltr">
