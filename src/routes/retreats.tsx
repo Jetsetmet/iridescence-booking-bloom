@@ -59,7 +59,7 @@ function Retreats() {
             <h2 className="mt-3 font-display text-4xl">Whispers of the Ancient Shores</h2>
             <p className="mt-2 text-sm text-muted-foreground">A Yoga & Sound Healing Retreat with Met Salih & Tara Loftis · From $2,800 per person</p>
             <p className="mt-4 text-foreground/80 leading-relaxed text-pretty">
-              A soul-nourishing journey of yoga, sound healing, cacao, breathwork, movement and water activities, woven together with the rich culture, beauty and ancient energy of Türkiye's Aegean shores.
+              A soul-nourishing journey of yoga, sound healing, cacao, breathwork and movement, woven together with the rich culture, beauty and ancient energy of Türkiye's Aegean shores.
             </p>
             <p className="mt-3 text-foreground/80 leading-relaxed text-pretty">
               An invitation to slow down and immerse yourself in the beauty, rhythm, and soul of Alaçatı. Surrounded by ancient stone streets, sea breezes, olive groves, and the sparkling Mediterranean, we gather to reconnect with simplicity, joy, and the quieter moments that nourish us — including time at Ilıca Beach, famous for its white sand and warm thermal spring water.
@@ -149,7 +149,7 @@ function Retreats() {
                 <li>Daily yoga & meditation</li>
                 <li>Sound healing journeys & cacao ceremonies</li>
                 <li>Breathwork & gentle somatic movement</li>
-                <li>Water activities & beach time at Ilıca Beach</li>
+                <li>Beach time at Ilıca Beach</li>
                 <li>Authentic local cuisine</li>
                 <li>Excursions, culture & exploration</li>
                 <li>Time to rest, connect & rejuvenate</li>
