@@ -163,12 +163,15 @@ function Retreats() {
                 <li>Turkish cuisine & seaside cafés</li>
                 <li>Ancient energy & Aegean beauty</li>
               </ul>
-              <h3 className="mt-8 font-display text-2xl">Your facilitators</h3>
-              <p className="mt-3 text-sm text-foreground/85">
-                <strong>Mehtap (Met) Salih</strong> — Founder of Iridescence Healing · Sound healer, Reiki master, yoga & cacao facilitator.
+              <h3 className="mt-8 font-display text-2xl">Your Facilitators</h3>
+              <p className="mt-3 text-base text-foreground/85">
+                <strong>Mehtap “Met” Salih &amp; Tara Loftis</strong>
               </p>
-              <p className="mt-2 text-sm text-foreground/85">
-                <strong>Tara Loftis</strong> — Yoga teacher, sound healer, hypnotherapist, Reiki healer & plant medicine apprentice.
+              <p className="mt-3 text-sm text-foreground/85 leading-relaxed">
+                Met and Tara are longtime friends, yoga teachers and holistic healing practitioners who share a deep love of travel, connection, movement and creating meaningful experiences. Together, they weave yoga, breathwork, sound healing, Reiki, ceremonial cacao and intuitive practices into spaces that invite you to slow down, reconnect and simply be.
+              </p>
+              <p className="mt-2 text-sm text-foreground/85 leading-relaxed">
+                Their approach is warm, grounded and joyful—balancing moments of reflection and restoration with adventure, laughter, culture and community. This retreat is an invitation to experience the beauty of Türkiye while reconnecting with yourself and sharing the journey with others.
               </p>
             </div>
           </div>
