@@ -23,7 +23,7 @@ export const Route = createFileRoute("/events")({
 
 const events = [
   {
-    date: "Monday, September 22", time: "6:30 PM",
+    date: "Monday, October 5", time: "6:30 PM",
     title: "Virtual \"Open Your Heart\" Breathwork Journey",
     loc: "Online from anywhere · $25",
     blurb: "An hour of guided breath to soften the chest, move stuck emotion and meet yourself in stillness — from wherever you are.",
@@ -31,7 +31,7 @@ const events = [
     price: "$25", payUrl: "https://buy.stripe.com/bJe9AU0xMc9G7388TR1Jm0j",
   },
   {
-    date: "Wednesday, September 9", time: "6:30 PM",
+    date: "Wednesday, October 7", time: "6:30 PM",
     title: "Cacao + Heart Circle",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $40",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
