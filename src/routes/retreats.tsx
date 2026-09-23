@@ -147,7 +147,7 @@ function Retreats() {
                 <li>6 nights accommodation in Alaçatı</li>
                 <li>Daily hotel breakfast & selected dinners</li>
                 <li>Daily yoga & meditation</li>
-                <li>Sound healing journeys & cacao ceremonies</li>
+                <li>Sound healing journey & cacao ceremony</li>
                 <li>Breathwork & gentle somatic movement</li>
                 <li>Beach time at Ilıca Beach</li>
                 <li>Authentic local cuisine</li>
