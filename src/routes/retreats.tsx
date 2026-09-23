@@ -71,9 +71,9 @@ function Retreats() {
               <a href="/whispers-ancient-shores-2027.pdf" target="_blank" rel="noopener noreferrer" download className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
                 Download poster (PDF) <ArrowRight className="h-4 w-4" />
               </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
+              <a href="mailto:met@iridescencehealing.com,taraloftylove@gmail.com?subject=Whispers of the Ancient Shores — question" className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-7 py-3.5 text-sm font-medium hover:bg-accent">
                 Ask a question
-              </Link>
+              </a>
             </div>
             <p className="mt-3 text-base text-muted-foreground">More info: <a href="tel:+15043453444" className="font-medium underline decoration-dotted underline-offset-4 hover:text-foreground">+1 504 345 3444</a></p>
           </div>
