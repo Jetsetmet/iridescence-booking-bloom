@@ -177,6 +177,107 @@ function Retreats() {
           </div>
         </div>
       </section>
+
+      {/* Whispers of the Ancient Shores — Itinerary */}
+      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Itinerary</p>
+          <h2 className="mt-2 font-display text-4xl">Whispers of the Ancient Shores</h2>
+          <p className="mt-2 text-sm text-muted-foreground">Alaçatı, Türkiye | June 1–7 | 6 Nights / 7 Days · Subject to change</p>
+
+          <div className="mt-8 grid md:grid-cols-2 gap-8">
+            {[
+              {
+                day: "Day 1",
+                title: "Arrival | Welcome to Alaçatı",
+                items: [
+                  "Arrival and settle in prior to 4pm",
+                  "4pm — Opening circle & grounding practice",
+                  "6pm — Welcome dinner at hotel",
+                  "Set intentions for the week and introductions",
+                ],
+              },
+              {
+                day: "Day 2",
+                title: "Intro to Alaçatı",
+                items: [
+                  "8am — Morning practice: Vinyasa",
+                  "9am — Breakfast",
+                  "Explore Alaçatı — the beautiful village, its cobbled streets, cafés, boutiques and local market culture",
+                  "5:30pm — Cacao Ceremony, Ecstatic Dance, Sound Bath",
+                  "7:30pm — Dinner at hotel",
+                ],
+              },
+              {
+                day: "Day 3",
+                title: "Aegean Sea Adventure",
+                items: [
+                  "8am — Morning practice: Kundalini",
+                  "9am — Breakfast",
+                  "11am — Leave for the beach · Beach Day",
+                  "Head to the coast with the option for windsurfing, paddleboarding or other water sports",
+                  "5:30pm — Evening practice",
+                  "7:30pm — Dinner offsite",
+                ],
+              },
+              {
+                day: "Day 4",
+                title: "Explore Ancient Cities",
+                items: [
+                  "8am — Morning practice: Kriya",
+                  "9am — Breakfast",
+                  "Explore Ildir & Erythrai and possible boat excursion",
+                  "5:30pm — Evening practice",
+                  "7:30pm — Dinner offsite",
+                ],
+              },
+              {
+                day: "Day 5",
+                title: "Turkish Spa Day",
+                items: [
+                  "8am — Morning practice: Ashtanga",
+                  "9am — Breakfast",
+                  "Spa Day — experience a traditional Turkish hammam",
+                  "Turkish Bath (included) · Massage & Treatments (extra cost)",
+                  "5:30pm — Evening practice",
+                  "7:30pm — Dinner offsite",
+                ],
+              },
+              {
+                day: "Day 6",
+                title: "Freedom & Celebration",
+                items: [
+                  "8am — Morning yoga, breathwork, and meditation",
+                  "9am — Breakfast",
+                  "Free day for shopping and creating your own adventure — shopping, beach, cafés or simply doing nothing. We create the day with group input",
+                  "5:30pm — Movement & Sound Bath",
+                  "7:30pm — Farewell Dinner at hotel",
+                ],
+              },
+              {
+                day: "Day 7",
+                title: "Integration & Departure",
+                items: [
+                  "8am — Morning practice and closing circle",
+                  "9am — Breakfast",
+                  "A beautiful opportunity to reflect on what you are taking home with you — breakfast together, hugs, departures and onward journeys",
+                ],
+              },
+            ].map((d, i) => (
+              <div key={i} className="rounded-2xl border border-border bg-background/60 p-6">
+                <p className="text-xs uppercase tracking-[0.2em] text-primary/80">{d.day}</p>
+                <h3 className="mt-1 font-display text-2xl">{d.title}</h3>
+                <ul className="mt-4 space-y-2 text-sm text-foreground/85 list-disc pl-5">
+                  {d.items.map((item, j) => (
+                    <li key={j}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TURKEY — Resonance & Remembrance */}
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
