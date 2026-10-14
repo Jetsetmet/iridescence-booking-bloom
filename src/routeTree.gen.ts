@@ -9,147 +9,47 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as BookRouteImport } from './routes/book'
-import { Route as BreathYogaRouteImport } from './routes/breath-yoga'
-import { Route as CacaoCeremoniesRouteImport } from './routes/cacao-ceremonies'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as CrystalReikiRouteImport } from './routes/crystal-reiki'
-import { Route as EventsRouteImport } from './routes/events'
-import { Route as ExperienceDesignRouteImport } from './routes/experience-design'
-import { Route as MeditationRouteImport } from './routes/meditation'
-import { Route as OfferingsRouteImport } from './routes/offerings'
-import { Route as PackagesRouteImport } from './routes/packages'
-import { Route as QuizRouteImport } from './routes/quiz'
-import { Route as ReikiNewOrleansRouteImport } from './routes/reiki-new-orleans'
-import { Route as ResonanceReleaseRouteImport } from './routes/resonance-release'
-import { Route as RetreatsRouteImport } from './routes/retreats'
-import { Route as ReviewsRouteImport } from './routes/reviews'
-import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SoundBathNewOrleansRouteImport } from './routes/sound-bath-new-orleans'
-import { Route as SoundHealingNewOrleansRouteImport } from './routes/sound-healing-new-orleans'
-import { Route as ThanksRouteImport } from './routes/thanks'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
-import { Route as AdminNewsletterRouteImport } from './routes/admin.newsletter'
-import { Route as AdminTestEmailRouteImport } from './routes/admin.test-email'
+import { Route as ThanksRouteImport } from './routes/thanks'
+import { Route as SoundHealingNewOrleansRouteImport } from './routes/sound-healing-new-orleans'
+import { Route as SoundBathNewOrleansRouteImport } from './routes/sound-bath-new-orleans'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SelfLoveMentoringRouteImport } from './routes/self-love-mentoring'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as RetreatsRouteImport } from './routes/retreats'
+import { Route as ResonanceReleaseRouteImport } from './routes/resonance-release'
+import { Route as ReikiNewOrleansRouteImport } from './routes/reiki-new-orleans'
+import { Route as QuizRouteImport } from './routes/quiz'
+import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as OfferingsRouteImport } from './routes/offerings'
+import { Route as MeditationRouteImport } from './routes/meditation'
+import { Route as ExperienceDesignRouteImport } from './routes/experience-design'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as CrystalReikiRouteImport } from './routes/crystal-reiki'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CacaoCeremoniesRouteImport } from './routes/cacao-ceremonies'
+import { Route as BreathYogaRouteImport } from './routes/breath-yoga'
+import { Route as BookRouteImport } from './routes/book'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
+import { Route as AdminTestEmailRouteImport } from './routes/admin.test-email'
+import { Route as AdminNewsletterRouteImport } from './routes/admin.newsletter'
 import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/email/suppression'
-import { Route as ApiPublicFormsBookingRouteImport } from './routes/api/public/forms/booking'
-import { Route as ApiPublicFormsLeadRouteImport } from './routes/api/public/forms/lead'
-import { Route as ApiPublicFormsQuizRouteImport } from './routes/api/public/forms/quiz'
-import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
-import { Route as ApiPublicHooksScheduleRetreatAnnouncementRouteImport } from './routes/api/public/hooks/schedule-retreat-announcement'
-import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
-import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe/webhook'
-import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
-import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lovable/email/transactional/send'
+import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
+import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
+import { Route as ApiPublicStripeWebhookRouteImport } from './routes/api/public/stripe/webhook'
+import { Route as ApiPublicHooksWeeklyReportRouteImport } from './routes/api/public/hooks/weekly-report'
+import { Route as ApiPublicHooksScheduleRetreatAnnouncementRouteImport } from './routes/api/public/hooks/schedule-retreat-announcement'
+import { Route as ApiPublicHooksMonthlyNewsletterRouteImport } from './routes/api/public/hooks/monthly-newsletter'
+import { Route as ApiPublicFormsQuizRouteImport } from './routes/api/public/forms/quiz'
+import { Route as ApiPublicFormsLeadRouteImport } from './routes/api/public/forms/lead'
+import { Route as ApiPublicFormsBookingRouteImport } from './routes/api/public/forms/booking'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BookRoute = BookRouteImport.update({
-  id: '/book',
-  path: '/book',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BreathYogaRoute = BreathYogaRouteImport.update({
-  id: '/breath-yoga',
-  path: '/breath-yoga',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CacaoCeremoniesRoute = CacaoCeremoniesRouteImport.update({
-  id: '/cacao-ceremonies',
-  path: '/cacao-ceremonies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CrystalReikiRoute = CrystalReikiRouteImport.update({
-  id: '/crystal-reiki',
-  path: '/crystal-reiki',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsRoute = EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ExperienceDesignRoute = ExperienceDesignRouteImport.update({
-  id: '/experience-design',
-  path: '/experience-design',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MeditationRoute = MeditationRouteImport.update({
-  id: '/meditation',
-  path: '/meditation',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const OfferingsRoute = OfferingsRouteImport.update({
-  id: '/offerings',
-  path: '/offerings',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PackagesRoute = PackagesRouteImport.update({
-  id: '/packages',
-  path: '/packages',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const QuizRoute = QuizRouteImport.update({
-  id: '/quiz',
-  path: '/quiz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReikiNewOrleansRoute = ReikiNewOrleansRouteImport.update({
-  id: '/reiki-new-orleans',
-  path: '/reiki-new-orleans',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ResonanceReleaseRoute = ResonanceReleaseRouteImport.update({
-  id: '/resonance-release',
-  path: '/resonance-release',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RetreatsRoute = RetreatsRouteImport.update({
-  id: '/retreats',
-  path: '/retreats',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ReviewsRoute = ReviewsRouteImport.update({
-  id: '/reviews',
-  path: '/reviews',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SelfLoveMentoringRoute = SelfLoveMentoringRouteImport.update({
-  id: '/self-love-mentoring',
-  path: '/self-love-mentoring',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SoundBathNewOrleansRoute = SoundBathNewOrleansRouteImport.update({
-  id: '/sound-bath-new-orleans',
-  path: '/sound-bath-new-orleans',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SoundHealingNewOrleansRoute = SoundHealingNewOrleansRouteImport.update({
-  id: '/sound-healing-new-orleans',
-  path: '/sound-healing-new-orleans',
+const UnsubscribeRoute = UnsubscribeRouteImport.update({
+  id: '/unsubscribe',
+  path: '/unsubscribe',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ThanksRoute = ThanksRouteImport.update({
@@ -157,19 +57,109 @@ const ThanksRoute = ThanksRouteImport.update({
   path: '/thanks',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UnsubscribeRoute = UnsubscribeRouteImport.update({
-  id: '/unsubscribe',
-  path: '/unsubscribe',
+const SoundHealingNewOrleansRoute = SoundHealingNewOrleansRouteImport.update({
+  id: '/sound-healing-new-orleans',
+  path: '/sound-healing-new-orleans',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AdminNewsletterRoute = AdminNewsletterRouteImport.update({
-  id: '/admin/newsletter',
-  path: '/admin/newsletter',
+const SoundBathNewOrleansRoute = SoundBathNewOrleansRouteImport.update({
+  id: '/sound-bath-new-orleans',
+  path: '/sound-bath-new-orleans',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AdminTestEmailRoute = AdminTestEmailRouteImport.update({
-  id: '/admin/test-email',
-  path: '/admin/test-email',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SelfLoveMentoringRoute = SelfLoveMentoringRouteImport.update({
+  id: '/self-love-mentoring',
+  path: '/self-love-mentoring',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RetreatsRoute = RetreatsRouteImport.update({
+  id: '/retreats',
+  path: '/retreats',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResonanceReleaseRoute = ResonanceReleaseRouteImport.update({
+  id: '/resonance-release',
+  path: '/resonance-release',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReikiNewOrleansRoute = ReikiNewOrleansRouteImport.update({
+  id: '/reiki-new-orleans',
+  path: '/reiki-new-orleans',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuizRoute = QuizRouteImport.update({
+  id: '/quiz',
+  path: '/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OfferingsRoute = OfferingsRouteImport.update({
+  id: '/offerings',
+  path: '/offerings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MeditationRoute = MeditationRouteImport.update({
+  id: '/meditation',
+  path: '/meditation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienceDesignRoute = ExperienceDesignRouteImport.update({
+  id: '/experience-design',
+  path: '/experience-design',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CrystalReikiRoute = CrystalReikiRouteImport.update({
+  id: '/crystal-reiki',
+  path: '/crystal-reiki',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CacaoCeremoniesRoute = CacaoCeremoniesRouteImport.update({
+  id: '/cacao-ceremonies',
+  path: '/cacao-ceremonies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BreathYogaRoute = BreathYogaRouteImport.update({
+  id: '/breath-yoga',
+  path: '/breath-yoga',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookRoute = BookRouteImport.update({
+  id: '/book',
+  path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
@@ -177,53 +167,25 @@ const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
   path: '/email/unsubscribe',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminTestEmailRoute = AdminTestEmailRouteImport.update({
+  id: '/admin/test-email',
+  path: '/admin/test-email',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminNewsletterRoute = AdminNewsletterRouteImport.update({
+  id: '/admin/newsletter',
+  path: '/admin/newsletter',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LovableEmailSuppressionRoute = LovableEmailSuppressionRouteImport.update({
   id: '/lovable/email/suppression',
   path: '/lovable/email/suppression',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ApiPublicFormsBookingRoute = ApiPublicFormsBookingRouteImport.update({
-  id: '/api/public/forms/booking',
-  path: '/api/public/forms/booking',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicFormsLeadRoute = ApiPublicFormsLeadRouteImport.update({
-  id: '/api/public/forms/lead',
-  path: '/api/public/forms/lead',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicFormsQuizRoute = ApiPublicFormsQuizRouteImport.update({
-  id: '/api/public/forms/quiz',
-  path: '/api/public/forms/quiz',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ApiPublicHooksMonthlyNewsletterRoute =
-  ApiPublicHooksMonthlyNewsletterRouteImport.update({
-    id: '/api/public/hooks/monthly-newsletter',
-    path: '/api/public/hooks/monthly-newsletter',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicHooksScheduleRetreatAnnouncementRoute =
-  ApiPublicHooksScheduleRetreatAnnouncementRouteImport.update({
-    id: '/api/public/hooks/schedule-retreat-announcement',
-    path: '/api/public/hooks/schedule-retreat-announcement',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicHooksWeeklyReportRoute =
-  ApiPublicHooksWeeklyReportRouteImport.update({
-    id: '/api/public/hooks/weekly-report',
-    path: '/api/public/hooks/weekly-report',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
-  id: '/api/public/stripe/webhook',
-  path: '/api/public/stripe/webhook',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LovableEmailQueueProcessRoute =
-  LovableEmailQueueProcessRouteImport.update({
-    id: '/lovable/email/queue/process',
-    path: '/lovable/email/queue/process',
+const LovableEmailTransactionalSendRoute =
+  LovableEmailTransactionalSendRouteImport.update({
+    id: '/lovable/email/transactional/send',
+    path: '/lovable/email/transactional/send',
     getParentRoute: () => rootRouteImport,
   } as any)
 const LovableEmailTransactionalPreviewRoute =
@@ -232,12 +194,50 @@ const LovableEmailTransactionalPreviewRoute =
     path: '/lovable/email/transactional/preview',
     getParentRoute: () => rootRouteImport,
   } as any)
-const LovableEmailTransactionalSendRoute =
-  LovableEmailTransactionalSendRouteImport.update({
-    id: '/lovable/email/transactional/send',
-    path: '/lovable/email/transactional/send',
+const LovableEmailQueueProcessRoute =
+  LovableEmailQueueProcessRouteImport.update({
+    id: '/lovable/email/queue/process',
+    path: '/lovable/email/queue/process',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ApiPublicStripeWebhookRoute = ApiPublicStripeWebhookRouteImport.update({
+  id: '/api/public/stripe/webhook',
+  path: '/api/public/stripe/webhook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicHooksWeeklyReportRoute =
+  ApiPublicHooksWeeklyReportRouteImport.update({
+    id: '/api/public/hooks/weekly-report',
+    path: '/api/public/hooks/weekly-report',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksScheduleRetreatAnnouncementRoute =
+  ApiPublicHooksScheduleRetreatAnnouncementRouteImport.update({
+    id: '/api/public/hooks/schedule-retreat-announcement',
+    path: '/api/public/hooks/schedule-retreat-announcement',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicHooksMonthlyNewsletterRoute =
+  ApiPublicHooksMonthlyNewsletterRouteImport.update({
+    id: '/api/public/hooks/monthly-newsletter',
+    path: '/api/public/hooks/monthly-newsletter',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ApiPublicFormsQuizRoute = ApiPublicFormsQuizRouteImport.update({
+  id: '/api/public/forms/quiz',
+  path: '/api/public/forms/quiz',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicFormsLeadRoute = ApiPublicFormsLeadRouteImport.update({
+  id: '/api/public/forms/lead',
+  path: '/api/public/forms/lead',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ApiPublicFormsBookingRoute = ApiPublicFormsBookingRouteImport.update({
+  id: '/api/public/forms/booking',
+  path: '/api/public/forms/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -519,151 +519,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/book': {
-      id: '/book'
-      path: '/book'
-      fullPath: '/book'
-      preLoaderRoute: typeof BookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/breath-yoga': {
-      id: '/breath-yoga'
-      path: '/breath-yoga'
-      fullPath: '/breath-yoga'
-      preLoaderRoute: typeof BreathYogaRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cacao-ceremonies': {
-      id: '/cacao-ceremonies'
-      path: '/cacao-ceremonies'
-      fullPath: '/cacao-ceremonies'
-      preLoaderRoute: typeof CacaoCeremoniesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/crystal-reiki': {
-      id: '/crystal-reiki'
-      path: '/crystal-reiki'
-      fullPath: '/crystal-reiki'
-      preLoaderRoute: typeof CrystalReikiRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events': {
-      id: '/events'
-      path: '/events'
-      fullPath: '/events'
-      preLoaderRoute: typeof EventsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/experience-design': {
-      id: '/experience-design'
-      path: '/experience-design'
-      fullPath: '/experience-design'
-      preLoaderRoute: typeof ExperienceDesignRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/meditation': {
-      id: '/meditation'
-      path: '/meditation'
-      fullPath: '/meditation'
-      preLoaderRoute: typeof MeditationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/offerings': {
-      id: '/offerings'
-      path: '/offerings'
-      fullPath: '/offerings'
-      preLoaderRoute: typeof OfferingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/packages': {
-      id: '/packages'
-      path: '/packages'
-      fullPath: '/packages'
-      preLoaderRoute: typeof PackagesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/quiz': {
-      id: '/quiz'
-      path: '/quiz'
-      fullPath: '/quiz'
-      preLoaderRoute: typeof QuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reiki-new-orleans': {
-      id: '/reiki-new-orleans'
-      path: '/reiki-new-orleans'
-      fullPath: '/reiki-new-orleans'
-      preLoaderRoute: typeof ReikiNewOrleansRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/resonance-release': {
-      id: '/resonance-release'
-      path: '/resonance-release'
-      fullPath: '/resonance-release'
-      preLoaderRoute: typeof ResonanceReleaseRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/retreats': {
-      id: '/retreats'
-      path: '/retreats'
-      fullPath: '/retreats'
-      preLoaderRoute: typeof RetreatsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/reviews': {
-      id: '/reviews'
-      path: '/reviews'
-      fullPath: '/reviews'
-      preLoaderRoute: typeof ReviewsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/self-love-mentoring': {
-      id: '/self-love-mentoring'
-      path: '/self-love-mentoring'
-      fullPath: '/self-love-mentoring'
-      preLoaderRoute: typeof SelfLoveMentoringRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sound-bath-new-orleans': {
-      id: '/sound-bath-new-orleans'
-      path: '/sound-bath-new-orleans'
-      fullPath: '/sound-bath-new-orleans'
-      preLoaderRoute: typeof SoundBathNewOrleansRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sound-healing-new-orleans': {
-      id: '/sound-healing-new-orleans'
-      path: '/sound-healing-new-orleans'
-      fullPath: '/sound-healing-new-orleans'
-      preLoaderRoute: typeof SoundHealingNewOrleansRouteImport
+    '/unsubscribe': {
+      id: '/unsubscribe'
+      path: '/unsubscribe'
+      fullPath: '/unsubscribe'
+      preLoaderRoute: typeof UnsubscribeRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/thanks': {
@@ -673,25 +533,151 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ThanksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/unsubscribe': {
-      id: '/unsubscribe'
-      path: '/unsubscribe'
-      fullPath: '/unsubscribe'
-      preLoaderRoute: typeof UnsubscribeRouteImport
+    '/sound-healing-new-orleans': {
+      id: '/sound-healing-new-orleans'
+      path: '/sound-healing-new-orleans'
+      fullPath: '/sound-healing-new-orleans'
+      preLoaderRoute: typeof SoundHealingNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/admin/newsletter': {
-      id: '/admin/newsletter'
-      path: '/admin/newsletter'
-      fullPath: '/admin/newsletter'
-      preLoaderRoute: typeof AdminNewsletterRouteImport
+    '/sound-bath-new-orleans': {
+      id: '/sound-bath-new-orleans'
+      path: '/sound-bath-new-orleans'
+      fullPath: '/sound-bath-new-orleans'
+      preLoaderRoute: typeof SoundBathNewOrleansRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/admin/test-email': {
-      id: '/admin/test-email'
-      path: '/admin/test-email'
-      fullPath: '/admin/test-email'
-      preLoaderRoute: typeof AdminTestEmailRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/self-love-mentoring': {
+      id: '/self-love-mentoring'
+      path: '/self-love-mentoring'
+      fullPath: '/self-love-mentoring'
+      preLoaderRoute: typeof SelfLoveMentoringRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/retreats': {
+      id: '/retreats'
+      path: '/retreats'
+      fullPath: '/retreats'
+      preLoaderRoute: typeof RetreatsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resonance-release': {
+      id: '/resonance-release'
+      path: '/resonance-release'
+      fullPath: '/resonance-release'
+      preLoaderRoute: typeof ResonanceReleaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reiki-new-orleans': {
+      id: '/reiki-new-orleans'
+      path: '/reiki-new-orleans'
+      fullPath: '/reiki-new-orleans'
+      preLoaderRoute: typeof ReikiNewOrleansRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quiz': {
+      id: '/quiz'
+      path: '/quiz'
+      fullPath: '/quiz'
+      preLoaderRoute: typeof QuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/offerings': {
+      id: '/offerings'
+      path: '/offerings'
+      fullPath: '/offerings'
+      preLoaderRoute: typeof OfferingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/meditation': {
+      id: '/meditation'
+      path: '/meditation'
+      fullPath: '/meditation'
+      preLoaderRoute: typeof MeditationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experience-design': {
+      id: '/experience-design'
+      path: '/experience-design'
+      fullPath: '/experience-design'
+      preLoaderRoute: typeof ExperienceDesignRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/crystal-reiki': {
+      id: '/crystal-reiki'
+      path: '/crystal-reiki'
+      fullPath: '/crystal-reiki'
+      preLoaderRoute: typeof CrystalReikiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cacao-ceremonies': {
+      id: '/cacao-ceremonies'
+      path: '/cacao-ceremonies'
+      fullPath: '/cacao-ceremonies'
+      preLoaderRoute: typeof CacaoCeremoniesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/breath-yoga': {
+      id: '/breath-yoga'
+      path: '/breath-yoga'
+      fullPath: '/breath-yoga'
+      preLoaderRoute: typeof BreathYogaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book': {
+      id: '/book'
+      path: '/book'
+      fullPath: '/book'
+      preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/email/unsubscribe': {
@@ -701,6 +687,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EmailUnsubscribeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/test-email': {
+      id: '/admin/test-email'
+      path: '/admin/test-email'
+      fullPath: '/admin/test-email'
+      preLoaderRoute: typeof AdminTestEmailRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin/newsletter': {
+      id: '/admin/newsletter'
+      path: '/admin/newsletter'
+      fullPath: '/admin/newsletter'
+      preLoaderRoute: typeof AdminNewsletterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/lovable/email/suppression': {
       id: '/lovable/email/suppression'
       path: '/lovable/email/suppression'
@@ -708,60 +708,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LovableEmailSuppressionRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/api/public/forms/booking': {
-      id: '/api/public/forms/booking'
-      path: '/api/public/forms/booking'
-      fullPath: '/api/public/forms/booking'
-      preLoaderRoute: typeof ApiPublicFormsBookingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/forms/lead': {
-      id: '/api/public/forms/lead'
-      path: '/api/public/forms/lead'
-      fullPath: '/api/public/forms/lead'
-      preLoaderRoute: typeof ApiPublicFormsLeadRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/forms/quiz': {
-      id: '/api/public/forms/quiz'
-      path: '/api/public/forms/quiz'
-      fullPath: '/api/public/forms/quiz'
-      preLoaderRoute: typeof ApiPublicFormsQuizRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/hooks/monthly-newsletter': {
-      id: '/api/public/hooks/monthly-newsletter'
-      path: '/api/public/hooks/monthly-newsletter'
-      fullPath: '/api/public/hooks/monthly-newsletter'
-      preLoaderRoute: typeof ApiPublicHooksMonthlyNewsletterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/hooks/schedule-retreat-announcement': {
-      id: '/api/public/hooks/schedule-retreat-announcement'
-      path: '/api/public/hooks/schedule-retreat-announcement'
-      fullPath: '/api/public/hooks/schedule-retreat-announcement'
-      preLoaderRoute: typeof ApiPublicHooksScheduleRetreatAnnouncementRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/hooks/weekly-report': {
-      id: '/api/public/hooks/weekly-report'
-      path: '/api/public/hooks/weekly-report'
-      fullPath: '/api/public/hooks/weekly-report'
-      preLoaderRoute: typeof ApiPublicHooksWeeklyReportRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/api/public/stripe/webhook': {
-      id: '/api/public/stripe/webhook'
-      path: '/api/public/stripe/webhook'
-      fullPath: '/api/public/stripe/webhook'
-      preLoaderRoute: typeof ApiPublicStripeWebhookRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/lovable/email/queue/process': {
-      id: '/lovable/email/queue/process'
-      path: '/lovable/email/queue/process'
-      fullPath: '/lovable/email/queue/process'
-      preLoaderRoute: typeof LovableEmailQueueProcessRouteImport
+    '/lovable/email/transactional/send': {
+      id: '/lovable/email/transactional/send'
+      path: '/lovable/email/transactional/send'
+      fullPath: '/lovable/email/transactional/send'
+      preLoaderRoute: typeof LovableEmailTransactionalSendRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lovable/email/transactional/preview': {
@@ -771,11 +722,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LovableEmailTransactionalPreviewRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/lovable/email/transactional/send': {
-      id: '/lovable/email/transactional/send'
-      path: '/lovable/email/transactional/send'
-      fullPath: '/lovable/email/transactional/send'
-      preLoaderRoute: typeof LovableEmailTransactionalSendRouteImport
+    '/lovable/email/queue/process': {
+      id: '/lovable/email/queue/process'
+      path: '/lovable/email/queue/process'
+      fullPath: '/lovable/email/queue/process'
+      preLoaderRoute: typeof LovableEmailQueueProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/stripe/webhook': {
+      id: '/api/public/stripe/webhook'
+      path: '/api/public/stripe/webhook'
+      fullPath: '/api/public/stripe/webhook'
+      preLoaderRoute: typeof ApiPublicStripeWebhookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/weekly-report': {
+      id: '/api/public/hooks/weekly-report'
+      path: '/api/public/hooks/weekly-report'
+      fullPath: '/api/public/hooks/weekly-report'
+      preLoaderRoute: typeof ApiPublicHooksWeeklyReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/schedule-retreat-announcement': {
+      id: '/api/public/hooks/schedule-retreat-announcement'
+      path: '/api/public/hooks/schedule-retreat-announcement'
+      fullPath: '/api/public/hooks/schedule-retreat-announcement'
+      preLoaderRoute: typeof ApiPublicHooksScheduleRetreatAnnouncementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/hooks/monthly-newsletter': {
+      id: '/api/public/hooks/monthly-newsletter'
+      path: '/api/public/hooks/monthly-newsletter'
+      fullPath: '/api/public/hooks/monthly-newsletter'
+      preLoaderRoute: typeof ApiPublicHooksMonthlyNewsletterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/forms/quiz': {
+      id: '/api/public/forms/quiz'
+      path: '/api/public/forms/quiz'
+      fullPath: '/api/public/forms/quiz'
+      preLoaderRoute: typeof ApiPublicFormsQuizRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/forms/lead': {
+      id: '/api/public/forms/lead'
+      path: '/api/public/forms/lead'
+      fullPath: '/api/public/forms/lead'
+      preLoaderRoute: typeof ApiPublicFormsLeadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/api/public/forms/booking': {
+      id: '/api/public/forms/booking'
+      path: '/api/public/forms/booking'
+      fullPath: '/api/public/forms/booking'
+      preLoaderRoute: typeof ApiPublicFormsBookingRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
