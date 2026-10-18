@@ -1,7 +1,4 @@
 import { Mail, Download } from "lucide-react";
-import poster from "@/assets/mexico-retreat-poster.png.asset.json";
-import metImg from "@/assets/host-met.jpg.asset.json";
-import markImg from "@/assets/host-mark.jpeg.asset.json";
 
 const MAILTO =
   "mailto:info@iridescencehealing.com,markvsno@gmail.com?subject=" +
@@ -41,7 +38,7 @@ export function MexicoRetreat() {
       <div className="rounded-3xl border border-border bg-card shadow-card overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-8 p-6 sm:p-10">
           <img
-            src={poster.url}
+            src="/media/mexico-retreat-poster.png"
             alt="Reignite & Restore Christmas wellness retreat in Mexico poster"
             className="w-full rounded-2xl shadow-soft"
             loading="lazy"
@@ -105,11 +102,11 @@ export function MexicoRetreat() {
           <h3 className="font-display text-2xl">Your Retreat Hosts</h3>
           <div className="mt-4 grid sm:grid-cols-2 gap-6 text-sm">
             <div className="flex gap-4">
-              <img src={metImg.url} alt="Met Salih with a singing bowl" className="h-24 w-24 rounded-full object-cover shrink-0" loading="lazy" />
+              <img src="/media/host-met.jpg" alt="Met Salih with a singing bowl" className="h-24 w-24 rounded-full object-cover object-top shrink-0" loading="lazy" />
               <p><span className="font-medium">Met Salih</span> — a holistic wellness practitioner, yoga teacher and retreat facilitator with 19 years of experience, weaving together breathwork, sound healing, Reiki, movement and ancient healing traditions to nurture connection, self-discovery & transformation.</p>
             </div>
             <div className="flex gap-4">
-              <img src={markImg.url} alt="Mark Berger" className="h-24 w-24 rounded-full object-cover shrink-0" loading="lazy" />
+              <img src="/media/host-mark.jpeg" alt="Mark Berger" className="h-24 w-24 rounded-full object-cover object-top shrink-0" loading="lazy" />
               <p><span className="font-medium">Mark Berger</span> — a wellness leader, yoga teacher, athlete, author, retreat leader and storyteller passionate about helping people live healthier, happier and more purposeful lives through movement, spirituality, travel and daily practice.</p>
             </div>
           </div>
