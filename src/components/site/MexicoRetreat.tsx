@@ -1,4 +1,4 @@
-import { Mail, Download } from "lucide-react";
+import { ExternalLink, Mail, Download } from "lucide-react";
 
 const MAILTO =
   "mailto:info@iridescencehealing.com,markvsno@gmail.com?subject=" +
@@ -47,7 +47,16 @@ export function MexicoRetreat() {
             <p className="text-xs uppercase tracking-[0.2em] text-primary/80">New · Holiday retreat</p>
             <h2 className="mt-2 font-display text-4xl sm:text-5xl text-balance">Reignite & Restore</h2>
             <p className="mt-1 text-muted-foreground">
-              December 20–26, 2026 · Casa Om, Puerto Morelos, Mexico
+              December 20–26, 2026 ·{" "}
+              <a
+                href="https://www.casaom.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary underline underline-offset-4 hover:opacity-80"
+              >
+                Casa Om
+              </a>
+              , Puerto Morelos, Mexico
             </p>
             <p className="mt-4 text-sm text-pretty">
               Gift yourself the time to slow down, soak up the sunshine, wade in the Caribbean, swim in a
@@ -76,6 +85,9 @@ export function MexicoRetreat() {
               </a>
               <a href="/reignite-restore-mexico-2026.pdf" download target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm hover:bg-muted">
                 <Download className="h-4 w-4" /> Download flyer (PDF)
+              </a>
+              <a href="https://www.casaom.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm hover:bg-muted">
+                <ExternalLink className="h-4 w-4" /> Visit Casa Om
               </a>
             </div>
             <p className="mt-3 text-xs text-muted-foreground">
