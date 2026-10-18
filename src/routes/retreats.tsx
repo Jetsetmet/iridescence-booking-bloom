@@ -4,6 +4,7 @@ import { useState } from "react";
 import heroImg from "@/assets/costa-rica-waterfall.jpg";
 import natureImg from "@/assets/costa-rica-ocean-sunset.jpg";
 import { SQUARE_URL } from "@/lib/booking";
+import { MexicoRetreat } from "@/components/site/MexicoRetreat";
 
 export const Route = createFileRoute("/retreats")({
   head: () => ({
@@ -39,6 +40,7 @@ function Retreats() {
 
 
       {/* TURKEY — Whispers of the Ancient Shores */}
+      <MexicoRetreat />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
         <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
           <img
