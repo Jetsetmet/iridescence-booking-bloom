@@ -28,7 +28,7 @@ const days = [
   ["Tue, Dec 22", "Flow & Release", "Vinyasa & meditation · optional healing sessions · traditional Temazcal ceremony"],
   ["Wed, Dec 23", "Waters of Renewal", "Yoga & breathwork · cenote excursion & rebirth ceremony · restorative yoga"],
   ["Thu, Dec 24", "Opening the Heart", "Heart-opening Kundalini · beach & rest · sunset breathwork & sound healing"],
-  ["Fri, Dec 25", "Christmas by the Sea", "Christmas flow & gratitude meditation · beach · celebration dinner & gift exchange"],
+  ["Fri, Dec 25", "Joy, Love & Celebration", "Dharma Christmas Flow Yoga & Gratitude Meditation · Beach & Relaxation · Christmas Celebration Dinner & Gift Exchange"],
   ["Sat, Dec 26", "Integration & New Beginnings", "Gentle yoga, meditation & closing circle · departures"],
 ];
 
