@@ -323,10 +323,10 @@ function Retreats() {
             <p className="mt-3 text-xs text-muted-foreground">Full cancellation available up to 3 months before the retreat date.</p>
           </div>
           <img
-            src="/media/turkey-istanbul-collage.png"
-            alt="Resonance & Remembrance — Istanbul & Cappadocia collage"
-            width={1400}
-            height={1000}
+            src="/media/istanbul-cappadocia-2027-poster.jpg"
+            alt="Resonance & Remembrance — Istanbul & Cappadocia retreat poster"
+            width={1224}
+            height={1584}
             loading="eager"
             decoding="async"
             fetchPriority="high"
