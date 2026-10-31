@@ -43,7 +43,8 @@ function Retreats() {
       {/* TURKEY — Whispers of the Ancient Shores */}
       <MexicoRetreat />
       <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft grid lg:grid-cols-2 gap-10 items-center">
+        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <div className="grid lg:grid-cols-2 gap-10 items-center">
           <img
             src="/media/whispers-poster-2027.png"
             alt="Whispers of the Ancient Shores — Yoga & Sound Healing Retreat in Alaçatı, Türkiye, 1–7 June 2027 with Met Salih & Tara Loftis"
@@ -80,14 +81,11 @@ function Retreats() {
             </div>
             <p className="mt-3 text-base text-muted-foreground">More info: <a href="tel:+15043453444" className="font-medium underline decoration-dotted underline-offset-4 hover:text-foreground">+1 504 345 3444</a></p>
           </div>
-        </div>
-      </section>
+          </div>
 
-      {/* Whispers of the Ancient Shores — Details & Pricing */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <hr className="my-14 border-t border-border" />
+
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Investment</p>
-          <h2 className="mt-2 font-display text-4xl">Whispers of the Ancient Shores</h2>
           <p className="mt-2 text-sm text-muted-foreground">1–7 June, 2027 · Alaçatı, Türkiye · Tiered pricing — rates go up Nov 1 and again Feb 1</p>
 
           <div className="mt-8 grid sm:grid-cols-2 gap-6">
@@ -179,6 +177,27 @@ function Retreats() {
             </div>
           </div>
           <hr className="my-14 border-t border-border" />
+
+          <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Deposit</p>
+          <h3 className="mt-2 font-display text-3xl">Secure your spot</h3>
+          <p className="mt-3 max-w-2xl text-foreground/80 leading-relaxed">
+            Reserve your place with a deposit per person — the remaining balance is due before the retreat. Your deposit is fully applied to your total, and room rates follow the tiers above.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="mailto:met@iridescencehealing.com,taraloftylove@gmail.com?subject=Paying my deposit — Whispers of the Ancient Shores" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+              Pay deposit <ArrowRight className="h-4 w-4" />
+            </a>
+            <Link
+              to="/book"
+              search={{ offering: "Retreat", event: "Whispers of the Ancient Shores — 1–7 June 2027 · Deposit" }}
+              className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/70 px-7 py-3.5 text-sm font-medium text-primary hover:bg-accent"
+            >
+              Reserve with a deposit <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <hr className="my-14 border-t border-border" />
+
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Itinerary</p>
           <p className="mt-2 text-sm text-muted-foreground">Alaçatı, Türkiye | June 1–7 | 6 Nights / 7 Days · Subject to change</p>
 
