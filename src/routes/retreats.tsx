@@ -178,14 +178,8 @@ function Retreats() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Whispers of the Ancient Shores — Itinerary */}
-      <section className="mx-auto max-w-6xl px-5 sm:px-8 py-12">
-        <div className="rounded-[2rem] border border-border bg-card p-8 sm:p-12 shadow-soft">
+          <hr className="my-14 border-t border-border" />
           <p className="text-xs uppercase tracking-[0.2em] text-primary/80">Itinerary</p>
-          <h2 className="mt-2 font-display text-4xl">Whispers of the Ancient Shores</h2>
           <p className="mt-2 text-sm text-muted-foreground">Alaçatı, Türkiye | June 1–7 | 6 Nights / 7 Days · Subject to change</p>
 
           <div className="mt-8 grid md:grid-cols-2 gap-8">
