@@ -184,7 +184,7 @@ function Retreats() {
             Reserve your place with a deposit per person — the remaining balance is due before the retreat. Your deposit is fully applied to your total, and room rates follow the tiers above.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href="mailto:met@iridescencehealing.com,taraloftylove@gmail.com?subject=Paying my deposit — Whispers of the Ancient Shores" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
+            <a href="https://buy.stripe.com/7sY7sM2FUflS9bgda71Jm0r" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-medium text-primary-foreground shadow-soft">
               Pay deposit <ArrowRight className="h-4 w-4" />
             </a>
             <Link
