@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { createHmac, timingSafeEqual } from "crypto";
 
+/** Met's inbox — receives a copy of every customer booking confirmation. */
+const OWNER_COPY_EMAIL = "met@iridescencehealing.com";
+
 /**
  * Stripe webhook endpoint for paid event bookings.
  *

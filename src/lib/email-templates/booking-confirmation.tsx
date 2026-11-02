@@ -82,14 +82,16 @@ const Email = ({
               <Row label="Sent to" value={customer_email} />
             ) : null}
           </Section>
-          <Text style={lead}>
-            If you have any questions before then, just reply to this email or
-            write to us at{' '}
-            <Link href="mailto:info@iridescencehealing.com" style={link}>
-              info@iridescencehealing.com
-            </Link>
-            .
-          </Text>
+          {!copy_for_owner && (
+            <Text style={lead}>
+              If you have any questions before then, just reply to this email or
+              write to us at{' '}
+              <Link href="mailto:info@iridescencehealing.com" style={link}>
+                info@iridescencehealing.com
+              </Link>
+              .
+            </Text>
+          )}
           <Hr style={hr} />
           <Text style={muted}>With love, Met &amp; the Iridescence Healing team</Text>
         </Container>
