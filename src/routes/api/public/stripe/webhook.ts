@@ -66,18 +66,35 @@ export const Route = createFileRoute("/api/public/stripe/webhook")({
             eventName = session.client_reference_id;
           }
 
+          const customerEmail: string =
+            customer.email ?? session.customer_email ?? "";
+
           try {
             const { notifyOwner } = await import("@/lib/email/notify-owner.server");
             await notifyOwner("stripe-payment-notification", {
-              customer_email: customer.email ?? session.customer_email ?? "",
+              customer_email: customerEmail,
               customer_name: customer.name ?? "",
               amount_total: amount,
               currency,
               event_name: eventName,
               payment_status: paymentStatus,
             });
+
+            // Send the customer their booking confirmation with the amount paid.
+            if (customerEmail) {
+              await notifyOwner(
+                "booking-confirmation",
+                {
+                  customer_name: customer.name ?? "",
+                  amount_total: amount,
+                  currency,
+                  event_name: eventName,
+                },
+                customerEmail,
+              );
+            }
           } catch (err) {
-            console.error("stripe webhook: failed to notify owner", err);
+            console.error("stripe webhook: failed to send notification", err);
             // Don't return an error to Stripe — we already accepted the event.
           }
         }
