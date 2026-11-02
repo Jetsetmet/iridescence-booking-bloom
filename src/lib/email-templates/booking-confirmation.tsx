@@ -110,7 +110,7 @@ const Row = ({ label, value }: { label: string; value: string }) => (
 export const template = {
   component: Email,
   subject: (d: Record<string, any>) =>
-    `Booking confirmed — ${d.event_name || 'Iridescence Healing'}`,
+    `${d.copy_for_owner ? 'Copy: ' : ''}Booking confirmed — ${d.event_name || 'Iridescence Healing'}`,
   displayName: 'Booking confirmation (customer)',
   previewData: {
     customer_name: 'Aurora',
