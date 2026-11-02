@@ -93,6 +93,16 @@ export const Route = createFileRoute("/api/public/stripe/webhook")({
                 customerEmail,
               );
             }
+
+            // Send Met a copy of the same confirmation.
+            await notifyOwner("booking-confirmation", {
+              customer_name: customer.name ?? "",
+              customer_email: customerEmail,
+              amount_total: amount,
+              currency,
+              event_name: eventName,
+              copy_for_owner: true,
+            }, OWNER_EMAIL);
           } catch (err) {
             console.error("stripe webhook: failed to send notification", err);
             // Don't return an error to Stripe — we already accepted the event.
