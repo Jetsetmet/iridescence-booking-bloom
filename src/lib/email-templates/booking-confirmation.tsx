@@ -18,6 +18,9 @@ interface Props {
   amount_total?: number
   currency?: string
   event_name?: string
+  customer_email?: string
+  /** Renders the owner-facing copy of a confirmation already sent to the customer. */
+  copy_for_owner?: boolean
 }
 
 const Email = ({
@@ -25,6 +28,8 @@ const Email = ({
   amount_total = 0,
   currency = 'usd',
   event_name = 'your booking',
+  customer_email = '',
+  copy_for_owner = false,
 }: Props) => {
   const formattedAmount = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -34,30 +39,59 @@ const Email = ({
   return (
     <Html lang="en" dir="ltr">
       <Head />
-      <Preview>Your booking is confirmed — {event_name}</Preview>
+      <Preview>
+        {copy_for_owner
+          ? `Copy of booking confirmation — ${event_name}`
+          : `Your booking is confirmed — ${event_name}`}
+      </Preview>
       <Body style={main}>
         <Container style={container}>
           <Text style={brand}>Iridescence Healing</Text>
-          <Heading style={h1}>Your booking is confirmed</Heading>
-          <Text style={lead}>
-            {customer_name ? `Dear ${customer_name},` : 'Hello,'}
-          </Text>
-          <Text style={lead}>
-            Thank you for your payment — your spot is reserved. We can't wait to
-            share this experience with you.
-          </Text>
+          <Heading style={h1}>
+            {copy_for_owner
+              ? 'Booking confirmed — copy for your records'
+              : 'Your booking is confirmed'}
+          </Heading>
+          {copy_for_owner ? (
+            <Text style={lead}>
+              This is a copy of the confirmation sent to{' '}
+              {customer_email ? (
+                <Link href={`mailto:${customer_email}`} style={link}>
+                  {customer_email}
+                </Link>
+              ) : (
+                customer_name || 'the customer'
+              )}
+              .
+            </Text>
+          ) : (
+            <>
+              <Text style={lead}>
+                {customer_name ? `Dear ${customer_name},` : 'Hello,'}
+              </Text>
+              <Text style={lead}>
+                Thank you for your payment — your spot is reserved. We can't wait
+                to share this experience with you.
+              </Text>
+            </>
+          )}
           <Section style={card}>
             <Row label="Booking" value={event_name} />
             <Row label="Amount paid" value={formattedAmount} />
+            {copy_for_owner && customer_email ? (
+              <Row label="Sent to" value={customer_email} />
+            ) : null}
           </Section>
-          <Text style={lead}>
-            If you have any questions before then, just reply to this email or
-            write to us at{' '}
-            <Link href="mailto:info@iridescencehealing.com" style={link}>
-              info@iridescencehealing.com
-            </Link>
-            .
-          </Text>
+          {!copy_for_owner && (
+            <Text style={lead}>
+              If you have any questions before then, just reply to this email or
+              write to us at{' '}
+              <Link href="mailto:info@iridescencehealing.com" style={link}>
+                info@iridescencehealing.com
+              </Link>
+              .
+            </Text>
+          )}
           <Hr style={hr} />
           <Text style={muted}>With love, Met &amp; the Iridescence Healing team</Text>
         </Container>
@@ -76,7 +110,7 @@ const Row = ({ label, value }: { label: string; value: string }) => (
 export const template = {
   component: Email,
   subject: (d: Record<string, any>) =>
-    `Booking confirmed — ${d.event_name || 'Iridescence Healing'}`,
+    `${d.copy_for_owner ? 'Copy: ' : ''}Booking confirmed — ${d.event_name || 'Iridescence Healing'}`,
   displayName: 'Booking confirmation (customer)',
   previewData: {
     customer_name: 'Aurora',
