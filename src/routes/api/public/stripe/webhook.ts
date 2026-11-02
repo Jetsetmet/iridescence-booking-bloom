@@ -102,7 +102,7 @@ export const Route = createFileRoute("/api/public/stripe/webhook")({
               currency,
               event_name: eventName,
               copy_for_owner: true,
-            }, OWNER_EMAIL);
+            }, OWNER_COPY_EMAIL);
           } catch (err) {
             console.error("stripe webhook: failed to send notification", err);
             // Don't return an error to Stripe — we already accepted the event.
