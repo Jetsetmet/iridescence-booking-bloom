@@ -3,3 +3,4 @@
 - [x] Add Istanbul–Cappadocia flyer with the confirmed June 9–15, 2027 date and send an updated test only.
 - [x] Merge Alaçatı intro/poster into the same box as investment + itinerary (dividers between parts).
 - [x] Wire Alaçatı "Pay deposit" button to Stripe payment link https://buy.stripe.com/7sY7sM2FUflS9bgda71Jm0r (price price_1UWgzeLbf1OHiEbMR3KnDwTZ).
+- [x] Send Met a copy of every customer booking confirmation email (met@iridescencehealing.com).
