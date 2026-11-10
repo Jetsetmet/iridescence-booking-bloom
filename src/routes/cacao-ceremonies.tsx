@@ -155,7 +155,7 @@ function CacaoCeremonies() {
         <h2 className="mt-2 font-display text-3xl">Ceremony options</h2>
         <ul className="mt-6 divide-y divide-border rounded-2xl border border-border bg-card/50">
           {([
-            { label: "Couples Cacao Ceremony", duration: "90 min", price: "$390" },
+            { label: "Couples Cacao Ceremony", duration: "110 min", price: "$390" },
             { label: "Private & Retreat Ceremonies", duration: "by arrangement", price: "Enquire", book: true },
             { label: "Iridescence Cacao Starter Kit", duration: "ships from New Orleans", price: "$22 + shipping" },
           ] as Array<{ label: string; duration: string; price: string; note?: string; book?: boolean }>).map((t, i) => (
