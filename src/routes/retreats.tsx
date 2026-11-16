@@ -9,10 +9,10 @@ import { SQUARE_URL } from "@/lib/booking";
 export const Route = createFileRoute("/retreats")({
   head: () => ({
     meta: [
-      { title: "Transformative Retreats — Mexico, Turkey & Costa Rica with Iridescence Healing" },
-      { name: "description", content: "Immersive retreats with Met — Reignite & Restore in Puerto Morelos, Mexico (December 2026), Istanbul & Cappadocia and Alaçatı, Türkiye (June 2027), and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
-      { property: "og:title", content: "Transformative Retreats — Mexico, Turkey & Costa Rica" },
-      { property: "og:description", content: "Reignite & Restore in Mexico, Resonance & Remembrance in Turkey, and a private Oneness Spiritual Emergence retreat in Costa Rica." },
+      { title: "Transformative Retreats — Türkiye & Costa Rica with Iridescence Healing" },
+      { name: "description", content: "Immersive retreats with Met — Istanbul & Cappadocia and Alaçatı, Türkiye (June 2027), and a private 4-day Oneness retreat in Costa Rica. Breath, sound, cacao, yoga and somatic practices." },
+      { property: "og:title", content: "Transformative Retreats — Türkiye & Costa Rica" },
+      { property: "og:description", content: "Resonance & Remembrance in Istanbul & Cappadocia, Whispers of the Ancient Shores in Alaçatı, Türkiye, and a private Oneness Spiritual Emergence retreat in Costa Rica." },
       { property: "og:image", content: heroImg },
     ],
   }),
@@ -28,9 +28,9 @@ function Retreats() {
           <h1 className="mt-2 font-display text-5xl sm:text-6xl text-balance">
             Reconnect with the <span className="italic bg-iridescent bg-clip-text text-transparent">wisdom within</span>.
           </h1>
-            <p className="mt-3 text-sm uppercase tracking-[0.2em] text-primary/90">Mexico · Türkiye · Costa Rica</p>
+            <p className="mt-3 text-sm uppercase tracking-[0.2em] text-primary/90">Türkiye · Costa Rica</p>
           <p className="mt-6 text-foreground/80 leading-relaxed text-pretty">
-            Immersive journeys in Mexico, Turkey and Costa Rica that weave energy healing, cacao, yoga, sound, meditation, breathwork and indigenous Temazcal into the quiet medicine of nature. A safe, nurturing space to release what no longer serves and step into true freedom.
+            Immersive journeys in Türkiye and Costa Rica that weave energy healing, cacao, yoga, sound, meditation, breathwork and indigenous Temazcal into the quiet medicine of nature. A safe, nurturing space to release what no longer serves and step into true freedom.
           </p>
           </div>
 
