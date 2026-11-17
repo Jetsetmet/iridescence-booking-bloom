@@ -31,7 +31,7 @@ const events = [
     price: "$25", payUrl: "https://buy.stripe.com/bJe9AU0xMc9G7388TR1Jm0j",
   },
   {
-    date: "Wednesday, November 18", time: "6:30 PM",
+    date: "Wednesday, December 9", time: "6:30 PM",
     title: "Cacao + Heart Circle",
     loc: "An intimate uptown sanctuary · address shared once your spot is held · only a few cushions left · $40",
     blurb: "Ceremonial cacao, gentle sharing and a quiet space to remember what your heart already knows.",
